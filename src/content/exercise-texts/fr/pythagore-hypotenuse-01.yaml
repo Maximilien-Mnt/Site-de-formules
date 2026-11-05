@@ -1,0 +1,13 @@
+title: Longueur d'une hypoténuse
+statement: |
+  Le triangle $ABC$ est rectangle en $A$, avec $AB = 6$ cm et $AC = 8$ cm.
+  Calcule la longueur $BC$, en cm.
+hints:
+  - 'Quel est le côté opposé à l''angle droit ? C''est l''hypoténuse.'
+  - 'Écris $BC^{2} = AB^{2} + AC^{2}$ et remplace par les valeurs.'
+solution: |
+  Le triangle est rectangle en $A$ : l'hypoténuse est $[BC]$.
+
+  D'après le théorème de Pythagore, $BC^{2} = AB^{2} + AC^{2} = 6^{2} + 8^{2} = 36 + 64 = 100$.
+
+  Donc $BC = \sqrt{100} = 10$ cm.

@@ -1,0 +1,11 @@
+subject: math
+domain: trigonometry
+level: 4
+difficulty: 2
+formulas: [identite-trigonometrique, pythagore]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 0.8
+  tolerance: 0.001
+status: published

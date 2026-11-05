@@ -1,0 +1,49 @@
+---
+title: Relation fondamentale de la trigonométrie
+summary: Pour tout angle θ, le carré du cosinus plus le carré du sinus vaut 1.
+aliases: [cos² + sin² = 1, identité trigonométrique, relation de Pythagore trigonométrique]
+keywords: [cosinus, sinus, cercle trigonométrique, angle]
+variableNames:
+  '\theta': Un angle quelconque
+variantLabels:
+  sin-from-cos: Sinus à partir du cosinus
+  tan: Avec la tangente (cos θ ≠ 0)
+---
+
+<Section kind="intuition">
+
+Sur le cercle de rayon 1, le point repéré par l'angle $\theta$ a pour coordonnées $(\cos\theta, \sin\theta)$. Comme il est à distance 1 du centre, ses coordonnées vérifient le théorème de Pythagore : c'est exactement la relation $\cos^{2}\theta + \sin^{2}\theta = 1$.
+
+</Section>
+
+<Section kind="explanation">
+
+La relation est vraie pour **tous** les angles, en degrés comme en radians. Elle permet de retrouver l'un des deux nombres à partir de l'autre, au signe près.
+
+**Exemple.** Si $\cos\theta = \dfrac{3}{5}$ et $\theta$ est aigu, alors $\sin^{2}\theta = 1 - \dfrac{9}{25} = \dfrac{16}{25}$, donc $\sin\theta = \dfrac{4}{5}$ (positif car $\theta$ est aigu).
+
+</Section>
+
+<Section kind="proof">
+
+Soit $M$ le point du cercle unité associé à l'angle $\theta$, et $H$ son projeté sur l'axe des abscisses. Le triangle $OHM$ est rectangle en $H$, avec $OH = |\cos\theta|$, $HM = |\sin\theta|$ et $OM = 1$. Par le théorème de Pythagore : $\cos^{2}\theta + \sin^{2}\theta = 1^{2} = 1$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La trigonométrie naît en astronomie grecque (Hipparque, IIe siècle av. J.-C., et ses tables de cordes) et se développe en Inde, où apparaît la notion de sinus, puis dans le monde arabe. La notation moderne $\sin$, $\cos$, $\tan$ s'impose progressivement jusqu'au XVIIIe siècle, notamment grâce aux travaux d'Euler.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Écrire $\cos\theta + \sin\theta = 1$ : **les carrés sont indispensables**.
+- Confondre $\cos^{2}\theta$ (le carré du cosinus) et $\cos(\theta^{2})$.
+- Oublier le signe $\pm$ quand on isole $\sin\theta$ : il faut regarder dans quel quadrant se trouve l'angle.
+
+</Callout>
+
+</Section>

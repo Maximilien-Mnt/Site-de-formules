@@ -1,0 +1,24 @@
+# Données partagées (indépendantes de la langue). Nom du fichier = identifiant.
+subject: math
+domain: geometry
+topics: [triangles, right-triangle, distances]
+level: 3
+difficulty: 2
+originYear: -1800 # approximatif : plus ancienne trace connue (tablettes babyloniennes)
+latex: 'a^{2} + b^{2} = c^{2}'
+variants:
+  - id: hypotenuse
+    latex: 'c = \sqrt{a^{2} + b^{2}}'
+  - id: leg
+    latex: 'a = \sqrt{c^{2} - b^{2}}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'c' }
+prerequisites: []
+related: [identite-trigonometrique]
+confusedWith: []
+graph:
+  kind: preset
+  preset: right-triangle
+status: published

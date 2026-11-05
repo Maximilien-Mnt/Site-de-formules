@@ -1,0 +1,111 @@
+---
+title: Théorème de Pythagore
+summary: Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés.
+aliases: [relation de Pythagore, hypoténuse, triangle rectangle, réciproque de Pythagore]
+keywords: [longueur, distance, côté, équerre]
+variableNames:
+  a: Longueur d'un côté de l'angle droit
+  b: Longueur de l'autre côté de l'angle droit
+  c: Longueur de l'hypoténuse (côté opposé à l'angle droit, le plus long)
+variantLabels:
+  hypotenuse: Calculer l'hypoténuse
+  leg: Calculer un côté de l'angle droit
+---
+
+<Section kind="intuition">
+
+Construis un carré sur chacun des trois côtés d'un triangle rectangle. L'aire du grand carré (celui de l'hypoténuse) est exactement égale à la somme des aires des deux autres carrés.
+
+Autrement dit : **si tu connais deux côtés d'un triangle rectangle, tu peux toujours calculer le troisième.**
+
+<Callout type="tip" title="À retenir">
+
+Le théorème ne s'applique qu'aux triangles **rectangles**. L'hypoténuse est le côté opposé à l'angle droit ; c'est toujours le plus long.
+
+</Callout>
+
+</Section>
+
+<Section kind="explanation">
+
+Dans un triangle $ABC$ rectangle en $A$, l'hypoténuse est $[BC]$ et l'on a :
+
+$$
+BC^{2} = AB^{2} + AC^{2}
+$$
+
+**Exemple.** Un triangle rectangle a des côtés de l'angle droit de 3 cm et 4 cm. Alors $c^{2} = 3^{2} + 4^{2} = 9 + 16 = 25$, donc $c = \sqrt{25} = 5$ cm.
+
+**La réciproque.** Si, dans un triangle $ABC$, on a $BC^{2} = AB^{2} + AC^{2}$, alors le triangle est rectangle en $A$. Et si l'égalité est fausse, le triangle n'est pas rectangle en $A$. On s'en sert pour *vérifier* qu'un angle est droit.
+
+</Section>
+
+<Section kind="proof">
+
+Prenons un grand carré de côté $a + b$. À l'intérieur, plaçons quatre copies du triangle rectangle (côtés $a$, $b$, hypoténuse $c$) de façon à ce que leurs hypoténuses forment un carré incliné de côté $c$ au centre.
+
+1. L'aire du grand carré vaut $(a + b)^{2} = a^{2} + 2ab + b^{2}$.
+2. Elle vaut aussi l'aire du carré central plus celle des quatre triangles : $c^{2} + 4 \times \dfrac{ab}{2} = c^{2} + 2ab$.
+3. Les deux expressions sont égales : $a^{2} + 2ab + b^{2} = c^{2} + 2ab$.
+4. On retire $2ab$ des deux côtés : $a^{2} + b^{2} = c^{2}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Le théorème porte le nom de Pythagore de Samos (vers 570 – 495 av. J.-C.), mais les historiens pensent que cette relation était connue bien avant lui, et il n'est pas certain qu'il en ait donné la première démonstration.
+
+Des tablettes babyloniennes, dont Plimpton 322 (vers 1800 av. J.-C.), contiennent des triplets de nombres qui vérifient la relation. Des textes indiens (les Sulba Sutras) et chinois (le Zhoubi suanjing) la mentionnent aussi. La première démonstration complète conservée figure dans les *Éléments* d'Euclide (vers 300 av. J.-C.), livre I, proposition 47 ; sa réciproque est la proposition 48.
+
+C'est l'un des théorèmes les plus démontrés des mathématiques : un ouvrage de 1927 d'Elisha Loomis en recense près de 370. En 1876, James A. Garfield, futur président des États-Unis, en publia une.
+
+</Section>
+
+<Section kind="methods">
+
+**Calculer l'hypoténuse**
+
+1. Repère l'angle droit : l'hypoténuse est le côté en face.
+2. Écris $c^{2} = a^{2} + b^{2}$ avec les valeurs connues.
+3. Calcule la somme, puis prends la racine carrée.
+
+**Calculer un côté de l'angle droit**
+
+1. Écris $a^{2} = c^{2} - b^{2}$ (on **soustrait** le carré de l'autre côté).
+2. Calcule la différence, puis prends la racine carrée.
+
+**Vérifier qu'un triangle est rectangle**
+
+1. Identifie le plus grand côté : c'est le candidat hypoténuse.
+2. Compare le carré du plus grand côté à la somme des carrés des deux autres.
+3. Égalité → rectangle. Sinon → pas rectangle.
+
+</Section>
+
+<Section kind="applications">
+
+- **Construction** : la « corde à nœuds » de rapport 3-4-5 permet de tracer un angle droit sur un chantier.
+- **Écrans** : la diagonale d'un écran se calcule avec la largeur et la hauteur.
+- **Distance dans le plan** : la distance entre $A(x_A, y_A)$ et $B(x_B, y_B)$ vaut $\sqrt{(x_B - x_A)^{2} + (y_B - y_A)^{2}}$.
+- **Informatique et jeux vidéo** : la distance euclidienne sert à détecter les collisions et à trouver le plus proche voisin.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier la **racine carrée** à la fin : $c^{2} = 25$ donne $c = 5$, pas $25$.
+- Additionner les côtés au lieu de leurs **carrés**.
+- Appliquer le théorème à un triangle qui n'a pas d'angle droit.
+- Prendre un côté de l'angle droit pour l'hypoténuse (et additionner au lieu de soustraire).
+
+</Callout>
+
+</Section>
+
+<Section kind="further">
+
+Le théorème de Pythagore est un cas particulier de la loi des cosinus. Pour les exposants supérieurs à 2, le « dernier théorème de Fermat » affirme que $a^{n} + b^{n} = c^{n}$ n'a pas de solution en nombres entiers strictement positifs ; il a été démontré par Andrew Wiles au milieu des années 1990.
+
+</Section>

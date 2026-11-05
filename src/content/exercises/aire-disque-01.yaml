@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 1
+formulas: [aire-disque]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 28.27
+  tolerance: 0.01
+  unit: cm²
+status: published

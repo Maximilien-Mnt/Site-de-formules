@@ -1,0 +1,8 @@
+title: Aire d'un disque
+statement: |
+  Un disque a un rayon de $3$ cm. Calcule son aire, arrondie au centième (en cm²).
+hints:
+  - 'La formule est $A = \pi r^{2}$.'
+  - 'Calcule d''abord $r^{2}$, puis multiplie par $\pi$.'
+solution: |
+  $A = \pi \times 3^{2} = 9\pi \approx 28{,}27$ cm².

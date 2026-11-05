@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 4
+difficulty: 1
+formulas: [discriminant-trinome]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 25
+  tolerance: 0
+status: published

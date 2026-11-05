@@ -1,0 +1,32 @@
+subject: math
+domain: algebra
+topics: [quadratic-equations, polynomials]
+level: 4
+difficulty: 2
+originYear: -1800 # approximatif : résolution de problèmes quadratiques en Mésopotamie
+latex: '\Delta = b^{2} - 4ac'
+variants:
+  - id: roots-positive
+    latex: 'x_{1} = \frac{-b - \sqrt{\Delta}}{2a} \quad\text{et}\quad x_{2} = \frac{-b + \sqrt{\Delta}}{2a}'
+  - id: root-zero
+    latex: 'x_{0} = \frac{-b}{2a}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'c' }
+  - { symbol: '\Delta' }
+  - { symbol: 'x' }
+prerequisites: []
+related: []
+confusedWith: []
+graph:
+  kind: function
+  expressions: ['a*x^2 + b*x + c']
+  params:
+    - { name: a, min: -3, max: 3, step: 0.1, default: 1 }
+    - { name: b, min: -6, max: 6, step: 0.5, default: -3 }
+    - { name: c, min: -6, max: 6, step: 0.5, default: 2 }
+  viewport:
+    x: [-6, 6]
+    y: [-6, 10]
+status: published

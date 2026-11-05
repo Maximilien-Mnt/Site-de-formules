@@ -1,0 +1,10 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 2
+formulas: [pythagore]
+kind: qcm
+estimatedMinutes: 2
+choices: [a, b, c, d]
+correct: [a]
+status: published

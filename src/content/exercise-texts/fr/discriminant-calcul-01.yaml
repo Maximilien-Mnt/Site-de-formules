@@ -1,0 +1,12 @@
+title: Calculer un discriminant
+statement: |
+  Calcule le discriminant $\Delta$ de l'équation $2x^{2} - 3x - 2 = 0$.
+hints:
+  - 'Repère $a$, $b$ et $c$ avec leurs signes.'
+  - 'Utilise $\Delta = b^{2} - 4ac$ ; attention au signe de $c$.'
+solution: |
+  Ici $a = 2$, $b = -3$, $c = -2$.
+
+  $\Delta = b^{2} - 4ac = (-3)^{2} - 4 \times 2 \times (-2) = 9 + 16 = 25$.
+
+  Comme $\Delta > 0$, l'équation a deux solutions réelles.

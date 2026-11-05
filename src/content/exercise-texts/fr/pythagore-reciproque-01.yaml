@@ -1,0 +1,17 @@
+title: Ce triangle est-il rectangle ?
+statement: |
+  Un triangle a pour côtés $5$ cm, $12$ cm et $13$ cm. Est-il rectangle ?
+choices:
+  a: 'Oui, car $5^{2} + 12^{2} = 13^{2}$'
+  b: 'Non, car $5 + 12 \neq 13$'
+  c: 'Non, car $5^{2} + 12^{2} \neq 13^{2}$'
+  d: 'On ne peut pas savoir sans mesurer les angles'
+hints:
+  - 'Le plus grand côté est le candidat hypoténuse.'
+  - 'Compare $13^{2}$ et $5^{2} + 12^{2}$.'
+solution: |
+  Le plus grand côté mesure $13$ cm. On compare :
+
+  $5^{2} + 12^{2} = 25 + 144 = 169$ et $13^{2} = 169$.
+
+  Les deux nombres sont égaux : d'après la **réciproque** du théorème de Pythagore, le triangle est rectangle (l'angle droit est opposé au côté de 13 cm).

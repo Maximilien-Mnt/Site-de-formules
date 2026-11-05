@@ -1,0 +1,10 @@
+title: Trouver un sinus à partir d'un cosinus
+statement: |
+  Soit $x$ un angle aigu tel que $\cos x = \dfrac{3}{5}$. Calcule $\sin x$ (réponse décimale).
+hints:
+  - 'Utilise $\cos^{2}x + \sin^{2}x = 1$.'
+  - 'Isole $\sin^{2}x$, puis prends la racine carrée : le signe dépend de l''angle.'
+solution: |
+  $\sin^{2}x = 1 - \cos^{2}x = 1 - \dfrac{9}{25} = \dfrac{16}{25}$.
+
+  L'angle est aigu : $\sin x > 0$, donc $\sin x = \dfrac{4}{5} = 0{,}8$.

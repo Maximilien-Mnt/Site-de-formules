@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 1
+formulas: [pythagore]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 10
+  tolerance: 0
+  unit: cm
+status: published

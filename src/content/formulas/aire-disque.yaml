@@ -1,0 +1,19 @@
+subject: math
+domain: geometry
+topics: [circle, area]
+level: 3
+difficulty: 1
+originYear: -1650 # approximatif : papyrus Rhind
+latex: 'A = \pi r^{2}'
+variants:
+  - id: diameter
+    latex: 'A = \frac{\pi d^{2}}{4}'
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'r' }
+  - { symbol: 'd' }
+  - { symbol: '\pi' }
+prerequisites: []
+related: []
+confusedWith: []
+status: published

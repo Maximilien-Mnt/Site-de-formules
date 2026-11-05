@@ -1,0 +1,82 @@
+---
+title: Discriminant et racines d'un trinôme du second degré
+summary: Le discriminant Δ = b² − 4ac indique le nombre de solutions réelles de l'équation ax² + bx + c = 0 et permet de les calculer.
+aliases: [équation du second degré, delta, racines, trinôme, formule quadratique]
+keywords: [second degré, parabole, solutions, équation]
+variableNames:
+  a: Coefficient de x² (a ≠ 0)
+  b: Coefficient de x
+  c: Terme constant
+  '\Delta': Le discriminant
+  x: L'inconnue
+variantLabels:
+  roots-positive: Deux solutions (Δ > 0)
+  root-zero: Une solution double (Δ = 0)
+---
+
+<Section kind="intuition">
+
+L'équation $ax^{2} + bx + c = 0$ décrit les points où une parabole coupe l'axe des abscisses. Selon sa position, elle peut le couper deux fois, le toucher une fois, ou ne jamais le rencontrer. Le discriminant $\Delta$ « discrimine » ces trois cas.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour l'équation $ax^{2} + bx + c = 0$ avec $a \neq 0$, on calcule $\Delta = b^{2} - 4ac$.
+
+| Signe de $\Delta$ | Nombre de solutions réelles | Solutions |
+|---|---|---|
+| $\Delta > 0$ | 2 | $x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$ |
+| $\Delta = 0$ | 1 (double) | $x_{0} = \dfrac{-b}{2a}$ |
+| $\Delta < 0$ | 0 | pas de solution réelle |
+
+**Exemple.** $x^{2} - 5x + 6 = 0$ : $a = 1$, $b = -5$, $c = 6$, donc $\Delta = 25 - 24 = 1 > 0$. Les solutions sont $\dfrac{5 - 1}{2} = 2$ et $\dfrac{5 + 1}{2} = 3$.
+
+</Section>
+
+<Section kind="proof">
+
+On factorise par $a$ et on complète le carré :
+
+1. $ax^{2} + bx + c = a\left(x^{2} + \dfrac{b}{a}x + \dfrac{c}{a}\right)$.
+2. $x^{2} + \dfrac{b}{a}x = \left(x + \dfrac{b}{2a}\right)^{2} - \dfrac{b^{2}}{4a^{2}}$.
+3. Donc $ax^{2} + bx + c = a\left[\left(x + \dfrac{b}{2a}\right)^{2} - \dfrac{b^{2} - 4ac}{4a^{2}}\right] = a\left[\left(x + \dfrac{b}{2a}\right)^{2} - \dfrac{\Delta}{4a^{2}}\right]$.
+4. L'équation s'écrit $\left(x + \dfrac{b}{2a}\right)^{2} = \dfrac{\Delta}{4a^{2}}$ : elle a des solutions réelles si et seulement si $\Delta \geq 0$, et alors $x = \dfrac{-b \pm \sqrt{\Delta}}{2a}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Des tablettes d'argile mésopotamiennes montrent que des problèmes équivalents à des équations du second degré étaient résolus il y a près de 4 000 ans. Le mathématicien indien Brahmagupta (628) donne une règle générale de résolution. Au IXe siècle, Al-Khwarizmi expose la méthode par complétion du carré dans son traité *Al-jabr*, d'où vient le mot « algèbre ». Le mot « discriminant » a été introduit par James Joseph Sylvester en 1851.
+
+</Section>
+
+<Section kind="methods">
+
+1. Mets l'équation sous la forme $ax^{2} + bx + c = 0$ et relève $a$, $b$, $c$ **avec leurs signes**.
+2. Calcule $\Delta = b^{2} - 4ac$.
+3. Conclus selon le signe de $\Delta$.
+4. Si $\Delta \geq 0$, calcule les solutions et vérifie-en une en la remplaçant dans l'équation.
+
+</Section>
+
+<Section kind="applications">
+
+- **Trajectoires** : la hauteur d'un projectile est une expression du second degré du temps ; $\Delta \geq 0$ dit s'il atteint une hauteur donnée, les racines donnent *quand*.
+- **Optimisation** : trouver le maximum d'un bénéfice modélisé par un trinôme.
+- **Intersections** : une droite et une parabole se coupent en 0, 1 ou 2 points, selon le signe d'un discriminant.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier les signes : si $b = -5$, alors $b^{2} = 25$ (positif).
+- Si $c < 0$ et $a > 0$, le terme $-4ac$ devient **positif**.
+- Oublier que le dénominateur $2a$ divise **tout** le numérateur.
+- Appliquer la formule quand $a = 0$ (l'équation n'est plus du second degré).
+
+</Callout>
+
+</Section>

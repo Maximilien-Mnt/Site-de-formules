@@ -1,0 +1,20 @@
+subject: math
+domain: trigonometry
+topics: [unit-circle, sine, cosine]
+level: 4
+difficulty: 2
+latex: '\cos^{2}\theta + \sin^{2}\theta = 1'
+variants:
+  - id: sin-from-cos
+    latex: '\sin\theta = \pm\sqrt{1 - \cos^{2}\theta}'
+  - id: tan
+    latex: '1 + \tan^{2}\theta = \frac{1}{\cos^{2}\theta}'
+variables:
+  - { symbol: '\theta' }
+prerequisites: [pythagore]
+related: []
+confusedWith: []
+graph:
+  kind: preset
+  preset: unit-circle
+status: published
