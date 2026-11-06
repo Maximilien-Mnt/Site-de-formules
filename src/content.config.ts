@@ -1,7 +1,8 @@
 // Schémas des collections de contenu (Astro Content Layer).
 // NOTE : adapter les imports à la version d'Astro installée. Si `z` n'est plus exporté par 'astro:content'
 // (déprécié dans les versions récentes), utiliser : import { z } from 'astro/zod';
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
 import { glob } from 'astro/loaders';
 import { ALL_DOMAINS, GRAPH_PRESETS, SUBJECTS } from './data/taxonomy';
 
