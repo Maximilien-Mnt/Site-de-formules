@@ -1,0 +1,44 @@
+---
+import { SUPPORTED_LANGS, DEFAULT_LANG, LANGS, type Lang } from '@/i18n/config';
+
+interface Props {
+  lang?: Lang;
+  title?: string;
+  description?: string;
+  canonical?: string;
+}
+
+const { lang = DEFAULT_LANG, title, description, canonical } = Astro.props;
+const dir = LANGS[lang]?.dir ?? 'ltr';
+---
+
+<!DOCTYPE html>
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} — Formulo` : 'Formulo'}</title>
+    {description && <meta name="description" content={description} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    {SUPPORTED_LANGS.map((l) => (
+      <link rel="alternate" hreflang={l} href={canonical ?? `/${l}/`} />
+    ))}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script is:inline>
+      (function () {
+        try {
+          const stored = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
