@@ -1,0 +1,354 @@
+---
+import { getFormulas } from '@/lib/content';
+import { localizedPath, DEFAULT_LANG } from '@/i18n/config';
+import { t } from '@/i18n/index';
+import katex from 'katex';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { Icon } from 'astro-icon/components';
+import Button from '@/components/ui/Button.astro';
+
+type Domain = 'arithmetic' | 'algebra' | 'geometry' | 'trigonometry' | 'calculus' | 'probability' | 'statistics' | 'linear-algebra' | 'discrete' | 'number-theory';
+
+const lang = DEFAULT_LANG;
+
+function renderFormula(latex: string): string {
+  try {
+    return katex.renderToString(latex, { displayMode: true, throwOnError: false });
+  } catch {
+    return `<code class="font-mono text-sm text-muted">${String(latex).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
+  }
+}
+
+const formulas = getFormulas(lang).filter((f) => f.status === 'published');
+const formulaHtmls = formulas.map((f) => renderFormula(f.latex));
+const formulaTerms = formulas.map((f) => {
+  const names = f.text ? (f.text.variableNames ?? {}) : {};
+  return (f.variables ?? []).map((v) => ({
+    symbol: v.symbol ?? '',
+    label: names[v.symbol ?? ''] ?? '',
+  }));
+});
+
+const formulasByLevel = Array.from({ length: 7 }, (_, i) => i + 1).map((level) => ({
+  level,
+  label: t(lang, `level.${level}.range` as import('@/i18n/index').TranslationKey),
+  count: formulas.filter((f) => f.level === level).length,
+}));
+
+const DOMAIN_ORDER: Domain[] = ['arithmetic', 'algebra', 'geometry', 'trigonometry', 'calculus', 'probability', 'statistics', 'linear-algebra', 'discrete', 'number-theory'];
+
+const DOMAIN_ICONS: Record<Domain, string> = {
+  arithmetic: 'calculator',
+  algebra: 'variable',
+  geometry: 'triangle-right',
+  trigonometry: 'circle-dashed',
+  calculus: 'chart-line',
+  probability: 'dices',
+  statistics: 'chart-column',
+  linear-algebra: 'grid-3x3',
+  discrete: 'network',
+  number-theory: 'hash',
+};
+
+const domainTiles = DOMAIN_ORDER.map((domain) => ({
+  domain,
+  icon: DOMAIN_ICONS[domain],
+  label: t(lang, `domain.${domain}` as import('@/i18n/index').TranslationKey),
+  count: formulas.filter((f) => f.domain === domain).length,
+})).filter((tile) => tile.count > 0);
+
+function formulaOfTheDay(formulasList: { id: string }[]): string {
+  const now = new Date();
+  const dateString = [now.getUTCFullYear(), now.getUTCMonth() + 1, now.getUTCDate()]
+    .map((part) => String(part))
+    .join('-');
+  let hash = 0;
+  for (let i = 0; i < dateString.length; i += 1) {
+    hash = (hash << 5) - hash + dateString.charCodeAt(i);
+  }
+  hash = hash >>> 0;
+  return formulasList[hash % formulasList.length].id;
+}
+
+const formulaDuJourId = formulaOfTheDay(formulas);
+const formulaDuJour = formulas.find((f) => f.id === formulaDuJourId);
+const formulaDuJourHtml = formulaDuJour ? renderFormula(formulaDuJour.latex) : '';
+
+function formatUTCDate(): string {
+  return new Intl.DateTimeFormat(lang, {
+    timeZone: 'UTC',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  }).format(new Date());
+}
+
+function pageExists(segment: string): boolean {
+  const candidates = [
+    join(process.cwd(), 'src', 'pages', lang, `${segment}.astro`),
+    join(process.cwd(), 'src', 'pages', lang, `${segment}/index.astro`),
+  ];
+  return candidates.some((path) => existsSync(path));
+}
+
+const destinations = [
+  { label: t(lang, 'review.flashcards'), hint: t(lang, 'home.review.hints.flashcards'), href: localizedPath(lang, 'review'), disabled: !pageExists('reviser') },
+  { label: t(lang, 'review.quiz'), hint: t(lang, 'home.review.hints.quiz'), href: `${localizedPath(lang, 'review')}/quiz`, disabled: !pageExists('reviser') },
+  { label: t(lang, 'nav.exercises'), hint: t(lang, 'home.review.hints.exercises'), href: localizedPath(lang, 'exercises'), disabled: !pageExists('exercices') },
+  { label: t(lang, 'nav.progress'), hint: t(lang, 'home.review.hints.progression'), href: localizedPath(lang, 'progress'), disabled: !pageExists('progression') },
+];
+---
+
+<div class="home">
+  <section class="hero">
+    <div class="home-inner">
+      <div class="hero-columns">
+        <div class="hero-copy">
+          <h1 class="hero-title">{t(lang, 'home.hero.title')}</h1>
+          <p class="hero-subtitle">{t(lang, 'home.hero.subtitle')}</p>
+          <form class="search" data-home-search>
+            <label class="search-label" for="home-search-input">{t(lang, 'home.search.label')}</label>
+            <div class="search-box">
+              <input id="home-search-input" name="q" type="search" autocomplete="off" placeholder={t(lang, 'home.search.placeholder')} />
+              <button type="submit" class="search-btn" aria-label={t(lang, 'nav.search')}>
+                <Icon name="lucide:search" />
+              </button>
+            </div>
+          </form>
+          <div class="hero-quick">
+            <a href={localizedPath(lang, 'formulas') + '?group=level'}>{t(lang, 'home.quick.1')}</a>
+            <a href={localizedPath(lang, 'formulas') + '?group=domain'}>{t(lang, 'home.quick.2')}</a>
+            <a href={localizedPath(lang, 'review')}>{t(lang, 'home.quick.3')}</a>
+          </div>
+        </div>
+        <div class="hero-live" data-home-carousel>
+          <div class="hero-live-head">
+            <p class="eyebrow">{t(lang, 'home.live.title')}</p>
+            <h2 class="hero-live-title">{t(lang, 'home.live.title')}</h2>
+            <p class="hero-live-sub">{t(lang, 'home.live.subtitle')}</p>
+            <div class="hero-live-idx">
+              <span class="hero-live-idx-current">1</span>
+              <span class="hero-live-idx-sep">/</span>
+              <span class="hero-live-idx-total">{formulas.length}</span>
+            </div>
+          </div>
+          {formulas.map((f, i) => (
+            <div class={`formula-panel${i === 0 ? ' active' : ''}`} data-panel={i}>
+              <div class="formula" set:html={formulaHtmls[i]} />
+              <div class="terms" data-terms>
+                {formulaTerms[i].map((term, j) => (
+                  <span class="term" style={`--i: ${j}`}>
+                    <span class="term-symbol">{term.symbol}</span>
+                    {term.label ? <span class="term-label">{term.label}</span> : null}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div class="hero-live-controls">
+            <button class="icon-btn" type="button" data-home-prev aria-label={t(lang, 'common.previous')}>
+              <Icon name="lucide:chevron-left" />
+            </button>
+            <button class="icon-btn" type="button" data-home-next aria-label={t(lang, 'common.next')}>
+              <Icon name="lucide:chevron-right" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, 'home.byLevel')}</h2>
+    <div class="strip">
+      {formulasByLevel.map((item) => (
+        <a class="strip-card" href={localizedPath(lang, 'formulas') + `?level=${item.level}`}>
+          <span class="strip-card-num">{item.level}</span>
+          <span class="strip-card-label">{item.label}</span>
+          <span class="strip-card-count">{t(lang, 'common.formulas', { count: item.count })}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, 'home.byDomain')}</h2>
+    <div class="grid">
+      {domainTiles.map((tile) => (
+        <a class="tile" href={localizedPath(lang, 'formulas') + `?domain=${tile.domain}`}>
+          <span class="tile-icon"><Icon name={`lucide:${tile.icon}`} /></span>
+          <span class="tile-name">{tile.label}</span>
+          <span class="tile-count">{t(lang, 'common.formulas', { count: tile.count })}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, 'home.formulaOfTheDay')}</h2>
+    <div class="formula-card">
+      <div class="formula formula-large" set:html={formulaDuJourHtml} />
+      <p class="formula-card-meta">{t(lang, 'home.today.date', { date: formatUTCDate() })}</p>
+      <Button variant="primary" size="md" href={localizedPath(lang, 'formulas')}>
+        {t(lang, 'nav.formulas')}
+      </Button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">{t(lang, 'home.howToReview')}</h2>
+    <div class="grid">
+      {destinations.map((d) => (
+        <a class={`card${d.disabled ? ' card--disabled' : ''}`} href={d.href} aria-disabled={d.disabled || undefined}>
+          <span class="card-label">{d.label}</span>
+          <span class="card-badge">{t(lang, 'common.soon')}</span>
+          <span class="card-hint">{d.hint}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  /* HERO */
+  .hero { padding: var(--space-6) var(--space-4) var(--space-7); background: var(--bg); }
+  .home-inner { max-width: var(--w-content); margin: 0 auto; }
+  .hero-columns { display: grid; grid-template-columns: 1fr; gap: var(--space-6); }
+  @media (min-width: 1024px) { .hero-columns { grid-template-columns: 1fr 1fr; } }
+  .hero-copy { display: flex; flex-direction: column; gap: var(--space-4); }
+  .eyebrow { font-family: var(--font-ui); font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--primary); }
+  .hero-title { font-family: var(--font-serif); font-size: var(--text-4xl); font-weight: 600; line-height: 1.05; letter-spacing: -0.01em; color: var(--text); }
+  .hero-subtitle { font-size: var(--text-lg); line-height: 1.5; color: var(--text-muted); }
+
+  .search { display: flex; flex-direction: column; gap: var(--space-2); }
+  .search-label { font-size: var(--text-sm); font-weight: 600; color: var(--text-muted); }
+  .search-box { display: flex; align-items: stretch; gap: var(--space-2); background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--r-sm); transition: border-color var(--dur-fast), box-shadow var(--dur-fast); }
+  .search-box:focus-within { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(35, 71, 217, 0.15); }
+  .search-box input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; font: inherit; color: var(--text); padding: var(--space-2) var(--space-3); }
+  .search-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; border-radius: var(--r-sm); background: var(--primary-soft); color: var(--primary); cursor: pointer; }
+  .search-btn:hover { background: var(--primary); color: var(--on-primary); }
+  .search-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  .search-btn svg { width: 18px; height: 18px; }
+
+  .hero-quick { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .hero-quick a { font-size: var(--text-sm); font-weight: 600; color: var(--primary); text-decoration: none; padding: var(--space-1) var(--space-2); border-radius: var(--r-sm); }
+  .hero-quick a:hover { color: var(--primary-hover); background: var(--primary-soft); text-decoration: underline; }
+
+  /* Carte formule vivante */
+  .hero-live { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--space-6); display: flex; flex-direction: column; gap: var(--space-4); min-height: 340px; }
+  .hero-live-head { display: flex; flex-direction: column; gap: var(--space-2); flex: 1; }
+  .hero-live-title { font-family: var(--font-serif); font-size: var(--text-xl); font-weight: 600; color: var(--text); }
+  .hero-live-sub { font-size: var(--text-sm); color: var(--text-muted); max-width: 42ch; }
+  .hero-live-idx { display: flex; align-items: center; gap: var(--space-1); font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); }
+  .hero-live-idx-current { color: var(--primary); font-weight: 600; }
+  .hero-live-idx-sep { opacity: 0.5; }
+
+  .formula-panel { display: none; flex-direction: column; gap: var(--space-3); }
+  .formula-panel.active { display: flex; }
+  .formula { border-radius: var(--r-lg); background: var(--surface-2); border: 1px solid var(--border); padding: var(--space-5); text-align: center; }
+  .formula .katex { font-size: 1.21em; }
+
+  .terms { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2); }
+  .term { display: inline-flex; align-items: center; gap: 2px; padding: 2px var(--space-3); border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--surface); font-family: var(--font-serif); font-weight: 600; color: var(--text); opacity: 1; transform: none; transition: opacity var(--dur-base) ease-out, transform var(--dur-base) ease-out; }
+  .term .term-symbol { font-style: italic; }
+  .term .term-label { font-family: var(--font-ui); font-size: var(--text-xs); color: var(--text-muted); }
+  .term.visible { transition-delay: calc(var(--i) * 40ms); }
+
+  .hero-live-controls { display: flex; justify-content: center; gap: var(--space-2); border-top: 1px solid var(--border); padding-top: var(--space-4); }
+  .icon-btn { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; border-radius: var(--r-md); background: var(--surface); color: var(--text-muted); cursor: pointer; }
+  .icon-btn:hover { background: var(--surface-2); color: var(--text); }
+  .icon-btn:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  .icon-btn svg { width: 18px; height: 18px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .term { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+
+  /* Sections */
+  .section { padding: var(--space-6) 0; border-top: 1px solid var(--border); }
+  .section:first-of-type { border-top: 0; padding-top: 0; }
+  .section-title { font-family: var(--font-serif); font-size: var(--text-2xl); font-weight: 600; color: var(--text); margin: 0 0 var(--space-4); }
+</style>
+
+<script is:inline>
+  (function () {
+    "use strict";
+
+    document.documentElement.classList.add("js");
+
+    // Champ de recherche du héros
+    var searchForms = document.querySelectorAll("form[data-home-search]");
+    Array.prototype.forEach.call(searchForms, function (form) {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var input = form.querySelector("input[name=\"q\\"]");
+        if (!input) { return; }
+        var query = input.value.trim();
+        if (!query) { return; }
+        window.location.href = "/fr/formules/?q=" + encodeURIComponent(query);
+      });
+    });
+
+    // Carte « formule vivante »
+    var carousels = document.querySelectorAll("[data-home-carousel]");
+    Array.prototype.forEach.call(carousels, function (carousel) {
+      var panels = carousel.querySelectorAll(".formula-panel");
+      if (panels.length < 2) { return; }
+      var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var index = 0;
+      var timer = null;
+
+      function showPanel(i) {
+        Array.prototype.forEach.call(panels, function (panel, pos) {
+          panel.classList.toggle("active", pos === i);
+        });
+        var terms = panels[i].querySelectorAll(".term");
+        Array.prototype.forEach.call(terms, function (term, pos) {
+          term.classList.add("visible");
+          term.style.transitionDelay = (reducedMotion ? "0ms" : (pos * 40) + "ms");
+          term.style.transform = reducedMotion ? "none" : "none";
+        });
+      }
+
+      function next() {
+        index = (index + 1) % panels.length;
+        showPanel(index);
+      }
+
+      showPanel(0);
+      timer = setInterval(next, 6000);
+
+      carousel.addEventListener("mouseenter", function () {
+        clearInterval(timer);
+        timer = null;
+      });
+
+      carousel.addEventListener("mouseleave", function () {
+        timer = setInterval(next, 6000);
+      });
+
+      carousel.querySelector("[data-home-prev]").addEventListener("click", function () {
+        clearInterval(timer);
+        index = (index - 1 + panels.length) % panels.length;
+        showPanel(index);
+      });
+
+      carousel.querySelector("[data-home-next]").addEventListener("click", function () {
+        clearInterval(timer);
+        next();
+      });
+
+      carousel.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") {
+          clearInterval(timer);
+          next();
+        } else if (event.key === "ArrowLeft") {
+          clearInterval(timer);
+          index = (index - 1 + panels.length) % panels.length;
+          showPanel(index);
+        }
+      });
+    });
+  })();
+</script>
