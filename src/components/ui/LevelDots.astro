@@ -1,0 +1,27 @@
+---
+import { t } from '@/i18n/index';
+import type { Lang } from '@/i18n/config';
+
+interface Props {
+  lang?: Lang;
+  level: number;
+  size?: 'sm' | 'md';
+}
+
+const { lang = 'fr', level = 1, size = 'md' } = Astro.props;
+const dot = size === 'sm' ? 'w-2 h-2' : 'w-2.5 h-2.5';
+const range = t(lang, `level.${level}.range` as import('@/i18n/index').TranslationKey);
+---
+
+<div
+  class="flex gap-1"
+  role="img"
+  aria-label={t(lang, 'level.label', { level }) + ' : ' + range}
+>
+  {[1, 2, 3, 4, 5, 6, 7].map((i) => (
+    <span
+      class={`${dot} rounded-full ${i <= level ? 'bg-primary' : 'border border-border-strong bg-transparent'}`}
+      aria-hidden="true"
+    />
+  ))}
+</div>

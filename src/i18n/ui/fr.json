@@ -179,5 +179,47 @@
 
   "error.404.title": "Page introuvable",
   "error.404.text": "Cette page n'existe pas ou a été déplacée.",
-  "fallback.notice": "Ce contenu n'est pas encore disponible dans ta langue ; il est affiché en français."
+  "fallback.notice": "Ce contenu n'est pas encore disponible dans ta langue ; il est affiché en français.",
+  "design": {
+    "title": "Bibliothèque de composants",
+    "subtitle": "Tous les composants de l'interface, dans tous leurs états et thèmes.",
+    "group": {
+      "button": "Bouton",
+      "chip": "Étiquette",
+      "level": "Niveau",
+      "difficulty": "Difficulté",
+      "callout": "Encadré",
+      "card": "Carte",
+      "breadcrumb": "Fil d'Ariane",
+      "empty": "État vide",
+      "math": "Formule mathématique"
+    },
+    "state": {
+      "primary": "Primaire",
+      "secondary": "Secondaire",
+      "quiet": "Discret",
+      "default": "Par défaut",
+      "selected": "Sélectionné",
+      "disabled": "Désactivé",
+      "loading": "Chargement"
+    },
+    "size": {
+      "sm": "Petit",
+      "md": "Moyen",
+      "lg": "Grand"
+    }
+  },
+  "callout": {
+    "tip": "Astuce",
+    "warning": "Attention",
+    "note": "Note"
+  },
+  "math": {
+    "displayLabel": "Afficher la formule",
+    "error": "Impossible d'afficher cette formule."
+  },
+  "empty": {
+    "title": "Aucun résultat",
+    "hint": "Essayez de modifier vos critères de recherche."
+  }
 }

@@ -1,5 +1,15 @@
 ---
-import { SUPPORTED_LANGS, DEFAULT_LANG, LANGS, type Lang } from '@/i18n/config';
+import { ViewTransitions } from 'astro:transitions';
+import {
+  SUPPORTED_LANGS,
+  DEFAULT_LANG,
+  LANGS,
+  type Lang,
+  localizedPath,
+} from '@/i18n/config';
+import { t } from '@/i18n/index';
+import Button from '@/components/ui/Button.astro';
+import ThemeToggle from '@/components/islands/ThemeToggle.tsx';
 
 interface Props {
   lang?: Lang;
@@ -10,35 +20,217 @@ interface Props {
 
 const { lang = DEFAULT_LANG, title, description, canonical } = Astro.props;
 const dir = LANGS[lang]?.dir ?? 'ltr';
+const siteName = t(lang, 'site.name');
+const formulesPath = localizedPath(lang, 'formules');
+const exercicesPath = localizedPath(lang, 'exercises');
+const reviserPath = localizedPath(lang, 'review');
+const progressionPath = localizedPath(lang, 'progress');
+const aboutPath = localizedPath(lang, 'about');
 ---
-
 <!DOCTYPE html>
 <html lang={lang} dir={dir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title ? `${title} — Formulo` : 'Formulo'}</title>
+    <title>{title ? `${title} — ${siteName}` : siteName}</title>
     {description && <meta name="description" content={description} />}
     {canonical && <link rel="canonical" href={canonical} />}
     {SUPPORTED_LANGS.map((l) => (
-      <link rel="alternate" hreflang={l} href={canonical ?? `/${l}/`} />
+      <link rel="alternate" hreflang={l} href={canonical ?? localizedPath(l, 'formules')} />
     ))}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <ViewTransitions />
+    <style is:global>
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: var(--dur-base);
+        animation-timing-function: var(--ease-out);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+          animation-duration: 0s !important;
+          animation-timing-function: linear !important;
+        }
+      }
+      @keyframes vt-fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes vt-fade-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+      ::view-transition-new(root) {
+        animation: vt-fade-in var(--dur-base) var(--ease-out);
+      }
+      ::view-transition-old(root) {
+        animation: vt-fade-out var(--dur-base) var(--ease-out);
+      }
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: var(--space-3);
+        margin: var(--space-3);
+        background: var(--surface);
+        border: 1px solid var(--border-strong);
+        color: var(--text);
+        z-index: var(--z-overlay);
+        text-decoration: none;
+        border-radius: var(--r-md);
+      }
+    </style>
     <script is:inline>
       (function () {
+        const KEY = 'formulo:theme:v1';
         try {
-          const stored = localStorage.getItem('theme');
+          const stored = localStorage.getItem(KEY);
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const theme = stored || (prefersDark ? 'dark' : 'light');
+          const theme =
+            stored === 'light' || stored === 'dark' ? stored : prefersDark ? 'dark' : 'light';
           document.documentElement.setAttribute('data-theme', theme);
+          window.addEventListener('theme-change', (e) => {
+            if (e instanceof CustomEvent && e.detail?.theme) {
+              document.documentElement.setAttribute('data-theme', String(e.detail.theme));
+            }
+          });
         } catch (e) {
           const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+          document.documentElement.setAttribute(
+            'data-theme',
+            prefersDark ? 'dark' : 'light',
+          );
         }
       })();
     </script>
   </head>
   <body>
-    <slot />
+    <a href="#main-content" class="skip-link">{t(lang, 'nav.skip')}</a>
+
+    <header class="sticky top-0 z-[var(--z-header)] border-b border-border bg-bg/95 backdrop-blur-md backdrop-blur-[8px]">
+      <div class="mx-auto max-w-[var(--w-content)] px-4 h-[var(--header-h)] flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3" aria-label={siteName}>
+          <img src="/logo-mark.svg" alt="" width="24" height="24" class="h-6 w-6" />
+          <span class="font-serif text-xl font-semibold tracking-tight text-text">{siteName}</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-5 text-sm font-sans">
+          <a
+            href={formulesPath}
+            class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]"
+          >
+            {t(lang, 'nav.formulas')}
+          </a>
+          <a
+            href={exercicesPath}
+            class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]"
+          >
+            {t(lang, 'nav.exercises')}
+          </a>
+          <a
+            href={reviserPath}
+            class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]"
+          >
+            {t(lang, 'nav.review')}
+          </a>
+          <a
+            href={progressionPath}
+            class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]"
+          >
+            {t(lang, 'nav.progress')}
+          </a>
+          <a
+            href={aboutPath}
+            class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]"
+          >
+            {t(lang, 'nav.about')}
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <Button variant="quiet" size="sm" href={formulesPath}>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+            <span>{t(lang, 'nav.search')}</span>
+          </Button>
+          <ThemeToggle client:idle lang={lang} />
+          {SUPPORTED_LANGS.length > 1 ? (
+            <button class="hidden" aria-label={t(lang, 'lang.switch')}>
+              …
+            </button>
+          ) : null}
+          <details class="md:hidden">
+            <summary
+              class="rounded-md p-2 text-text hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-[2px]"
+              aria-label={t(lang, 'nav.menu')}
+            >
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </summary>
+            <div class="absolute right-0 mt-2 w-48 rounded-lg border border-border bg-surface shadow-md py-2">
+              <a href={formulesPath} class="block px-4 py-2 text-sm text-text hover:bg-surface-2">{t(lang, 'nav.formulas')}</a>
+              <a href={exercicesPath} class="block px-4 py-2 text-sm text-text hover:bg-surface-2">{t(lang, 'nav.exercises')}</a>
+              <a href={reviserPath} class="block px-4 py-2 text-sm text-text hover:bg-surface-2">{t(lang, 'nav.review')}</a>
+              <a href={progressionPath} class="block px-4 py-2 text-sm text-text hover:bg-surface-2">{t(lang, 'nav.progress')}</a>
+              <a href={aboutPath} class="block px-4 py-2 text-sm text-text hover:bg-surface-2">{t(lang, 'nav.about')}</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="border-t border-border bg-surface mt-auto pt-10 pb-6">
+      <div class="mx-auto max-w-[var(--w-content)] px-4">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div class="flex items-center gap-3">
+            <img src="/logo-mark.svg" alt="" width="20" height="20" class="h-5 w-5" />
+            <span class="font-serif text-lg font-semibold tracking-tight text-text">{siteName}</span>
+          </div>
+          <nav class="flex flex-col md:flex-row gap-4 text-sm font-sans text-muted">
+            <a href={aboutPath} class="hover:text-primary transition-colors">{t(lang, 'footer.about')}</a>
+            <a href={localizedPath(lang, 'legal')} class="hover:text-primary transition-colors">{t(lang, 'footer.legal')}</a>
+            <a href={localizedPath(lang, 'privacy')} class="hover:text-primary transition-colors">{t(lang, 'footer.privacy')}</a>
+            <a href="#" class="hover:text-primary transition-colors">{t(lang, 'footer.feedback')}</a>
+          </nav>
+        </div>
+        <p class="mt-6 text-xs text-subtle text-center">
+          {t(lang, 'progress.localNotice')}
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,30 @@
+---
+import { t } from '@/i18n/index';
+import type { Lang } from '@/i18n/config';
+
+interface Props {
+  lang?: Lang;
+  items: { label: string; href?: string }[];
+  label?: string;
+}
+
+const { lang = 'fr', items = [], label } = Astro.props;
+---
+
+<nav aria-label={label ?? t(lang, 'breadcrumb.label') ?? 'Fil d\'Ariane'} class="flex flex-wrap gap-1 text-sm font-sans text-muted">
+  <ol class="flex flex-wrap gap-1">
+    {items.map((item, i) => {
+      const last = i === items.length - 1;
+      return (
+        <li class="flex items-center gap-1">
+          {i > 0 && (
+            <span class="text-subtle select-none" aria-hidden="true">
+              ›
+            </span>
+          )}
+          {last ? <span aria-current="page">{item.label}</span> : <a href={item.href}>{item.label}</a>}
+        </li>
+      );
+    })}
+  </ol>
+</nav>

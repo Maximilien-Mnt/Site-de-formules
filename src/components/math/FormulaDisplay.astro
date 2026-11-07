@@ -1,0 +1,39 @@
+---
+import katex from 'katex';
+import CopyButton from '@/components/islands/CopyButton.tsx';
+import { t } from '@/i18n/index';
+import type { Lang } from '@/i18n/config';
+
+interface Props {
+  latex: string;
+  lang?: Lang;
+  displayMode?: boolean;
+}
+
+const { latex, lang = 'fr', displayMode = true } = Astro.props;
+
+let html = '';
+let hasError = false;
+try {
+  html = katex.renderToString(latex, { displayMode, throwOnError: false });
+  hasError = /katex-error/.test(html);
+} catch {
+  hasError = true;
+  html = `<code class="text-muted font-mono text-sm">${String(latex).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
+}
+---
+
+<div class="rounded-lg border border-border bg-surface-2 p-8">
+  <div class="flex flex-col md:flex-row items-end justify-between gap-4 mb-4">
+    <h3 class="font-sans text-sm font-semibold text-muted uppercase tracking-widest">
+      {t(lang, 'math.displayLabel')}
+    </h3>
+    <CopyButton client:idle latex={latex} lang={lang} />
+  </div>
+  <div class="overflow-x-auto">
+    <div set:html={html} />
+  </div>
+  {hasError && (
+    <p class="mt-2 text-xs text-danger">{t(lang, 'math.error')}</p>
+  )}
+</div>

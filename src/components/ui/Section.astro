@@ -1,0 +1,21 @@
+---
+import { t } from '@/i18n/index';
+import type { Lang, TranslationKey } from '@/i18n/config';
+
+interface Props {
+  lang: Lang;
+  kind: string;
+}
+
+const { lang, kind } = Astro.props;
+---
+
+<section id={kind} class="mb-10">
+  <h2 id={kind} class="font-serif text-2xl font-semibold tracking-tight">
+    <a href={`#${kind}`} class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]" aria-hidden="true">
+      #
+    </a>
+    {t(lang, (`section.${kind}` as unknown) as TranslationKey)}
+  </h2>
+  <slot />
+</section>
