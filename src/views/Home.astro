@@ -286,6 +286,12 @@ const destinations = [
         if (!input) { return; }
         var query = input.value.trim();
         if (!query) { return; }
+        window.posthog?.capture("formula_search_submitted", {
+          query_length: query.length,
+        });
+        window.posthog?.logger?.info("formula search submitted", {
+          query_length: query.length,
+        });
         window.location.href = "/fr/formules/?q=" + encodeURIComponent(query);
       });
     });
