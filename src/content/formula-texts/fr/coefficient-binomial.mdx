@@ -1,0 +1,76 @@
+---
+title: Coefficients binomiaux et triangle de Pascal
+summary: Le coefficient binomial « k parmi n » compte les façons de choisir k éléments parmi n, sans tenir compte de l'ordre.
+aliases: [combinaisons, k parmi n, triangle de Pascal, factorielle, nombre de parties]
+keywords: [dénombrement, choisir, combinaison, factorielle, loto]
+variableNames:
+  n: Le nombre d'éléments disponibles
+  k: Le nombre d'éléments choisis (0 ≤ k ≤ n)
+variantLabels:
+  pascal: Relation de Pascal
+  symmetry: Symétrie
+---
+
+<Section kind="intuition">
+
+Dans une classe de 8 élèves, on choisit 3 délégués. Peu importe l'ordre dans lequel on les nomme : on compte des **groupes**, pas des listes. Le nombre de groupes possibles est le coefficient binomial « 3 parmi 8 ».
+
+</Section>
+
+<Section kind="explanation">
+
+On note $n! = n \times (n - 1) \times \dots \times 2 \times 1$ (« factorielle de $n$ »), avec $0! = 1$. Pour $0 \leq k \leq n$ :
+
+$$
+\binom{n}{k} = \frac{n!}{k!\,(n - k)!}
+$$
+
+**Exemple.** $\dbinom{8}{3} = \dfrac{8 \times 7 \times 6}{3 \times 2 \times 1} = \dfrac{336}{6} = 56$.
+
+**Symétrie.** Choisir $k$ éléments revient à choisir les $n - k$ qu'on laisse : $\dbinom{n}{k} = \dbinom{n}{n - k}$.
+
+**Triangle de Pascal.** Chaque nombre est la somme des deux au-dessus : $\dbinom{n}{k} = \dbinom{n-1}{k-1} + \dbinom{n-1}{k}$. La ligne $n = 5$ est : $1,\ 5,\ 10,\ 10,\ 5,\ 1$.
+
+</Section>
+
+<Section kind="proof">
+
+Pour choisir **dans l'ordre** $k$ éléments parmi $n$, il y a $n \times (n-1) \times \dots \times (n - k + 1) = \dfrac{n!}{(n-k)!}$ possibilités. Chaque groupe de $k$ éléments est obtenu de $k!$ manières différentes (les $k!$ ordres possibles). Le nombre de groupes est donc $\dfrac{n!}{k!\,(n-k)!}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Le triangle des coefficients binomiaux est décrit en Inde dès l'Antiquité (Pingala, puis Halayudha au Xe siècle), en Perse et en Chine (Yang Hui, XIIIe siècle). En Occident, il porte le nom de Blaise Pascal, dont le *Traité du triangle arithmétique* est publié en 1665. La notation $\binom{n}{k}$ date du XIXe siècle (Andreas von Ettingshausen, 1826).
+
+</Section>
+
+<Section kind="methods">
+
+1. Décide si l'**ordre compte** : s'il ne compte pas, c'est un coefficient binomial.
+2. Écris $\dbinom{n}{k} = \dfrac{n \times (n-1) \times \dots}{k!}$ avec $k$ facteurs au numérateur.
+3. Simplifie avant de multiplier.
+4. Utilise la symétrie pour choisir le plus petit $k$ : $\dbinom{50}{48} = \dbinom{50}{2} = 1\,225$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Loteries** : au loto « 6 numéros parmi 49 », il y a $\dbinom{49}{6} = 13\,983\,816$ tirages possibles.
+- **Probabilités** : base de la loi binomiale.
+- **Informatique et réseaux** : nombre de connexions possibles entre $n$ machines, $\dbinom{n}{2}$.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Utiliser un coefficient binomial quand l'**ordre compte** (il faut alors compter des listes).
+- Oublier que $0! = 1$.
+- Calculer $n!$ en entier alors qu'on peut simplifier : les nombres deviennent vite énormes.
+- Prendre $k > n$ : il n'y a alors aucun choix possible.
+
+</Callout>
+
+</Section>

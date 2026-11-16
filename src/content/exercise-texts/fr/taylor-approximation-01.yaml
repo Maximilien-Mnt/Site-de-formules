@@ -1,0 +1,9 @@
+title: Approcher e^0,5
+statement: |
+  À l'aide du développement de $e^{x}$ à l'ordre $3$ autour de $0$, donne une valeur approchée de $e^{0{,}5}$ (arrondie au dix-millième).
+hints:
+  - '$e^{x} \approx 1 + x + \dfrac{x^{2}}{2!} + \dfrac{x^{3}}{3!}$.'
+solution: |
+  $e^{0{,}5} \approx 1 + 0{,}5 + \dfrac{0{,}25}{2} + \dfrac{0{,}125}{6} = 1 + 0{,}5 + 0{,}125 + 0{,}0208\ldots \approx 1{,}6458$.
+
+  La valeur exacte est $e^{0{,}5} \approx 1{,}6487$ : l'erreur est d'environ $0{,}003$.

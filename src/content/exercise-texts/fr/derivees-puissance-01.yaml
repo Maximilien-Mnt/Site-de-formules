@@ -1,0 +1,7 @@
+title: Dériver une puissance
+statement: |
+  Soit $f(x) = x^{4}$. Calcule $f'(2)$.
+hints:
+  - 'Utilise $(x^{n})'' = n\,x^{n-1}$.'
+solution: |
+  $f'(x) = 4x^{3}$, donc $f'(2) = 4 \times 2^{3} = 4 \times 8 = 32$.

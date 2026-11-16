@@ -1,0 +1,15 @@
+title: Écrire une division euclidienne
+statement: |
+  Quelle égalité traduit la division euclidienne de $53$ par $8$ ?
+choices:
+  a: '$53 = 8 \times 6 + 5$'
+  b: '$53 = 8 \times 5 + 13$'
+  c: '$53 = 8 \times 7 - 3$'
+  d: '$53 = 8 \times 6{,}625$'
+hints:
+  - 'Le reste doit être positif ou nul, et strictement plus petit que 8.'
+solution: |
+  - a : $8 \times 6 + 5 = 53$ et $0 \leq 5 < 8$ : c'est la bonne écriture.
+  - b : l'égalité est vraie, mais le reste $13$ est plus grand que $8$.
+  - c : le « reste » est négatif.
+  - d : le quotient n'est pas un entier.

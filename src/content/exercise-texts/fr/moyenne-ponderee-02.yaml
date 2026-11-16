@@ -1,0 +1,9 @@
+title: Moyenne avec coefficients
+statement: |
+  Un élève a $14$ en mathématiques (coefficient $3$) et $10$ en français (coefficient $2$).
+  Calcule sa moyenne pondérée.
+hints:
+  - 'Multiplie chaque note par son coefficient avant d''additionner.'
+  - 'Divise ensuite par la somme des coefficients, pas par 2.'
+solution: |
+  $\bar{x} = \dfrac{14 \times 3 + 10 \times 2}{3 + 2} = \dfrac{42 + 20}{5} = \dfrac{62}{5} = 12{,}4$.

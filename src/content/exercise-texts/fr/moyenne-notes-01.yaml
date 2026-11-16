@@ -1,0 +1,10 @@
+title: Moyenne de cinq notes
+statement: |
+  Un élève a obtenu les notes $12$, $15$, $9$, $16$ et $13$.
+  Calcule sa moyenne.
+hints:
+  - 'Additionne les cinq notes, puis divise par le nombre de notes.'
+solution: |
+  Somme : $12 + 15 + 9 + 16 + 13 = 65$.
+
+  Moyenne : $\dfrac{65}{5} = 13$.

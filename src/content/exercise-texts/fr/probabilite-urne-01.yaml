@@ -1,0 +1,11 @@
+title: Tirer une boule rouge
+statement: |
+  Une urne contient $3$ boules rouges et $7$ boules noires, indiscernables au toucher.
+  On tire une boule au hasard. Quelle est la probabilité de tirer une boule rouge ?
+  (Donne le résultat sous forme décimale.)
+hints:
+  - 'Combien y a-t-il de boules en tout ? Combien sont rouges ?'
+solution: |
+  Il y a $3 + 7 = 10$ boules en tout, dont $3$ rouges.
+
+  $P(\text{rouge}) = \dfrac{3}{10} = 0{,}3$.

@@ -1,0 +1,19 @@
+subject: math
+domain: calculus
+topics: [derivative, product, quotient]
+level: 4
+difficulty: 3
+originYear: 1675 # approximatif : règle de Leibniz
+latex: '(uv)^{\prime} = u^{\prime}v + uv^{\prime}'
+variants:
+  - id: quotient
+    latex: '\left(\dfrac{u}{v}\right)^{\prime} = \dfrac{u^{\prime}v - uv^{\prime}}{v^{2}}'
+  - id: inverse
+    latex: '\left(\dfrac{1}{v}\right)^{\prime} = -\dfrac{v^{\prime}}{v^{2}}'
+variables:
+  - { symbol: 'u' }
+  - { symbol: 'v' }
+prerequisites: [derivees-usuelles]
+related: [integration-par-parties]
+confusedWith: []
+status: draft

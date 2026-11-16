@@ -1,0 +1,11 @@
+subject: math
+domain: linear-algebra
+level: 5
+difficulty: 1
+formulas: [determinant-inverse-2x2]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 10
+  tolerance: 0
+status: draft

@@ -1,0 +1,14 @@
+title: Quelle égalité est fausse ?
+statement: |
+  Pour $a > 0$ et $b > 0$, quelle égalité est **fausse** en général ?
+choices:
+  a: '$\ln(ab) = \ln a + \ln b$'
+  b: '$\ln(a + b) = \ln a + \ln b$'
+  c: '$\ln(a^{2}) = 2\ln a$'
+  d: '$\ln 1 = 0$'
+hints:
+  - 'Teste avec $a = b = 1$.'
+solution: |
+  La réponse **b** est fausse : avec $a = b = 1$, $\ln(1 + 1) = \ln 2 \approx 0{,}69$ alors que $\ln 1 + \ln 1 = 0$.
+
+  Les trois autres sont des propriétés du logarithme.

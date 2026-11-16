@@ -1,0 +1,79 @@
+---
+title: Théorème de Thalès
+summary: Si une droite parallèle à un côté d'un triangle coupe les deux autres côtés, les longueurs obtenues sont proportionnelles à celles du grand triangle.
+aliases: [théorème de Thalès, proportionnalité dans un triangle, droites parallèles, produit en croix, théorème d'intercept]
+keywords: [parallèles, rapport, proportionnel, agrandissement, réduction]
+variableNames:
+  AB: Longueur du côté [AB] du grand triangle
+  AC: Longueur du côté [AC] du grand triangle
+  BC: Longueur du côté [BC] du grand triangle (parallèle à [MN])
+  AM: Longueur du côté [AM] du petit triangle
+  AN: Longueur du côté [AN] du petit triangle
+  MN: Longueur du côté [MN] du petit triangle
+variantLabels:
+  cross-product: Produit en croix
+---
+
+<Section kind="intuition">
+
+Dans un triangle, trace une droite parallèle à l'un des côtés. Tu obtiens un **petit triangle** qui est une réduction du grand : tous ses côtés sont réduits dans le **même rapport**.
+
+</Section>
+
+<Section kind="explanation">
+
+Soit $ABC$ un triangle, $M$ un point de la droite $(AB)$ et $N$ un point de la droite $(AC)$. Si $(MN) \parallel (BC)$, alors :
+
+$$
+\frac{AM}{AB} = \frac{AN}{AC} = \frac{MN}{BC}
+$$
+
+**Exemple.** On a $AB = 9$, $AM = 3$ et $BC = 12$. Le rapport est $\dfrac{AM}{AB} = \dfrac{3}{9} = \dfrac{1}{3}$, donc $MN = \dfrac{1}{3} \times 12 = 4$.
+
+**La réciproque.** Si les points $A$, $M$, $B$ sont alignés dans le même ordre que $A$, $N$, $C$, et si $\dfrac{AM}{AB} = \dfrac{AN}{AC}$, alors $(MN) \parallel (BC)$. On s'en sert pour **prouver** que deux droites sont parallèles.
+
+<Callout type="tip" title="À retenir">
+
+Les numérateurs sont les côtés du **petit** triangle, les dénominateurs ceux du **grand** triangle.
+
+</Callout>
+
+</Section>
+
+<Section kind="history">
+
+Thalès de Milet (vers 625 – 547 av. J.-C.) est traditionnellement associé à cette idée : selon une tradition rapportée par des auteurs antiques, il aurait mesuré la hauteur d'une pyramide grâce à la longueur de son ombre. Une démonstration figure dans les *Éléments* d'Euclide (livre VI, proposition 2).
+
+En anglais, l'expression « Thales' theorem » désigne un autre résultat (un angle inscrit dans un demi-cercle est droit) ; notre théorème s'y appelle « intercept theorem ».
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère les deux droites parallèles et le sommet commun $A$.
+2. Écris les trois rapports en mettant le petit triangle en haut et le grand en bas.
+3. Choisis les deux rapports qui contiennent ta longueur inconnue.
+4. Résous avec le produit en croix : $\dfrac{x}{a} = \dfrac{b}{c}$ donne $x = \dfrac{a \times b}{c}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Hauteurs inaccessibles** : un arbre ou un bâtiment mesuré grâce à son ombre et à celle d'un bâton.
+- **Cartes et plans** : changer d'échelle revient à multiplier toutes les longueurs par le même rapport.
+- **Agrandissement et réduction** : photos, maquettes et dessins techniques.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Utiliser le théorème **sans avoir vérifié** que les droites sont parallèles.
+- Écrire $\dfrac{AM}{MB}$ au lieu de $\dfrac{AM}{AB}$ : on compare un morceau au côté **entier**.
+- Mélanger les côtés des deux triangles (par exemple $\dfrac{AM}{AB} = \dfrac{BC}{MN}$).
+- Confondre avec Pythagore : Thalès parle de rapports et de parallèles, Pythagore d'angle droit et de carrés.
+
+</Callout>
+
+</Section>

@@ -1,0 +1,16 @@
+title: Mettre sous forme canonique
+statement: |
+  Quelle est la forme canonique de $x^{2} + 4x + 1$ ?
+choices:
+  a: '$(x + 2)^{2} - 3$'
+  b: '$(x + 2)^{2} + 1$'
+  c: '$(x - 2)^{2} - 3$'
+  d: '$(x + 4)^{2} - 15$'
+hints:
+  - 'Calcule $\alpha = -\dfrac{b}{2a}$, puis $\beta = f(\alpha)$.'
+solution: |
+  $\alpha = -\dfrac{4}{2} = -2$ et $\beta = f(-2) = 4 - 8 + 1 = -3$.
+
+  Donc $x^{2} + 4x + 1 = (x - (-2))^{2} - 3 = (x + 2)^{2} - 3$.
+
+  Vérification : $(x + 2)^{2} - 3 = x^{2} + 4x + 4 - 3 = x^{2} + 4x + 1$.

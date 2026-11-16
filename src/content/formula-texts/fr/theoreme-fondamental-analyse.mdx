@@ -1,0 +1,87 @@
+---
+title: Théorème fondamental de l'analyse
+summary: L'intégrale d'une fonction continue entre a et b s'obtient avec une primitive F de f, par la différence F(b) − F(a).
+aliases: [théorème fondamental, intégrale, primitive, calcul d'aire, aire sous la courbe]
+keywords: [intégrale, primitive, aire, dérivée, calcul intégral]
+variableNames:
+  f: Une fonction continue
+  F: Une primitive de f (c'est-à-dire F' = f)
+  a: La borne inférieure
+  b: La borne supérieure
+  x: La variable
+  t: La variable d'intégration
+  n: Un entier différent de −1
+  C: Une constante quelconque
+variantLabels:
+  derivative-of-integral: Dérivée d'une intégrale
+  power-primitive: Primitive d'une puissance
+---
+
+<Section kind="intuition">
+
+Pour calculer l'aire sous une courbe, on pourrait découper en rectangles très fins. Le théorème fondamental permet un raccourci spectaculaire : **dériver** et **calculer une aire** sont deux opérations inverses. Il suffit de trouver une fonction dont la dérivée est $f$, et de regarder sa variation entre $a$ et $b$.
+
+</Section>
+
+<Section kind="explanation">
+
+Une **primitive** de $f$ est une fonction $F$ telle que $F' = f$. Si $f$ est continue sur $[a\,;\,b]$ :
+
+$$
+\int_{a}^{b} f(x)\,dx = F(b) - F(a) = \Big[F(x)\Big]_{a}^{b}
+$$
+
+Si $f \geq 0$, cette intégrale est l'**aire** comprise entre la courbe, l'axe des abscisses et les droites $x = a$ et $x = b$.
+
+**Exemple.** $\displaystyle\int_{0}^{3} x^{2}\,dx = \left[\frac{x^{3}}{3}\right]_{0}^{3} = 9 - 0 = 9$.
+
+**Autre exemple.** $\displaystyle\int_{1}^{2} (2x + 1)\,dx = \Big[x^{2} + x\Big]_{1}^{2} = 6 - 2 = 4$.
+
+Une primitive est définie à une **constante** près, mais la constante disparaît dans $F(b) - F(a)$.
+
+</Section>
+
+<Section kind="proof">
+
+Idée de la démonstration. Notons $A(x) = \displaystyle\int_{a}^{x} f(t)\,dt$ l'aire jusqu'à $x$. Entre $x$ et $x + h$, l'aire ajoutée est presque un rectangle de largeur $h$ et de hauteur $f(x)$ : $A(x + h) - A(x) \approx f(x)\,h$. Donc $A'(x) = f(x)$ : $A$ est une primitive de $f$. Toute primitive $F$ diffère de $A$ d'une constante, d'où $F(b) - F(a) = A(b) - A(a) = A(b)$. ∎
+
+(Cette démonstration est une esquisse ; la version rigoureuse utilise la continuité de $f$.)
+
+</Section>
+
+<Section kind="history">
+
+Le lien entre aires et tangentes a été entrevu par Isaac Barrow et James Gregory au XVIIe siècle, puis exploité par Isaac Newton et Gottfried Wilhelm Leibniz dans les années 1670. Leibniz introduit le symbole $\int$ (un « S » allongé, pour *summa*). Bernhard Riemann en donne une définition rigoureuse au milieu du XIXe siècle.
+
+</Section>
+
+<Section kind="methods">
+
+1. Cherche une primitive $F$ de $f$ (avec le tableau des dérivées lu à l'envers).
+2. Calcule $F(b)$ et $F(a)$.
+3. Soustrais : $F(b) - F(a)$.
+
+Pour une puissance : $\displaystyle\int x^{n}\,dx = \frac{x^{n+1}}{n+1} + C$ ($n \neq -1$).
+
+</Section>
+
+<Section kind="applications">
+
+- **Aires et volumes** de formes courbes.
+- **Physique** : de la vitesse à la distance parcourue, du débit au volume écoulé.
+- **Probabilités** : une probabilité est l'intégrale d'une densité.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Inverser les bornes : c'est $F(b) - F(a)$, pas $F(a) - F(b)$.
+- Dériver au lieu de chercher une primitive (ou l'inverse).
+- Oublier que $\displaystyle\int \dfrac{1}{x}\,dx$ vaut $\ln|x| + C$ : la formule des puissances exclut $n = -1$.
+- Interpréter l'intégrale d'une fonction négative comme une aire positive : elle compte négativement.
+
+</Callout>
+
+</Section>

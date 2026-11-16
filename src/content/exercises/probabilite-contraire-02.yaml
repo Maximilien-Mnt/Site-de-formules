@@ -1,0 +1,10 @@
+subject: math
+domain: probability
+level: 3
+difficulty: 1
+formulas: [probabilite-equiprobable]
+kind: qcm
+estimatedMinutes: 1
+choices: [a, b, c, d]
+correct: [b]
+status: draft

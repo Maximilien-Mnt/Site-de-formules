@@ -1,0 +1,74 @@
+---
+title: Logarithme népérien et ses propriétés
+summary: Le logarithme népérien ln est la réciproque de l'exponentielle. Il transforme les produits en sommes, pour des nombres strictement positifs.
+aliases: [logarithme, ln, logarithme népérien, logarithme naturel, réciproque de exp]
+keywords: [ln, produit en somme, puissance, équation, exponentielle]
+variableNames:
+  a: Un réel strictement positif
+  b: Un autre réel strictement positif
+  n: Un entier
+  x: La variable
+variantLabels:
+  quotient: Quotient
+  power: Puissance
+  inverse: Fonction réciproque de l'exponentielle
+  derivative: Dérivée
+---
+
+<Section kind="intuition">
+
+L'exponentielle répond à « quel nombre obtient-on en partant de 1 avec une croissance continue de durée $x$ ? ». Le logarithme répond à la question **inverse** : « combien de temps faut-il pour atteindre le nombre $a$ ? ». Comme les durées s'additionnent quand les facteurs de croissance se multiplient, $\ln$ transforme les produits en sommes.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour $a > 0$ et $b > 0$, et pour tout entier $n$ :
+
+$$
+\ln(ab) = \ln a + \ln b \qquad \ln\frac{a}{b} = \ln a - \ln b \qquad \ln(a^{n}) = n\ln a
+$$
+
+$\ln$ est la réciproque de l'exponentielle : $e^{\ln a} = a$ et $\ln(e^{x}) = x$. De plus, $\ln 1 = 0$, $\ln e = 1$ et $(\ln x)' = \dfrac{1}{x}$.
+
+**Exemple.** $\ln 8 = \ln(2^{3}) = 3\ln 2 \approx 3 \times 0{,}693 = 2{,}079$.
+
+**Résoudre une équation.** $e^{x} = 5$ équivaut à $x = \ln 5 \approx 1{,}609$.
+
+</Section>
+
+<Section kind="history">
+
+John Napier publie en 1614 sa table de logarithmes (*Mirifici logarithmorum canonis descriptio*) pour simplifier les calculs d'astronomie ; Henry Briggs en propose ensuite une version en base 10. Les logarithmes ont permis, pendant plus de trois siècles, de remplacer les multiplications par des additions (règle à calcul, tables). Le « logarithme népérien » doit son nom à Napier, même si ses logarithmes originaux diffèrent légèrement de $\ln$.
+
+</Section>
+
+<Section kind="methods">
+
+1. Vérifie que les nombres dont tu prends le logarithme sont **strictement positifs**.
+2. Pour **simplifier** : transforme produits, quotients et puissances en sommes, différences et multiples.
+3. Pour **résoudre** $e^{x} = k$ : prends $\ln$ des deux côtés ; pour $\ln x = k$ : prends l'exponentielle.
+4. Pour **inéquations** : $\ln$ est croissante, donc elle conserve l'ordre.
+
+</Section>
+
+<Section kind="applications">
+
+- **Échelles logarithmiques** : décibels, magnitude des séismes, pH.
+- **Durées** : temps de doublement d'un capital, demi-vie d'un élément radioactif.
+- **Informatique** : complexité d'algorithmes en $\ln n$ ou $\log_{2} n$.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- $\ln(a + b) \neq \ln a + \ln b$ : il n'existe pas de formule simple pour le logarithme d'une somme.
+- Oublier la condition $a > 0$ : $\ln(-3)$ n'existe pas.
+- Écrire $\ln(a^{n}) = (\ln a)^{n}$ au lieu de $n\ln a$.
+- Confondre $\ln$ (base $e$) et $\log$ (base 10 dans beaucoup de calculatrices).
+
+</Callout>
+
+</Section>

@@ -1,0 +1,81 @@
+---
+title: Somme et produit des racines
+summary: Si l'équation ax² + bx + c = 0 a deux solutions x1 et x2, leur somme vaut −b/a et leur produit vaut c/a.
+aliases: [relations de Viète, somme et produit des racines, relations coefficients racines, racine évidente]
+keywords: [second degré, racines, somme, produit, équation]
+variableNames:
+  a: Le coefficient de x² (a ≠ 0)
+  b: Le coefficient de x
+  c: Le terme constant
+  'x_{1}': Une première racine
+  'x_{2}': La seconde racine
+variantLabels:
+  sum: Somme des racines
+  product: Produit des racines
+---
+
+<Section kind="intuition">
+
+Les deux solutions d'une équation du second degré ne sont pas indépendantes des coefficients : leur **somme** et leur **produit** se lisent directement dessus, sans calculer le discriminant ni les racines.
+
+</Section>
+
+<Section kind="explanation">
+
+Si l'équation $ax^{2} + bx + c = 0$ ($a \neq 0$) a deux solutions $x_{1}$ et $x_{2}$ (éventuellement égales) :
+
+$$
+x_{1} + x_{2} = -\frac{b}{a} \qquad\text{et}\qquad x_{1}\,x_{2} = \frac{c}{a}
+$$
+
+**Exemple.** Pour $x^{2} - 7x + 12 = 0$ : somme $= 7$ et produit $= 12$. Les nombres $3$ et $4$ conviennent ($3 + 4 = 7$ et $3 \times 4 = 12$).
+
+**Utilisation réciproque.** Deux nombres de somme $S$ et de produit $P$ sont les solutions de $x^{2} - Sx + P = 0$.
+
+**Racine évidente.** Si l'on connaît une racine $x_{1}$ (par exemple $1$), la somme ou le produit donne immédiatement l'autre.
+
+</Section>
+
+<Section kind="proof">
+
+Avec $x_{1} = \dfrac{-b - \sqrt{\Delta}}{2a}$ et $x_{2} = \dfrac{-b + \sqrt{\Delta}}{2a}$ :
+
+- Somme : $x_{1} + x_{2} = \dfrac{-2b}{2a} = -\dfrac{b}{a}$.
+- Produit : $x_{1}\,x_{2} = \dfrac{b^{2} - \Delta}{4a^{2}} = \dfrac{4ac}{4a^{2}} = \dfrac{c}{a}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Ces relations portent le nom de François Viète (1540 – 1603), qui a introduit une écriture algébrique avec des lettres pour les inconnues et les paramètres. Albert Girard a énoncé en 1629 des relations analogues pour les équations de degré supérieur.
+
+</Section>
+
+<Section kind="methods">
+
+1. Écris $S = -\dfrac{b}{a}$ et $P = \dfrac{c}{a}$.
+2. Cherche deux nombres dont la somme est $S$ et le produit est $P$ (en essayant les diviseurs de $P$).
+3. Ou, si tu connais une racine, déduis l'autre par $x_{2} = S - x_{1}$ ou $x_{2} = \dfrac{P}{x_{1}}$.
+4. Vérifie dans l'équation de départ.
+
+</Section>
+
+<Section kind="applications">
+
+- **Résoudre vite** une équation à coefficients entiers.
+- **Vérifier** ses résultats après un calcul avec le discriminant.
+- **Problèmes inverses** : construire une équation dont on impose les racines.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier le **signe moins** dans la somme : $x_{1} + x_{2} = -\dfrac{b}{a}$.
+- Oublier de diviser par $a$ quand $a \neq 1$.
+- Utiliser ces relations quand l'équation n'a **pas de racines réelles** ($\Delta < 0$).
+
+</Callout>
+
+</Section>

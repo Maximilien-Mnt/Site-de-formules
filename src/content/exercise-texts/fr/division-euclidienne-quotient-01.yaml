@@ -1,0 +1,10 @@
+title: Quotient d'une division
+statement: |
+  On effectue la division euclidienne de $47$ par $6$.
+  Quel est le quotient ?
+hints:
+  - 'Cherche le plus grand multiple de 6 qui ne dépasse pas 47.'
+solution: |
+  $6 \times 7 = 42$ et $6 \times 8 = 48 > 47$.
+
+  Le quotient est donc $7$, et le reste est $47 - 42 = 5$ : $47 = 6 \times 7 + 5$.

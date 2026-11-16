@@ -1,0 +1,90 @@
+---
+title: Variance et écart type
+summary: La variance mesure la dispersion d'une série autour de sa moyenne. L'écart type en est la racine carrée et s'exprime dans la même unité que les données.
+aliases: [écart type, écart-type, dispersion, variance d'une série, sigma, formule de König]
+keywords: [dispersion, moyenne, statistiques, écart, étalement]
+variableNames:
+  V: La variance
+  '\sigma': L'écart type
+  'x_{i}': Une valeur de la série
+  '\bar{x}': La moyenne de la série
+  n: Le nombre de valeurs
+variantLabels:
+  koenig: Formule de König (moyenne des carrés moins carré de la moyenne)
+---
+
+<Section kind="intuition">
+
+Deux classes ont la même moyenne de 10, mais dans l'une toutes les notes sont proches de 10, et dans l'autre elles vont de 2 à 18. La moyenne ne dit rien de cette **dispersion**. La variance mesure l'écart moyen (au carré) entre chaque valeur et la moyenne.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour une série $x_{1}, \dots, x_{n}$ de moyenne $\bar{x}$ :
+
+$$
+V = \frac{1}{n}\sum_{i=1}^{n}\left(x_{i} - \bar{x}\right)^{2} \qquad\text{et}\qquad \sigma = \sqrt{V}
+$$
+
+**Exemple.** Série : $2,\ 4,\ 4,\ 4,\ 5,\ 5,\ 7,\ 9$. La moyenne vaut $5$. Les carrés des écarts à la moyenne sont $9,\ 1,\ 1,\ 1,\ 0,\ 0,\ 4,\ 16$, de somme $32$. Donc $V = \dfrac{32}{8} = 4$ et $\sigma = 2$.
+
+**Formule de König.** Ici, la moyenne des carrés est $\dfrac{232}{8} = 29$, et $V = 29 - 5^{2} = 4$. Cette formule évite de calculer chaque écart.
+
+**Effets d'un changement.** Ajouter une constante à toutes les valeurs ne change pas $\sigma$. Multiplier toutes les valeurs par $k$ multiplie $\sigma$ par $|k|$.
+
+<Callout type="note" title="Population ou échantillon">
+
+Pour estimer la dispersion d'une population à partir d'un échantillon, on divise souvent par $n - 1$ au lieu de $n$ (variance corrigée). Au lycée, on divise par $n$.
+
+</Callout>
+
+</Section>
+
+<Section kind="proof">
+
+On développe la somme des carrés des écarts, en utilisant $\sum x_{i} = n\bar{x}$ :
+
+$\sum (x_{i} - \bar{x})^{2} = \sum x_{i}^{2} - 2\bar{x}\sum x_{i} + n\bar{x}^{2} = \sum x_{i}^{2} - 2n\bar{x}^{2} + n\bar{x}^{2} = \sum x_{i}^{2} - n\bar{x}^{2}$.
+
+En divisant par $n$, on obtient la formule de König. ∎
+
+</Section>
+
+<Section kind="history">
+
+Le terme « écart type » (*standard deviation* en anglais) est introduit par Karl Pearson en 1893. Le mot « variance » est popularisé par Ronald Fisher à partir de 1918. Les idées sous-jacentes (mesurer les erreurs de mesure en les élevant au carré) remontent à Gauss et Laplace.
+
+</Section>
+
+<Section kind="methods">
+
+1. Calcule la moyenne $\bar{x}$.
+2. Calcule l'écart de chaque valeur à la moyenne, puis élève-le **au carré**.
+3. Fais la moyenne de ces carrés : c'est la variance.
+4. Prends la racine carrée pour obtenir l'écart type.
+
+Pour comparer des séries, regarde la moyenne **et** l'écart type ensemble.
+
+</Section>
+
+<Section kind="applications">
+
+- **Sciences** : exprimer l'incertitude sur une mesure répétée.
+- **Finance** : la volatilité d'un placement est un écart type.
+- **Contrôle qualité** : repérer une production dont les pièces sont trop dispersées.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier d'élever les écarts **au carré** : leur somme sans carré vaut toujours $0$.
+- Oublier la racine carrée : la variance est dans l'unité **au carré**.
+- Confondre variance et écart type.
+- Confondre la dispersion (écart type) avec la valeur centrale (moyenne).
+
+</Callout>
+
+</Section>

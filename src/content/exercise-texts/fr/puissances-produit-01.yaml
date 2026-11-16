@@ -1,0 +1,7 @@
+title: Produit de puissances
+statement: |
+  Calcule $2^{5} \times 2^{3}$.
+hints:
+  - 'Les deux puissances ont la même base : que fait-on des exposants ?'
+solution: |
+  $2^{5} \times 2^{3} = 2^{5+3} = 2^{8} = 256$.

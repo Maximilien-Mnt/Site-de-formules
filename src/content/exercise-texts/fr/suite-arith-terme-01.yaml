@@ -1,0 +1,8 @@
+title: Calculer un terme
+statement: |
+  $(u_{n})$ est une suite arithmétique de premier terme $u_{0} = 5$ et de raison $r = 3$.
+  Calcule $u_{10}$.
+hints:
+  - 'Utilise $u_{n} = u_{0} + n \times r$.'
+solution: |
+  $u_{10} = u_{0} + 10 \times r = 5 + 10 \times 3 = 35$.

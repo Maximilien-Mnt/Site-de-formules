@@ -1,0 +1,19 @@
+subject: math
+domain: discrete
+topics: [combinatorics, pascal-triangle, counting]
+level: 4
+difficulty: 3
+originYear: -200 # approximatif : Pingala (Inde), triangle des combinaisons
+latex: '\binom{n}{k} = \dfrac{n!}{k!\,(n - k)!}'
+variants:
+  - id: pascal
+    latex: '\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}'
+  - id: symmetry
+    latex: '\binom{n}{k} = \binom{n}{n-k}'
+variables:
+  - { symbol: 'n' }
+  - { symbol: 'k' }
+prerequisites: []
+related: [binome-newton, loi-binomiale, somme-premiers-entiers]
+confusedWith: []
+status: draft

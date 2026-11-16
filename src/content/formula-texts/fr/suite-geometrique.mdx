@@ -1,0 +1,88 @@
+---
+title: Suite géométrique
+summary: Dans une suite géométrique, on passe d'un terme au suivant en multipliant toujours par la même raison q. Le terme de rang n vaut u0 × q^n.
+aliases: [progression géométrique, raison, croissance exponentielle, intérêts composés, terme général]
+keywords: [raison, multiplier, puissance, intérêts, croissance, décroissance]
+variableNames:
+  'u_{n}': Le terme de rang n
+  'u_{0}': Le terme initial (rang 0)
+  q: La raison (le nombre par lequel on multiplie)
+  n: Le rang du terme
+  S: La somme des termes de u0 à un
+variantLabels:
+  sum: Somme des n + 1 premiers termes
+---
+
+<Section kind="intuition">
+
+Un placement à 5 % par an : chaque année, le capital est **multiplié par 1,05**. La suite $1000,\ 1050,\ 1102{,}5,\ \dots$ ne grandit pas de la même quantité chaque année, mais dans le même **rapport**.
+
+</Section>
+
+<Section kind="explanation">
+
+Une suite $(u_{n})$ est **géométrique** de raison $q$ si $u_{n+1} = q \times u_{n}$ pour tout $n$. Alors :
+
+$$
+u_{n} = u_{0} \times q^{n}
+$$
+
+**Exemple.** $u_{0} = 3$ et $q = 2$ : $u_{5} = 3 \times 2^{5} = 96$.
+
+**Évolution en pourcentage.** Une hausse de $t\,\%$ revient à multiplier par $q = 1 + \dfrac{t}{100}$ ; une baisse de $t\,\%$, par $q = 1 - \dfrac{t}{100}$. Un capital de 1 000 € à 5 % pendant 2 ans vaut $1000 \times 1{,}05^{2} = 1\,102{,}50$ €.
+
+**Somme des termes** (pour $q \neq 1$) :
+
+$$
+S = u_{0} + u_{1} + \dots + u_{n} = u_{0} \times \frac{1 - q^{n+1}}{1 - q}
+$$
+
+Avec $u_{0} = 3$, $q = 2$, $n = 4$ : $3 + 6 + 12 + 24 + 48 = 3 \times \dfrac{1 - 2^{5}}{1 - 2} = 93$.
+
+</Section>
+
+<Section kind="proof">
+
+Soit $S = u_{0}(1 + q + q^{2} + \dots + q^{n})$. En multipliant par $q$ :
+
+$qS = u_{0}(q + q^{2} + \dots + q^{n} + q^{n+1})$.
+
+On soustrait : $S - qS = u_{0}(1 - q^{n+1})$, donc $S = u_{0} \dfrac{1 - q^{n+1}}{1 - q}$ si $q \neq 1$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Les *Éléments* d'Euclide (vers 300 av. J.-C., livre IX) contiennent une formule pour la somme d'une progression géométrique. Archimède (vers 250 av. J.-C.) utilise une somme de ce type, de raison $\frac{1}{4}$, pour calculer l'aire d'un segment de parabole.
+
+</Section>
+
+<Section kind="methods">
+
+1. **Reconnaître** une suite géométrique : le quotient $\dfrac{u_{n+1}}{u_{n}}$ est constant.
+2. **Calculer la raison** : $q = \dfrac{u_{n+1}}{u_{n}}$.
+3. **Calculer un terme** : $u_{n} = u_{0} \times q^{n}$.
+4. **Calculer une somme** : attention au nombre de termes ($n + 1$) et au cas $q = 1$ (alors $S = (n + 1)\,u_{0}$).
+
+</Section>
+
+<Section kind="applications">
+
+- **Finance** : intérêts composés, remboursement d'un prêt.
+- **Démographie et biologie** : croissance d'une population, désintégration radioactive.
+- **Informatique** : doublement à chaque étape (nombre de nœuds d'un arbre binaire).
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Confondre suite géométrique (on **multiplie**) et suite arithmétique (on **ajoute**).
+- Écrire $u_{0} \times q \times n$ au lieu de $u_{0} \times q^{n}$.
+- Calculer une baisse de 20 % avec $q = 0{,}2$ au lieu de $q = 0{,}8$.
+- Appliquer la formule de somme quand $q = 1$.
+
+</Callout>
+
+</Section>

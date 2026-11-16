@@ -1,0 +1,14 @@
+title: Quelle égalité est vraie ?
+statement: |
+  Quelle égalité est vraie pour tous les réels $a$ et $b$ ?
+choices:
+  a: '$e^{a + b} = e^{a} \times e^{b}$'
+  b: '$e^{a + b} = e^{a} + e^{b}$'
+  c: '$e^{ab} = e^{a} \times e^{b}$'
+  d: '$(e^{a})^{b} = e^{a + b}$'
+hints:
+  - 'Teste avec $a = b = 0$ : $e^{0} = 1$.'
+solution: |
+  La propriété fondamentale est $e^{a+b} = e^{a} \times e^{b}$ : la réponse **a** est correcte.
+
+  Avec $a = b = 0$, la réponse b donne $1 = 2$ : fausse. La réponse d devrait être $(e^{a})^{b} = e^{ab}$.

@@ -1,0 +1,22 @@
+subject: math
+domain: algebra
+topics: [quadratic-equations, roots]
+level: 4
+difficulty: 3
+originYear: 1600 # approximatif : relations coefficients-racines (Viète, Girard)
+latex: 'x_{1} + x_{2} = -\dfrac{b}{a} \qquad x_{1}\,x_{2} = \dfrac{c}{a}'
+variants:
+  - id: sum
+    latex: 'x_{1} + x_{2} = -\dfrac{b}{a}'
+  - id: product
+    latex: 'x_{1}\,x_{2} = \dfrac{c}{a}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'c' }
+  - { symbol: 'x_{1}' }
+  - { symbol: 'x_{2}' }
+prerequisites: [discriminant-trinome]
+related: [forme-canonique-trinome]
+confusedWith: []
+status: draft

@@ -1,0 +1,12 @@
+title: Somme des racines
+statement: |
+  L'équation $2x^{2} - 10x + 8 = 0$ a deux solutions $x_{1}$ et $x_{2}$.
+  Calcule $x_{1} + x_{2}$ sans résoudre l'équation.
+hints:
+  - 'Repère $a$ et $b$, puis utilise $-\dfrac{b}{a}$.'
+solution: |
+  Ici $a = 2$ et $b = -10$.
+
+  $x_{1} + x_{2} = -\dfrac{b}{a} = -\dfrac{-10}{2} = 5$.
+
+  (Les solutions sont $1$ et $4$ : $1 + 4 = 5$ et $1 \times 4 = 4 = \dfrac{8}{2}$.)

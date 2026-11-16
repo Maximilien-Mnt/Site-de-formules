@@ -1,0 +1,32 @@
+subject: math
+domain: calculus
+topics: [logarithm, functions]
+level: 5
+difficulty: 2
+originYear: 1614 # approximatif : Napier, Mirifici logarithmorum canonis descriptio
+latex: '\ln(ab) = \ln a + \ln b'
+variants:
+  - id: quotient
+    latex: '\ln\dfrac{a}{b} = \ln a - \ln b'
+  - id: power
+    latex: '\ln(a^{n}) = n\,\ln a'
+  - id: inverse
+    latex: 'e^{\ln a} = a \quad\text{et}\quad \ln(e^{x}) = x'
+  - id: derivative
+    latex: '(\ln x)^{\prime} = \dfrac{1}{x}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'n' }
+  - { symbol: 'x' }
+prerequisites: [exponentielle-proprietes]
+related: [exponentielle-proprietes]
+confusedWith: []
+graph:
+  kind: function
+  expressions: ['log(x)']
+  params: []
+  viewport:
+    x: [0.05, 8]
+    y: [-3, 3]
+status: draft

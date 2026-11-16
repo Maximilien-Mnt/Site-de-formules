@@ -1,0 +1,14 @@
+title: Utiliser la symétrie
+statement: |
+  Quel nombre est égal à $\dbinom{10}{3}$ ?
+choices:
+  a: '$\dbinom{10}{7}$'
+  b: '$\dbinom{10}{6}$'
+  c: '$\dbinom{7}{3}$'
+  d: '$\dbinom{3}{10}$'
+hints:
+  - 'Choisir 3 éléments, c''est aussi choisir ceux qu''on ne prend pas.'
+solution: |
+  $\dbinom{n}{k} = \dbinom{n}{n - k}$, donc $\dbinom{10}{3} = \dbinom{10}{7}$.
+
+  La réponse d n'a pas de sens : on ne peut pas choisir 10 éléments parmi 3.

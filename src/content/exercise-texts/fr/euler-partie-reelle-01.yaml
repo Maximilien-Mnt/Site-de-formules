@@ -1,0 +1,11 @@
+title: Une partie réelle
+statement: |
+  Quelle est la partie réelle du nombre complexe $e^{i\pi/3}$ ?
+  (Résultat décimal.)
+hints:
+  - 'Utilise $e^{i\theta} = \cos\theta + i\sin\theta$.'
+  - 'Que vaut $\cos\dfrac{\pi}{3}$ ?'
+solution: |
+  $e^{i\pi/3} = \cos\dfrac{\pi}{3} + i\sin\dfrac{\pi}{3}$.
+
+  La partie réelle est $\cos\dfrac{\pi}{3} = \dfrac{1}{2} = 0{,}5$.

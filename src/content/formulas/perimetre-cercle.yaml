@@ -1,0 +1,21 @@
+subject: math
+domain: geometry
+topics: [circle, perimeter, pi]
+level: 3
+difficulty: 1
+originYear: -1800 # approximatif : mesures babyloniennes (circonférence ≈ 3 × diamètre)
+latex: 'P = 2 \pi r'
+variants:
+  - id: diameter
+    latex: 'P = \pi d'
+  - id: radius
+    latex: 'r = \dfrac{P}{2\pi}'
+variables:
+  - { symbol: 'P' }
+  - { symbol: 'r' }
+  - { symbol: 'd' }
+  - { symbol: '\pi' }
+prerequisites: []
+related: [aire-disque]
+confusedWith: [aire-disque]
+status: draft

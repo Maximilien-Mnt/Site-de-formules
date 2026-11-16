@@ -1,0 +1,7 @@
+title: La valeur de l'intégrale de Gauss
+statement: |
+  Donne la valeur de $\displaystyle\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx$, arrondie au dix-millième.
+hints:
+  - 'Le résultat est une racine carrée de $\pi$.'
+solution: |
+  $\displaystyle\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx = \sqrt{\pi} \approx 1{,}7725$.

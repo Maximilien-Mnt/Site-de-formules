@@ -1,0 +1,15 @@
+title: Quelle suite est géométrique ?
+statement: |
+  Parmi ces suites, laquelle est géométrique ?
+choices:
+  a: '$2,\ 4,\ 8,\ 16,\ \dots$'
+  b: '$2,\ 4,\ 6,\ 8,\ \dots$'
+  c: '$1,\ 4,\ 9,\ 16,\ \dots$'
+  d: '$1,\ 2,\ 4,\ 7,\ \dots$'
+hints:
+  - 'Calcule le quotient de chaque terme par le précédent.'
+solution: |
+  - a : $\dfrac{4}{2} = \dfrac{8}{4} = \dfrac{16}{8} = 2$. Le quotient est constant : suite géométrique de raison $2$.
+  - b : on ajoute $2$ à chaque fois : suite **arithmétique**.
+  - c : ce sont les carrés des entiers, ni l'un ni l'autre.
+  - d : les écarts valent $1,\ 2,\ 3$ : ni l'un ni l'autre.

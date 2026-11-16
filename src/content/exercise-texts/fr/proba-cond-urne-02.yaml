@@ -1,0 +1,17 @@
+title: Tirage sans remise
+statement: |
+  Une urne contient $3$ boules rouges et $2$ boules bleues. On tire successivement deux boules, sans remise.
+  Sachant que la première boule tirée est rouge, quelle est la probabilité que la deuxième soit rouge ?
+choices:
+  a: '$\dfrac{3}{5}$'
+  b: '$\dfrac{1}{2}$'
+  c: '$\dfrac{2}{5}$'
+  d: '$\dfrac{3}{4}$'
+hints:
+  - 'Après le premier tirage rouge, combien reste-t-il de boules en tout, et combien sont rouges ?'
+solution: |
+  Après avoir tiré une boule rouge, il reste $4$ boules dont $2$ rouges.
+
+  La probabilité est donc $\dfrac{2}{4} = \dfrac{1}{2}$.
+
+  La réponse a est la probabilité de tirer rouge au **premier** tirage, sans l'information.

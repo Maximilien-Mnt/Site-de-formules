@@ -1,0 +1,24 @@
+subject: math
+domain: calculus
+topics: [derivative, powers]
+level: 4
+difficulty: 2
+originYear: 1670 # approximatif : calcul différentiel de Newton et Leibniz
+latex: '(x^{n})^{\prime} = n\,x^{n-1}'
+variants:
+  - id: constant
+    latex: '(k)^{\prime} = 0'
+  - id: linear
+    latex: '(kx)^{\prime} = k'
+  - id: inverse
+    latex: '\left(\dfrac{1}{x}\right)^{\prime} = -\dfrac{1}{x^{2}}'
+  - id: sqrt
+    latex: '(\sqrt{x})^{\prime} = \dfrac{1}{2\sqrt{x}}'
+variables:
+  - { symbol: 'x' }
+  - { symbol: 'n' }
+  - { symbol: 'k' }
+prerequisites: [nombre-derive, regles-puissances]
+related: [derivee-produit-quotient, exponentielle-proprietes]
+confusedWith: []
+status: draft

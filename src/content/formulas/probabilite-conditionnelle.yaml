@@ -1,0 +1,18 @@
+subject: math
+domain: probability
+topics: [conditional-probability, events]
+level: 4
+difficulty: 3
+latex: 'P_{A}(B) = \dfrac{P(A \cap B)}{P(A)}'
+variants:
+  - id: product
+    latex: 'P(A \cap B) = P(A) \times P_{A}(B)'
+  - id: total
+    latex: 'P(B) = P(A)\,P_{A}(B) + P(\overline{A})\,P_{\overline{A}}(B)'
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'B' }
+prerequisites: [probabilite-equiprobable]
+related: [theoreme-de-bayes, loi-binomiale]
+confusedWith: [theoreme-de-bayes]
+status: draft

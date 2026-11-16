@@ -1,0 +1,14 @@
+title: Quand une matrice est-elle inversible ?
+statement: |
+  À quelle condition la matrice $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ est-elle inversible ?
+choices:
+  a: '$ad - bc \neq 0$'
+  b: '$a + d \neq 0$'
+  c: '$ac - bd \neq 0$'
+  d: '$a \neq 0$'
+hints:
+  - 'La formule de l''inverse contient une division par un nombre : lequel ?'
+solution: |
+  La formule de l'inverse divise par $ad - bc$ : la matrice est inversible si et seulement si $ad - bc \neq 0$.
+
+  Par exemple, $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$ est inversible (son déterminant vaut $-1$) alors que $a = 0$.

@@ -1,0 +1,19 @@
+title: Un couple impossible
+statement: |
+  Lequel de ces couples ne peut **pas** être $(\cos\theta\,;\,\sin\theta)$ pour un angle $\theta$ ?
+choices:
+  a: '$(0{,}6\,;\,0{,}8)$'
+  b: '$(0{,}5\,;\,0{,}5)$'
+  c: '$(1\,;\,0)$'
+  d: '$(-0{,}6\,;\,0{,}8)$'
+hints:
+  - 'Vérifie si $\cos^{2}\theta + \sin^{2}\theta = 1$ pour chaque couple.'
+solution: |
+  Il faut $\cos^{2}\theta + \sin^{2}\theta = 1$.
+
+  - a : $0{,}36 + 0{,}64 = 1$ ✓
+  - b : $0{,}25 + 0{,}25 = 0{,}5 \neq 1$ ✗
+  - c : $1 + 0 = 1$ ✓
+  - d : $0{,}36 + 0{,}64 = 1$ ✓
+
+  Le couple b est impossible.

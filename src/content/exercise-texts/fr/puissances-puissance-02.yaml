@@ -1,0 +1,14 @@
+title: Puissance d'une puissance
+statement: |
+  Simplifie $(x^{3})^{4}$.
+choices:
+  a: '$x^{7}$'
+  b: '$x^{12}$'
+  c: '$x^{81}$'
+  d: '$3x^{4}$'
+hints:
+  - 'Pour $(a^{m})^{n}$, on multiplie les exposants.'
+solution: |
+  $(x^{3})^{4} = x^{3 \times 4} = x^{12}$.
+
+  La réponse a additionne les exposants, ce qui est la règle du **produit** $x^{3} \times x^{4}$.

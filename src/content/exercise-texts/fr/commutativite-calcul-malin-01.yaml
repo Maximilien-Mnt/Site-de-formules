@@ -1,0 +1,10 @@
+title: Un calcul malin
+statement: |
+  Calcule astucieusement $25 \times 7 \times 4$.
+hints:
+  - 'Change l''ordre des nombres : quels deux nombres sont faciles à multiplier ensemble ?'
+  - '$25 \times 4 = 100$.'
+solution: |
+  On change l'ordre : $25 \times 7 \times 4 = 25 \times 4 \times 7$.
+
+  Puis $25 \times 4 = 100$, donc $100 \times 7 = 700$.

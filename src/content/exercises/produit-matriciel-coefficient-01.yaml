@@ -1,0 +1,11 @@
+subject: math
+domain: linear-algebra
+level: 6
+difficulty: 2
+formulas: [produit-matriciel]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 2
+  tolerance: 0
+status: draft

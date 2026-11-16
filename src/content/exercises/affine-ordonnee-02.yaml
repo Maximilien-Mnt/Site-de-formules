@@ -1,0 +1,10 @@
+subject: math
+domain: algebra
+level: 3
+difficulty: 1
+formulas: [fonction-affine]
+kind: qcm
+estimatedMinutes: 1
+choices: [a, b, c, d]
+correct: [b]
+status: draft

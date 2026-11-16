@@ -1,0 +1,14 @@
+title: Quand l'angle est droit
+statement: |
+  Que devient la loi des cosinus $a^{2} = b^{2} + c^{2} - 2bc\cos A$ lorsque $A = 90^\circ$ ?
+choices:
+  a: '$a^{2} = b^{2} + c^{2}$'
+  b: '$a^{2} = b^{2} - c^{2}$'
+  c: '$a^{2} = (b + c)^{2}$'
+  d: '$a^{2} = 2bc$'
+hints:
+  - 'Que vaut $\cos 90^\circ$ ?'
+solution: |
+  $\cos 90^\circ = 0$, donc le terme $-2bc\cos A$ disparaît.
+
+  Il reste $a^{2} = b^{2} + c^{2}$ : c'est le théorème de Pythagore. La loi des cosinus en est donc une généralisation.

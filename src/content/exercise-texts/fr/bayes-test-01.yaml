@@ -1,0 +1,16 @@
+title: Un test de dépistage
+statement: |
+  Une maladie touche $1\,\%$ de la population. Un test est positif pour $99\,\%$ des malades et pour $5\,\%$ des personnes saines.
+  Une personne choisie au hasard a un test positif. Quelle est la probabilité qu'elle soit malade ?
+  (Résultat décimal, arrondi au millième.)
+hints:
+  - 'Calcule d''abord $P(\text{positif})$ en additionnant malades positifs et sains positifs.'
+  - 'Divise ensuite $P(\text{malade et positif})$ par $P(\text{positif})$.'
+solution: |
+  $P(\text{malade et positif}) = 0{,}01 \times 0{,}99 = 0{,}0099$.
+
+  $P(\text{sain et positif}) = 0{,}99 \times 0{,}05 = 0{,}0495$.
+
+  $P(\text{positif}) = 0{,}0099 + 0{,}0495 = 0{,}0594$.
+
+  $P_{+}(\text{malade}) = \dfrac{0{,}0099}{0{,}0594} \approx 0{,}167$.

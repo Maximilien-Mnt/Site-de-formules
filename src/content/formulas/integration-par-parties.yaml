@@ -1,0 +1,20 @@
+subject: math
+domain: calculus
+topics: [integral, product]
+level: 5
+difficulty: 4
+originYear: 1715 # approximatif : Brook Taylor
+latex: '\int_{a}^{b} u(x)\,v^{\prime}(x)\,dx = \Big[u(x)\,v(x)\Big]_{a}^{b} - \int_{a}^{b} u^{\prime}(x)\,v(x)\,dx'
+variants:
+  - id: antiderivative
+    latex: '\int u\,v^{\prime} = u\,v - \int u^{\prime}\,v'
+variables:
+  - { symbol: 'u' }
+  - { symbol: 'v' }
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'x' }
+prerequisites: [theoreme-fondamental-analyse, derivee-produit-quotient]
+related: []
+confusedWith: []
+status: draft

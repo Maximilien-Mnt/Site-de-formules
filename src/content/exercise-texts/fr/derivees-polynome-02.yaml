@@ -1,0 +1,14 @@
+title: Dériver un polynôme
+statement: |
+  Quelle est la dérivée de $f(x) = 3x^{2} - 5x + 7$ ?
+choices:
+  a: '$6x - 5$'
+  b: '$6x + 7$'
+  c: '$3x - 5$'
+  d: '$6x^{2} - 5$'
+hints:
+  - 'Dérive terme à terme : $3x^{2}$, puis $-5x$, puis la constante $7$.'
+solution: |
+  $(3x^{2})' = 3 \times 2x = 6x$ ; $(-5x)' = -5$ ; $(7)' = 0$.
+
+  Donc $f'(x) = 6x - 5$.

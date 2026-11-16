@@ -1,0 +1,15 @@
+title: Quelle égalité est correcte ?
+statement: |
+  Dans un triangle $ABC$, $M$ est sur $[AB]$, $N$ est sur $[AC]$ et $(MN) \parallel (BC)$.
+  Quelle égalité est correcte ?
+choices:
+  a: '$\dfrac{AM}{AB} = \dfrac{AN}{AC}$'
+  b: '$\dfrac{AM}{MB} = \dfrac{AN}{AC}$'
+  c: '$\dfrac{AM}{AB} = \dfrac{MN}{AN}$'
+  d: '$\dfrac{AM}{BC} = \dfrac{AN}{MN}$'
+hints:
+  - 'Dans chaque rapport, le numérateur est dans le petit triangle et le dénominateur dans le grand triangle.'
+solution: |
+  Le théorème de Thalès donne $\dfrac{AM}{AB} = \dfrac{AN}{AC} = \dfrac{MN}{BC}$ : la réponse **a** est correcte.
+
+  Les autres mélangent des longueurs qui ne se correspondent pas (par exemple $MB$ n'est pas un côté du grand triangle).

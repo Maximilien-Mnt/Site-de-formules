@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 6
+difficulty: 3
+formulas: [taylor, exponentielle-proprietes]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 1.6458
+  tolerance: 0.001
+status: draft

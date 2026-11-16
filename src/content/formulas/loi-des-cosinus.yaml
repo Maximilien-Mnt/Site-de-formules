@@ -1,0 +1,19 @@
+subject: math
+domain: trigonometry
+topics: [triangles, law-of-cosines]
+level: 4
+difficulty: 3
+originYear: -300 # approximatif : généralisation de Pythagore dans les Éléments d'Euclide (livre II)
+latex: 'a^{2} = b^{2} + c^{2} - 2bc\cos A'
+variants:
+  - id: angle
+    latex: '\cos A = \dfrac{b^{2} + c^{2} - a^{2}}{2bc}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'c' }
+  - { symbol: 'A' }
+prerequisites: [pythagore, trigonometrie-triangle-rectangle]
+related: [pythagore, distance-plan]
+confusedWith: []
+status: draft

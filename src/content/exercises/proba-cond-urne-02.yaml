@@ -1,0 +1,10 @@
+subject: math
+domain: probability
+level: 4
+difficulty: 3
+formulas: [probabilite-conditionnelle]
+kind: qcm
+estimatedMinutes: 3
+choices: [a, b, c, d]
+correct: [b]
+status: draft

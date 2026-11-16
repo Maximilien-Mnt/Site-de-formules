@@ -1,0 +1,94 @@
+---
+title: Intégrale de Gauss et loi normale
+summary: L'intégrale de exp(−x²) sur toute la droite réelle vaut racine de π. Elle fixe la constante de la densité de la loi normale.
+aliases: [intégrale gaussienne, loi normale, courbe en cloche, densité gaussienne, loi de Gauss, racine de pi]
+keywords: [gaussienne, cloche, loi normale, densité, intégrale impropre, probabilités]
+variableNames:
+  x: La variable
+  '\mu': La moyenne (centre de la cloche)
+  '\sigma': L'écart type (largeur de la cloche)
+variantLabels:
+  general: Avec moyenne et écart type
+  density: Densité de la loi normale
+---
+
+<Section kind="intuition">
+
+La courbe en cloche de $e^{-x^{2}}$ décroît très vite des deux côtés de $0$. L'aire totale sous cette courbe est finie : c'est $\sqrt{\pi}$, un résultat surprenant car $\pi$ apparaît sans aucun cercle apparent. Dès qu'on la divise par ce nombre (et qu'on ajuste la largeur), on obtient une aire totale de $1$, c'est-à-dire une loi de probabilité : la loi normale.
+
+</Section>
+
+<Section kind="explanation">
+
+$$
+\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx = \sqrt{\pi} \approx 1{,}7725
+$$
+
+Cette fonction n'a **pas de primitive** exprimable avec les fonctions usuelles, mais son intégrale sur $\mathbb{R}$ se calcule exactement.
+
+Avec un centre $\mu$ et une largeur $\sigma$ :
+
+$$
+\int_{-\infty}^{+\infty} e^{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}\,dx = \sigma\sqrt{2\pi}
+$$
+
+On en déduit que la **densité de la loi normale** $\mathcal{N}(\mu\,;\,\sigma^{2})$, $f(x) = \dfrac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}$, a une aire totale égale à $1$.
+
+**Exemple.** Pour $\sigma = 2$ et $\mu = 0$, l'intégrale vaut $2\sqrt{2\pi} \approx 5{,}013$.
+
+Pour une loi normale, environ $68\,\%$ des valeurs sont à moins d'un écart type de la moyenne, $95\,\%$ à moins de deux, et $99{,}7\,\%$ à moins de trois.
+
+</Section>
+
+<Section kind="proof">
+
+Notons $I = \displaystyle\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx$. On calcule $I^{2}$ comme une intégrale double :
+
+$$
+I^{2} = \iint_{\mathbb{R}^{2}} e^{-(x^{2} + y^{2})}\,dx\,dy
+$$
+
+En coordonnées polaires ($x^{2} + y^{2} = r^{2}$, $dx\,dy = r\,dr\,d\theta$) :
+
+$$
+I^{2} = \int_{0}^{2\pi}\int_{0}^{+\infty} e^{-r^{2}}\,r\,dr\,d\theta = 2\pi \times \left[-\frac{1}{2}e^{-r^{2}}\right]_{0}^{+\infty} = 2\pi \times \frac{1}{2} = \pi
+$$
+
+Comme $I > 0$, $I = \sqrt{\pi}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La courbe en cloche apparaît chez Abraham de Moivre (1733) comme approximation de la loi binomiale, puis chez Carl Friedrich Gauss (1809) pour modéliser les erreurs de mesure, d'où le nom « loi de Gauss ». Le calcul de l'intégrale est dû à Pierre-Simon de Laplace à la fin du XVIIIe siècle ; la méthode par coordonnées polaires est souvent associée à Siméon Denis Poisson.
+
+</Section>
+
+<Section kind="methods">
+
+1. Reconnais une expression en $e^{-(\text{quelque chose})^{2}}$.
+2. Ramène-la à la forme standard par un **changement de variable** (par exemple $u = \dfrac{x - \mu}{\sigma\sqrt{2}}$).
+3. Utilise $\displaystyle\int_{-\infty}^{+\infty} e^{-u^{2}}\,du = \sqrt{\pi}$ pour conclure.
+
+</Section>
+
+<Section kind="applications">
+
+- **Statistiques** : loi normale, théorème central limite, intervalles de confiance.
+- **Physique** : distribution des vitesses des molécules, diffusion de la chaleur.
+- **Traitement du signal et d'images** : flou gaussien.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Chercher une **primitive** de $e^{-x^{2}}$ avec les fonctions usuelles : elle n'existe pas.
+- Oublier le facteur $\sigma\sqrt{2\pi}$ dans la normalisation.
+- Confondre $\sigma$ (écart type) et $\sigma^{2}$ (variance) dans l'exposant.
+- Oublier que le résultat concerne l'intervalle **entier** $]-\infty\,;\,+\infty[$.
+
+</Callout>
+
+</Section>

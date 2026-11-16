@@ -1,0 +1,12 @@
+title: Le coefficient de x³
+statement: |
+  Dans le développement de Maclaurin d'une fonction $f$ (autour de $0$), quel est le coefficient de $x^{3}$ ?
+choices:
+  a: '$\dfrac{f^{(3)}(0)}{3!}$'
+  b: '$f^{(3)}(0)$'
+  c: '$\dfrac{f^{(3)}(0)}{3}$'
+  d: '$\dfrac{f^{\prime\prime}(0)}{3!}$'
+hints:
+  - 'Le coefficient de $x^{k}$ est $\dfrac{f^{(k)}(0)}{k!}$.'
+solution: |
+  Le coefficient de $x^{k}$ est $\dfrac{f^{(k)}(0)}{k!}$. Pour $k = 3$ : $\dfrac{f^{(3)}(0)}{3!} = \dfrac{f^{(3)}(0)}{6}$.

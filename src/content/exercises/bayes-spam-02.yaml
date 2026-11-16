@@ -1,0 +1,10 @@
+subject: math
+domain: probability
+level: 5
+difficulty: 3
+formulas: [theoreme-de-bayes]
+kind: qcm
+estimatedMinutes: 5
+choices: [a, b, c, d]
+correct: [a]
+status: draft

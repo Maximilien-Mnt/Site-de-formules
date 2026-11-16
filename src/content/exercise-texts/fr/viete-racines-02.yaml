@@ -1,0 +1,15 @@
+title: Retrouver les racines
+statement: |
+  Deux nombres ont pour somme $5$ et pour produit $6$.
+  Quels sont ces deux nombres ?
+choices:
+  a: '$2$ et $3$'
+  b: '$1$ et $6$'
+  c: '$-2$ et $-3$'
+  d: '$5$ et $1$'
+hints:
+  - 'Ils sont les solutions de $x^{2} - Sx + P = 0$, avec $S = 5$ et $P = 6$.'
+solution: |
+  Ce sont les solutions de $x^{2} - 5x + 6 = 0$ : $\Delta = 25 - 24 = 1$, donc $x = \dfrac{5 \pm 1}{2}$, soit $2$ et $3$.
+
+  Vérification : $2 + 3 = 5$ et $2 \times 3 = 6$. La paire $-2$ et $-3$ a le bon produit mais une somme de $-5$.

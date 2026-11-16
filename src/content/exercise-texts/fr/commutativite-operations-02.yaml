@@ -1,0 +1,19 @@
+title: Quelle égalité est toujours vraie ?
+statement: |
+  Quelle égalité est vraie pour tous les nombres $a$ et $b$ ?
+choices:
+  a: '$a + b = b + a$'
+  b: '$a - b = b - a$'
+  c: '$a \div b = b \div a$'
+  d: '$a - b = a + b$'
+hints:
+  - 'Teste avec des petits nombres, par exemple $a = 6$ et $b = 3$.'
+solution: |
+  Avec $a = 6$ et $b = 3$ :
+
+  - $6 + 3 = 3 + 6$ : c'est vrai.
+  - $6 - 3 = 3$ mais $3 - 6$ n'est pas égal à $3$ : l'égalité b est fausse.
+  - $6 \div 3 = 2$ mais $3 \div 6 = 0{,}5$ : l'égalité c est fausse.
+  - $6 - 3 = 3$ mais $6 + 3 = 9$ : l'égalité d est fausse.
+
+  Seule l'addition (et la multiplication) est commutative : la bonne réponse est **a**.

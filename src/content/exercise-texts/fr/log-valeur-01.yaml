@@ -1,0 +1,7 @@
+title: Calculer ln 8
+statement: |
+  On donne $\ln 2 \approx 0{,}693$. Calcule $\ln 8$, arrondi au millième.
+hints:
+  - 'Écris $8$ comme une puissance de $2$.'
+solution: |
+  $8 = 2^{3}$, donc $\ln 8 = \ln(2^{3}) = 3\ln 2 \approx 3 \times 0{,}693 = 2{,}079$.

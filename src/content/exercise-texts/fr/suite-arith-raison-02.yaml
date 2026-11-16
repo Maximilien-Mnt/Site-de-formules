@@ -1,0 +1,13 @@
+title: Retrouver la raison
+statement: |
+  $(u_{n})$ est une suite arithmétique avec $u_{3} = 11$ et $u_{7} = 23$.
+  Quelle est sa raison ?
+choices:
+  a: '$2$'
+  b: '$3$'
+  c: '$4$'
+  d: '$12$'
+hints:
+  - 'Entre $u_{3}$ et $u_{7}$, on ajoute la raison $7 - 3 = 4$ fois.'
+solution: |
+  $u_{7} = u_{3} + (7 - 3) \times r$, donc $23 = 11 + 4r$ et $r = \dfrac{12}{4} = 3$.

@@ -1,0 +1,76 @@
+---
+title: Somme des premiers entiers
+summary: La somme des entiers de 1 à n vaut n(n+1)/2. Ces nombres s'appellent les nombres triangulaires.
+aliases: [somme de Gauss, nombres triangulaires, somme de 1 à n, somme des n premiers entiers]
+keywords: [somme, entiers, Gauss, triangulaire, récurrence]
+variableNames:
+  n: Le dernier entier de la somme
+variantLabels:
+  sigma: Avec le symbole somme
+---
+
+<Section kind="intuition">
+
+Range des jetons en escalier : 1 jeton sur la première ligne, 2 sur la deuxième, jusqu'à $n$. Place un deuxième escalier à l'envers à côté du premier : tu obtiens un rectangle de $n$ lignes et $n + 1$ colonnes. Un escalier vaut donc la moitié d'un rectangle de $n(n+1)$ jetons.
+
+</Section>
+
+<Section kind="explanation">
+
+$$
+1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}
+$$
+
+**Exemple.** $1 + 2 + \dots + 100 = \dfrac{100 \times 101}{2} = 5\,050$.
+
+**Poignées de main.** Dans un groupe de 10 personnes qui se serrent toutes la main, il y a $9 + 8 + \dots + 1 = \dfrac{9 \times 10}{2} = 45$ poignées de main.
+
+Les nombres $1,\ 3,\ 6,\ 10,\ 15,\ \dots$ sont appelés **nombres triangulaires** : on peut les disposer en triangle.
+
+</Section>
+
+<Section kind="proof">
+
+Écris la somme deux fois, la seconde à l'envers :
+
+$S = 1 + 2 + \dots + n$ et $S = n + (n - 1) + \dots + 1$.
+
+Chaque colonne a pour somme $n + 1$ et il y a $n$ colonnes : $2S = n(n+1)$, donc $S = \dfrac{n(n+1)}{2}$. ∎
+
+On peut aussi le démontrer par **récurrence** : si la formule est vraie au rang $n$, alors $S_{n+1} = \dfrac{n(n+1)}{2} + (n + 1) = \dfrac{(n+1)(n+2)}{2}$.
+
+</Section>
+
+<Section kind="history">
+
+Les nombres triangulaires étaient étudiés par les pythagoriciens. Selon une anecdote célèbre, dont les détails sont discutés par les historiens, le jeune Carl Friedrich Gauss (fin du XVIIIe siècle) aurait trouvé très vite la somme de 1 à 100 en regroupant les nombres deux à deux : $1 + 100$, $2 + 99$, $3 + 98$, etc.
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère la somme : de 1 à $n$ (et pas de 0 à $n$, ni de 2 à $n$).
+2. Applique $\dfrac{n(n+1)}{2}$.
+3. Si la somme commence à $p$ au lieu de 1, retranche : $p + \dots + n = \dfrac{n(n+1)}{2} - \dfrac{(p-1)p}{2}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Dénombrement** : poignées de main, matchs d'un tournoi où chacun joue contre chacun.
+- **Informatique** : coût d'algorithmes avec deux boucles imbriquées.
+- **Suites arithmétiques** : cas particulier de la somme des termes.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Se tromper sur le nombre de termes : de 1 à $n$, il y en a $n$.
+- Oublier de diviser par $2$.
+- Utiliser la formule pour une somme qui ne commence pas à 1 sans l'adapter.
+
+</Callout>
+
+</Section>

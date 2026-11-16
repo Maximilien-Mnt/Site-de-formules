@@ -1,0 +1,11 @@
+subject: math
+domain: probability
+level: 5
+difficulty: 3
+formulas: [theoreme-de-bayes, probabilite-conditionnelle]
+kind: numeric
+estimatedMinutes: 5
+answer:
+  value: 0.167
+  tolerance: 0.005
+status: draft

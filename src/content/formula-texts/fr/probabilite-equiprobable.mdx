@@ -1,0 +1,69 @@
+---
+title: Probabilité dans une situation équiprobable
+summary: Quand toutes les issues ont la même chance, la probabilité d'un événement est le nombre de cas favorables divisé par le nombre de cas possibles.
+aliases: [probabilité, cas favorables sur cas possibles, hasard, équiprobabilité, événement contraire]
+keywords: [dé, pièce, urne, chance, événement, complémentaire]
+variableNames:
+  'P(A)': La probabilité de l'événement A (un nombre entre 0 et 1)
+  A: Un événement
+  '\overline{A}': L'événement contraire de A (A n'arrive pas)
+variantLabels:
+  complement: Événement contraire
+---
+
+<Section kind="intuition">
+
+Si tu lances un dé équilibré, chacun des 6 nombres a autant de chances de sortir. Pour savoir si tu as « une chance sur combien » d'obtenir un résultat, tu comptes les cas qui t'arrangent et tu les compares à tous les cas possibles.
+
+</Section>
+
+<Section kind="explanation">
+
+Si toutes les issues ont la **même probabilité** :
+
+$$
+P(A) = \frac{\text{nombre de cas favorables}}{\text{nombre de cas possibles}}
+$$
+
+La probabilité est toujours entre $0$ (événement impossible) et $1$ (événement certain).
+
+**Exemple.** Un dé à 6 faces : la probabilité d'obtenir un multiple de 3 (les faces 3 et 6) est $\dfrac{2}{6} = \dfrac{1}{3}$.
+
+**Événement contraire.** $P(\overline{A}) = 1 - P(A)$. La probabilité de **ne pas** obtenir un multiple de 3 est $1 - \dfrac{1}{3} = \dfrac{2}{3}$.
+
+</Section>
+
+<Section kind="history">
+
+Les jeux de hasard ont d'abord inspiré des calculs de chances au XVIe siècle (Cardano). La théorie des probabilités naît en 1654 dans une correspondance entre Blaise Pascal et Pierre de Fermat, à propos d'un problème de partage des mises dans un jeu interrompu. Pierre-Simon de Laplace formule plus tard la définition « cas favorables sur cas possibles » (début du XIXe siècle).
+
+</Section>
+
+<Section kind="methods">
+
+1. Liste (ou compte) **tous les cas possibles** et vérifie qu'ils ont la même chance.
+2. Compte les cas qui réalisent l'événement.
+3. Divise : cas favorables sur cas possibles.
+4. Pour « au moins un », passe par l'événement contraire : $1 - P(\text{aucun})$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Jeux** : dés, cartes, loteries, urnes.
+- **Qualité et assurance** : probabilité d'un défaut, d'un sinistre.
+- **Base de la statistique** et de nombreux algorithmes aléatoires.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Appliquer la formule quand les issues **n'ont pas la même chance**. Avec deux dés, les sommes de 2 à 12 ne sont pas équiprobables (7 est bien plus fréquent que 2).
+- Oublier des cas, ou compter deux fois le même.
+- Croire que le hasard « compense » : une pièce qui vient de donner 5 piles a toujours une chance sur deux de donner pile.
+
+</Callout>
+
+</Section>

@@ -1,0 +1,14 @@
+title: Développer (x − 4)²
+statement: |
+  Quel est le développement de $(x - 4)^{2}$ ?
+choices:
+  a: '$x^{2} - 16$'
+  b: '$x^{2} - 8x + 16$'
+  c: '$x^{2} + 8x + 16$'
+  d: '$x^{2} - 4x + 16$'
+hints:
+  - 'Applique $(a - b)^{2} = a^{2} - 2ab + b^{2}$ avec $a = x$ et $b = 4$.'
+solution: |
+  $(x - 4)^{2} = x^{2} - 2 \times x \times 4 + 4^{2} = x^{2} - 8x + 16$.
+
+  La réponse a oublie le double produit ; la réponse c se trompe de signe.

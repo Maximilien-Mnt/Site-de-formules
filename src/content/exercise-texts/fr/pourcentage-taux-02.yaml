@@ -1,0 +1,15 @@
+title: Quel pourcentage ?
+statement: |
+  Dans une classe de $25$ élèves, $7$ portent des lunettes.
+  Quel pourcentage des élèves porte des lunettes ?
+choices:
+  a: '$7\,\%$'
+  b: '$28\,\%$'
+  c: '$35\,\%$'
+  d: '$3{,}5\,\%$'
+hints:
+  - 'Calcule la part $\dfrac{7}{25}$, puis multiplie par 100.'
+solution: |
+  $p = \dfrac{7}{25} \times 100 = 0{,}28 \times 100 = 28$.
+
+  Donc $28\,\%$ des élèves portent des lunettes.

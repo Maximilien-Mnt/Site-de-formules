@@ -1,0 +1,15 @@
+title: Trouver la bonne distance
+statement: |
+  Dans un repère orthonormé, on donne $A(2\,;\,-1)$ et $B(5\,;\,3)$.
+  Combien vaut $AB$ ?
+choices:
+  a: '$5$'
+  b: '$7$'
+  c: '$\sqrt{7}$'
+  d: '$25$'
+hints:
+  - 'Attention au signe : $3 - (-1) = 4$.'
+solution: |
+  $AB = \sqrt{(5 - 2)^{2} + (3 - (-1))^{2}} = \sqrt{3^{2} + 4^{2}} = \sqrt{25} = 5$.
+
+  La réponse b additionne les différences ($3 + 4$) au lieu de passer par les carrés ; la réponse d oublie la racine carrée.

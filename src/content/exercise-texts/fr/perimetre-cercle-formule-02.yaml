@@ -1,0 +1,14 @@
+title: Quelle formule pour la longueur ?
+statement: |
+  Quelle formule donne la **longueur** d'un cercle de rayon $r$ ?
+choices:
+  a: '$2\pi r$'
+  b: '$\pi r^{2}$'
+  c: '$2 r^{2}$'
+  d: '$\pi r$'
+hints:
+  - 'Une longueur n''a pas de carré. Une aire, si.'
+solution: |
+  La longueur du cercle est $2\pi r$.
+
+  La formule $\pi r^{2}$ donne l'**aire** du disque, pas la longueur de son bord.

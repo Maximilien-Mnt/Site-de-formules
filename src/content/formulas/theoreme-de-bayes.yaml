@@ -1,0 +1,17 @@
+subject: math
+domain: probability
+topics: [conditional-probability, bayes]
+level: 5
+difficulty: 3
+originYear: 1763 # approximatif : essai de Thomas Bayes publié par Richard Price
+latex: 'P_{B}(A) = \dfrac{P_{A}(B)\,P(A)}{P(B)}'
+variants:
+  - id: expanded
+    latex: 'P_{B}(A) = \dfrac{P_{A}(B)\,P(A)}{P_{A}(B)\,P(A) + P_{\overline{A}}(B)\,P(\overline{A})}'
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'B' }
+prerequisites: [probabilite-conditionnelle]
+related: []
+confusedWith: [probabilite-conditionnelle]
+status: draft

@@ -1,0 +1,69 @@
+---
+title: Division euclidienne
+summary: Diviser a par b (non nul), c'est trouver un quotient q et un reste r plus petit que b tels que a = b × q + r.
+aliases: [division avec reste, quotient et reste, dividende diviseur]
+keywords: [reste, quotient, dividende, diviseur, partage]
+variableNames:
+  a: Le dividende (le nombre à partager)
+  b: Le diviseur (non nul)
+  q: Le quotient
+  r: Le reste (toujours plus petit que b)
+variantLabels:
+  floor: Quotient et reste
+---
+
+<Section kind="intuition">
+
+Tu partages 47 bonbons entre 6 enfants. Chacun en reçoit 7, et il en reste 5 qu'on ne peut plus partager équitablement : $47 = 6 \times 7 + 5$.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour deux nombres entiers $a$ et $b$ (avec $b \neq 0$), il existe **un seul** couple $(q\,;\,r)$ d'entiers tel que :
+
+$$
+a = b \times q + r \qquad\text{avec}\qquad 0 \leq r < b
+$$
+
+**Exemple.** $47 = 6 \times 7 + 5$ : le quotient est 7 et le reste est 5. On a bien $5 < 6$.
+
+Si le reste vaut 0, on dit que $a$ est un **multiple** de $b$ (ou que $b$ divise $a$).
+
+</Section>
+
+<Section kind="history">
+
+La division avec reste est au cœur de l'algorithme d'Euclide, décrit dans les *Éléments* (livre VII, vers 300 av. J.-C.), qui sert à trouver le plus grand diviseur commun de deux nombres. C'est de là que vient le nom « division euclidienne ».
+
+</Section>
+
+<Section kind="methods">
+
+1. Cherche le plus grand multiple de $b$ qui ne dépasse pas $a$ (par exemple avec la table de $b$).
+2. Le nombre par lequel tu multiplies $b$ est le quotient $q$.
+3. Le reste est $r = a - b \times q$.
+4. **Vérifie** que $r < b$ et que $b \times q + r = a$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Le temps** : 135 minutes, c'est $135 = 60 \times 2 + 15$, soit 2 h 15 min.
+- **Le calendrier** : le reste de la division par 7 donne le jour de la semaine.
+- **Informatique** : l'opération « modulo » est le reste d'une division euclidienne (parité, tables de hachage, cryptographie).
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Laisser un reste **plus grand ou égal** au diviseur : si $r \geq b$, le quotient est trop petit.
+- Oublier de vérifier avec $b \times q + r$.
+- Intervertir le dividende et le diviseur.
+- Diviser par 0 : c'est impossible.
+
+</Callout>
+
+</Section>

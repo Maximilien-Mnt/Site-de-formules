@@ -1,0 +1,18 @@
+subject: math
+domain: probability
+topics: [probability, counting]
+level: 3
+difficulty: 1
+originYear: 1654 # approximatif : correspondance entre Pascal et Fermat
+latex: 'P(A) = \dfrac{\text{nombre de cas favorables}}{\text{nombre de cas possibles}}'
+variants:
+  - id: complement
+    latex: 'P(\overline{A}) = 1 - P(A)'
+variables:
+  - { symbol: 'P(A)' }
+  - { symbol: 'A' }
+  - { symbol: '\overline{A}' }
+prerequisites: []
+related: [probabilite-conditionnelle, loi-binomiale, moyenne-arithmetique]
+confusedWith: []
+status: draft

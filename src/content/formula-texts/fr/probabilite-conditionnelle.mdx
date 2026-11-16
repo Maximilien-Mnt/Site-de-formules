@@ -1,0 +1,78 @@
+---
+title: Probabilité conditionnelle
+summary: La probabilité de B sachant que A est réalisé vaut P(A ∩ B) divisé par P(A), avec P(A) non nul.
+aliases: [probabilité sachant, probabilités totales, arbre pondéré, événements indépendants, P(B|A)]
+keywords: [arbre de probabilités, sachant que, intersection, indépendance]
+variableNames:
+  A: L'événement connu (supposé réalisé, de probabilité non nulle)
+  B: L'événement dont on cherche la probabilité
+variantLabels:
+  product: Formule des probabilités composées
+  total: Formule des probabilités totales
+---
+
+<Section kind="intuition">
+
+Une information change les chances. Tu pioches deux cartes sans remise : savoir que la première est rouge réduit le nombre de cartes rouges restantes, donc la probabilité que la deuxième soit rouge n'est plus la même. La probabilité conditionnelle mesure ce changement.
+
+</Section>
+
+<Section kind="explanation">
+
+Si $P(A) \neq 0$, la probabilité de $B$ **sachant** $A$ est :
+
+$$
+P_{A}(B) = \frac{P(A \cap B)}{P(A)}
+$$
+
+On en déduit la formule des **probabilités composées** : $P(A \cap B) = P(A) \times P_{A}(B)$ (on multiplie le long des branches d'un arbre).
+
+**Exemple.** $P(A) = 0{,}5$ et $P(A \cap B) = 0{,}2$ donnent $P_{A}(B) = \dfrac{0{,}2}{0{,}5} = 0{,}4$.
+
+**Probabilités totales.** Quand $A$ et $\overline{A}$ partagent toutes les issues :
+
+$$
+P(B) = P(A)\,P_{A}(B) + P(\overline{A})\,P_{\overline{A}}(B)
+$$
+
+On additionne les chemins de l'arbre qui mènent à $B$.
+
+**Indépendance.** $A$ et $B$ sont indépendants si $P_{A}(B) = P(B)$, c'est-à-dire si $P(A \cap B) = P(A) \times P(B)$.
+
+</Section>
+
+<Section kind="history">
+
+Les probabilités conditionnelles apparaissent dans les travaux de Thomas Bayes (publiés après sa mort, en 1763) et de Pierre-Simon de Laplace (1774). La notation $P_{A}(B)$ est surtout utilisée en France ; dans beaucoup de pays, on écrit $P(B \mid A)$.
+
+</Section>
+
+<Section kind="methods">
+
+1. Dessine un **arbre pondéré** : sur chaque branche, la probabilité conditionnelle correspondante.
+2. Pour une intersection, **multiplie** les probabilités le long du chemin.
+3. Pour un événement final, **additionne** tous les chemins qui y mènent.
+4. Pour « sachant » : divise l'intersection par la probabilité de la condition.
+
+</Section>
+
+<Section kind="applications">
+
+- **Tests médicaux** et diagnostics : probabilité d'être malade sachant un test positif.
+- **Tirages sans remise** : cartes, urnes, loteries.
+- **Filtres anti-spam** et classification automatique.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Confondre $P_{A}(B)$ et $P_{B}(A)$ : ce ne sont pas les mêmes nombres.
+- Additionner au lieu de **multiplier** le long d'une branche.
+- Diviser par $P(B)$ au lieu de $P(A)$ (la condition est au dénominateur).
+- Croire que deux événements sont indépendants sans l'avoir vérifié.
+
+</Callout>
+
+</Section>

@@ -1,0 +1,12 @@
+title: Dériver un produit
+statement: |
+  Soit $f(x) = (2x + 1)(x^{2} - 3)$. Calcule $f'(1)$.
+hints:
+  - 'Pose $u = 2x + 1$ et $v = x^{2} - 3$, puis calcule $u''$ et $v''$.'
+  - '$f'' = u''v + uv''$.'
+solution: |
+  Avec $u = 2x + 1$, $u' = 2$ et $v = x^{2} - 3$, $v' = 2x$ :
+
+  $f'(x) = 2(x^{2} - 3) + (2x + 1) \times 2x$.
+
+  En $x = 1$ : $f'(1) = 2 \times (-2) + 3 \times 2 = -4 + 6 = 2$.

@@ -1,0 +1,21 @@
+subject: math
+domain: calculus
+topics: [series, geometric-sequence, convergence]
+level: 6
+difficulty: 3
+originYear: -250 # approximatif : quadrature de la parabole par Archimède
+latex: '\sum_{k=0}^{\infty} q^{k} = \dfrac{1}{1 - q} \quad (|q| < 1)'
+variants:
+  - id: partial
+    latex: '\sum_{k=0}^{n} q^{k} = \dfrac{1 - q^{n+1}}{1 - q}'
+  - id: shifted
+    latex: '\sum_{k=p}^{\infty} q^{k} = \dfrac{q^{p}}{1 - q}'
+variables:
+  - { symbol: 'q' }
+  - { symbol: 'k' }
+  - { symbol: 'n' }
+  - { symbol: 'p' }
+prerequisites: [suite-geometrique]
+related: [taylor]
+confusedWith: []
+status: draft

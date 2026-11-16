@@ -1,0 +1,19 @@
+subject: math
+domain: arithmetic
+topics: [division, remainder, integers]
+level: 2
+difficulty: 2
+originYear: -300 # approximatif : Éléments d'Euclide, livre VII
+latex: 'a = b \times q + r \quad\text{avec}\quad 0 \leq r < b'
+variants:
+  - id: floor
+    latex: 'q = \left\lfloor \dfrac{a}{b} \right\rfloor \quad\text{et}\quad r = a - b \times q'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'q' }
+  - { symbol: 'r' }
+prerequisites: []
+related: []
+confusedWith: []
+status: draft

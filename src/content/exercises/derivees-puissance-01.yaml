@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 4
+difficulty: 1
+formulas: [derivees-usuelles]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 32
+  tolerance: 0
+status: draft

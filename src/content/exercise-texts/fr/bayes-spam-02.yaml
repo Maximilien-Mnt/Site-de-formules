@@ -1,0 +1,17 @@
+title: Un filtre anti-spam
+statement: |
+  $20\,\%$ des messages reçus sont des spams. Le mot « gratuit » apparaît dans $90\,\%$ des spams et dans $2\,\%$ des autres messages.
+  Un message contient le mot « gratuit ». Quelle est la probabilité que ce soit un spam ?
+choices:
+  a: 'Environ $92\,\%$'
+  b: '$90\,\%$'
+  c: 'Environ $20\,\%$'
+  d: 'Environ $2\,\%$'
+hints:
+  - 'Calcule $P(\text{gratuit})$ avec les probabilités totales.'
+solution: |
+  $P(\text{spam et gratuit}) = 0{,}2 \times 0{,}9 = 0{,}18$ et $P(\text{non-spam et gratuit}) = 0{,}8 \times 0{,}02 = 0{,}016$.
+
+  $P(\text{gratuit}) = 0{,}196$, donc $P_{\text{gratuit}}(\text{spam}) = \dfrac{0{,}18}{0{,}196} \approx 0{,}918$, soit environ $92\,\%$.
+
+  La réponse b est $P_{\text{spam}}(\text{gratuit})$ : c'est l'inversion qu'il faut éviter.

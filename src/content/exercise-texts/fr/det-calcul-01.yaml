@@ -1,0 +1,7 @@
+title: Calculer un déterminant
+statement: |
+  Calcule le déterminant de la matrice $A = \begin{pmatrix} 3 & 2 \\ 1 & 4 \end{pmatrix}$.
+hints:
+  - 'Utilise $ad - bc$ avec $a = 3$, $b = 2$, $c = 1$, $d = 4$.'
+solution: |
+  $\det A = 3 \times 4 - 2 \times 1 = 12 - 2 = 10$.

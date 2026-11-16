@@ -1,0 +1,33 @@
+subject: math
+domain: calculus
+topics: [exponential, functions]
+level: 5
+difficulty: 2
+originYear: 1683 # approximatif : Jacques Bernoulli et les intérêts composés
+latex: 'e^{a + b} = e^{a} \times e^{b}'
+variants:
+  - id: quotient
+    latex: 'e^{a - b} = \dfrac{e^{a}}{e^{b}}'
+  - id: power
+    latex: '(e^{a})^{n} = e^{na}'
+  - id: inverse
+    latex: 'e^{-a} = \dfrac{1}{e^{a}}'
+  - id: derivative
+    latex: '(e^{x})^{\prime} = e^{x}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'n' }
+  - { symbol: 'x' }
+prerequisites: [regles-puissances, derivees-usuelles]
+related: [logarithme-proprietes, euler-formule, suite-geometrique]
+confusedWith: []
+graph:
+  kind: function
+  expressions: ['exp(k*x)']
+  params:
+    - { name: k, min: -2, max: 2, step: 0.1, default: 1 }
+  viewport:
+    x: [-4, 4]
+    y: [-1, 8]
+status: draft

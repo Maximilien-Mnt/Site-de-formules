@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 2
+difficulty: 1
+formulas: [aire-triangle]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 35
+  tolerance: 0
+  unit: cm²
+status: draft

@@ -1,0 +1,83 @@
+---
+title: Forme canonique d'un trinôme du second degré
+summary: On peut écrire ax² + bx + c sous la forme a(x − α)² + β. Le point (α ; β) est le sommet de la parabole.
+aliases: [forme canonique, sommet de la parabole, complétion du carré, extremum d'un trinôme]
+keywords: [parabole, sommet, minimum, maximum, second degré]
+variableNames:
+  a: Le coefficient de x² (a ≠ 0)
+  b: Le coefficient de x
+  c: Le terme constant
+  x: L'inconnue
+  '\alpha': L'abscisse du sommet
+  '\beta': L'ordonnée du sommet (la valeur extrême de la fonction)
+  '\Delta': Le discriminant
+variantLabels:
+  alpha: Abscisse du sommet
+  beta: Ordonnée du sommet
+---
+
+<Section kind="intuition">
+
+La courbe de $f(x) = ax^{2} + bx + c$ est une parabole. Elle a un point le plus haut ou le plus bas : son **sommet**. La forme canonique $a(x - \alpha)^{2} + \beta$ met ce sommet en évidence : un carré est toujours positif ou nul, donc l'expression est extrême quand ce carré vaut $0$, c'est-à-dire en $x = \alpha$.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour $a \neq 0$ :
+
+$$
+ax^{2} + bx + c = a\,(x - \alpha)^{2} + \beta \qquad\text{avec}\qquad \alpha = -\frac{b}{2a} \quad\text{et}\quad \beta = f(\alpha) = -\frac{\Delta}{4a}
+$$
+
+- Si $a > 0$ : la parabole est tournée vers le haut et $\beta$ est son **minimum**.
+- Si $a < 0$ : elle est tournée vers le bas et $\beta$ est son **maximum**.
+
+**Exemple.** $f(x) = x^{2} - 6x + 5$ : $\alpha = \dfrac{6}{2} = 3$ et $\beta = f(3) = 9 - 18 + 5 = -4$. Donc $f(x) = (x - 3)^{2} - 4$, de minimum $-4$ atteint en $x = 3$.
+
+</Section>
+
+<Section kind="proof">
+
+On factorise par $a$ puis on complète le carré (voir aussi la démonstration du discriminant) :
+
+$ax^{2} + bx + c = a\left[\left(x + \dfrac{b}{2a}\right)^{2} - \dfrac{b^{2}}{4a^{2}} + \dfrac{c}{a}\right] = a\left(x + \dfrac{b}{2a}\right)^{2} - \dfrac{b^{2} - 4ac}{4a}$.
+
+On reconnaît $\alpha = -\dfrac{b}{2a}$ et $\beta = -\dfrac{\Delta}{4a}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La méthode de « complétion du carré » est décrite dans le traité d'al-Khwarizmi (vers 820), d'où vient le mot « algèbre ». Les mathématiciens de l'Antiquité et de l'Inde en connaissaient déjà des variantes pour résoudre des problèmes du second degré.
+
+</Section>
+
+<Section kind="methods">
+
+1. Calcule $\alpha = -\dfrac{b}{2a}$.
+2. Calcule $\beta = f(\alpha)$ en remplaçant $x$ par $\alpha$ (ou $-\dfrac{\Delta}{4a}$).
+3. Écris $f(x) = a\,(x - \alpha)^{2} + \beta$.
+4. Vérifie en développant ou avec une valeur (par exemple $x = 0$ doit donner $c$).
+
+</Section>
+
+<Section kind="applications">
+
+- **Optimisation** : trouver le bénéfice maximal, l'aire maximale d'un enclos.
+- **Trajectoires** : la hauteur maximale d'un projectile.
+- **Résolution d'équations** et étude du signe d'un trinôme.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Se tromper de signe : $x^{2} + 4x + 1 = (x + 2)^{2} - 3$ donne $\alpha = -2$, et la forme $(x - \alpha)^{2}$ s'écrit donc $(x + 2)^{2}$.
+- Oublier de multiplier le carré par $a$ quand $a \neq 1$.
+- Confondre $\beta$ avec $c$ : ce sont deux valeurs différentes (sauf si $b = 0$).
+
+</Callout>
+
+</Section>

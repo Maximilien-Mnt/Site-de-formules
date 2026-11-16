@@ -1,0 +1,23 @@
+subject: math
+domain: calculus
+topics: [sequences, arithmetic-sequence]
+level: 4
+difficulty: 2
+originYear: -1650 # approximatif : papyrus Rhind (partage en progression arithmétique)
+latex: 'u_{n} = u_{0} + n \times r'
+variants:
+  - id: general
+    latex: 'u_{n} = u_{p} + (n - p) \times r'
+  - id: sum
+    latex: 'S = (n + 1) \times \dfrac{u_{0} + u_{n}}{2}'
+variables:
+  - { symbol: 'u_{n}' }
+  - { symbol: 'u_{0}' }
+  - { symbol: 'u_{p}' }
+  - { symbol: 'r' }
+  - { symbol: 'n' }
+  - { symbol: 'S' }
+prerequisites: [fonction-affine]
+related: [somme-premiers-entiers, suite-geometrique]
+confusedWith: [suite-geometrique]
+status: draft

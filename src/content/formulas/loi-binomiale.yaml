@@ -1,0 +1,21 @@
+subject: math
+domain: probability
+topics: [binomial-distribution, random-variables]
+level: 5
+difficulty: 3
+originYear: 1713 # approximatif : Jacques Bernoulli, Ars Conjectandi (publié après sa mort)
+latex: 'P(X = k) = \binom{n}{k}\,p^{k}\,(1 - p)^{n-k}'
+variants:
+  - id: expectation
+    latex: 'E(X) = np'
+  - id: variance
+    latex: 'V(X) = np\,(1 - p)'
+variables:
+  - { symbol: 'X' }
+  - { symbol: 'n' }
+  - { symbol: 'k' }
+  - { symbol: 'p' }
+prerequisites: [coefficient-binomial, probabilite-equiprobable]
+related: [variance-ecart-type, binome-newton, probabilite-conditionnelle]
+confusedWith: []
+status: draft

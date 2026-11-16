@@ -1,0 +1,8 @@
+title: Aire d'un triangle
+statement: |
+  Un triangle a une base de 10 cm et la hauteur correspondante mesure 7 cm.
+  Calcule son aire, en cm².
+hints:
+  - 'N''oublie pas de diviser par 2.'
+solution: |
+  $A = \dfrac{b \times h}{2} = \dfrac{10 \times 7}{2} = \dfrac{70}{2} = 35$ cm².

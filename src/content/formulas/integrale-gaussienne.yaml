@@ -1,0 +1,28 @@
+subject: math
+domain: calculus
+topics: [integral, gaussian, probability]
+level: 7
+difficulty: 4
+latex: '\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx = \sqrt{\pi}'
+variants:
+  - id: general
+    latex: '\int_{-\infty}^{+\infty} e^{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}\,dx = \sigma\sqrt{2\pi}'
+  - id: density
+    latex: 'f(x) = \dfrac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}'
+variables:
+  - { symbol: 'x' }
+  - { symbol: '\mu' }
+  - { symbol: '\sigma' }
+prerequisites: [theoreme-fondamental-analyse, exponentielle-proprietes]
+related: [taylor, loi-binomiale]
+confusedWith: []
+graph:
+  kind: function
+  expressions: ['exp(-((x-mu)^2)/(2*sigma^2))/(sigma*sqrt(2*pi))']
+  params:
+    - { name: mu, min: -3, max: 3, step: 0.1, default: 0 }
+    - { name: sigma, min: 0.3, max: 3, step: 0.1, default: 1 }
+  viewport:
+    x: [-6, 6]
+    y: [-0.1, 1.4]
+status: draft

@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 5
+difficulty: 1
+formulas: [exponentielle-proprietes]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 10
+  tolerance: 0
+status: draft

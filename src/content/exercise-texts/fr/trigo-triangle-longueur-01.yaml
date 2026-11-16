@@ -1,0 +1,11 @@
+title: Calculer un côté avec le sinus
+statement: |
+  Le triangle $ABC$ est rectangle en $A$. On a $BC = 10$ cm et $\widehat{ABC} = 30^\circ$.
+  Calcule $AC$, en cm (on rappelle que $\sin 30^\circ = 0{,}5$).
+hints:
+  - 'Par rapport à l''angle $\widehat{B}$, le côté $[AC]$ est le côté opposé et $[BC]$ est l''hypoténuse.'
+  - 'Utilise $\sin \widehat{B} = \dfrac{AC}{BC}$.'
+solution: |
+  Par rapport à l'angle $\widehat{B}$, $[AC]$ est le côté opposé et $[BC]$ est l'hypoténuse.
+
+  $\sin \widehat{B} = \dfrac{AC}{BC}$, donc $AC = BC \times \sin 30^\circ = 10 \times 0{,}5 = 5$ cm.

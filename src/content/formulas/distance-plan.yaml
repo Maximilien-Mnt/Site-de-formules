@@ -1,0 +1,21 @@
+subject: math
+domain: geometry
+topics: [coordinates, distances]
+level: 4
+difficulty: 2
+originYear: 1637 # approximatif : coordonnées cartésiennes (Descartes, Fermat)
+latex: 'AB = \sqrt{(x_{B} - x_{A})^{2} + (y_{B} - y_{A})^{2}}'
+variants:
+  - id: origin
+    latex: 'OA = \sqrt{x_{A}^{2} + y_{A}^{2}}'
+variables:
+  - { symbol: 'AB' }
+  - { symbol: 'OA' }
+  - { symbol: 'x_{A}' }
+  - { symbol: 'y_{A}' }
+  - { symbol: 'x_{B}' }
+  - { symbol: 'y_{B}' }
+prerequisites: [pythagore]
+related: [loi-des-cosinus]
+confusedWith: []
+status: draft

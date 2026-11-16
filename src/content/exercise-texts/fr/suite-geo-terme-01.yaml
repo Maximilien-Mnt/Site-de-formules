@@ -1,0 +1,8 @@
+title: Calculer un terme
+statement: |
+  $(u_{n})$ est une suite géométrique de premier terme $u_{0} = 3$ et de raison $q = 2$.
+  Calcule $u_{5}$.
+hints:
+  - 'Utilise $u_{n} = u_{0} \times q^{n}$.'
+solution: |
+  $u_{5} = 3 \times 2^{5} = 3 \times 32 = 96$.

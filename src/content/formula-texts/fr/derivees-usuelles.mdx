@@ -1,0 +1,74 @@
+---
+title: Dérivées des fonctions usuelles
+summary: Les dérivées de x puissance n, des constantes, de 1/x et de la racine carrée, à connaître par cœur pour dériver rapidement.
+aliases: [dérivée de x^n, dérivée d'un polynôme, dérivées usuelles, tableau des dérivées, règle des puissances]
+keywords: [dérivation, polynôme, puissance, racine carrée, inverse]
+variableNames:
+  x: La variable
+  n: Un exposant entier (positif ou négatif)
+  k: Une constante
+variantLabels:
+  constant: Dérivée d'une constante
+  linear: Dérivée de kx
+  inverse: Dérivée de 1/x (x ≠ 0)
+  sqrt: Dérivée de la racine carrée (x > 0)
+---
+
+<Section kind="intuition">
+
+La dérivée d'une fonction donne la pente de sa courbe en chaque point. Pour une droite, la pente ne change jamais : la dérivée de $kx$ est $k$. Pour la parabole $x^{2}$, la pente augmente quand on avance vers la droite : sa dérivée $2x$ le traduit.
+
+</Section>
+
+<Section kind="explanation">
+
+| $f(x)$ | $f'(x)$ | Valable pour |
+|---|---|---|
+| $k$ (constante) | $0$ | tout $x$ |
+| $x$ | $1$ | tout $x$ |
+| $x^{2}$ | $2x$ | tout $x$ |
+| $x^{n}$ | $n\,x^{n-1}$ | $n$ entier ($x \neq 0$ si $n < 0$) |
+| $\dfrac{1}{x}$ | $-\dfrac{1}{x^{2}}$ | $x \neq 0$ |
+| $\sqrt{x}$ | $\dfrac{1}{2\sqrt{x}}$ | $x > 0$ |
+
+Deux règles de calcul : $(u + v)' = u' + v'$ et $(k\,u)' = k\,u'$.
+
+**Exemple.** Pour $f(x) = 3x^{2} - 5x + 7$ : $f'(x) = 3 \times 2x - 5 \times 1 + 0 = 6x - 5$.
+
+</Section>
+
+<Section kind="history">
+
+Les règles de dérivation des puissances font partie des premiers résultats du calcul différentiel de Newton et de Leibniz (fin du XVIIe siècle). Leibniz notait la dérivée $\dfrac{dy}{dx}$, notation encore très utilisée en physique ; la notation $f'$ vient de Lagrange.
+
+</Section>
+
+<Section kind="methods">
+
+1. Écris la fonction comme une **somme de termes** (développe si nécessaire).
+2. Dérive chaque terme avec le tableau.
+3. Additionne les résultats, en gardant les coefficients constants.
+4. Pour $\dfrac{1}{x^{n}}$ ou $\sqrt{x}$, réécris avec un exposant : $\dfrac{1}{x^{2}} = x^{-2}$ et $\sqrt{x} = x^{1/2}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Étudier les variations** : le signe de la dérivée donne si la fonction monte ou descend.
+- **Optimiser** : trouver où la dérivée s'annule.
+- **Physique** : de la position à la vitesse, puis à l'accélération.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Dériver la constante comme si c'était $x$ : $(7)' = 0$ et non $7$.
+- Oublier de **diminuer l'exposant** de 1 : $(x^{4})' = 4x^{3}$, pas $4x^{4}$.
+- Dériver un produit comme le produit des dérivées : ce n'est pas vrai (voir la règle du produit).
+- Oublier la condition $x \neq 0$ pour $\dfrac{1}{x}$ et $x > 0$ pour $\sqrt{x}$.
+
+</Callout>
+
+</Section>

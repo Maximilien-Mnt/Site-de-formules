@@ -1,0 +1,8 @@
+title: Calculer une probabilité conditionnelle
+statement: |
+  On sait que $P(A) = 0{,}5$ et $P(A \cap B) = 0{,}2$.
+  Calcule $P_{A}(B)$.
+hints:
+  - 'Utilise $P_{A}(B) = \dfrac{P(A \cap B)}{P(A)}$.'
+solution: |
+  $P_{A}(B) = \dfrac{P(A \cap B)}{P(A)} = \dfrac{0{,}2}{0{,}5} = 0{,}4$.

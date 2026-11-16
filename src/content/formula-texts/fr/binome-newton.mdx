@@ -1,0 +1,84 @@
+---
+title: Formule du binôme de Newton
+summary: La formule du binôme développe (a + b)^n avec les coefficients binomiaux, qui se lisent dans le triangle de Pascal.
+aliases: [binôme de Newton, développement de (a+b)^n, formule du binôme, triangle de Pascal]
+keywords: [développement, puissance, coefficients binomiaux, identités remarquables]
+variableNames:
+  a: Un premier terme
+  b: Un second terme
+  n: Un entier positif ou nul
+  k: L'indice de la somme (de 0 à n)
+variantLabels:
+  example: Cas n = 3
+  difference: Pour (a − b)^n
+---
+
+<Section kind="intuition">
+
+Développer $(a + b)^{n}$, c'est multiplier $n$ facteurs $(a + b)$. Dans chaque produit, on choisit soit $a$, soit $b$ dans chacun des $n$ facteurs. Le terme $a^{n-k}b^{k}$ apparaît chaque fois qu'on choisit $b$ dans exactement $k$ facteurs, soit $\dbinom{n}{k}$ fois.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour tout entier $n \geq 0$ :
+
+$$
+(a + b)^{n} = \sum_{k=0}^{n}\binom{n}{k}\,a^{\,n-k}\,b^{\,k}
+$$
+
+Les coefficients sont ceux de la ligne $n$ du triangle de Pascal. Par exemple :
+
+$$
+(a + b)^{4} = a^{4} + 4a^{3}b + 6a^{2}b^{2} + 4ab^{3} + b^{4}
+$$
+
+Les puissances de $a$ **diminuent** et celles de $b$ **augmentent**, et leur somme vaut toujours $n$.
+
+**Exemple.** Dans $(x + 2)^{4}$, le coefficient de $x^{2}$ est $\dbinom{4}{2} \times 2^{2} = 6 \times 4 = 24$.
+
+Pour $(a - b)^{n}$, on remplace $b$ par $-b$ : les signes alternent.
+
+</Section>
+
+<Section kind="proof">
+
+On procède par récurrence sur $n$, en utilisant la relation de Pascal $\dbinom{n+1}{k} = \dbinom{n}{k-1} + \dbinom{n}{k}$. En multipliant $(a + b)^{n}$ par $(a + b)$, le coefficient de $a^{n+1-k}b^{k}$ est la somme de deux termes consécutifs de la ligne $n$, c'est-à-dire un terme de la ligne $n + 1$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Pour $n = 2$, le résultat figure sous forme géométrique dans les *Éléments* d'Euclide. Les coefficients sont connus en Inde, en Perse et en Chine bien avant Pascal. Isaac Newton généralise la formule aux exposants non entiers dans les années 1660 – 1670, ce qui donne son nom habituel à la formule.
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère $a$, $b$ et $n$ (attention aux signes et aux coefficients : $(2x - 3)^{3}$ a pour « $a$ » $2x$ et pour « $b$ » $-3$).
+2. Écris les coefficients de la ligne $n$ du triangle de Pascal.
+3. Combine avec les puissances décroissantes de $a$ et croissantes de $b$.
+4. Pour **un seul coefficient**, utilise directement $\dbinom{n}{k}\,a^{n-k}\,b^{k}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Développements** de grandes puissances sans multiplier à la main.
+- **Probabilités** : la somme des probabilités de la loi binomiale vaut $(p + (1 - p))^{n} = 1$.
+- **Approximations** : $(1 + x)^{n} \approx 1 + nx$ pour $x$ petit.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Écrire $(a + b)^{n} = a^{n} + b^{n}$ : il manque tous les termes croisés.
+- Oublier les coefficients (ou prendre la mauvaise ligne du triangle de Pascal).
+- Se tromper de signe avec $(a - b)^{n}$ : $b$ devient $-b$, donc un signe alterné.
+- Oublier de mettre les coefficients ou les nombres au bon exposant quand $a$ ou $b$ sont des produits ($(2x)^{3} = 8x^{3}$).
+
+</Callout>
+
+</Section>

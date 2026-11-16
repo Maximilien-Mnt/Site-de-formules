@@ -1,0 +1,8 @@
+title: Aire d'un rectangle
+statement: |
+  Un rectangle mesure 9 cm de long et 4 cm de large.
+  Calcule son aire, en cm².
+hints:
+  - 'Multiplie la longueur par la largeur.'
+solution: |
+  $A = L \times \ell = 9 \times 4 = 36$ cm².

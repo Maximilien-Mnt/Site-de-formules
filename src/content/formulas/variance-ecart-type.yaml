@@ -1,0 +1,19 @@
+subject: math
+domain: statistics
+topics: [variance, standard-deviation, dispersion]
+level: 4
+difficulty: 3
+latex: 'V = \dfrac{1}{n}\sum_{i=1}^{n}\left(x_{i} - \bar{x}\right)^{2} \qquad \sigma = \sqrt{V}'
+variants:
+  - id: koenig
+    latex: 'V = \dfrac{1}{n}\sum_{i=1}^{n} x_{i}^{2} - \bar{x}^{2}'
+variables:
+  - { symbol: 'V' }
+  - { symbol: '\sigma' }
+  - { symbol: 'x_{i}' }
+  - { symbol: '\bar{x}' }
+  - { symbol: 'n' }
+prerequisites: [moyenne-arithmetique]
+related: [loi-binomiale]
+confusedWith: []
+status: draft

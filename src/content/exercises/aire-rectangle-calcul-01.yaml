@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 2
+difficulty: 1
+formulas: [aire-rectangle]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 36
+  tolerance: 0
+  unit: cm²
+status: draft

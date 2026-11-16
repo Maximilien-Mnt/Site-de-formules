@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 1
+formulas: [perimetre-cercle]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 31.4
+  tolerance: 0.05
+  unit: cm
+status: draft

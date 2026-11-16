@@ -1,0 +1,16 @@
+title: Quel rapport pour quel angle ?
+statement: |
+  Le triangle $ABC$ est rectangle en $A$.
+  Quelle égalité est correcte pour l'angle $\widehat{B}$ ?
+choices:
+  a: '$\cos \widehat{B} = \dfrac{AB}{BC}$'
+  b: '$\cos \widehat{B} = \dfrac{AC}{BC}$'
+  c: '$\sin \widehat{B} = \dfrac{AB}{BC}$'
+  d: '$\tan \widehat{B} = \dfrac{AB}{AC}$'
+hints:
+  - 'L''hypoténuse est $[BC]$. Pour l''angle $\widehat{B}$, le côté adjacent est celui qui touche $B$ (sans être l''hypoténuse).'
+solution: |
+  Par rapport à $\widehat{B}$ : le côté adjacent est $[AB]$, le côté opposé est $[AC]$, l'hypoténuse est $[BC]$.
+
+  - $\cos \widehat{B} = \dfrac{\text{adjacent}}{\text{hypoténuse}} = \dfrac{AB}{BC}$ : la réponse **a** est correcte.
+  - $\sin \widehat{B} = \dfrac{AC}{BC}$ et $\tan \widehat{B} = \dfrac{AC}{AB}$.

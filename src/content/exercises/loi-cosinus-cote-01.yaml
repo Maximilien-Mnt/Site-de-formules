@@ -1,0 +1,11 @@
+subject: math
+domain: trigonometry
+level: 4
+difficulty: 3
+formulas: [loi-des-cosinus]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 7
+  tolerance: 0
+status: draft

@@ -1,0 +1,14 @@
+title: Que vaut e^(iπ) ?
+statement: |
+  Que vaut $e^{i\pi}$ ?
+choices:
+  a: '$-1$'
+  b: '$1$'
+  c: '$i$'
+  d: '$-i$'
+hints:
+  - 'Remplace $\theta$ par $\pi$ dans $\cos\theta + i\sin\theta$.'
+solution: |
+  $e^{i\pi} = \cos\pi + i\sin\pi = -1 + i \times 0 = -1$.
+
+  D'où l'identité d'Euler : $e^{i\pi} + 1 = 0$.

@@ -1,0 +1,84 @@
+---
+title: Intégration par parties
+summary: Pour intégrer un produit u·v', on transporte la dérivée sur l'autre facteur. C'est la règle du produit lue à l'envers.
+aliases: [IPP, intégration par parties, intégrale d'un produit]
+keywords: [intégrale, produit, primitive, calcul intégral]
+variableNames:
+  u: Une fonction dérivable
+  v: Une fonction dont la dérivée v' est continue
+  a: La borne inférieure
+  b: La borne supérieure
+  x: La variable
+variantLabels:
+  antiderivative: Version sans bornes
+---
+
+<Section kind="intuition">
+
+La règle du produit dit que $(uv)' = u'v + uv'$. Si on intègre cette égalité, on peut **échanger** le rôle des deux facteurs : un produit difficile à intégrer devient, après transformation, une intégrale plus simple.
+
+</Section>
+
+<Section kind="explanation">
+
+Si $u$ et $v$ sont dérivables à dérivées continues sur $[a\,;\,b]$ :
+
+$$
+\int_{a}^{b} u(x)\,v'(x)\,dx = \Big[u(x)\,v(x)\Big]_{a}^{b} - \int_{a}^{b} u'(x)\,v(x)\,dx
+$$
+
+**Exemple.** $\displaystyle\int_{0}^{1} x\,e^{x}\,dx$. On pose $u(x) = x$ et $v'(x) = e^{x}$, donc $u'(x) = 1$ et $v(x) = e^{x}$ :
+
+$$
+\int_{0}^{1} x\,e^{x}\,dx = \Big[x\,e^{x}\Big]_{0}^{1} - \int_{0}^{1} e^{x}\,dx = e - (e - 1) = 1
+$$
+
+**Autre exemple.** $\displaystyle\int \ln x\,dx$ avec $u = \ln x$ et $v' = 1$ donne $x\ln x - x + C$.
+
+</Section>
+
+<Section kind="proof">
+
+On part de $(uv)' = u'v + uv'$, qu'on intègre entre $a$ et $b$ :
+
+$\Big[uv\Big]_{a}^{b} = \displaystyle\int_{a}^{b} u'v\,dx + \int_{a}^{b} uv'\,dx$.
+
+Il suffit d'isoler $\displaystyle\int_{a}^{b} uv'\,dx$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La formule est attribuée à Brook Taylor, qui la publie en 1715. Elle découle de la règle du produit établie par Leibniz quelques décennies plus tôt.
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère le produit, puis choisis $u$ comme le facteur qui **se simplifie quand on le dérive** (un polynôme, $\ln x$) et $v'$ comme celui dont tu sais trouver une primitive ($e^{x}$, $\sin x$, $\cos x$).
+2. Calcule $u'$ et $v$.
+3. Applique la formule : le crochet, puis la nouvelle intégrale.
+4. Calcule la nouvelle intégrale (qui doit être plus simple).
+
+</Section>
+
+<Section kind="applications">
+
+- **Calculs d'intégrales** de produits : $x\,e^{x}$, $x\sin x$, $\ln x$.
+- **Physique** : transformées de Fourier, calcul de moments en probabilités.
+- **Analyse** : démonstrations de formules de récurrence et d'estimations.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier le signe moins devant la nouvelle intégrale.
+- Oublier d'**évaluer le crochet** aux deux bornes.
+- Mal choisir $u$ et $v'$ : si la nouvelle intégrale est plus compliquée, échange les rôles.
+- Confondre $v$ (la primitive) et $v'$ (la fonction donnée).
+
+</Callout>
+
+</Section>

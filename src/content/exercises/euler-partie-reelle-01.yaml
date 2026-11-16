@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 5
+difficulty: 2
+formulas: [euler-formule]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 0.5
+  tolerance: 0
+status: draft

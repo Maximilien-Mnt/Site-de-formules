@@ -1,0 +1,20 @@
+subject: math
+domain: linear-algebra
+topics: [matrices, determinant, inverse]
+level: 5
+difficulty: 2
+originYear: 1683 # approximatif : Seki Takakazu et Leibniz, indépendamment
+latex: '\det\begin{pmatrix} a & b \\ c & d \end{pmatrix} = ad - bc'
+variants:
+  - id: inverse
+    latex: 'A^{-1} = \dfrac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'c' }
+  - { symbol: 'd' }
+  - { symbol: 'A' }
+prerequisites: []
+related: [produit-matriciel]
+confusedWith: []
+status: draft

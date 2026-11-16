@@ -1,0 +1,18 @@
+subject: math
+domain: arithmetic
+topics: [addition, multiplication, properties]
+level: 1
+difficulty: 1
+latex: 'a + b = b + a \qquad a \times b = b \times a'
+variants:
+  - id: addition
+    latex: 'a + b = b + a'
+  - id: multiplication
+    latex: 'a \times b = b \times a'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+prerequisites: []
+related: []
+confusedWith: []
+status: draft

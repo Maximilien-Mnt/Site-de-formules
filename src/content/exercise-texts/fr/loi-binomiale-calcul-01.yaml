@@ -1,0 +1,9 @@
+title: Exactement deux faces
+statement: |
+  On lance $5$ fois une pièce équilibrée. Soit $X$ le nombre de « face » obtenus.
+  Calcule $P(X = 2)$ (résultat décimal).
+hints:
+  - '$X$ suit la loi binomiale $\mathcal{B}(5\,;\,0{,}5)$.'
+  - 'Utilise $\dbinom{5}{2}\,p^{2}\,(1 - p)^{3}$.'
+solution: |
+  $P(X = 2) = \dbinom{5}{2} \times 0{,}5^{2} \times 0{,}5^{3} = 10 \times 0{,}5^{5} = \dfrac{10}{32} = 0{,}3125$.

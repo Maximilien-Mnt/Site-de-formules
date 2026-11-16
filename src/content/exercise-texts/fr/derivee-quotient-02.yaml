@@ -1,0 +1,14 @@
+title: Dériver un quotient
+statement: |
+  Quelle est la dérivée de $f(x) = \dfrac{x}{x + 1}$ sur $]-1\,;\,+\infty[$ ?
+choices:
+  a: '$\dfrac{1}{(x + 1)^{2}}$'
+  b: '$1$'
+  c: '$-\dfrac{1}{(x + 1)^{2}}$'
+  d: '$\dfrac{x}{(x + 1)^{2}}$'
+hints:
+  - 'Pose $u = x$ et $v = x + 1$ : $u'' = 1$ et $v'' = 1$.'
+solution: |
+  $f'(x) = \dfrac{u'v - uv'}{v^{2}} = \dfrac{1 \times (x + 1) - x \times 1}{(x + 1)^{2}} = \dfrac{1}{(x + 1)^{2}}$.
+
+  La réponse c inverse l'ordre des termes du numérateur.

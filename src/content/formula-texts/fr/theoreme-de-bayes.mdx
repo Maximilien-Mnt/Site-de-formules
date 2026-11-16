@@ -1,0 +1,78 @@
+---
+title: Théorème de Bayes
+summary: La formule de Bayes permet d'inverser un conditionnement et de calculer P(A sachant B) à partir de P(B sachant A).
+aliases: [formule de Bayes, probabilité des causes, inversion de conditionnement, test positif, faux positifs]
+keywords: [probabilité conditionnelle, test médical, faux positif, prévalence, cause]
+variableNames:
+  A: L'événement dont on cherche la probabilité (la « cause »)
+  B: L'événement observé
+variantLabels:
+  expanded: Forme développée avec les probabilités totales
+---
+
+<Section kind="intuition">
+
+On connaît souvent la probabilité d'observer un résultat **sachant** la cause (un test est positif si la personne est malade), mais ce qu'on veut savoir, c'est la probabilité de la cause **sachant** le résultat (la personne est-elle malade si le test est positif ?). La formule de Bayes permet de passer de l'un à l'autre.
+
+</Section>
+
+<Section kind="explanation">
+
+Si $P(A) \neq 0$ et $P(B) \neq 0$ :
+
+$$
+P_{B}(A) = \frac{P_{A}(B)\,P(A)}{P(B)}
+$$
+
+avec, d'après les probabilités totales, $P(B) = P_{A}(B)\,P(A) + P_{\overline{A}}(B)\,P(\overline{A})$.
+
+**Exemple.** Une maladie touche $1\,\%$ de la population. Un test est positif pour $99\,\%$ des malades et pour $5\,\%$ des personnes saines. Si le test d'une personne est positif, quelle est la probabilité qu'elle soit malade ?
+
+$$
+P_{+}(\text{malade}) = \frac{0{,}99 \times 0{,}01}{0{,}99 \times 0{,}01 + 0{,}05 \times 0{,}99} = \frac{0{,}0099}{0{,}0594} = \frac{1}{6} \approx 0{,}167
+$$
+
+Malgré un test fiable, la probabilité n'est que d'environ **17 %** : la maladie est si rare que les faux positifs sont plus nombreux que les vrais.
+
+</Section>
+
+<Section kind="proof">
+
+Par la formule des probabilités composées, $P(A \cap B) = P_{A}(B)\,P(A)$ et aussi $P(A \cap B) = P_{B}(A)\,P(B)$. On égalise les deux expressions et on divise par $P(B)$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Le pasteur et mathématicien Thomas Bayes a laissé un essai sur le sujet, publié après sa mort, en 1763, par son ami Richard Price. Pierre-Simon de Laplace a retrouvé et développé le résultat indépendamment en 1774.
+
+</Section>
+
+<Section kind="methods">
+
+1. Nomme les événements : $A$ (la cause), $B$ (ce qu'on observe).
+2. Dessine un arbre pondéré avec $P(A)$, $P_{A}(B)$ et $P_{\overline{A}}(B)$.
+3. Calcule $P(B)$ en additionnant les branches qui mènent à $B$.
+4. Divise la branche « $A$ puis $B$ » par $P(B)$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Médecine** : interpréter un test de dépistage.
+- **Filtres anti-spam** : probabilité qu'un message soit un spam sachant qu'il contient certains mots.
+- **Intelligence artificielle** : mise à jour de croyances à partir de nouvelles données (statistique bayésienne).
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- **Confondre** $P_{A}(B)$ et $P_{B}(A)$ : « 99 % des malades sont positifs » ne veut pas dire « 99 % des positifs sont malades ».
+- Ignorer la **prévalence** $P(A)$ : plus la cause est rare, plus un test positif est trompeur.
+- Oublier le terme $P_{\overline{A}}(B)\,P(\overline{A})$ au dénominateur.
+
+</Callout>
+
+</Section>

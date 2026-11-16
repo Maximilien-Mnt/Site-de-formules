@@ -1,0 +1,87 @@
+---
+title: Loi des cosinus (théorème d'Al-Kashi)
+summary: Dans un triangle quelconque, a² = b² + c² − 2bc cos A. C'est le théorème de Pythagore généralisé à un triangle non rectangle.
+aliases: [théorème d'Al-Kashi, Pythagore généralisé, formule d'Al-Kashi, triangle quelconque]
+keywords: [triangle, angle, côté, cosinus, longueur]
+variableNames:
+  a: Longueur du côté opposé à l'angle A
+  b: Longueur d'un autre côté du triangle
+  c: Longueur du troisième côté
+  A: L'angle formé par les côtés b et c (opposé à a)
+variantLabels:
+  angle: Calculer un angle
+---
+
+<Section kind="intuition">
+
+Le théorème de Pythagore ne marche que si l'angle est droit. La loi des cosinus ajoute un terme de **correction** qui dépend de l'angle $A$ : plus l'angle est ouvert, plus le côté opposé est long.
+
+</Section>
+
+<Section kind="explanation">
+
+Dans un triangle $ABC$, avec $a = BC$, $b = AC$ et $c = AB$ :
+
+$$
+a^{2} = b^{2} + c^{2} - 2bc\cos A
+$$
+
+**Exemple.** Si $b = 5$, $c = 8$ et $A = 60^\circ$ : $a^{2} = 25 + 64 - 2 \times 5 \times 8 \times 0{,}5 = 49$, donc $a = 7$.
+
+**Cas particuliers.** Si $A = 90^\circ$, alors $\cos A = 0$ et on retrouve $a^{2} = b^{2} + c^{2}$ (Pythagore). Si $A$ est aigu, $a^{2} < b^{2} + c^{2}$ ; s'il est obtus, $a^{2} > b^{2} + c^{2}$.
+
+**Calculer un angle** quand on connaît les trois côtés : $\cos A = \dfrac{b^{2} + c^{2} - a^{2}}{2bc}$, puis on utilise $\cos^{-1}$.
+
+</Section>
+
+<Section kind="proof">
+
+Place $A$ à l'origine, $B(c\,;\,0)$ et $C(b\cos A\,;\,b\sin A)$. Avec la formule de la distance :
+
+$a^{2} = BC^{2} = (b\cos A - c)^{2} + (b\sin A)^{2} = b^{2}\cos^{2}A - 2bc\cos A + c^{2} + b^{2}\sin^{2}A$.
+
+Comme $\cos^{2}A + \sin^{2}A = 1$, on obtient $a^{2} = b^{2} + c^{2} - 2bc\cos A$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Des versions géométriques de ce résultat figurent dans les *Éléments* d'Euclide (livre II, propositions 12 et 13, vers 300 av. J.-C.), sans cosinus. Le mathématicien persan Jamshid al-Kashi en donne une forme proche de la nôtre au début du XVe siècle, d'où le nom « théorème d'Al-Kashi » en France.
+
+</Section>
+
+<Section kind="methods">
+
+**Trouver un côté** (deux côtés et l'angle entre eux connus)
+
+1. Repère l'angle $A$ et le côté $a$ qui lui est opposé.
+2. Remplace dans $a^{2} = b^{2} + c^{2} - 2bc\cos A$.
+3. Prends la racine carrée.
+
+**Trouver un angle** (trois côtés connus)
+
+1. Isole $\cos A$ avec la seconde forme.
+2. Calcule l'angle avec $\cos^{-1}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Topographie et navigation** : distance entre deux points inaccessibles à partir de deux visées.
+- **Mécanique** : composer deux forces formant un angle.
+- **Géométrie** : trouver un angle dans un triangle dont on connaît les côtés.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Se tromper d'angle : $A$ est **opposé** au côté $a$.
+- Oublier le facteur $2$ dans $2bc\cos A$.
+- Mettre la calculatrice en radians au lieu de degrés.
+- Oublier la racine carrée à la fin.
+
+</Callout>
+
+</Section>

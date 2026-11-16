@@ -1,0 +1,8 @@
+title: Distance entre deux points
+statement: |
+  Dans un repère orthonormé, on donne $A(1\,;\,2)$ et $B(4\,;\,6)$.
+  Calcule la distance $AB$.
+hints:
+  - 'Calcule $x_{B} - x_{A}$ et $y_{B} - y_{A}$.'
+solution: |
+  $AB = \sqrt{(4 - 1)^{2} + (6 - 2)^{2}} = \sqrt{3^{2} + 4^{2}} = \sqrt{9 + 16} = \sqrt{25} = 5$.

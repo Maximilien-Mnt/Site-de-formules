@@ -1,0 +1,15 @@
+title: La taille d'un produit
+statement: |
+  $A$ est une matrice de taille $2 \times 3$ et $B$ une matrice de taille $3 \times 4$.
+  Que peut-on dire de $AB$ ?
+choices:
+  a: 'Elle existe et est de taille $2 \times 4$.'
+  b: 'Elle existe et est de taille $3 \times 3$.'
+  c: 'Elle existe et est de taille $2 \times 3$.'
+  d: 'Elle n''existe pas.'
+hints:
+  - 'Le nombre de colonnes de $A$ doit être égal au nombre de lignes de $B$.'
+solution: |
+  $A$ a $3$ colonnes et $B$ a $3$ lignes : le produit existe. Il a autant de lignes que $A$ ($2$) et autant de colonnes que $B$ ($4$).
+
+  Donc $AB$ est de taille $2 \times 4$.

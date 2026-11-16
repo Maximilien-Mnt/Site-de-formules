@@ -1,0 +1,14 @@
+title: Bien choisir u et v'
+statement: |
+  Pour calculer $\displaystyle\int x\,e^{x}\,dx$ par parties, quel choix est le plus judicieux ?
+choices:
+  a: '$u(x) = x$ et $v''(x) = e^{x}$'
+  b: '$u(x) = e^{x}$ et $v''(x) = x$'
+  c: '$u(x) = x\,e^{x}$ et $v''(x) = 1$'
+  d: '$u(x) = 1$ et $v''(x) = x\,e^{x}$'
+hints:
+  - 'Quel facteur devient plus simple quand on le dérive ?'
+solution: |
+  Dériver $x$ donne $1$ (plus simple), et une primitive de $e^{x}$ est $e^{x}$ (aussi simple) : le choix **a** conduit à une intégrale facile.
+
+  Avec le choix b, on obtiendrait $\dfrac{x^{2}}{2}e^{x} - \displaystyle\int \dfrac{x^{2}}{2}e^{x}\,dx$ : l'intégrale restante est plus compliquée.

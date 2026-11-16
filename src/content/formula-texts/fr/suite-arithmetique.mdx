@@ -1,0 +1,87 @@
+---
+title: Suite arithmétique
+summary: Dans une suite arithmétique, on passe d'un terme au suivant en ajoutant toujours la même raison r. Le terme de rang n vaut u0 + n × r.
+aliases: [progression arithmétique, raison, terme général, somme des termes, suite]
+keywords: [raison, terme, somme, rang, ajouter]
+variableNames:
+  'u_{n}': Le terme de rang n
+  'u_{0}': Le terme initial (rang 0)
+  'u_{p}': Le terme de rang p
+  r: La raison (le nombre ajouté à chaque étape)
+  n: Le rang du terme
+  S: La somme des termes de u0 à un
+variantLabels:
+  general: Depuis un terme de rang p
+  sum: Somme des n + 1 premiers termes
+---
+
+<Section kind="intuition">
+
+Tu économises 3 € chaque semaine en partant de 5 € : $5,\ 8,\ 11,\ 14,\ \dots$ Chaque terme s'obtient en **ajoutant** 3. C'est le même comportement qu'une fonction affine, mais en ne regardant que les valeurs entières de $n$.
+
+</Section>
+
+<Section kind="explanation">
+
+Une suite $(u_{n})$ est **arithmétique** de raison $r$ si, pour tout $n$ : $u_{n+1} = u_{n} + r$. Alors :
+
+$$
+u_{n} = u_{0} + n \times r
+$$
+
+**Exemple.** Avec $u_{0} = 5$ et $r = 3$ : $u_{10} = 5 + 10 \times 3 = 35$.
+
+**Somme des termes.** La somme des $n + 1$ premiers termes ($u_{0}$ à $u_{n}$) est :
+
+$$
+S = u_{0} + u_{1} + \dots + u_{n} = (n + 1) \times \frac{u_{0} + u_{n}}{2}
+$$
+
+Avec l'exemple précédent : $S = 11 \times \dfrac{5 + 35}{2} = 220$.
+
+</Section>
+
+<Section kind="proof">
+
+Écris la somme deux fois, la seconde à l'envers :
+
+$S = u_{0} + u_{1} + \dots + u_{n}$ et $S = u_{n} + u_{n-1} + \dots + u_{0}$.
+
+Chaque colonne a pour somme $u_{0} + u_{n}$ (car quand on avance d'un côté de $r$, on recule de $r$ de l'autre). Il y a $n + 1$ colonnes : $2S = (n + 1)(u_{0} + u_{n})$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Les suites arithmétiques sont très anciennes : le papyrus Rhind (vers 1650 av. J.-C.) contient un problème de partage de pains entre des personnes selon une progression arithmétique. La somme des termes est liée aux nombres triangulaires, connus des pythagoriciens.
+
+</Section>
+
+<Section kind="methods">
+
+1. **Reconnaître** une suite arithmétique : la différence $u_{n+1} - u_{n}$ est constante.
+2. **Calculer la raison** avec deux termes : $r = \dfrac{u_{n} - u_{p}}{n - p}$.
+3. **Calculer un terme** avec $u_{n} = u_{0} + n\,r$ (ou $u_{p} + (n - p)\,r$).
+4. **Calculer une somme** : nombre de termes × moyenne du premier et du dernier.
+
+</Section>
+
+<Section kind="applications">
+
+- **Épargne ou loyer** qui augmente d'une somme fixe chaque période.
+- **Rangées d'un amphithéâtre** : chaque rangée a le même nombre de places de plus que la précédente.
+- **Modélisation** de phénomènes à croissance constante.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Confondre suite **arithmétique** (on ajoute $r$) et suite **géométrique** (on multiplie par $q$).
+- Se tromper sur le nombre de termes : de $u_{0}$ à $u_{n}$, il y en a $n + 1$, pas $n$.
+- Oublier que le premier terme est parfois $u_{1}$ : la formule change alors en $u_{n} = u_{1} + (n - 1)\,r$.
+
+</Callout>
+
+</Section>

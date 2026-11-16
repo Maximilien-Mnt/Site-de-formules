@@ -1,0 +1,8 @@
+title: Le coefficient directeur
+statement: |
+  Une droite passe par les points $A(1\,;\,5)$ et $B(3\,;\,9)$.
+  Quel est son coefficient directeur $a$ ?
+hints:
+  - 'Calcule la variation de $y$ divisée par la variation de $x$.'
+solution: |
+  $a = \dfrac{y_{B} - y_{A}}{x_{B} - x_{A}} = \dfrac{9 - 5}{3 - 1} = \dfrac{4}{2} = 2$.

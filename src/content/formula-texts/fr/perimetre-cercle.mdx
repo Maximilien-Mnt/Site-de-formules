@@ -1,0 +1,68 @@
+---
+title: Périmètre d'un cercle
+summary: Le périmètre d'un cercle de rayon r vaut 2πr. C'est aussi π fois son diamètre.
+aliases: [circonférence, longueur d'un cercle, tour d'un cercle, périmètre d'un disque]
+keywords: [pi, rayon, diamètre, roue, circonférence]
+variableNames:
+  P: Le périmètre du cercle (sa longueur)
+  r: Le rayon (distance du centre au cercle)
+  d: Le diamètre (le double du rayon)
+  '\pi': Le nombre pi, environ 3,14159
+variantLabels:
+  diameter: Avec le diamètre
+  radius: Retrouver le rayon
+---
+
+<Section kind="intuition">
+
+Fais rouler une roue sur une règle pendant un tour complet : la distance parcourue est le périmètre de la roue. Quelle que soit la taille du cercle, cette distance vaut un peu plus de **3 fois son diamètre**. Ce rapport constant s'appelle $\pi$.
+
+</Section>
+
+<Section kind="explanation">
+
+$$
+P = \pi \times d = 2 \pi r
+$$
+
+**Exemple.** Pour un cercle de rayon 5 cm : $P = 2 \times \pi \times 5 = 10\pi \approx 31{,}4$ cm.
+
+**Retrouver le rayon.** Si $P = 40$ cm, alors $r = \dfrac{40}{2\pi} \approx 6{,}37$ cm.
+
+Le nombre $\pi$ vaut environ $3{,}14159$. Ses décimales ne s'arrêtent jamais et ne se répètent pas : on utilise souvent la valeur approchée $3{,}14$.
+
+</Section>
+
+<Section kind="history">
+
+Les Babyloniens et les Égyptiens utilisaient déjà des valeurs approchées du rapport entre la circonférence et le diamètre (par exemple 3 ou $\frac{25}{8}$). Archimède (vers 250 av. J.-C.) encadre $\pi$ avec des polygones à 96 côtés : $\frac{223}{71} < \pi < \frac{22}{7}$. La lettre $\pi$ est utilisée pour ce nombre au début du XVIIIe siècle, notamment par William Jones (1706), puis popularisée par Euler.
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère si on te donne le **rayon** ou le **diamètre** ($d = 2r$).
+2. Applique $P = 2\pi r$ ou $P = \pi d$.
+3. Arrondis à la fin seulement, avec l'unité de longueur (cm, m…).
+
+</Section>
+
+<Section kind="applications">
+
+- **Roues** : la distance parcourue en un tour de roue.
+- **Tuyaux et câbles** : la longueur de ruban pour entourer un tube.
+- **Pistes et horloges** : la longueur d'un tour de piste ou du bord d'un cadran.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Confondre avec l'**aire** $\pi r^{2}$ : le périmètre est une longueur, il n'y a pas de carré.
+- Oublier de doubler le rayon dans $2\pi r$.
+- Arrondir $\pi$ trop tôt (par exemple à 3) : l'erreur grandit vite.
+
+</Callout>
+
+</Section>

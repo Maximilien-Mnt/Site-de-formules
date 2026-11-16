@@ -1,0 +1,17 @@
+title: Les poignées de main
+statement: |
+  Dix personnes se rencontrent et chacune serre la main de toutes les autres, une seule fois.
+  Combien y a-t-il de poignées de main en tout ?
+choices:
+  a: '$45$'
+  b: '$90$'
+  c: '$100$'
+  d: '$55$'
+hints:
+  - 'La première personne serre 9 mains, la suivante 8 nouvelles mains, etc.'
+solution: |
+  La première personne serre $9$ mains, la deuxième $8$ nouvelles, et ainsi de suite :
+
+  $9 + 8 + \dots + 1 = \dfrac{9 \times 10}{2} = 45$.
+
+  La réponse b compte chaque poignée de main deux fois ($10 \times 9$).

@@ -1,0 +1,18 @@
+subject: math
+domain: geometry
+topics: [rectangle, area]
+level: 2
+difficulty: 1
+latex: 'A = L \times \ell'
+variants:
+  - id: square
+    latex: 'A = c \times c = c^{2}'
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'L' }
+  - { symbol: '\ell' }
+  - { symbol: 'c' }
+prerequisites: []
+related: [aire-triangle, perimetre-rectangle]
+confusedWith: [perimetre-rectangle]
+status: draft

@@ -1,0 +1,12 @@
+title: Un taux d'accroissement
+statement: |
+  Soit $f(x) = x^{2}$. Calcule le taux d'accroissement de $f$ entre $x = 2$ et $x = 2{,}1$,
+  c'est-à-dire $\dfrac{f(2{,}1) - f(2)}{0{,}1}$.
+hints:
+  - 'Calcule $f(2{,}1) = 2{,}1^{2}$ et $f(2) = 4$.'
+solution: |
+  $f(2{,}1) = 4{,}41$ et $f(2) = 4$.
+
+  $\dfrac{4{,}41 - 4}{0{,}1} = \dfrac{0{,}41}{0{,}1} = 4{,}1$.
+
+  Ce taux est proche de $f'(2) = 4$ : plus $h$ est petit, plus on s'en approche.

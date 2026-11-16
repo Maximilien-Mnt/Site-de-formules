@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 2
+formulas: [volume-cylindre, aire-disque]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 282.7
+  tolerance: 0.5
+  unit: cm³
+status: draft

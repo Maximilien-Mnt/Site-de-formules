@@ -1,0 +1,9 @@
+title: Le tour d'un rectangle
+statement: |
+  Un rectangle mesure 12 cm de long et 5 cm de large.
+  Calcule son périmètre, en cm.
+hints:
+  - 'Le périmètre est la longueur du tour : deux longueurs et deux largeurs.'
+  - 'Calcule $2 \times (12 + 5)$.'
+solution: |
+  $P = 2 \times (L + \ell) = 2 \times (12 + 5) = 2 \times 17 = 34$ cm.

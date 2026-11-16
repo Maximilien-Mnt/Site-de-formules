@@ -1,0 +1,73 @@
+---
+title: Moyenne arithmétique
+summary: La moyenne de n valeurs est leur somme divisée par n. Avec des coefficients, on parle de moyenne pondérée.
+aliases: [moyenne, moyenne pondérée, moyenne des notes, moyenne simple]
+keywords: [notes, coefficient, effectif, statistiques, valeur centrale]
+variableNames:
+  '\bar{x}': La moyenne
+  'x_{i}': Une valeur de la série
+  n: Le nombre de valeurs
+  'n_{i}': L'effectif ou le coefficient de la valeur numéro i
+  k: Le nombre de valeurs différentes
+variantLabels:
+  weighted: Moyenne pondérée
+---
+
+<Section kind="intuition">
+
+La moyenne, c'est la valeur que tout le monde aurait si on **répartissait** le total de façon égale. Trois amis ont 2 €, 5 € et 8 € : à eux trois, ils ont 15 €. En partageant équitablement, chacun aurait 5 €, la moyenne.
+
+</Section>
+
+<Section kind="explanation">
+
+$$
+\bar{x} = \frac{x_{1} + x_{2} + \dots + x_{n}}{n}
+$$
+
+**Exemple.** Les notes 12, 15, 9, 16 et 13 ont pour somme $65$. La moyenne est $\dfrac{65}{5} = 13$.
+
+**Moyenne pondérée.** Quand les valeurs n'ont pas la même importance (coefficients ou effectifs), on multiplie chaque valeur par son coefficient. Avec 14 (coefficient 3) et 10 (coefficient 2) :
+
+$$
+\bar{x} = \frac{14 \times 3 + 10 \times 2}{3 + 2} = \frac{62}{5} = 12{,}4
+$$
+
+La moyenne est toujours comprise entre la plus petite et la plus grande valeur.
+
+</Section>
+
+<Section kind="history">
+
+Dans la tradition pythagoricienne, on distinguait plusieurs « moyennes » (arithmétique, géométrique, harmonique). Les astronomes et les géodésiens ont ensuite pris l'habitude de remplacer plusieurs mesures d'une même grandeur par leur moyenne pour réduire l'effet des erreurs ; cette pratique se généralise aux XVIIe et XVIIIe siècles.
+
+</Section>
+
+<Section kind="methods">
+
+1. Additionne toutes les valeurs (en tenant compte des coefficients ou des effectifs).
+2. Divise par le **nombre de valeurs** (ou par la somme des coefficients).
+3. Vérifie que le résultat est compris entre la plus petite et la plus grande valeur.
+
+</Section>
+
+<Section kind="applications">
+
+- **Notes scolaires** : moyenne d'une matière, moyenne générale avec coefficients.
+- **Sciences** : moyenne de plusieurs mesures pour limiter l'erreur.
+- **Sport et économie** : vitesse moyenne, salaire moyen, température moyenne.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier les **coefficients** et faire une moyenne simple.
+- Diviser par le mauvais nombre (le nombre de valeurs différentes au lieu de l'effectif total).
+- Faire la moyenne de moyennes sans tenir compte de la taille de chaque groupe.
+- Confondre la moyenne avec la **médiane** (valeur du milieu) ou le **mode** (valeur la plus fréquente).
+
+</Callout>
+
+</Section>

@@ -1,0 +1,19 @@
+subject: math
+domain: arithmetic
+topics: [percentages, proportionality]
+level: 2
+difficulty: 2
+latex: 'V = \dfrac{p}{100} \times T'
+variants:
+  - id: rate
+    latex: 'p = \dfrac{V}{T} \times 100'
+  - id: total
+    latex: 'T = \dfrac{V \times 100}{p}'
+variables:
+  - { symbol: 'V' }
+  - { symbol: 'T' }
+  - { symbol: 'p' }
+prerequisites: []
+related: []
+confusedWith: []
+status: draft

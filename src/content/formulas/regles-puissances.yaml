@@ -1,0 +1,27 @@
+subject: math
+domain: algebra
+topics: [powers, exponents]
+level: 3
+difficulty: 2
+originYear: -250 # approximatif : L'Arénaire d'Archimède (règle sur les ordres de grandeur)
+latex: 'a^{m} \times a^{n} = a^{m+n}'
+variants:
+  - id: quotient
+    latex: '\dfrac{a^{m}}{a^{n}} = a^{m-n}'
+  - id: power-of-power
+    latex: '(a^{m})^{n} = a^{m \times n}'
+  - id: power-of-product
+    latex: '(a \times b)^{n} = a^{n} \times b^{n}'
+  - id: negative
+    latex: 'a^{-n} = \dfrac{1}{a^{n}}'
+  - id: zero
+    latex: 'a^{0} = 1'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'm' }
+  - { symbol: 'n' }
+prerequisites: []
+related: [exponentielle-proprietes, suite-geometrique]
+confusedWith: []
+status: draft

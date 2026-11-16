@@ -1,0 +1,8 @@
+title: Longueur d'un cercle
+statement: |
+  Un cercle a un rayon de $5$ cm.
+  Calcule son périmètre en cm, arrondi au dixième (utilise $\pi \approx 3{,}14$).
+hints:
+  - 'La formule est $P = 2 \pi r$.'
+solution: |
+  $P = 2 \times \pi \times 5 = 10\pi \approx 10 \times 3{,}14 = 31{,}4$ cm.

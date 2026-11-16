@@ -1,0 +1,11 @@
+subject: math
+domain: probability
+level: 3
+difficulty: 1
+formulas: [probabilite-equiprobable]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 0.3
+  tolerance: 0
+status: draft

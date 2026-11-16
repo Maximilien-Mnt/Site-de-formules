@@ -1,0 +1,8 @@
+title: Une intégration par parties
+statement: |
+  Calcule $\displaystyle\int_{0}^{1} x\,e^{x}\,dx$.
+hints:
+  - 'Pose $u(x) = x$ et $v''(x) = e^{x}$.'
+  - 'Alors $u''(x) = 1$ et $v(x) = e^{x}$.'
+solution: |
+  $\displaystyle\int_{0}^{1} x\,e^{x}\,dx = \Big[x\,e^{x}\Big]_{0}^{1} - \int_{0}^{1} e^{x}\,dx = e - \Big[e^{x}\Big]_{0}^{1} = e - (e - 1) = 1$.

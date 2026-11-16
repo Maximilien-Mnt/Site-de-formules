@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 5
+difficulty: 2
+formulas: [theoreme-fondamental-analyse]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 9
+  tolerance: 0
+status: draft

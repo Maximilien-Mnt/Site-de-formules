@@ -1,0 +1,14 @@
+title: Quand la série converge-t-elle ?
+statement: |
+  Pour quelles valeurs de $q$ la série $\displaystyle\sum_{k=0}^{\infty} q^{k}$ converge-t-elle ?
+choices:
+  a: '$|q| < 1$'
+  b: '$q < 1$'
+  c: '$|q| \leq 1$'
+  d: '$q > 0$'
+hints:
+  - 'Pour $q = -2$, les termes valent $1, -2, 4, -8, \dots$ : convergent-ils vers $0$ ?'
+solution: |
+  La série converge si et seulement si $|q| < 1$.
+
+  Pour $q = -2$ (qui vérifie $q < 1$), les termes grandissent en valeur absolue : la série diverge, donc b est fausse. Pour $q = 1$, la somme vaut $1 + 1 + 1 + \dots$ qui diverge : c est fausse.

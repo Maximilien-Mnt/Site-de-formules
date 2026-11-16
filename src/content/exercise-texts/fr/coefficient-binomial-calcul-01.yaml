@@ -1,0 +1,8 @@
+title: Former un comité
+statement: |
+  Dans une classe de $8$ élèves, on choisit un comité de $3$ élèves (l'ordre n'a pas d'importance).
+  Combien de comités différents peut-on former ?
+hints:
+  - 'C''est « 3 parmi 8 » : $\dbinom{8}{3}$.'
+solution: |
+  $\dbinom{8}{3} = \dfrac{8!}{3!\,5!} = \dfrac{8 \times 7 \times 6}{3 \times 2 \times 1} = \dfrac{336}{6} = 56$.

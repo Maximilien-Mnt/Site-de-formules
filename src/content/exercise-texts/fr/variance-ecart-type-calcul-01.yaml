@@ -1,0 +1,12 @@
+title: Calculer un écart type
+statement: |
+  Soit la série $2,\ 4,\ 4,\ 4,\ 5,\ 5,\ 7,\ 9$. Calcule son écart type $\sigma$.
+hints:
+  - 'Commence par calculer la moyenne.'
+  - 'Calcule la moyenne des carrés des écarts à la moyenne : c''est la variance. L''écart type est sa racine carrée.'
+solution: |
+  Moyenne : $\bar{x} = \dfrac{40}{8} = 5$.
+
+  Carrés des écarts : $9,\ 1,\ 1,\ 1,\ 0,\ 0,\ 4,\ 16$, de somme $32$.
+
+  $V = \dfrac{32}{8} = 4$, donc $\sigma = \sqrt{4} = 2$.

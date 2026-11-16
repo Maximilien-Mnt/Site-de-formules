@@ -1,0 +1,14 @@
+title: Le périmètre d'un carré
+statement: |
+  Quelle formule donne le périmètre d'un carré de côté $c$ ?
+choices:
+  a: '$4 \times c$'
+  b: '$c \times c$'
+  c: '$2 \times c$'
+  d: '$c + 4$'
+hints:
+  - 'Un carré a 4 côtés égaux.'
+solution: |
+  Le tour d'un carré est formé de 4 côtés de même longueur : $P = c + c + c + c = 4 \times c$.
+
+  La formule $c \times c$ donne l'**aire** du carré, pas son périmètre.

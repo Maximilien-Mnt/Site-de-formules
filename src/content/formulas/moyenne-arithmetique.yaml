@@ -1,0 +1,19 @@
+subject: math
+domain: statistics
+topics: [mean, data]
+level: 3
+difficulty: 1
+latex: '\bar{x} = \dfrac{x_{1} + x_{2} + \dots + x_{n}}{n}'
+variants:
+  - id: weighted
+    latex: '\bar{x} = \dfrac{\sum_{i=1}^{k} n_{i}x_{i}}{\sum_{i=1}^{k} n_{i}}'
+variables:
+  - { symbol: '\bar{x}' }
+  - { symbol: 'x_{i}' }
+  - { symbol: 'n' }
+  - { symbol: 'n_{i}' }
+  - { symbol: 'k' }
+prerequisites: []
+related: [variance-ecart-type, probabilite-equiprobable]
+confusedWith: []
+status: draft

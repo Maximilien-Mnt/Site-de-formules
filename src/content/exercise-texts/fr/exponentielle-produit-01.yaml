@@ -1,0 +1,7 @@
+title: Une somme dans l'exposant
+statement: |
+  On sait que $e^{a} = 2$ et $e^{b} = 5$. Calcule $e^{a + b}$.
+hints:
+  - 'Une somme dans l''exposant devient un produit.'
+solution: |
+  $e^{a + b} = e^{a} \times e^{b} = 2 \times 5 = 10$.

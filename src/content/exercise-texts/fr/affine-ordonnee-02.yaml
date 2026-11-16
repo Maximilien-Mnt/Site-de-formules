@@ -1,0 +1,14 @@
+title: Lire l'ordonnée à l'origine
+statement: |
+  Quelle est l'ordonnée à l'origine de la fonction $f(x) = -2x + 7$ ?
+choices:
+  a: '$-2$'
+  b: '$7$'
+  c: '$3{,}5$'
+  d: '$-7$'
+hints:
+  - 'Calcule $f(0)$.'
+solution: |
+  $f(0) = -2 \times 0 + 7 = 7$ : la droite coupe l'axe vertical en $7$.
+
+  Le nombre $-2$ est le coefficient directeur (la pente), et $3{,}5$ est l'endroit où la droite coupe l'axe horizontal.

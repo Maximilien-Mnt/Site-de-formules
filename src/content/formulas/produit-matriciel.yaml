@@ -1,0 +1,23 @@
+subject: math
+domain: linear-algebra
+topics: [matrices, matrix-product]
+level: 6
+difficulty: 3
+originYear: 1858 # approximatif : Cayley, A Memoir on the Theory of Matrices
+latex: '(AB)_{ij} = \sum_{k=1}^{n} a_{ik}\,b_{kj}'
+variants:
+  - id: example-2x2
+    latex: '\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} e & f \\ g & h \end{pmatrix} = \begin{pmatrix} ae + bg & af + bh \\ ce + dg & cf + dh \end{pmatrix}'
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'B' }
+  - { symbol: 'a_{ik}' }
+  - { symbol: 'b_{kj}' }
+  - { symbol: 'i' }
+  - { symbol: 'j' }
+  - { symbol: 'k' }
+  - { symbol: 'n' }
+prerequisites: [determinant-inverse-2x2]
+related: []
+confusedWith: []
+status: draft

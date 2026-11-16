@@ -1,0 +1,73 @@
+---
+title: Fonction exponentielle et ses propriétés
+summary: La fonction exponentielle transforme les sommes en produits (e^(a+b) = e^a × e^b) et elle est égale à sa propre dérivée.
+aliases: [exponentielle, fonction exp, nombre e, e puissance x, croissance exponentielle]
+keywords: [exp, nombre e, croissance, dérivée, positif]
+variableNames:
+  a: Un nombre réel
+  b: Un autre nombre réel
+  n: Un entier
+  x: La variable
+variantLabels:
+  quotient: Quotient
+  power: Puissance
+  inverse: Inverse
+  derivative: Dérivée
+---
+
+<Section kind="intuition">
+
+Certaines quantités croissent d'autant plus vite qu'elles sont déjà grandes : une population de bactéries, un capital placé à intérêts composés. La fonction exponentielle est le modèle de cette croissance : sa pente en chaque point est égale à sa valeur.
+
+</Section>
+
+<Section kind="explanation">
+
+La fonction $x \mapsto e^{x}$, avec $e \approx 2{,}71828$, est définie par : elle est égale à sa dérivée et $e^{0} = 1$. Elle est **strictement positive** et **croissante**. Pour tous réels $a$ et $b$ et tout entier $n$ :
+
+$$
+e^{a + b} = e^{a} \times e^{b} \qquad e^{a - b} = \frac{e^{a}}{e^{b}} \qquad (e^{a})^{n} = e^{na} \qquad e^{-a} = \frac{1}{e^{a}}
+$$
+
+Et $(e^{x})' = e^{x}$.
+
+**Exemple.** Si $e^{a} = 2$ et $e^{b} = 5$, alors $e^{a+b} = 2 \times 5 = 10$ et $e^{a-b} = \dfrac{2}{5}$.
+
+**Lien avec $e$.** Le nombre $e$ est la limite de $\left(1 + \dfrac{1}{n}\right)^{n}$ quand $n$ tend vers $+\infty$.
+
+</Section>
+
+<Section kind="history">
+
+Jacques Bernoulli rencontre en 1683 la limite de $\left(1 + \dfrac{1}{n}\right)^{n}$ en étudiant les intérêts composés. Leonhard Euler introduit la lettre $e$ vers 1727 – 1731 et étudie systématiquement la fonction exponentielle dans l'*Introductio in analysin infinitorum* (1748).
+
+</Section>
+
+<Section kind="methods">
+
+1. Pour **simplifier** : regroupe les exposants avec les règles ci-dessus, comme pour les puissances.
+2. Pour **résoudre** $e^{x} = k$ avec $k > 0$ : $x = \ln k$ (voir le logarithme).
+3. Pour **comparer** $e^{a}$ et $e^{b}$ : comme l'exponentielle est croissante, $e^{a} < e^{b}$ équivaut à $a < b$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Populations et épidémies** : croissance en début de propagation.
+- **Finance** : intérêts composés continus.
+- **Physique** : décroissance radioactive, charge d'un condensateur, refroidissement.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- $e^{a + b} \neq e^{a} + e^{b}$ : une somme dans l'exposant devient un **produit**.
+- $e^{x}$ n'est jamais nul ni négatif.
+- Dériver $e^{x}$ comme une puissance : $(e^{x})' = e^{x}$ et non $x\,e^{x-1}$.
+- Confondre $e^{ab}$ avec $e^{a} \times e^{b}$ (qui vaut $e^{a+b}$).
+
+</Callout>
+
+</Section>

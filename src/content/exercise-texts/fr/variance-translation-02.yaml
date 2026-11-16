@@ -1,0 +1,15 @@
+title: Que devient l'écart type ?
+statement: |
+  On ajoute $10$ à chaque valeur d'une série statistique.
+  Que devient son écart type ?
+choices:
+  a: 'Il ne change pas.'
+  b: 'Il augmente de $10$.'
+  c: 'Il est multiplié par $10$.'
+  d: 'Il est doublé.'
+hints:
+  - 'La moyenne change aussi : que deviennent les écarts $x_{i} - \bar{x}$ ?'
+solution: |
+  Toutes les valeurs augmentent de $10$, et la moyenne aussi. Chaque écart $x_{i} - \bar{x}$ reste donc le même, et l'écart type ne change pas.
+
+  L'écart type mesure l'étalement de la série, pas sa position.

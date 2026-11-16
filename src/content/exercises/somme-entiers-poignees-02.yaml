@@ -1,0 +1,10 @@
+subject: math
+domain: discrete
+level: 4
+difficulty: 2
+formulas: [somme-premiers-entiers, coefficient-binomial]
+kind: qcm
+estimatedMinutes: 3
+choices: [a, b, c, d]
+correct: [a]
+status: draft

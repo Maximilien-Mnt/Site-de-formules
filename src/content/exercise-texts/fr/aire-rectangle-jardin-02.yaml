@@ -1,0 +1,15 @@
+title: Aire d'un jardin
+statement: |
+  Un jardin rectangulaire mesure 15 m de long et 8 m de large.
+  Quelle est son aire ?
+choices:
+  a: '$46$ m'
+  b: '$120$ m²'
+  c: '$120$ m'
+  d: '$23$ m²'
+hints:
+  - 'Une aire est un produit, et son unité est « au carré ».'
+solution: |
+  $A = 15 \times 8 = 120$ m².
+
+  La réponse a (46 m) est le **périmètre** : $2 \times (15 + 8) = 46$ m. La réponse c oublie le carré de l'unité.

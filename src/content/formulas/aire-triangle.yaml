@@ -1,0 +1,16 @@
+subject: math
+domain: geometry
+topics: [triangles, area]
+level: 2
+difficulty: 2
+originYear: -1650 # approximatif : papyrus Rhind, problème du champ triangulaire
+latex: 'A = \dfrac{b \times h}{2}'
+variants: []
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'b' }
+  - { symbol: 'h' }
+prerequisites: [aire-rectangle]
+related: [pythagore]
+confusedWith: []
+status: draft

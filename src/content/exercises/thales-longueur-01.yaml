@@ -1,0 +1,12 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 2
+formulas: [thales]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 4
+  tolerance: 0
+  unit: cm
+status: draft

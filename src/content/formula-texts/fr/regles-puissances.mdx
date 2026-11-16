@@ -1,0 +1,88 @@
+---
+title: Règles de calcul sur les puissances
+summary: Pour multiplier, diviser ou élever à une puissance des nombres écrits avec des exposants, on additionne, soustrait ou multiplie les exposants.
+aliases: [puissances, exposants, règles des exposants, produit de puissances, puissance négative]
+keywords: [exposant, puissance de 10, carré, cube, simplifier]
+variableNames:
+  a: La base (non nulle pour les exposants négatifs et nul)
+  b: Une autre base
+  m: Un exposant entier
+  n: Un autre exposant entier
+variantLabels:
+  quotient: Quotient de puissances
+  power-of-power: Puissance d'une puissance
+  power-of-product: Puissance d'un produit
+  negative: Exposant négatif
+  zero: Exposant nul
+---
+
+<Section kind="intuition">
+
+$a^{n}$ veut dire « $a$ multiplié $n$ fois par lui-même ». Écrire $2^{3} \times 2^{4}$, c'est aligner 3 facteurs 2, puis 4 facteurs 2 : on obtient **7** facteurs 2, donc $2^{7}$.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour $a \neq 0$ et pour des entiers $m$ et $n$ :
+
+$$
+a^{m} \times a^{n} = a^{m+n} \qquad \frac{a^{m}}{a^{n}} = a^{m-n} \qquad (a^{m})^{n} = a^{m \times n}
+$$
+
+$$
+(a \times b)^{n} = a^{n} \times b^{n} \qquad a^{-n} = \frac{1}{a^{n}} \qquad a^{0} = 1
+$$
+
+**Exemples.** $2^{3} \times 2^{4} = 2^{7} = 128$ ; $\dfrac{5^{6}}{5^{4}} = 5^{2} = 25$ ; $(3^{2})^{3} = 3^{6} = 729$ ; $(2 \times 5)^{3} = 2^{3} \times 5^{3} = 1\,000$ ; $2^{-3} = \dfrac{1}{8}$.
+
+</Section>
+
+<Section kind="proof">
+
+Pour $m$ et $n$ entiers positifs :
+
+$$
+a^{m} \times a^{n} = \underbrace{a \times \cdots \times a}_{m \text{ facteurs}} \times \underbrace{a \times \cdots \times a}_{n \text{ facteurs}} = \underbrace{a \times \cdots \times a}_{m + n \text{ facteurs}} = a^{m+n}
+$$
+
+Pour que cette règle reste vraie avec $n = 0$, il faut $a^{m} \times a^{0} = a^{m}$, donc $a^{0} = 1$. De même, $a^{n} \times a^{-n} = a^{0} = 1$, donc $a^{-n} = \dfrac{1}{a^{n}}$.
+
+</Section>
+
+<Section kind="history">
+
+Dans *L'Arénaire* (vers 250 av. J.-C.), Archimède énonce une règle sur les « ordres de grandeur » équivalente à $10^{a} \times 10^{b} = 10^{a+b}$ pour nommer de très grands nombres. La notation moderne, avec l'exposant écrit en haut à droite, se généralise avec René Descartes dans *La Géométrie* (1637).
+
+</Section>
+
+<Section kind="methods">
+
+1. Regarde si les **bases** sont les mêmes (ou si tu peux t'y ramener : $4 = 2^{2}$).
+2. Même base : produit → on **additionne** les exposants ; quotient → on les **soustrait**.
+3. Puissance d'une puissance → on **multiplie** les exposants.
+4. Vérifie avec un petit exemple numérique avant de continuer.
+
+</Section>
+
+<Section kind="applications">
+
+- **Puissances de 10** : notation scientifique, ordres de grandeur ($10^{-3}$ m = 1 mm).
+- **Informatique** : $2^{10} = 1\,024$, tailles de mémoire.
+- **Croissance** : intérêts composés, suites géométriques, exponentielles.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- $2^{3}$ n'est pas $2 \times 3$ : c'est $2 \times 2 \times 2 = 8$.
+- $a^{m} \times a^{n} = a^{m+n}$ et **pas** $a^{m \times n}$.
+- $(a + b)^{n} \neq a^{n} + b^{n}$ (essaie avec $a = b = 1$ et $n = 2$).
+- $(-2)^{2} = 4$ mais $-2^{2} = -4$ : les parenthèses comptent.
+- Les règles sur les produits ne fonctionnent que pour une **même base**.
+
+</Callout>
+
+</Section>

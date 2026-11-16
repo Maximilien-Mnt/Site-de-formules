@@ -1,0 +1,15 @@
+title: Calculer une longueur avec Thalès
+statement: |
+  Dans le triangle $ABC$, le point $M$ est sur $[AB]$ et le point $N$ est sur $[AC]$.
+  Les droites $(MN)$ et $(BC)$ sont parallèles.
+  On sait que $AM = 3$ cm, $AB = 9$ cm et $BC = 12$ cm.
+  Calcule $MN$, en cm.
+hints:
+  - 'Écris $\dfrac{AM}{AB} = \dfrac{MN}{BC}$.'
+  - 'Remplace par les valeurs connues : $\dfrac{3}{9} = \dfrac{MN}{12}$.'
+solution: |
+  Les droites $(MN)$ et $(BC)$ sont parallèles : d'après le théorème de Thalès,
+
+  $\dfrac{AM}{AB} = \dfrac{AN}{AC} = \dfrac{MN}{BC}$.
+
+  Donc $\dfrac{3}{9} = \dfrac{MN}{12}$, d'où $MN = \dfrac{3 \times 12}{9} = 4$ cm.

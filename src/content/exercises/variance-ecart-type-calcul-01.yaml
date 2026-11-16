@@ -1,0 +1,11 @@
+subject: math
+domain: statistics
+level: 4
+difficulty: 3
+formulas: [variance-ecart-type]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 2
+  tolerance: 0
+status: draft

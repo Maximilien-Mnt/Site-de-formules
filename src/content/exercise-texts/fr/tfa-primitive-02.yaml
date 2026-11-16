@@ -1,0 +1,14 @@
+title: Trouver une primitive
+statement: |
+  Quelle est une primitive de $f(x) = 2x + 1$ ?
+choices:
+  a: '$F(x) = x^{2} + x$'
+  b: '$F(x) = x^{2} + 1$'
+  c: '$F(x) = 2$'
+  d: '$F(x) = 2x^{2} + x$'
+hints:
+  - 'Dérive chaque proposition : on doit retrouver $2x + 1$.'
+solution: |
+  $(x^{2} + x)' = 2x + 1$ : la réponse **a** est une primitive de $f$.
+
+  Les autres, une fois dérivées, donnent $2x$, $0$ et $4x + 1$.

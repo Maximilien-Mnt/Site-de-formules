@@ -1,0 +1,8 @@
+title: Volume d'un cylindre
+statement: |
+  Un cylindre a un rayon de base de $3$ cm et une hauteur de $10$ cm.
+  Calcule son volume en cm³, arrondi au dixième.
+hints:
+  - 'Calcule d''abord l''aire de la base : $\pi r^{2}$.'
+solution: |
+  $V = \pi r^{2} h = \pi \times 3^{2} \times 10 = 90\pi \approx 282{,}7$ cm³.

@@ -1,0 +1,17 @@
+title: Attention au diamètre
+statement: |
+  Une boîte cylindrique a un **diamètre** de $10$ cm et une hauteur de $4$ cm.
+  Quel est son volume ?
+choices:
+  a: '$100\pi$ cm³'
+  b: '$400\pi$ cm³'
+  c: '$40\pi$ cm³'
+  d: '$20\pi$ cm³'
+hints:
+  - 'Le rayon est la moitié du diamètre.'
+solution: |
+  Le rayon vaut $\dfrac{10}{2} = 5$ cm.
+
+  $V = \pi \times 5^{2} \times 4 = 100\pi$ cm³.
+
+  La réponse b utilise le diamètre à la place du rayon.

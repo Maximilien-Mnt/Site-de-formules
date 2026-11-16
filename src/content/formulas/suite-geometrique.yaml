@@ -1,0 +1,20 @@
+subject: math
+domain: calculus
+topics: [sequences, geometric-sequence]
+level: 4
+difficulty: 2
+originYear: -300 # approximatif : Éléments d'Euclide, livre IX
+latex: 'u_{n} = u_{0} \times q^{n}'
+variants:
+  - id: sum
+    latex: 'S = u_{0} \times \dfrac{1 - q^{n+1}}{1 - q} \quad (q \neq 1)'
+variables:
+  - { symbol: 'u_{n}' }
+  - { symbol: 'u_{0}' }
+  - { symbol: 'q' }
+  - { symbol: 'n' }
+  - { symbol: 'S' }
+prerequisites: [regles-puissances]
+related: [suite-arithmetique, serie-geometrique, exponentielle-proprietes]
+confusedWith: [suite-arithmetique]
+status: draft

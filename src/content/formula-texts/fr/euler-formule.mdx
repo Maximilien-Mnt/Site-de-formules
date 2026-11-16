@@ -1,0 +1,83 @@
+---
+title: Formule d'Euler
+summary: Le nombre complexe e^(iθ) est le point du cercle unité d'angle θ. La formule relie l'exponentielle, le cosinus et le sinus.
+aliases: [formule d'Euler, identité d'Euler, exponentielle complexe, forme exponentielle, nombres complexes]
+keywords: [nombre complexe, cercle unité, exponentielle, cosinus, sinus, module, argument]
+variableNames:
+  '\theta': Un angle en radians
+  i: L'unité imaginaire (le nombre i tel que i au carré vaut −1)
+variantLabels:
+  identity: Identité d'Euler
+  cosine: Cosinus avec des exponentielles
+  sine: Sinus avec des exponentielles
+---
+
+<Section kind="intuition">
+
+Un nombre complexe se place dans un plan. Le point du cercle unité obtenu en tournant d'un angle $\theta$ a pour coordonnées $(\cos\theta\,;\,\sin\theta)$, c'est-à-dire pour affixe $\cos\theta + i\sin\theta$. La formule d'Euler dit que ce point s'écrit aussi $e^{i\theta}$ : **tourner**, c'est **multiplier** par $e^{i\theta}$.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour tout réel $\theta$ :
+
+$$
+e^{i\theta} = \cos\theta + i\sin\theta
+$$
+
+Conséquences :
+
+- $|e^{i\theta}| = \sqrt{\cos^{2}\theta + \sin^{2}\theta} = 1$ : on reste sur le cercle unité.
+- $e^{i\theta} \times e^{i\varphi} = e^{i(\theta + \varphi)}$ : les angles s'additionnent quand on multiplie.
+- $e^{i\pi} = -1$, donc $e^{i\pi} + 1 = 0$ (**identité d'Euler**), et $e^{i\pi/2} = i$.
+- $\cos\theta = \dfrac{e^{i\theta} + e^{-i\theta}}{2}$ et $\sin\theta = \dfrac{e^{i\theta} - e^{-i\theta}}{2i}$.
+
+**Exemple.** $e^{i\pi/3} = \cos\dfrac{\pi}{3} + i\sin\dfrac{\pi}{3} = \dfrac{1}{2} + i\dfrac{\sqrt{3}}{2}$.
+
+</Section>
+
+<Section kind="proof">
+
+On utilise les développements en série (voir la formule de Taylor) de $e^{x}$, $\cos x$ et $\sin x$ en remplaçant $x$ par $i\theta$ :
+
+$e^{i\theta} = 1 + i\theta - \dfrac{\theta^{2}}{2!} - i\dfrac{\theta^{3}}{3!} + \dfrac{\theta^{4}}{4!} + \dots$
+
+On sépare les termes réels et imaginaires : $e^{i\theta} = \left(1 - \dfrac{\theta^{2}}{2!} + \dfrac{\theta^{4}}{4!} - \dots\right) + i\left(\theta - \dfrac{\theta^{3}}{3!} + \dots\right) = \cos\theta + i\sin\theta$. ∎
+
+</Section>
+
+<Section kind="history">
+
+Leonhard Euler publie la formule dans son *Introductio in analysin infinitorum* (1748). Roger Cotes avait obtenu dès 1714 une relation équivalente, écrite avec le logarithme. L'égalité $e^{i\pi} + 1 = 0$, qui relie cinq constantes fondamentales ($0$, $1$, $e$, $i$ et $\pi$), est souvent citée comme l'une des plus belles formules des mathématiques.
+
+</Section>
+
+<Section kind="methods">
+
+1. Pour un nombre complexe de **module** $r$ et d'**argument** $\theta$ : $z = r\,e^{i\theta}$.
+2. Pour **multiplier** : on multiplie les modules et on additionne les arguments.
+3. Pour **élever à une puissance** : $\left(r\,e^{i\theta}\right)^{n} = r^{n}e^{in\theta}$.
+4. Pour passer à la forme algébrique : $z = r\cos\theta + i\,r\sin\theta$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Électricité et signaux** : tensions et courants alternatifs, analyse de Fourier.
+- **Géométrie** : rotations et similitudes dans le plan.
+- **Physique quantique et ondes** : les ondes s'écrivent avec $e^{i\omega t}$.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Mélanger **degrés** et **radians** : dans $e^{i\theta}$, $\theta$ est en radians.
+- Oublier que l'argument est défini à $2\pi$ près : $e^{i(\theta + 2\pi)} = e^{i\theta}$.
+- Écrire $e^{i\theta} = \cos\theta + \sin\theta$ : le $i$ est indispensable.
+
+</Callout>
+
+</Section>

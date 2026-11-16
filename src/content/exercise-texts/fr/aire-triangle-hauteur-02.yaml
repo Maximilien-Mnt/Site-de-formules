@@ -1,0 +1,18 @@
+title: Quelle hauteur utiliser ?
+statement: |
+  Dans le triangle $ABC$, on a $BC = 8$ cm et $AB = 6$ cm.
+  La hauteur issue de $A$ (perpendiculaire à $[BC]$) mesure 5 cm.
+  Quelle est l'aire du triangle $ABC$ ?
+choices:
+  a: '$20$ cm²'
+  b: '$24$ cm²'
+  c: '$40$ cm²'
+  d: '$48$ cm²'
+hints:
+  - 'Quelle base correspond à la hauteur de 5 cm ? Le côté $AB$ n''est pas perpendiculaire à $[BC]$.'
+solution: |
+  La hauteur de 5 cm est relative à la base $[BC]$ :
+
+  $A = \dfrac{BC \times h}{2} = \dfrac{8 \times 5}{2} = 20$ cm².
+
+  La réponse b utilise le côté $AB$ (6 cm) comme hauteur, ce qui est faux ; la réponse c oublie de diviser par 2.

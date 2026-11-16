@@ -1,0 +1,20 @@
+subject: math
+domain: algebra
+topics: [expansion, binomial-theorem, combinatorics]
+level: 5
+difficulty: 3
+latex: '(a + b)^{n} = \sum_{k=0}^{n}\binom{n}{k}\,a^{\,n-k}\,b^{\,k}'
+variants:
+  - id: example
+    latex: '(a + b)^{3} = a^{3} + 3a^{2}b + 3ab^{2} + b^{3}'
+  - id: difference
+    latex: '(a - b)^{n} = \sum_{k=0}^{n}\binom{n}{k}\,a^{\,n-k}\,(-b)^{k}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'n' }
+  - { symbol: 'k' }
+prerequisites: [coefficient-binomial, identites-remarquables]
+related: [loi-binomiale]
+confusedWith: []
+status: draft

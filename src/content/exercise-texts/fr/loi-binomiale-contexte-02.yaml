@@ -1,0 +1,16 @@
+title: Reconnaître une loi binomiale
+statement: |
+  Dans laquelle de ces situations la variable $X$ suit-elle une loi binomiale ?
+choices:
+  a: '$X$ est le nombre de « pile » en $10$ lancers indépendants d''une pièce.'
+  b: '$X$ est le nombre de lancers nécessaires pour obtenir le premier « pile ».'
+  c: '$X$ est la taille d''un élève choisi au hasard.'
+  d: '$X$ est le nombre de cartes rouges en tirant $5$ cartes sans remise dans un jeu de $32$ cartes.'
+hints:
+  - 'Vérifie : nombre fixe de répétitions, deux issues, indépendance, même probabilité.'
+solution: |
+  Seule la situation **a** réunit toutes les conditions : $10$ répétitions indépendantes, deux issues, $p = 0{,}5$ constant.
+
+  - b : le nombre d'épreuves n'est pas fixé d'avance.
+  - c : la taille n'est pas un nombre de succès.
+  - d : sans remise, les tirages ne sont pas indépendants.

@@ -1,0 +1,10 @@
+title: Un côté avec la loi des cosinus
+statement: |
+  Dans le triangle $ABC$, on a $AC = 5$, $AB = 8$ et $\widehat{BAC} = 60^\circ$.
+  Calcule $BC$ (on rappelle que $\cos 60^\circ = 0{,}5$).
+hints:
+  - 'Le côté cherché $BC$ est opposé à l''angle $\widehat{A}$ : $BC^{2} = AC^{2} + AB^{2} - 2 \times AC \times AB \times \cos \widehat{A}$.'
+solution: |
+  $BC^{2} = 5^{2} + 8^{2} - 2 \times 5 \times 8 \times 0{,}5 = 25 + 64 - 40 = 49$.
+
+  Donc $BC = \sqrt{49} = 7$.

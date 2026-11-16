@@ -1,0 +1,66 @@
+---
+title: Aire d'un triangle
+summary: L'aire d'un triangle est égale à la moitié du produit d'une base par la hauteur correspondante.
+aliases: [surface d'un triangle, base fois hauteur sur deux, hauteur d'un triangle]
+keywords: [base, hauteur, moitié, surface]
+variableNames:
+  A: L'aire du triangle
+  b: La longueur d'un côté choisi comme base
+  h: La hauteur relative à cette base (perpendiculaire à la base)
+---
+
+<Section kind="intuition">
+
+Un triangle est **la moitié d'un rectangle** : si tu découpes un rectangle suivant une diagonale, tu obtiens deux triangles identiques. Pour un triangle quelconque, on le « complète » de la même façon avec un parallélogramme de même base et de même hauteur.
+
+</Section>
+
+<Section kind="explanation">
+
+On choisit un côté du triangle comme **base**. La **hauteur** est la distance entre le sommet opposé et la droite qui porte cette base : elle est perpendiculaire à la base.
+
+$$
+A = \frac{b \times h}{2}
+$$
+
+**Exemple.** Une base de 10 cm et la hauteur correspondante de 7 cm : $A = \dfrac{10 \times 7}{2} = 35$ cm².
+
+La hauteur peut tomber **à l'intérieur** du triangle, sur un côté (triangle rectangle) ou **à l'extérieur** (triangle obtus) : la formule reste la même.
+
+</Section>
+
+<Section kind="history">
+
+Un papyrus égyptien, le papyrus Rhind (vers 1650 av. J.-C.), calcule l'aire d'un champ triangulaire. Plus tard, Euclide démontre dans les *Éléments* (livre I) qu'un parallélogramme a une aire double de celle d'un triangle de même base et de même hauteur.
+
+</Section>
+
+<Section kind="methods">
+
+1. Choisis une base et repère la hauteur correspondante (elle forme un angle droit avec la base).
+2. Multiplie la base par la hauteur.
+3. Divise par 2.
+
+Pour retrouver la hauteur à partir de l'aire : $h = \dfrac{2A}{b}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Terrains et toits** : aire d'une parcelle triangulaire ou d'un pignon.
+- **Voiles de bateau** : la toile d'une voile triangulaire.
+- **Images 3D** : un objet est découpé en milliers de triangles dont on calcule les aires.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Prendre un **côté oblique** pour la hauteur. La hauteur forme toujours un angle droit avec la base.
+- Oublier de diviser par 2.
+- Utiliser une base et une hauteur qui ne se correspondent pas.
+
+</Callout>
+
+</Section>

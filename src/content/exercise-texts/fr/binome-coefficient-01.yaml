@@ -1,0 +1,9 @@
+title: Un coefficient dans un développement
+statement: |
+  Dans le développement de $(x + 2)^{4}$, quel est le coefficient de $x^{2}$ ?
+hints:
+  - 'Le terme en $x^{2}$ est $\dbinom{4}{2}\,x^{2}\,2^{2}$.'
+solution: |
+  Le terme en $x^{2}$ est $\dbinom{4}{2}\,x^{4-2}\,2^{2} = 6 \times 4\,x^{2} = 24x^{2}$.
+
+  Le coefficient est donc $24$. (On vérifie : $(x + 2)^{4} = x^{4} + 8x^{3} + 24x^{2} + 32x + 16$.)

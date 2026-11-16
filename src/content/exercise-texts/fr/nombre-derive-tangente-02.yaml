@@ -1,0 +1,15 @@
+title: Équation d'une tangente
+statement: |
+  Soit $f(x) = x^{2}$. On admet que $f'(1) = 2$.
+  Quelle est l'équation de la tangente à la courbe de $f$ au point d'abscisse $1$ ?
+choices:
+  a: '$y = 2x - 1$'
+  b: '$y = 2x + 1$'
+  c: '$y = x^{2}$'
+  d: '$y = x - 1$'
+hints:
+  - 'Utilise $y = f''(a)(x - a) + f(a)$ avec $a = 1$.'
+solution: |
+  $f(1) = 1$ et $f'(1) = 2$, donc $y = 2(x - 1) + 1 = 2x - 2 + 1 = 2x - 1$.
+
+  On vérifie : la droite passe bien par le point $(1\,;\,1)$ de la courbe.

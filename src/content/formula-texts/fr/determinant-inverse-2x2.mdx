@@ -1,0 +1,90 @@
+---
+title: Déterminant et inverse d'une matrice 2×2
+summary: Le déterminant d'une matrice 2×2 vaut ad − bc. La matrice est inversible si et seulement si il est non nul, et son inverse se calcule directement.
+aliases: [déterminant, matrice inverse, matrice 2x2, matrice inversible, colinéarité, système linéaire]
+keywords: [matrice, déterminant, inverse, système, colinéarité, aire]
+variableNames:
+  a: Coefficient en haut à gauche
+  b: Coefficient en haut à droite
+  c: Coefficient en bas à gauche
+  d: Coefficient en bas à droite
+  A: La matrice carrée d'ordre 2
+variantLabels:
+  inverse: Matrice inverse
+---
+
+<Section kind="intuition">
+
+Une matrice $2 \times 2$ transforme le plan (étire, tourne, incline). Le **déterminant** mesure de combien elle change les aires : si le déterminant vaut $3$, toute figure voit son aire multipliée par $3$. S'il vaut $0$, le plan est « écrasé » sur une droite : on ne peut pas revenir en arrière, la matrice n'est pas inversible.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour la matrice $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ :
+
+$$
+\det A = ad - bc
+$$
+
+$A$ est **inversible** si et seulement si $\det A \neq 0$, et alors :
+
+$$
+A^{-1} = \frac{1}{ad - bc}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}
+$$
+
+**Exemple.** Pour $A = \begin{pmatrix} 3 & 2 \\ 1 & 4 \end{pmatrix}$ : $\det A = 3 \times 4 - 2 \times 1 = 10$.
+
+**Autre exemple.** Pour $A = \begin{pmatrix} 2 & 1 \\ 5 & 3 \end{pmatrix}$ : $\det A = 6 - 5 = 1$ et $A^{-1} = \begin{pmatrix} 3 & -1 \\ -5 & 2 \end{pmatrix}$.
+
+**Colinéarité.** Deux vecteurs $(x\,;\,y)$ et $(x'\,;\,y')$ sont colinéaires si et seulement si $xy' - x'y = 0$.
+
+</Section>
+
+<Section kind="proof">
+
+On vérifie par produit que $A$ multipliée par $\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$ donne :
+
+$$
+\begin{pmatrix} a & b \\ c & d \end{pmatrix}\begin{pmatrix} d & -b \\ -c & a \end{pmatrix} = \begin{pmatrix} ad - bc & -ab + ba \\ cd - dc & -cb + da \end{pmatrix} = (ad - bc)\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}
+$$
+
+Si $ad - bc \neq 0$, on divise par ce nombre pour obtenir la matrice identité. ∎
+
+</Section>
+
+<Section kind="history">
+
+La notion de déterminant apparaît à la fin du XVIIe siècle, indépendamment chez le Japonais Seki Takakazu (1683) et chez Leibniz (1693). Le mot « déterminant » prend son sens moderne chez Cauchy (1812), et le terme « matrice » est introduit par James Joseph Sylvester en 1850.
+
+</Section>
+
+<Section kind="methods">
+
+1. Calcule $ad - bc$ : produit de la diagonale principale moins produit de l'autre diagonale.
+2. Si le résultat est $0$ : pas d'inverse.
+3. Sinon, **échange** $a$ et $d$, **change le signe** de $b$ et $c$, puis divise par le déterminant.
+4. Pour un système $A\binom{x}{y} = \binom{e}{f}$ : $\binom{x}{y} = A^{-1}\binom{e}{f}$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Systèmes d'équations** linéaires à deux inconnues.
+- **Géométrie** : colinéarité, aire d'un parallélogramme, transformations du plan.
+- **Infographie** : rotations, homothéties, symétries.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Inverser l'ordre des diagonales : c'est $ad - bc$ et non $bc - ad$.
+- Oublier de **diviser** par le déterminant dans l'inverse.
+- Se tromper de signes dans $\begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$.
+- Chercher l'inverse d'une matrice dont le déterminant est nul.
+
+</Callout>
+
+</Section>

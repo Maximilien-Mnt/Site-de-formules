@@ -1,0 +1,11 @@
+subject: math
+domain: probability
+level: 4
+difficulty: 2
+formulas: [probabilite-conditionnelle]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 0.4
+  tolerance: 0
+status: draft

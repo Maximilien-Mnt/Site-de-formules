@@ -1,0 +1,76 @@
+---
+title: Loi binomiale
+summary: Si on répète n fois la même expérience indépendante, avec une probabilité de succès p, le nombre de succès X suit la loi binomiale.
+aliases: [loi binomiale, schéma de Bernoulli, épreuve de Bernoulli, nombre de succès, B(n;p)]
+keywords: [succès, échec, répétition, indépendance, espérance, variance]
+variableNames:
+  X: Le nombre de succès (variable aléatoire)
+  n: Le nombre de répétitions
+  k: Le nombre de succès qui nous intéresse (0 ≤ k ≤ n)
+  p: La probabilité de succès à chaque répétition
+variantLabels:
+  expectation: Espérance
+  variance: Variance
+---
+
+<Section kind="intuition">
+
+Tu lances 5 fois une pièce et tu comptes les « face ». À chaque lancer, il y a deux issues (succès ou échec), la probabilité de succès ne change pas et les lancers ne s'influencent pas. Le nombre total de succès suit une loi bien connue, la **loi binomiale**.
+
+</Section>
+
+<Section kind="explanation">
+
+On répète $n$ fois, de façon **indépendante**, une épreuve à deux issues avec la même probabilité de succès $p$. Le nombre $X$ de succès suit la loi $\mathcal{B}(n\,;\,p)$ :
+
+$$
+P(X = k) = \binom{n}{k}\,p^{k}\,(1 - p)^{n-k}
+$$
+
+**Exemple.** On lance 5 fois une pièce équilibrée : $P(X = 2) = \dbinom{5}{2}\left(\dfrac{1}{2}\right)^{2}\left(\dfrac{1}{2}\right)^{3} = \dfrac{10}{32} = 0{,}3125$.
+
+**Espérance et variance.** $E(X) = np$ et $V(X) = np(1 - p)$. Pour $n = 20$ et $p = 0{,}3$, on attend en moyenne $E(X) = 6$ succès.
+
+</Section>
+
+<Section kind="proof">
+
+Une suite précise de $n$ résultats avec $k$ succès et $n - k$ échecs a pour probabilité $p^{k}(1 - p)^{n-k}$ (les épreuves sont indépendantes). Il y a $\dbinom{n}{k}$ façons de choisir les positions des $k$ succès dans la suite. On additionne donc $\dbinom{n}{k}$ fois la même probabilité. ∎
+
+</Section>
+
+<Section kind="history">
+
+La loi binomiale est étudiée par Jacques Bernoulli dans l'*Ars Conjectandi* (publié en 1713, après sa mort), où il démontre aussi la première version de la loi des grands nombres. Les épreuves à deux issues portent aujourd'hui le nom d'« épreuves de Bernoulli ».
+
+</Section>
+
+<Section kind="methods">
+
+1. **Vérifie les conditions** : $n$ répétitions identiques, indépendantes, avec deux issues et un $p$ constant.
+2. Identifie $n$, $p$ et la valeur $k$ demandée.
+3. Applique la formule. Pour « au moins un succès », utilise $1 - P(X = 0) = 1 - (1 - p)^{n}$.
+4. Sur calculatrice ou tableur, utilise la fonction binomiale.
+
+</Section>
+
+<Section kind="applications">
+
+- **Qualité** : nombre de pièces défectueuses dans un lot.
+- **Sondages et votes** : nombre de personnes qui répondent « oui » dans un échantillon.
+- **Biologie et médecine** : nombre de patients qui répondent à un traitement.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Utiliser la loi binomiale pour des tirages **sans remise** dans une petite population : l'indépendance n'est plus respectée.
+- Oublier le coefficient $\dbinom{n}{k}$.
+- Confondre $p$ (probabilité de succès) et $1 - p$.
+- Se tromper dans « au moins » et « au plus ».
+
+</Callout>
+
+</Section>

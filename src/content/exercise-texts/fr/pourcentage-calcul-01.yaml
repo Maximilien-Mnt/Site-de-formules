@@ -1,0 +1,7 @@
+title: 20 % de 150
+statement: |
+  Calcule $20\,\%$ de $150$.
+hints:
+  - '$20\,\%$ veut dire $\dfrac{20}{100}$.'
+solution: |
+  $\dfrac{20}{100} \times 150 = 0{,}2 \times 150 = 30$.

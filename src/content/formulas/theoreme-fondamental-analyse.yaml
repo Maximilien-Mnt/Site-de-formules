@@ -1,0 +1,25 @@
+subject: math
+domain: calculus
+topics: [integral, antiderivative]
+level: 5
+difficulty: 3
+originYear: 1670 # approximatif : Barrow, Newton et Leibniz
+latex: '\int_{a}^{b} f(x)\,dx = F(b) - F(a)'
+variants:
+  - id: derivative-of-integral
+    latex: '\dfrac{d}{dx}\int_{a}^{x} f(t)\,dt = f(x)'
+  - id: power-primitive
+    latex: '\int x^{n}\,dx = \dfrac{x^{n+1}}{n+1} + C \quad (n \neq -1)'
+variables:
+  - { symbol: 'f' }
+  - { symbol: 'F' }
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'x' }
+  - { symbol: 't' }
+  - { symbol: 'n' }
+  - { symbol: 'C' }
+prerequisites: [derivees-usuelles]
+related: [integration-par-parties, integrale-gaussienne]
+confusedWith: []
+status: draft

@@ -1,0 +1,16 @@
+subject: math
+domain: discrete
+topics: [sums, sequences, induction]
+level: 4
+difficulty: 2
+originYear: -500 # approximatif : nombres triangulaires chez les pythagoriciens
+latex: '1 + 2 + 3 + \dots + n = \dfrac{n(n+1)}{2}'
+variants:
+  - id: sigma
+    latex: '\sum_{k=1}^{n} k = \dfrac{n(n+1)}{2}'
+variables:
+  - { symbol: 'n' }
+prerequisites: []
+related: [suite-arithmetique, coefficient-binomial]
+confusedWith: []
+status: draft

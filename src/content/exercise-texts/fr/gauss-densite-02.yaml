@@ -1,0 +1,12 @@
+title: L'aire sous la densité normale
+statement: |
+  Quelle est la valeur de $\displaystyle\int_{-\infty}^{+\infty} \frac{1}{\sigma\sqrt{2\pi}}\,e^{-\frac{(x - \mu)^{2}}{2\sigma^{2}}}\,dx$ ?
+choices:
+  a: '$0$'
+  b: '$1$'
+  c: '$\sqrt{\pi}$'
+  d: '$\sigma\sqrt{2\pi}$'
+hints:
+  - 'C''est l''aire totale sous une densité de probabilité.'
+solution: |
+  L'intégrale de $e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$ vaut $\sigma\sqrt{2\pi}$. En la multipliant par $\dfrac{1}{\sigma\sqrt{2\pi}}$, on obtient exactement $1$ : c'est ce qui fait de $f$ une densité de probabilité.

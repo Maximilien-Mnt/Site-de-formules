@@ -1,0 +1,23 @@
+subject: math
+domain: trigonometry
+topics: [right-triangle, sine, cosine, tangent]
+level: 3
+difficulty: 2
+originYear: -150 # approximatif : table des cordes d'Hipparque
+latex: '\sin\alpha = \dfrac{\text{opposé}}{\text{hypoténuse}} \qquad \cos\alpha = \dfrac{\text{adjacent}}{\text{hypoténuse}} \qquad \tan\alpha = \dfrac{\text{opposé}}{\text{adjacent}}'
+variants:
+  - id: sine
+    latex: '\sin\alpha = \dfrac{\text{opposé}}{\text{hypoténuse}}'
+  - id: cosine
+    latex: '\cos\alpha = \dfrac{\text{adjacent}}{\text{hypoténuse}}'
+  - id: tangent
+    latex: '\tan\alpha = \dfrac{\text{opposé}}{\text{adjacent}}'
+variables:
+  - { symbol: '\alpha' }
+prerequisites: [pythagore]
+related: [identite-trigonometrique, loi-des-cosinus, thales]
+confusedWith: []
+graph:
+  kind: preset
+  preset: unit-circle
+status: draft

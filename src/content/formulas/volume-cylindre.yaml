@@ -1,0 +1,20 @@
+subject: math
+domain: geometry
+topics: [cylinder, volume, solids]
+level: 3
+difficulty: 2
+originYear: -1650 # approximatif : papyrus Rhind (greniers cylindriques)
+latex: 'V = \pi r^{2} h'
+variants:
+  - id: base-area
+    latex: 'V = B \times h'
+variables:
+  - { symbol: 'V' }
+  - { symbol: 'r' }
+  - { symbol: 'h' }
+  - { symbol: '\pi' }
+  - { symbol: 'B' }
+prerequisites: [aire-disque]
+related: [perimetre-cercle]
+confusedWith: []
+status: draft

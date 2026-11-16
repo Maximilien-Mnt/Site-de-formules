@@ -1,0 +1,19 @@
+subject: math
+domain: algebra
+topics: [expansion, factorisation, polynomials]
+level: 3
+difficulty: 2
+originYear: -300 # approximatif : version géométrique dans les Éléments d'Euclide, livre II
+latex: '(a + b)^{2} = a^{2} + 2ab + b^{2}'
+variants:
+  - id: square-difference
+    latex: '(a - b)^{2} = a^{2} - 2ab + b^{2}'
+  - id: difference-of-squares
+    latex: 'a^{2} - b^{2} = (a - b)(a + b)'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+prerequisites: []
+related: [discriminant-trinome, forme-canonique-trinome, binome-newton]
+confusedWith: []
+status: draft

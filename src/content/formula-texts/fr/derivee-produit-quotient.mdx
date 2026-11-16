@@ -1,0 +1,90 @@
+---
+title: Dérivée d'un produit et d'un quotient
+summary: La dérivée d'un produit uv est u'v + uv'. La dérivée d'un quotient u/v est (u'v − uv')/v².
+aliases: [dérivée d'un produit, dérivée d'un quotient, règle de Leibniz, formule du produit]
+keywords: [dérivation, produit, quotient, fonctions]
+variableNames:
+  u: Une première fonction dérivable
+  v: Une seconde fonction dérivable (non nulle pour le quotient)
+variantLabels:
+  quotient: Dérivée d'un quotient
+  inverse: Dérivée de l'inverse
+---
+
+<Section kind="intuition">
+
+L'aire d'un rectangle de côtés $u$ et $v$ est $uv$. Si les deux côtés varient un peu, l'aire augmente de deux bandes fines : une de largeur $u'$ et de hauteur $v$, l'autre de largeur $v'$ et de hauteur $u$. C'est pourquoi la dérivée du produit a **deux** termes.
+
+</Section>
+
+<Section kind="explanation">
+
+Si $u$ et $v$ sont dérivables :
+
+$$
+(uv)' = u'v + uv'
+$$
+
+et, si $v$ ne s'annule pas :
+
+$$
+\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^{2}}
+$$
+
+**Exemple (produit).** $f(x) = (2x + 1)(x^{2} - 3)$ avec $u = 2x + 1$ et $v = x^{2} - 3$ :
+
+$f'(x) = 2(x^{2} - 3) + (2x + 1) \times 2x = 6x^{2} + 2x - 6$.
+
+**Exemple (quotient).** $f(x) = \dfrac{x}{x + 1}$ avec $u = x$ et $v = x + 1$ :
+
+$f'(x) = \dfrac{1 \times (x + 1) - x \times 1}{(x + 1)^{2}} = \dfrac{1}{(x + 1)^{2}}$.
+
+</Section>
+
+<Section kind="proof">
+
+On écrit le taux d'accroissement du produit en ajoutant et retranchant $u(x + h)\,v(x)$ :
+
+$$
+\frac{u(x+h)v(x+h) - u(x)v(x)}{h} = \frac{u(x+h) - u(x)}{h}\,v(x+h) + u(x)\,\frac{v(x+h) - v(x)}{h}
+$$
+
+Quand $h \to 0$, le premier terme tend vers $u'(x)v(x)$ (car $v$ est continue) et le second vers $u(x)v'(x)$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La règle du produit est due à Gottfried Wilhelm Leibniz, qui l'établit dans les années 1670 dans le cadre de son calcul différentiel. La règle du quotient s'en déduit, par exemple en écrivant $\dfrac{u}{v} = u \times \dfrac{1}{v}$.
+
+</Section>
+
+<Section kind="methods">
+
+1. Identifie $u$ et $v$ et calcule $u'$ et $v'$ **séparément**.
+2. Recopie la formule sans te tromper dans l'ordre des termes.
+3. Simplifie (développe ou factorise) le résultat.
+
+Pour un quotient, le numérateur est $u'v - uv'$ : l'**ordre** compte, car il y a un signe moins.
+
+</Section>
+
+<Section kind="applications">
+
+- **Physique** : dériver une quantité qui est le produit de deux grandeurs variables.
+- **Étude de fonctions** rationnelles (quotients de polynômes).
+- **Intégration par parties** : cette technique vient directement de la règle du produit.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Écrire $(uv)' = u'v'$ : c'est **faux**. Essaie avec $u = v = x$ : $(x^{2})' = 2x$ et non $1$.
+- Inverser les termes du numérateur du quotient : $u'v - uv'$ et non $uv' - u'v$.
+- Oublier de mettre $v$ **au carré** au dénominateur.
+
+</Callout>
+
+</Section>

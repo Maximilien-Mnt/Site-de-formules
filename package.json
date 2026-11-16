@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check && npm run check:content",
+    "check": "astro check && npm run check:content && npm run audit:content",
+     "audit:content": "node scripts/audit-content.mjs",
+  "content:status": "node scripts/content-status.mjs",
     "check:content": "node scripts/check-content.mjs",
     "test": "vitest run",
     "format": "prettier --write ."
@@ -45,6 +47,7 @@
     "prettier-plugin-astro": "^0.5.0",
     "@astrojs/check": "^0.9.0",
     "@types/react": "^19.0.0",
+    "yaml": "^2.5.0",
     "@types/react-dom": "^19.0.0"
   }
 }

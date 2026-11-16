@@ -1,0 +1,86 @@
+---
+title: Formule de Taylor
+summary: Près d'un point a, une fonction suffisamment dérivable se rapproche d'un polynôme construit avec ses dérivées successives.
+aliases: [développement de Taylor, formule de Maclaurin, développement limité, approximation polynomiale, série de Taylor]
+keywords: [approximation, polynôme, dérivées successives, reste, série entière]
+variableNames:
+  f: Une fonction dérivable n fois
+  a: Le point autour duquel on approche
+  x: Le point où l'on évalue
+  n: L'ordre du développement
+  k: L'indice de la somme (de 0 à n)
+  'R_{n}': Le reste (l'erreur de l'approximation)
+variantLabels:
+  maclaurin: Autour de 0 (Maclaurin)
+  exponential: Série de l'exponentielle
+  sine: Série du sinus
+  cosine: Série du cosinus
+---
+
+<Section kind="intuition">
+
+Un polynôme est simple à calculer (additions et multiplications). On peut approcher une fonction compliquée par un polynôme qui **a la même valeur, la même pente, la même courbure…** au point $a$. Plus on garde de termes, plus l'approximation reste bonne loin de $a$.
+
+</Section>
+
+<Section kind="explanation">
+
+Si $f$ est dérivable $n + 1$ fois autour de $a$ :
+
+$$
+f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}\,(x - a)^{k} + R_{n}(x)
+$$
+
+où $f^{(k)}$ est la dérivée $k$-ième de $f$ et $R_{n}(x)$ est l'erreur (le reste). Avec le reste de Lagrange : $R_{n}(x) = \dfrac{f^{(n+1)}(c)}{(n+1)!}\,(x - a)^{n+1}$ pour un certain $c$ entre $a$ et $x$.
+
+**Séries usuelles (autour de 0).**
+
+$$
+e^{x} = 1 + x + \frac{x^{2}}{2!} + \frac{x^{3}}{3!} + \dots \qquad \sin x = x - \frac{x^{3}}{3!} + \frac{x^{5}}{5!} - \dots \qquad \cos x = 1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \dots
+$$
+
+**Exemple.** À l'ordre 3, $e^{0{,}5} \approx 1 + 0{,}5 + 0{,}125 + 0{,}0208\ldots \approx 1{,}6458$, alors que $e^{0{,}5} \approx 1{,}6487$. Et pour $x$ petit, $\sin x \approx x$ : $\sin 0{,}1 \approx 0{,}0998$.
+
+</Section>
+
+<Section kind="proof">
+
+Cherchons un polynôme $P(x) = c_{0} + c_{1}(x - a) + c_{2}(x - a)^{2} + \dots + c_{n}(x - a)^{n}$ dont les dérivées en $a$ jusqu'à l'ordre $n$ coïncident avec celles de $f$. La dérivée $k$-ième de $(x - a)^{k}$ vaut $k!$ en $a$, et celle des autres termes est nulle en $a$. Donc $P^{(k)}(a) = k!\,c_{k}$, et il faut $c_{k} = \dfrac{f^{(k)}(a)}{k!}$. L'estimation du reste $R_{n}$ (Taylor – Lagrange) se démontre ensuite avec le théorème de Rolle. ∎
+
+</Section>
+
+<Section kind="history">
+
+Dès le XIVe siècle, les mathématiciens de l'école du Kerala (en Inde), autour de Madhava de Sangamagrama, obtiennent des séries pour le sinus, le cosinus et l'arc tangente. En Europe, Brook Taylor publie la formule générale en 1715. Colin Maclaurin popularise le cas $a = 0$ en 1742, et Lagrange donne la forme du reste en 1797.
+
+</Section>
+
+<Section kind="methods">
+
+1. Calcule les dérivées successives de $f$ jusqu'à l'ordre $n$.
+2. Évalue-les en $a$ : $f(a), f'(a), f''(a), \dots$
+3. Écris $\displaystyle\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x - a)^{k}$ et simplifie.
+4. Estime l'erreur avec le reste pour savoir si l'ordre choisi suffit.
+
+</Section>
+
+<Section kind="applications">
+
+- **Calculatrices et ordinateurs** : calcul de $\sin$, $\cos$, $e^{x}$ avec des polynômes.
+- **Physique** : approximation des petits angles ($\sin \theta \approx \theta$) pour le pendule.
+- **Optimisation et apprentissage automatique** : approximations d'ordre 1 et 2 d'une fonction.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier de diviser par $k!$.
+- Utiliser $x^{k}$ au lieu de $(x - a)^{k}$ quand on développe autour de $a \neq 0$.
+- Penser que l'approximation est bonne partout : elle est excellente près de $a$ et se dégrade loin de $a$.
+- Oublier le reste : la formule est une égalité **avec** $R_{n}$, une approximation sans.
+
+</Callout>
+
+</Section>

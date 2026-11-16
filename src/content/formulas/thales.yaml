@@ -1,0 +1,21 @@
+subject: math
+domain: geometry
+topics: [triangles, proportionality, similar-triangles]
+level: 3
+difficulty: 3
+originYear: -300 # approximatif : Éléments d'Euclide, livre VI, proposition 2
+latex: '\dfrac{AM}{AB} = \dfrac{AN}{AC} = \dfrac{MN}{BC}'
+variants:
+  - id: cross-product
+    latex: 'AM \times AC = AN \times AB'
+variables:
+  - { symbol: 'AB' }
+  - { symbol: 'AC' }
+  - { symbol: 'BC' }
+  - { symbol: 'AM' }
+  - { symbol: 'AN' }
+  - { symbol: 'MN' }
+prerequisites: []
+related: [pythagore, trigonometrie-triangle-rectangle]
+confusedWith: [pythagore]
+status: draft

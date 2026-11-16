@@ -1,0 +1,14 @@
+title: Combien de solutions ?
+statement: |
+  Combien de solutions réelles a l'équation $x^{2} + x + 1 = 0$ ?
+choices:
+  a: 'Aucune'
+  b: 'Une seule'
+  c: 'Deux'
+  d: 'Une infinité'
+hints:
+  - 'Calcule $\Delta = b^{2} - 4ac$ avec $a = 1$, $b = 1$ et $c = 1$.'
+solution: |
+  $\Delta = 1^{2} - 4 \times 1 \times 1 = -3 < 0$.
+
+  Quand le discriminant est négatif, l'équation n'a **aucune** solution réelle : la réponse est **a**.

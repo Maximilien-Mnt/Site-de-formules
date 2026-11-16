@@ -1,0 +1,84 @@
+---
+title: Nombre dérivé et tangente
+summary: Le nombre dérivé f'(a) est la limite du taux d'accroissement de f en a. C'est la pente de la tangente à la courbe au point d'abscisse a.
+aliases: [dérivée, nombre dérivé, tangente, taux d'accroissement, pente de la tangente, limite]
+keywords: [dérivation, vitesse instantanée, variation, courbe, limite]
+variableNames:
+  f: Une fonction dérivable en a
+  a: L'abscisse du point étudié
+  h: Une petite variation de x (non nulle)
+variantLabels:
+  tangent: Équation de la tangente
+---
+
+<Section kind="intuition">
+
+Zoome de plus en plus sur une courbe lisse : elle ressemble de plus en plus à une **droite**. La pente de cette droite, c'est le nombre dérivé. C'est ce que mesure le compteur de vitesse d'une voiture : la vitesse **à cet instant précis**, et non la vitesse moyenne sur le trajet.
+
+</Section>
+
+<Section kind="explanation">
+
+Le **taux d'accroissement** de $f$ entre $a$ et $a + h$ est la pente de la droite qui passe par les deux points de la courbe :
+
+$$
+\frac{f(a + h) - f(a)}{h}
+$$
+
+Quand $h$ se rapproche de $0$, cette pente tend (si elle existe) vers un nombre, le **nombre dérivé** :
+
+$$
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+$$
+
+**Exemple.** Pour $f(x) = x^{2}$ en $a = 3$ : $\dfrac{(3 + h)^{2} - 9}{h} = \dfrac{6h + h^{2}}{h} = 6 + h$, qui tend vers $6$. Donc $f'(3) = 6$.
+
+**La tangente** à la courbe au point d'abscisse $a$ a pour équation :
+
+$$
+y = f'(a)\,(x - a) + f(a)
+$$
+
+</Section>
+
+<Section kind="history">
+
+Pierre de Fermat met au point vers 1636 une méthode pour trouver des tangentes et des extremums. À la fin du XVIIe siècle, Isaac Newton et Gottfried Wilhelm Leibniz développent chacun de leur côté le calcul différentiel. La notation $f'$ est introduite par Joseph-Louis Lagrange à la fin du XVIIIe siècle ; la définition précise par les limites s'impose au XIXe siècle, notamment avec Augustin-Louis Cauchy.
+
+</Section>
+
+<Section kind="methods">
+
+**Calculer un nombre dérivé avec la définition**
+
+1. Écris $\dfrac{f(a + h) - f(a)}{h}$ et développe le numérateur.
+2. Simplifie par $h$.
+3. Fais tendre $h$ vers $0$.
+
+**Trouver la tangente**
+
+1. Calcule $f(a)$ et $f'(a)$.
+2. Remplace dans $y = f'(a)(x - a) + f(a)$ et simplifie.
+
+</Section>
+
+<Section kind="applications">
+
+- **Physique** : vitesse instantanée, accélération.
+- **Économie** : coût marginal (variation du coût pour une unité de plus).
+- **Optimisation** : une dérivée nulle signale souvent un maximum ou un minimum.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Confondre $f'(a)$ (un **nombre**) et $f'$ (une **fonction**).
+- Remplacer $h$ par $0$ trop tôt, avant d'avoir simplifié : on obtient $\frac{0}{0}$.
+- Se tromper dans l'équation de la tangente : on utilise $f(a)$ et $f'(a)$, deux valeurs différentes.
+- Croire que toute fonction continue est dérivable : la fonction « valeur absolue » n'a pas de tangente en $0$.
+
+</Callout>
+
+</Section>

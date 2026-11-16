@@ -1,0 +1,73 @@
+---
+title: Fonction affine
+summary: Une fonction affine f(x) = ax + b a pour courbe une droite. Le nombre a est sa pente, et b est l'ordonnée à l'origine.
+aliases: [droite, coefficient directeur, pente, ordonnée à l'origine, fonction linéaire, y = ax + b]
+keywords: [droite, pente, proportionnalité, représentation graphique]
+variableNames:
+  a: Le coefficient directeur (la pente de la droite)
+  b: L'ordonnée à l'origine (valeur de f en 0)
+  x: La variable
+  'x_{1}': L'abscisse d'un premier point
+  'x_{2}': L'abscisse d'un second point
+variantLabels:
+  slope: Calculer la pente avec deux points
+  root: Trouver où la droite coupe l'axe des abscisses
+---
+
+<Section kind="intuition">
+
+Un forfait téléphonique coûte 5 € par mois, plus 2 € par gigaoctet : le prix est $5 + 2x$. Un **prix fixe**, plus un **prix par unité** multiplié par la quantité : voilà une fonction affine. Quand on la dessine, on obtient une droite.
+
+</Section>
+
+<Section kind="explanation">
+
+Une fonction affine s'écrit $f(x) = ax + b$.
+
+- $a$ est la **pente** : quand $x$ augmente de 1, $f(x)$ augmente de $a$ (elle diminue si $a < 0$).
+- $b$ est l'**ordonnée à l'origine** : c'est $f(0)$, le point où la droite coupe l'axe vertical.
+
+Si $b = 0$, la fonction est **linéaire** : $f(x) = ax$ (proportionnalité).
+
+**Exemple.** $f(x) = 2x + 1$ donne $f(3) = 2 \times 3 + 1 = 7$.
+
+**Trouver $a$ avec deux points.** La droite passe par $A(1\,;\,5)$ et $B(3\,;\,9)$ : $a = \dfrac{9 - 5}{3 - 1} = 2$. Puis $5 = 2 \times 1 + b$ donne $b = 3$ : $f(x) = 2x + 3$.
+
+**Quand $f(x) = 0$ ?** $ax + b = 0$ donne $x = -\dfrac{b}{a}$ (si $a \neq 0$).
+
+</Section>
+
+<Section kind="history">
+
+Au XVIIe siècle, Pierre de Fermat et René Descartes relient l'algèbre et la géométrie : une droite du plan devient une équation en $x$ et $y$ (*La Géométrie*, 1637). La notation $f(x)$ pour une fonction est généralisée par Leonhard Euler au XVIIIe siècle.
+
+</Section>
+
+<Section kind="methods">
+
+1. **Deux points** : calcule $a = \dfrac{y_{B} - y_{A}}{x_{B} - x_{A}}$ (même ordre au numérateur et au dénominateur).
+2. **Trouve $b$** : remplace $x$ et $y$ d'un des points dans $y = ax + b$.
+3. **Tracer** : place deux points (par exemple $x = 0$ et $x = 1$) et trace la droite.
+4. **Lire un graphique** : $a$ se lit comme « combien on monte quand on avance de 1 ».
+
+</Section>
+
+<Section kind="applications">
+
+- **Tarifs** : taxi, forfait, location (prix fixe + prix à l'unité).
+- **Mouvement à vitesse constante** : la distance en fonction du temps.
+- **Conversions** : de degrés Celsius en Fahrenheit, $F = 1{,}8\,C + 32$.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Intervertir $a$ et $b$.
+- Se tromper de signe dans la pente, ou inverser l'ordre des points au numérateur seulement.
+- Utiliser une fonction affine pour un phénomène qui ne croît pas à vitesse constante.
+
+</Callout>
+
+</Section>

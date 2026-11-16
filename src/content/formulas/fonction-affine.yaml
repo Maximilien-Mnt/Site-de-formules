@@ -1,0 +1,31 @@
+subject: math
+domain: algebra
+topics: [linear-functions, lines, slope]
+level: 3
+difficulty: 2
+originYear: 1637 # approximatif : géométrie analytique de Fermat et Descartes
+latex: 'f(x) = ax + b'
+variants:
+  - id: slope
+    latex: 'a = \dfrac{f(x_{2}) - f(x_{1})}{x_{2} - x_{1}}'
+  - id: root
+    latex: 'f(x) = 0 \iff x = -\dfrac{b}{a}'
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'x' }
+  - { symbol: 'x_{1}' }
+  - { symbol: 'x_{2}' }
+prerequisites: []
+related: [nombre-derive, suite-arithmetique]
+confusedWith: []
+graph:
+  kind: function
+  expressions: ['a*x + b']
+  params:
+    - { name: a, min: -4, max: 4, step: 0.5, default: 2 }
+    - { name: b, min: -5, max: 5, step: 0.5, default: 1 }
+  viewport:
+    x: [-6, 6]
+    y: [-8, 8]
+status: draft

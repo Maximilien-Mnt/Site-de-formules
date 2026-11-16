@@ -1,0 +1,80 @@
+---
+title: Distance entre deux points du plan
+summary: Dans un repère orthonormé, la distance entre A et B se calcule avec leurs coordonnées grâce au théorème de Pythagore.
+aliases: [distance entre deux points, longueur d'un segment, distance euclidienne, formule de la distance]
+keywords: [coordonnées, repère orthonormé, abscisse, ordonnée, vecteur]
+variableNames:
+  AB: La distance entre A et B
+  OA: La distance entre l'origine O et A
+  'x_{A}': L'abscisse de A
+  'y_{A}': L'ordonnée de A
+  'x_{B}': L'abscisse de B
+  'y_{B}': L'ordonnée de B
+variantLabels:
+  origin: Distance à l'origine
+---
+
+<Section kind="intuition">
+
+Pour aller de $A$ à $B$, tu peux te déplacer horizontalement puis verticalement : tu dessines ainsi un triangle rectangle dont $[AB]$ est l'hypoténuse. Les deux autres côtés se lisent sur les coordonnées.
+
+</Section>
+
+<Section kind="explanation">
+
+Dans un repère **orthonormé**, avec $A(x_{A}\,;\,y_{A})$ et $B(x_{B}\,;\,y_{B})$ :
+
+$$
+AB = \sqrt{(x_{B} - x_{A})^{2} + (y_{B} - y_{A})^{2}}
+$$
+
+**Exemple.** $A(1\,;\,2)$ et $B(4\,;\,6)$ : $AB = \sqrt{3^{2} + 4^{2}} = \sqrt{25} = 5$.
+
+**Un autre exemple.** $A(-2\,;\,3)$ et $B(4\,;\,-1)$ : $AB = \sqrt{6^{2} + (-4)^{2}} = \sqrt{52} = 2\sqrt{13} \approx 7{,}21$.
+
+Le signe de $x_{B} - x_{A}$ n'a pas d'importance, car il est élevé au carré.
+
+</Section>
+
+<Section kind="proof">
+
+Place le point $C(x_{B}\,;\,y_{A})$. Le triangle $ACB$ est rectangle en $C$ avec $AC = |x_{B} - x_{A}|$ et $CB = |y_{B} - y_{A}|$. D'après le théorème de Pythagore :
+
+$AB^{2} = AC^{2} + CB^{2} = (x_{B} - x_{A})^{2} + (y_{B} - y_{A})^{2}$. ∎
+
+</Section>
+
+<Section kind="history">
+
+C'est le théorème de Pythagore exprimé avec des coordonnées. L'idée de repérer un point par deux nombres est développée au XVIIe siècle par René Descartes (*La Géométrie*, 1637) et Pierre de Fermat, d'où le nom de repère « cartésien ».
+
+</Section>
+
+<Section kind="methods">
+
+1. Calcule les différences $x_{B} - x_{A}$ et $y_{B} - y_{A}$.
+2. Élève chaque différence au carré, puis additionne.
+3. Prends la racine carrée.
+4. Pour comparer deux distances, tu peux comparer leurs carrés (pas besoin de racine).
+
+</Section>
+
+<Section kind="applications">
+
+- **Jeux vidéo et robotique** : détecter les collisions, trouver l'objet le plus proche.
+- **Cartes et GPS** : distance à vol d'oiseau sur un plan.
+- **Géométrie** : prouver qu'un triangle est isocèle, rectangle ou équilatéral à partir de ses sommets.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier la **racine carrée** à la fin.
+- Écrire $(x_{B} - x_{A}) + (y_{B} - y_{A})$ sans élever au carré.
+- Appliquer la formule dans un repère qui n'est **pas orthonormé** (les unités des deux axes doivent être identiques et les axes perpendiculaires).
+
+</Callout>
+
+</Section>

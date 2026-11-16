@@ -1,0 +1,8 @@
+title: Un coefficient d'un produit
+statement: |
+  Soit $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$ et $B = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$.
+  Quel est le coefficient en haut à gauche de $AB$ ?
+hints:
+  - 'Multiplie la première ligne de $A$ par la première colonne de $B$.'
+solution: |
+  $(AB)_{11} = 1 \times 0 + 2 \times 1 = 2$.
