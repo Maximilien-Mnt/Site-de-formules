@@ -1,0 +1,18 @@
+subject: math
+domain: calculus
+topics: [derivative, functions]
+level: 4
+difficulty: 3
+originYear: 1676 # approximatif : règle de la chaîne de Leibniz
+latex: '(f \\circ g)^{\\prime}(x) = f^{\\prime}(g(x)) \\, g^{\\prime}(x)'
+variants:
+  - id: composition
+    latex: '(f(g(x)))^{\\prime} = f^{\\prime}(g(x)) \\, g^{\\prime}(x)'
+variables:
+  - { symbol: 'f' }
+  - { symbol: 'g' }
+  - { symbol: 'x' }
+prerequisites: [nombre-derive, derivees-usuelles]
+related: [derivee-produit-quotient, derivee-inverse]
+confusedWith: []
+status: draft

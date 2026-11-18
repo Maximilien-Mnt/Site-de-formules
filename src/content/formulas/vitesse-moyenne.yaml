@@ -1,0 +1,15 @@
+subject: math
+domain: arithmetic
+topics: [speed, proportionality, rate]
+level: 3
+difficulty: 1
+latex: 'v = \\dfrac{d}{t}'
+variants: []
+variables:
+  - { symbol: 'v' }
+  - { symbol: 'd' }
+  - { symbol: 't' }
+prerequisites: []
+related: [pourcentage]
+confusedWith: []
+status: draft

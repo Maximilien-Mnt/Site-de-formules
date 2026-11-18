@@ -1,0 +1,15 @@
+subject: math
+domain: algebra
+topics: [equations, first-degree, linear-equations]
+level: 3
+difficulty: 1
+latex: 'ax + b = 0 \\iff x = -\\dfrac{b}{a}'
+variants: []
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'x' }
+prerequisites: [fonction-affine]
+related: [identites-remarquables]
+confusedWith: []
+status: draft

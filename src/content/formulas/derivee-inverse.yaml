@@ -1,0 +1,13 @@
+subject: math
+domain: calculus
+topics: [derivative, inverse]
+level: 4
+difficulty: 4
+latex: '(f^{-1})^{\\prime}(x) = \\dfrac{1}{f^{\\prime}(f^{-1}(x))}'
+variables:
+  - { symbol: 'f' }
+  - { symbol: 'x' }
+prerequisites: [nombre-derive, derivees-usuelles]
+related: [derivees-usuelles, derivee-chaine]
+confusedWith: []
+status: draft

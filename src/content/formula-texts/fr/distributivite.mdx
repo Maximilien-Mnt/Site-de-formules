@@ -1,0 +1,78 @@
+---
+title: Distributivité de la multiplication
+summary: La distributivité permet de développer k(a + b) en ka + kb et de factoriser ka + kb en k(a + b)
+aliases: [distributivité, développer, factoriser]
+keywords: [distributivité, parenthèse, multiplication, addition]
+variableNames:
+  k: Nombre qui multiplie la parenthèse
+  a: Premier terme dans la parenthèse
+  b: Second terme dans la parenthèse
+variantLabels: {}
+---
+
+<Section kind="intuition">
+
+La distributivité dit que multiplier une somme par un nombre revient à multiplier chaque terme de la somme par ce nombre, puis à additionner. C'est comme distribuer des objets dans plusieurs sacs.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour tous nombres $k$, $a$ et $b$ :
+
+$$
+k(a + b) = ka + kb
+$$
+
+**Exemple.** Calcule $3 \\times (20 + 5)$.
+
+$3 \\times (20 + 5) = 3 \\times 20 + 3 \\times 5 = 60 + 15 = 75$.
+
+Et directement : $20 + 5 = 25$, puis $3 \\times 25 = 75$. Même résultat.
+
+La formule marche aussi dans l'autre sens : on peut factoriser.
+
+$6x + 9y = 3 \\times 2x + 3 \\times 3y = 3(2x + 3y)$.
+
+</Section>
+
+<Section kind="proof">
+
+On définit $ka$ comme l'addition de $k$ fois $a$ et $kb$ comme l'addition de $k$ fois $b$. Alors $k(a + b)$ est l'addition de $k$ fois $(a + b)$, ce qui donne $k$ fois $a$ plus $k$ fois $b$, soit $ka + kb$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La distributivité est une propriété de base des nombres, utilisée depuis l'Antiquité et formalisée dans les axiomes de l'arithmétique moderne vers la fin du dix-neuvième siècle.
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère le nombre devant la parenthèse : c'est $k$.
+2. Multiplique ce nombre par chaque terme à l'intérieur de la parenthèse.
+3. Additionne les résultats.
+4. Pour factoriser, cherche un facteur commun à tous les termes et écrive-le devant une parenthèse.
+
+</Section>
+
+<Section kind="applications">
+
+- **Calcul mental** : $7 \\times 14 = 7 \\times (10 + 4) = 70 + 28 = 98$.
+- **Algèbre** : développer des expressions littérales pour simplifier ou résoudre des équations.
+- **Programmation** : optimiser des calculs en factorisant des opérations répétées.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier de multiplier le second terme : écrire $k(a + b) = ka + b$ au lieu de $ka + kb$.
+- Oublier le signe : $k(a - b) = ka - kb$, pas $ka + kb$.
+- Multiplier $k$ par un seul terme quand il y a plus de deux termes dans la parenthèse.
+
+</Callout>
+
+</Section>

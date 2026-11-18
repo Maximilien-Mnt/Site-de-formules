@@ -1,0 +1,15 @@
+subject: math
+domain: statistics
+topics: [frequency, proportion, statistics]
+level: 3
+difficulty: 1
+latex: 'f = \\dfrac{n}{N}'
+variants: []
+variables:
+  - { symbol: 'f' }
+  - { symbol: 'n' }
+  - { symbol: 'N' }
+prerequisites: [probabilite-equiprobable]
+related: [moyenne-arithmetique]
+confusedWith: []
+status: draft

@@ -1,0 +1,80 @@
+---
+title: Dérivée d'une composée
+summary: Dériver une composée c'est multiplier les dérivées des deux fonctions
+aliases: [dérivée d'une composée, règle de la chaîne, règle de Leibniz]
+keywords: [dérivation, composée, fonctions, chaîne]
+variableNames:
+  f: Fonction extérieure dérivable
+  g: Fonction intérieure dérivable
+  x: Variable réelle
+variantLabels:
+  composition: Dérivée d'une composée
+---
+
+<Section kind="intuition">
+
+Imagine une fonction comme une machine. Tu donnes un nombre à $g$, elle en sort un autre, que tu donnes aussitôt à $f$. La composée $f \\circ g$ enchaîne les deux machines. Sa dérivée mesure comment une petite variation de $x$ se propage à travers les deux étapes.
+
+</Section>
+
+<Section kind="explanation">
+
+Si $f$ est dérivable en $g(x)$ et $g$ est dérivable en $x$ :
+
+$$
+(f \\circ g)^{\\prime}(x) = f^{\\prime}(g(x)) \\, g^{\\prime}(x)
+$$
+
+**Exemple.** Soit $f(x) = (x^{2} + 3)^{4}$. Écris $u = x^{2} + 3$, donc $f(x) = u^{4}$. Alors $u^{\\prime} = 2x$ et :
+
+$$
+f^{\\prime}(x) = 4u^{3} \\, u^{\\prime} = 4(x^{2} + 3)^{3} \\, 2x = 8x(x^{2} + 3)^{3}
+$$
+
+À $x = 1$ : $x^{2} + 3 = 4$, donc $f^{\\prime}(1) = 8 \\times 1 \\times 4^{3} = 8 \\times 64 = 512$.
+
+</Section>
+
+<Section kind="proof">
+
+On écrit le taux d'accroissement de la composée :
+
+$$
+\\frac{f(g(x + h)) - f(g(x))}{h} = \\frac{f(g(x + h)) - f(g(x))}{g(x + h) - g(x)} \\, \\frac{g(x + h) - g(x)}{h}
+$$
+
+Quand $h \\to 0$, le premier facteur tend vers $f^{\\prime}(g(x))$ et le second vers $g^{\\prime}(x)$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La règle de la chaîne est traditionnellement attribuée à Gottfried Wilhelm Leibniz, vers 1676, dans le cadre de son calcul différentiel.
+
+</Section>
+
+<Section kind="methods">
+
+1. Identifie la fonction extérieure $f$ et la fonction intérieure $g$.
+2. Dérive chacune séparément.
+3. Multiplie $f^{\\prime}(g(x))$ par $g^{\\prime}(x)$.
+
+</Section>
+
+<Section kind="applications">
+
+- **Physique** : vitesse d'une grandeur qui dépend d'une autre grandeur variable.
+- **Étude de fonctions** : dérivée des puissances de fonctions et des compositions.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier de multiplier par $g^{\\prime}(x)$ : la dérivée de $f(g(x))$ n'est pas seulement $f^{\\prime}(g(x))$.
+- Confondre l'ordre : c'est $f^{\\prime}$ évaluée en $g(x)$, multipliée par $g^{\\prime}(x)$.
+
+</Callout>
+
+</Section>

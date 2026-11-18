@@ -1,0 +1,15 @@
+subject: math
+domain: geometry
+topics: [area, parallelogram]
+level: 2
+difficulty: 2
+latex: 'A = b \\times h'
+variants: []
+variables:
+  - { symbol: 'A' }
+  - { symbol: 'b' }
+  - { symbol: 'h' }
+prerequisites: [aire-rectangle]
+related: [aire-triangle]
+confusedWith: []
+status: draft

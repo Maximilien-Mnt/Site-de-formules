@@ -1,0 +1,15 @@
+subject: math
+domain: arithmetic
+topics: [percentages, variation, increase-decrease]
+level: 3
+difficulty: 2
+latex: 'V_f = V_i \\left(1 + \\dfrac{t}{100}\\right)'
+variants: []
+variables:
+  - { symbol: 'V_f' }
+  - { symbol: 'V_i' }
+  - { symbol: 't' }
+prerequisites: [pourcentage]
+related: [probabilite-equiprobable]
+confusedWith: []
+status: draft

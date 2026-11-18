@@ -1,0 +1,15 @@
+subject: math
+domain: arithmetic
+topics: [fractions, equivalence]
+level: 3
+difficulty: 1
+latex: '\\dfrac{a}{b} = \\dfrac{k \\times a}{k \\times b}'
+variants: []
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'k' }
+prerequisites: [division-euclidienne]
+related: [pourcentage]
+confusedWith: []
+status: draft

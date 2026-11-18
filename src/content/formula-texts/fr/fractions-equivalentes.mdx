@@ -1,0 +1,74 @@
+---
+title: Fractions égales
+summary: Multiplier le numérateur et le dénominateur par le même nombre ne change pas la valeur de la fraction
+aliases: [fraction équivalente, simplifier une fraction, réduire une fraction]
+keywords: [fraction, numérateur, dénominateur, simplifier, équivalente]
+variableNames:
+  a: Numérateur (nombre au-dessus de la barre)
+  b: Dénominateur (nombre en dessous de la barre, non nul)
+  k: Nombre par lequel on multiplie le haut et le bas
+variantLabels: {}
+---
+
+<Section kind="intuition">
+
+Deux fractions peuvent avoir l'air différentes et valoir exactement la même chose. Couper un gâteau en 2 et en prendre 1, c'est la même quantité que le couper en 4 et en prendre 2 : dans les deux cas, tu as la moitié du gâteau.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour tous nombres entiers $a$, $b$ (avec $b \\neq 0$) et $k$ (avec $k \\neq 0$) :
+
+$$
+\\dfrac{a}{b} = \\dfrac{k \\times a}{k \\times b}
+$$
+
+**Exemple.** La fraction $\\dfrac{3}{5}$ est égale à $\\dfrac{3 \\times 2}{5 \\times 2} = \\dfrac{6}{10}$.
+
+On peut aussi simplifier : $\\dfrac{12}{18} = \\dfrac{12 \\div 6}{18 \\div 6} = \\dfrac{2}{3}$ (ici, on divise par 6, c'est comme si $k = \\dfrac{1}{6}$).
+
+La condition $b \\neq 0$ est indispensable : on ne peut pas diviser par zéro.
+
+</Section>
+
+<Section kind="proof">
+
+Multiplier le numérateur et le dénominateur par le même nombre $k$, c'est multiplier la fraction par $\\dfrac{k}{k}$, qui vaut 1. Multiplier par 1 ne change pas la valeur. ∎
+
+</Section>
+
+<Section kind="history">
+
+La notion de fraction et d'équivalence des fractions est connue depuis l'Égypte antique, qui utilisait des fractions unitaires vers 1800 av. J.-C. La notation moderne avec une barre horizontale s'est imposée progressivement à partir du Moyen Âge.
+
+</Section>
+
+<Section kind="methods">
+
+1. Vérifie que le dénominateur n'est pas zéro.
+2. Pour créer une fraction équivalente, multiplie le haut et le bas par le même nombre non nul.
+3. Pour simplifier, divise le haut et le bas par leur plus grand diviseur commun.
+4. Une fraction est irréductible quand on ne peut plus la simplifier.
+
+</Section>
+
+<Section kind="applications">
+
+- **Cuisson** : adapter une recette de 4 personnes à 6 personnes en multipliant toutes les quantités par le même facteur.
+- **Remises** : comprendre que $\\dfrac{1}{2}$ de réduction, c'est la même chose que $\\dfrac{50}{100}$ ou 50 %.
+- **Mesures** : convertir entre unités (cm et m, par exemple).
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Ajouter le même nombre au haut et au bas au lieu de multiplier : $\\dfrac{a+1}{b+1} \\neq \\dfrac{a}{b}$ en général.
+- Oublier de faire la même opération au numérateur et au dénominateur.
+- Oublier que le dénominateur ne peut pas être zéro.
+
+</Callout>
+
+</Section>

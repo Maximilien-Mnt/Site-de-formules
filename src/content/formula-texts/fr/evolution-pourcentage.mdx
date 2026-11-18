@@ -1,0 +1,80 @@
+---
+title: Évolution en pourcentage
+summary: Une valeur qui évolue de t % se calcule avec Vf = Vi × (1 + t/100), où t peut être positif ou négatif
+aliases: [évolution, pourcentage, augmentation, diminution, variation]
+keywords: [pourcentage, évolution, augmentation, diminution, valeur finale, valeur initiale]
+variableNames:
+  'V_f': Valeur finale (après l'évolution)
+  'V_i': Valeur initiale (avant l'évolution)
+  t: Taux d'évolution en pourcentage (positif pour une augmentation, négatif pour une diminution)
+variantLabels: {}
+---
+
+<Section kind="intuition">
+
+Quand une quantité augmente ou diminue d'un certain pourcentage, on ne se contente pas d'ajouter ou de soustraire ce pourcentage : on le calcule par rapport à la valeur de départ. Une augmentation de 10 % sur 100 € fait 110 €, mais une baisse de 10 % sur 110 € ne revient pas à 100 €.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour une valeur initiale $V_i$ qui évolue de $t$ % :
+
+$$
+V_f = V_i \\left(1 + \\dfrac{t}{100}\\right)
+$$
+
+Si $t > 0$, c'est une augmentation. Si $t < 0$, c'est une diminution.
+
+**Exemple (augmentation).** Un pantalon coûte 80 €. Son prix augmente de 15 %.
+
+$V_f = 80 \\times \\left(1 + \\dfrac{15}{100}\\right) = 80 \\times 1{,}15 = 92$ €.
+
+**Exemple (diminution).** Le même pantalon à 92 € est ensuite soldé à -15 %.
+
+$V_f = 92 \\times \\left(1 - \\dfrac{15}{100}\\right) = 92 \\times 0{,}85 = 78{,}20$ €.
+
+Le prix final (78,20 €) est inférieur au prix initial (80 €) : une augmentation puis une diminution du même pourcentage ne s'annulent pas.
+
+</Section>
+
+<Section kind="proof">
+
+Une augmentation de $t$ % signifie qu'on ajoute $t$ % de la valeur initiale : $V_i + \\dfrac{t}{100} \\times V_i = V_i \\left(1 + \\dfrac{t}{100}\\right)$. Une diminution de $t$ % correspond à $t$ négatif. ∎
+
+</Section>
+
+<Section kind="history">
+
+Le calcul aux pourcentages est utilisé depuis l'Antiquité pour les impôts et le commerce. Le symbole % et la notation moderne sont apparus progressivement à partir du XVe siècle.
+
+</Section>
+
+<Section kind="methods">
+
+1. Identifie la valeur initiale $V_i$ et le taux d'évolution $t$ en pourcentage.
+2. Si c'est une augmentation, $t$ est positif. Si c'est une diminution, $t$ est négatif.
+3. Applique la formule : $V_f = V_i \\times (1 + t/100)$.
+4. Vérifie que le résultat est cohérent (plus grand pour une augmentation, plus petit pour une diminution).
+
+</Section>
+
+<Section kind="applications">
+
+- **Soldes** : calculer le prix après une réduction.
+- **Inflation** : comprendre comment les prix augmentent avec le temps.
+- **Intérêts** : calculer le montant d'un placement après un intérêt donné.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Penser qu'une augmentation de 10 % puis une diminution de 10 % reviennent au point de départ (faux).
+- Oublier que le pourcentage s'applique toujours à la valeur initiale.
+- Confondre « passer de 100 à 150 » (augmentation de 50 %) et « passer de 150 à 100 » (diminution de 33,3 %).
+
+</Callout>
+
+</Section>

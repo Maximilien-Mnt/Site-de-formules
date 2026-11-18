@@ -1,0 +1,16 @@
+subject: math
+domain: algebra
+topics: [expansion, distributivity, binomial]
+level: 3
+difficulty: 2
+latex: '(a + b)(c + d) = ac + ad + bc + bd'
+variants: []
+variables:
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+  - { symbol: 'c' }
+  - { symbol: 'd' }
+prerequisites: [distributivite, identites-remarquables]
+related: [identites-remarquables]
+confusedWith: []
+status: draft

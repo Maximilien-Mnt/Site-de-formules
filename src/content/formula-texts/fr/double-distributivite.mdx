@@ -1,0 +1,79 @@
+---
+title: Double distributivité
+summary: La double distributivité développe (a + b)(c + d) en ac + ad + bc + bd en multipliant chaque terme par chaque terme
+aliases: [double distributivité, développement, produit de deux sommes]
+keywords: [distributivité, développement, parenthèses, produit, binôme]
+variableNames:
+  a: Premier terme de la première parenthèse
+  b: Second terme de la première parenthèse
+  c: Premier terme de la seconde parenthèse
+  d: Second terme de la seconde parenthèse
+variantLabels: {}
+---
+
+<Section kind="intuition">
+
+La double distributivité est l'application de la distributivité deux fois de suite. Chaque terme de la première parenthèse est multiplié par chaque terme de la seconde parenthèse. C'est comme distribuer des cadeaux : chaque personne de la première famille offre un cadeau à chaque personne de la seconde famille.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour tous nombres $a$, $b$, $c$ et $d$ :
+
+$$
+(a + b)(c + d) = ac + ad + bc + bd
+$$
+
+**Exemple.** Calcule $(x + 2)(x + 3)$.
+
+On multiplie chaque terme de la première parenthèse par chaque terme de la seconde :
+
+$x \\times x + x \\times 3 + 2 \\times x + 2 \\times 3 = x^{2} + 3x + 2x + 6 = x^{2} + 5x + 6$.
+
+**Exemple.** Calcule $(2a - 1)(a + 4)$.
+
+$2a \\times a + 2a \\times 4 - 1 \\times a - 1 \\times 4 = 2a^{2} + 8a - a - 4 = 2a^{2} + 7a - 4$.
+
+</Section>
+
+<Section kind="proof">
+
+On applique la distributivité : $(a + b)(c + d) = (a + b)c + (a + b)d = ac + bc + ad + bd$. Puis on réordonne les termes : $ac + ad + bc + bd$. ∎
+
+</Section>
+
+<Section kind="history">
+
+La double distributivité découle directement de la distributivité simple, une propriété fondamentale des nombres connue depuis l'Antiquité et formalisée avec la notation algébrique moderne à partir du seizième siècle.
+
+</Section>
+
+<Section kind="methods">
+
+1. Multiplique le premier terme de la première parenthèse par les deux termes de la seconde.
+2. Multiplique le second terme de la première parenthèse par les deux termes de la seconde.
+3. Additionne les quatre résultats.
+4. Regroupe les termes semblables (ceux qui ont la même lettre et le même exposant).
+
+</Section>
+
+<Section kind="applications">
+
+- **Factorisation** : l'opération inverse permet de factoriser $ac + ad + bc + bd$ en $(a + b)(c + d)$.
+- **Équations du second degré** : développer $(x + a)(x + b)$ pour résoudre des équations.
+- **Aire d'un rectangle** : un rectangle de côtés $(a + b)$ et $(c + d)$ se découpe en quatre petits rectangles de aires $ac$, $ad$, $bc$ et $bd$.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier un des quatre produits (par exemple oublier $ad$ ou $bc$).
+- Oublier les signes : $(a - b)(c + d)$ donne $ac + ad - bc - bd$, pas tous des plus.
+- Confondre avec l'identité remarquable $(a + b)^{2} = a^{2} + 2ab + b^{2}$ qui est un cas particulier.
+
+</Callout>
+
+</Section>

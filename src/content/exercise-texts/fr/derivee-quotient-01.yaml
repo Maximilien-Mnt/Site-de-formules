@@ -1,0 +1,18 @@
+title: Dérivée d'un quotient
+statement: |
+  Soit $f(x) = \\dfrac{x}{x + 1}$.
+  Quelle est $f'(x)$ ?
+choices:
+  a: '$\\dfrac{1}{(x + 1)^{2}}$'
+  b: '$\\dfrac{x - 1}{(x + 1)^{2}}$'
+  c: '$\\dfrac{1}{x + 1}$'
+  d: '$\\dfrac{x}{(x + 1)^{2}}$'
+hints:
+  - 'Applique la formule du quotient : la dérivée de u fois v, moins u fois la dérivée de v, le tout sur v au carré.'
+  - 'Vérifie que l’ordre du numérateur est u′v − uv′ et non l’inverse.'
+solution: |
+  $u = x$ donc $u' = 1$.
+  $v = x + 1$ donc $v' = 1$.
+  $(u/v)' = (u'v - uv')/v^{2} = (1 \\times (x + 1) - x \\times 1)/(x + 1)^{2}$.
+  $(x + 1) - x = 1$, donc $f'(x) = \\dfrac{1}{(x + 1)^{2}}$.
+  La réponse **a** est correcte.

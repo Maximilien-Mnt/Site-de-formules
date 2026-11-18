@@ -1,0 +1,19 @@
+subject: math
+domain: geometry
+topics: [volume, solids, cuboid]
+level: 2
+difficulty: 2
+latex: 'V = L \\times \\ell \\times h'
+variants:
+  - id: cube
+    latex: 'V = c \\times c \\times c = c^{3}'
+variables:
+  - { symbol: 'V' }
+  - { symbol: 'L' }
+  - { symbol: '\\ell' }
+  - { symbol: 'h' }
+  - { symbol: 'c' }
+prerequisites: [aire-rectangle]
+related: [volume-cylindre]
+confusedWith: []
+status: draft

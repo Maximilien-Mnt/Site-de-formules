@@ -1,0 +1,72 @@
+---
+title: Fréquence et proportion
+summary: La fréquence d'un événement est le rapport entre le nombre de fois où il se produit et le nombre total d'essais
+aliases: [fréquence, proportion, pourcentage d'occurrence]
+keywords: [fréquence, proportion, essai, pourcentage, statistique]
+variableNames:
+  f: Fréquence (nombre entre 0 et 1, ou pourcentage)
+  n: Nombre de fois où l'événement se produit
+  N: Nombre total d'essais ou d'observations
+variantLabels: {}
+---
+
+<Section kind="intuition">
+
+La fréquence, c'est la proportion de fois où quelque chose se produit. Si tu lances un dé 60 fois et que le 6 sort 12 fois, la fréquence de sortie du 6 est de 12 sur 60, soit 1 sur 5, ou 20 %.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour un événement qui se produit $n$ fois sur $N$ essais :
+
+$$
+f = \\dfrac{n}{N}
+$$
+
+**Exemple.** Dans une urne contenant 10 billes dont 4 rouges, on tire une bille 50 fois (avec remise). La bille rouge sort 19 fois. La fréquence du rouge vaut $19 \\div 50 = 0{,}38$, soit 38 %.
+
+On peut aussi exprimer la fréquence en pourcentage : $0{,}38 \\times 100 = 38\\%$.
+
+</Section>
+
+<Section kind="proof">
+
+Par définition, la fréquence est le rapport entre le nombre de cas favorables et le nombre total de cas. Si tous les cas sont équiprobables, la fréquence tend vers la probabilité quand le nombre d'essais augmente. ∎
+
+</Section>
+
+<Section kind="history">
+
+La notion de fréquence comme proportion d'occurrences a été formalisée avec le développement des statistiques au XVIIe et XVIIIe siècles, notamment par les travaux de John Graunt et d'Edmond Halley sur les tables de mortalité.
+
+</Section>
+
+<Section kind="methods">
+
+1. Compte le nombre de fois où l'événement se produit ($n$).
+2. Compte le nombre total d'essais ($N$).
+3. Divise $n$ par $N$.
+4. Si besoin, multiplie par 100 pour obtenir un pourcentage.
+
+</Section>
+
+<Section kind="applications">
+
+- **Sondages** : estimer la proportion de personnes qui préfèrent un produit.
+- **Qualité** : calculer le taux de pièces défectueuses dans une fabrication.
+- **Météo** : indiquer le risque de pluie en pourcentage.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Confondre fréquence (résultat d'un décompte réel) et probabilité (ce qu'on attend théoriquement).
+- Oublier que la fréquence est toujours entre 0 et 1 (ou entre 0 % et 100 %).
+- Utiliser $n$ et $N$ à l'envers (le résultat serait supérieur à 1, ce qui est impossible pour une fréquence).
+
+</Callout>
+
+</Section>

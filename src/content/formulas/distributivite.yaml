@@ -1,0 +1,15 @@
+subject: math
+domain: arithmetic
+topics: [multiplication, distributivity, properties]
+level: 2
+difficulty: 2
+latex: 'k(a + b) = ka + kb'
+variants: []
+variables:
+  - { symbol: 'k' }
+  - { symbol: 'a' }
+  - { symbol: 'b' }
+prerequisites: [commutativite]
+related: [identites-remarquables]
+confusedWith: []
+status: draft

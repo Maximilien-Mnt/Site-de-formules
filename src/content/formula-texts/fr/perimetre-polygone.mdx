@@ -1,0 +1,80 @@
+---
+title: Périmètre d'un polygone
+summary: Le périmètre d'un polygone est la somme des longueurs de tous ses côtés
+aliases: [périmètre, polygone, contour]
+keywords: [longueur, côté, somme, polygone]
+variableNames:
+  P: Périmètre (longueur totale du contour)
+  'a_{1}': Longueur du premier côté
+  'a_{2}': Longueur du deuxième côté
+  'a_{n}': Longueur du dernier côté
+  n: Nombre de côtés
+  a: Longueur d'un côté (polygone régulier)
+variantLabels:
+  polygone-regulier: Polygone régulier
+---
+
+<Section kind="intuition">
+
+Le périmètre, c'est la distance totale autour d'une figure. Pour un polygone, on fait le tour en ajoutant la longueur de chaque côté.
+
+</Section>
+
+<Section kind="explanation">
+
+Pour un polygone à $n$ côtés de longueurs $a_{1}, a_{2}, \\dots, a_{n}$ :
+
+$$
+P = a_{1} + a_{2} + \\dots + a_{n}
+$$
+
+**Exemple.** Un pentagone a des côtés de 3 cm, 4 cm, 5 cm, 3 cm et 4 cm. Son périmètre vaut $3 + 4 + 5 + 3 + 4 = 19$ cm.
+
+Pour un polygone régulier (tous les côtés égaux) de $n$ côtés de longueur $a$ :
+
+$$
+P = n \\times a
+$$
+
+</Section>
+
+<Section kind="proof">
+
+On parcourt le contour du polygone d'un bout à l'autre. La distance totale est la somme des longueurs de chaque portion de côté. ∎
+
+</Section>
+
+<Section kind="history">
+
+La notion de périmètre est ancienne : les Égyptiens et les Babyloniens mesuraient déjà les contours des champs vers l'Antiquité pour calculer des surfaces.
+
+</Section>
+
+<Section kind="methods">
+
+1. Repère chaque côté du polygone.
+2. Mesure ou note la longueur de chaque côté.
+3. Additionne toutes les longueurs.
+4. Pour un polygone régulier, multiplie le nombre de côtés par la longueur d'un côté.
+
+</Section>
+
+<Section kind="applications">
+
+- **Jardin** : calculer la longueur d'une clôture autour d'un terrain polygonal.
+- **Bricolage** : mesurer la longueur d'une baguette pour encadrer un tableau de forme quelconque.
+- **Course à pied** : connaître la distance d'un tour de piste polygonale.
+
+</Section>
+
+<Section kind="mistakes">
+
+<Callout type="warning" title="Les pièges classiques">
+
+- Oublier un côté dans l'addition.
+- Confondre périmètre et aire (le périmètre mesure le contour, l'aire mesure la surface à l'intérieur).
+- Additionner des longueurs avec des unités différentes (cm et m) sans les convertir d'abord.
+
+</Callout>
+
+</Section>

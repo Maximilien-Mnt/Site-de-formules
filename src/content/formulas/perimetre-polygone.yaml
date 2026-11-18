@@ -1,0 +1,20 @@
+subject: math
+domain: geometry
+topics: [perimeter, polygon]
+level: 1
+difficulty: 1
+latex: 'P = a_{1} + a_{2} + \\dots + a_{n}'
+variants:
+  - id: polygone-regulier
+    latex: 'P = n \\times a'
+variables:
+  - { symbol: 'P' }
+  - { symbol: 'a_{1}' }
+  - { symbol: 'a_{2}' }
+  - { symbol: 'a_{n}' }
+  - { symbol: 'n' }
+  - { symbol: 'a' }
+prerequisites: [perimetre-rectangle]
+related: [perimetre-cercle]
+confusedWith: []
+status: draft
