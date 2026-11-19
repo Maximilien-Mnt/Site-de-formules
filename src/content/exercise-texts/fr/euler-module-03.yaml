@@ -1,0 +1,9 @@
+title: Module de e^(iθ)
+statement: |
+  Quelle est la valeur du module $|e^{i\pi/4}|$ ?
+hints:
+  - 'Rappelle''toi que $e^{i\theta}$ est un point du cercle unité.'
+solution: |
+  $|e^{i\theta}| = \sqrt{\cos^{2}\theta + \sin^{2}\theta} = 1$ pour tout $\theta$.
+
+  Donc $|e^{i\pi/4}| = 1$. Le piège serait de calculer $\cos(\pi/4)$ seul.

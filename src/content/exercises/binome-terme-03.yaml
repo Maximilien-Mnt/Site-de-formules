@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 5
+difficulty: 2
+formulas: [binome-newton]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 15
+  tolerance: 0
+status: draft

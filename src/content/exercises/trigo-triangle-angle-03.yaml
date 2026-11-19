@@ -1,0 +1,12 @@
+subject: math
+domain: trigonometry
+level: 3
+difficulty: 3
+formulas: [trigonometrie-triangle-rectangle]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 53.13
+  tolerance: 0.5
+  unit: degre
+status: draft

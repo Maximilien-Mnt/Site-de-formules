@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 3
+difficulty: 1
+formulas: [identites-remarquables]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 9999
+  tolerance: 0
+status: draft

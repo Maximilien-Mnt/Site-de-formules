@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 3
+difficulty: 2
+formulas: [regles-puissances]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 2401
+  tolerance: 0
+status: draft

@@ -1,0 +1,11 @@
+subject: math
+domain: geometry
+level: 4
+difficulty: 3
+formulas: [distance-plan]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 7
+  tolerance: 0
+status: draft

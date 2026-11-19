@@ -1,0 +1,10 @@
+subject: math
+domain: algebra
+level: 4
+difficulty: 1
+formulas: [viete-somme-produit]
+kind: qcm
+estimatedMinutes: 2
+choices: [a, b, c, d]
+correct: [a]
+status: draft

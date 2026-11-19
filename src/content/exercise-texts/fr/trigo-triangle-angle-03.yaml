@@ -1,0 +1,15 @@
+title: Trouver un angle avec le cosinus
+statement: |
+  Le triangle $ABC$ est rectangle en $A$. On a $AB = 6$ cm et $BC = 10$ cm.
+  Calcule l'angle $\widehat{ABC}$, en degrés, arrondi au centième.
+hints:
+  - 'Par rapport à l''angle $\widehat{B}$, le côté $[AB]$ est adjacent et $[BC]$ est l''hypoténuse.'
+  - 'Utilise $\cos \widehat{B} = \dfrac{AB}{BC}$, puis la touche $\cos^{-1}$ de la calculatrice.'
+solution: |
+  Par rapport à $\widehat{B}$, $[AB]$ est le côté adjacent et $[BC]$ est l'hypoténuse.
+
+  $\cos \widehat{B} = \dfrac{\text{adjacent}}{\text{hypoténuse}} = \dfrac{AB}{BC} = \dfrac{6}{10} = 0{,}6$.
+
+  Donc $\widehat{B} = \cos^{-1}(0{,}6) \approx 53{,}13^\circ$.
+
+  Piège : donner un angle remarquable ($30^\circ$ ou $60^\circ$) sans calculer. Ici $\cos \widehat{B} = 0{,}6$, ce qui donne environ $53{,}13^\circ$, pas un angle spécial.

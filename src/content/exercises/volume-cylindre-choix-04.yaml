@@ -1,0 +1,10 @@
+subject: math
+domain: geometry
+level: 3
+difficulty: 3
+formulas: [volume-cylindre]
+kind: qcm
+estimatedMinutes: 3
+choices: [a, b, c, d]
+correct: [a]
+status: draft

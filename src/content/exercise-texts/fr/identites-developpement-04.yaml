@@ -1,0 +1,14 @@
+title: Développer (3x + 2)²
+statement: |
+  Quel est le développement de $(3x + 2)^{2}$ ?
+choices:
+  a: '$9x^{2} + 12x + 4$'
+  b: '$9x^{2} + 4$'
+  c: '$3x^{2} + 12x + 4$'
+  d: '$9x^{2} + 6x + 4$'
+hints:
+  - 'Applique $(a + b)^{2} = a^{2} + 2ab + b^{2}$ avec $a = 3x$ et $b = 2$.'
+solution: |
+  $(3x + 2)^{2} = (3x)^{2} + 2 \times 3x \times 2 + 2^{2} = 9x^{2} + 12x + 4$.
+
+  La réponse b oublie le double produit $12x$ ; la réponse c n'élève pas $3x$ au carré ; la réponse d calcule mal $2 \times 3x \times 2$.

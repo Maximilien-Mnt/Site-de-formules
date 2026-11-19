@@ -1,0 +1,18 @@
+title: Attention aux unités
+statement: |
+  Un rectangle mesure 2 m de long et 150 cm de large.
+  Quel est son périmètre, en mètres ?
+choices:
+  a: '$7$ m'
+  b: '$3{,}5$ m'
+  c: '$4$ m'
+  d: '$152$ m'
+hints:
+  - 'Convertis les unités avant de calculer : 150 cm = 1,5 m.'
+  - 'Le périmètre est le tour complet : il faut doubler la somme.'
+solution: |
+  La largeur vaut 150 cm = 1,5 m, comme la longueur.
+
+  $P = 2 \\times (2 + 1,5) = 2 \\times 3,5 = 7$ m.
+
+  La réponse b oublie de doubler (elle donne seulement L + \\ell = 3,5 m). La réponse c double seulement la longueur (2 × 2 = 4 m). La réponse d additionne 2 et 150 sans convertir les cm.

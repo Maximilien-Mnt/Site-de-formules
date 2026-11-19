@@ -1,0 +1,18 @@
+title: Unités mélangées
+statement: |
+  Un rectangle mesure 2 m de long et 40 cm de large.
+  Quelle est son aire ?
+choices:
+  a: '$0{,}8$ m²'
+  b: '$80$ m²'
+  c: '$0{,}08$ m²'
+  d: '$8$ m²'
+hints:
+  - 'Convertis les unités avant de multiplier : 40 cm = 0,4 m.'
+  - 'Une aire s''écrit en unités carrées.'
+solution: |
+  La largeur vaut 40 cm = 0,4 m.
+
+  $A = 2 \\times 0,4 = 0,8$ m².
+
+  La réponse b multiplie 2 par 40 sans convertir les unités. La réponse c convertit mal (40 cm ≠ 0,04 m). La réponse d déplace la virgule.

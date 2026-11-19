@@ -1,0 +1,21 @@
+title: Formule pour calculer un angle
+statement: |
+  On connaît les trois côtés $a$, $b$, $c$ d'un triangle.
+  Quelle égalité permet de calculer l'angle $\widehat{A}$ ?
+choices:
+  a: '$\cos \widehat{A} = \dfrac{b^{2} + c^{2} - a^{2}}{2bc}$'
+  b: '$\cos \widehat{A} = \dfrac{a^{2} + b^{2} - c^{2}}{2ab}$'
+  c: '$a^{2} = b^{2} + c^{2} + 2bc\cos \widehat{A}$'
+  d: '$a^{2} = b^{2} + c^{2} - 2bc$'
+hints:
+  - 'L''angle $A$ est opposé au côté $a$.'
+  - 'Isole $\cos A$ dans $a^{2} = b^{2} + c^{2} - 2bc\cos A$.'
+solution: |
+  La forme « calculer un angle » de la loi des cosinus est
+  $\cos \widehat{A} = \dfrac{b^{2} + c^{2} - a^{2}}{2bc}$ : réponse **a**.
+
+  - **b** calcule l'angle opposé à $c$, pas à $A$ : mauvais angle.
+  - **c** a le signe $+$ au lieu de $-$ : le terme de correction a le mauvais signe.
+  - **d** omet le $\cos \widehat{A}$ : sans l'angle, ce n'est plus la loi des cosinus.
+
+  Piège : se tromper d'angle (le côté au numérateur est celui opposé à l'angle cherché) ou oublier le facteur $2$ et le cosinus.

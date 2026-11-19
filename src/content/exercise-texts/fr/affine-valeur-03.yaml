@@ -1,0 +1,9 @@
+title: "Valeur d'une fonction affine"
+statement: |
+  Soit $f(x) = -3x + 4$. Calcule $f(2)$.
+hints:
+  - "Remplace x par 2 dans $f(x) = -3x + 4$."
+solution: |
+  $f(2) = -3 \times 2 + 4 = -6 + 4 = -2$.
+
+  Le piège serait d'oublier le signe moins de $-3$ ou de calculer $-3 + 4 = 1$.

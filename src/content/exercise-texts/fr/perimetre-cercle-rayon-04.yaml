@@ -1,0 +1,19 @@
+title: Retrouver le rayon
+statement: |
+  Le périmètre d'un cercle vaut 31,4 cm.
+  Quel est son rayon ?
+  Utilise $\\pi \\approx 3{,}14$.
+choices:
+  a: '$5$ cm'
+  b: '$10$ cm'
+  c: '$15{,}7$ cm'
+  d: '$78{,}5$ cm²'
+hints:
+  - '$P = 2 \\pi r$, donc $r = P \\div (2 \\pi)$.'
+  - 'Calcule 31,4 / (2 x 3,14).'
+solution: |
+  $r = \\dfrac{P}{2\\pi} = \\dfrac{31,4}{2 \\times 3,14} = \\dfrac{31,4}{6,28} = 5$ cm.
+
+  Le rayon vaut 5 cm.
+
+  La réponse b oublie le facteur 2 (r = P / π = 10). La réponse c divise par 2 seulement (P / 2 = 15,7). La réponse d calcule l'aire (π × 5² = 78,5 cm²) au lieu du périmètre.

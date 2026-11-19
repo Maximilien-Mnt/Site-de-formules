@@ -1,0 +1,14 @@
+title: Contenance en litres
+statement: |
+  Une boîte de conserve cylindrique a un rayon de base de 5 cm et une hauteur de 8 cm.
+  Quelle est sa contenance en litres ?
+  Utilise $\\pi \\approx 3{,}14$ et rappelle-toi que 1 L = 1 000 cm³.
+hints:
+  - 'Calcule d''abord l''aire de la base : pi x r².'
+  - 'Convertis ensuite cm³ en litres : divise par 1 000.'
+solution: |
+  $V = \\pi \\times r^{2} \\times h = 3,14 \\times 5^{2} \\times 8 = 3,14 \\times 25 \\times 8 = 628$ cm³.
+
+  $628$ cm³ = $628 \\div 1\\,000 = 0,628$ L.
+
+  La boîte contient environ 0,628 litre.

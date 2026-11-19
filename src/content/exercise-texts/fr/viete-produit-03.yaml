@@ -1,0 +1,12 @@
+title: Produit des racines sans résoudre
+statement: |
+  L'équation $4x^{2} + 8x - 5 = 0$ a deux solutions $x_{1}$ et $x_{2}$.
+  Calcule $x_{1} \times x_{2}$ sans résoudre l'équation. (Résultat décimal.)
+hints:
+  - 'Repère $a$ et $c$, puis utilise $\dfrac{c}{a}$.'
+solution: |
+  Ici $a = 4$ et $c = -5$.
+
+  $x_{1} \times x_{2} = \dfrac{c}{a} = \dfrac{-5}{4} = -1{,}25$.
+
+  Le piège serait d'utiliser $b$ au lieu de $c$, ou d'oublier le signe de $c$.

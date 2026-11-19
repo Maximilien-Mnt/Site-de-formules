@@ -1,0 +1,12 @@
+title: Retrouver la hauteur
+statement: |
+  L'aire d'un triangle est de 30 cm².
+  Sa base mesure 12 cm.
+  Quelle est la hauteur correspondante, en cm ?
+hints:
+  - '$A = \\dfrac{b \\times h}{2}$, donc $h = \\dfrac{2A}{b}$.'
+  - 'Calcule $(2 \\times 30) \\div 12$.'
+solution: |
+  $A = \\dfrac{b \\times h}{2}$, donc $h = \\dfrac{2A}{b} = \\dfrac{2 \\times 30}{12} = \\dfrac{60}{12} = 5$ cm.
+
+  La hauteur correspondante vaut 5 cm.

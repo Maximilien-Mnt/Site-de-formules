@@ -1,0 +1,15 @@
+title: Une longueur par Thalès
+statement: |
+  Dans le triangle ABC, M est sur [AB] et N est sur [AC].
+  Les droites (MN) et (BC) sont parallèles.
+  AM = 5 cm, AB = 15 cm et BC = 18 cm.
+  Calcule MN, en cm.
+hints:
+  - 'Écris AM/AB = MN/BC.'
+  - 'Remplace : 5/15 = MN/18.'
+solution: |
+  Comme (MN) est parallèle à (BC), le théorème de Thalès donne :
+
+  $\\dfrac{AM}{AB} = \\dfrac{MN}{BC}$, donc $\\dfrac{5}{15} = \\dfrac{MN}{18}$.
+
+  $MN = \\dfrac{5 \\times 18}{15} = 6$ cm.

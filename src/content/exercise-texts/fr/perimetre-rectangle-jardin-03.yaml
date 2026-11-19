@@ -1,0 +1,11 @@
+title: Le tour d'un jardin
+statement: |
+  Un jardin rectangulaire mesure 8 m de long et 3 m de large.
+  Quelle longueur de grillage faut-il pour l'entourer entièrement ?
+hints:
+  - 'Le grillage suit le tour du jardin : deux longueurs et deux largeurs.'
+  - 'Calcule $2 \\times (8 + 3)$.'
+solution: |
+  Le périmètre est la longueur du tour : $P = 2 \\times (L + \\ell) = 2 \\times (8 + 3) = 2 \\times 11 = 22$ m.
+
+  Il faut donc 22 m de grillage.

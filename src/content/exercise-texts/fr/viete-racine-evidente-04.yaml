@@ -1,0 +1,17 @@
+title: Racine évidente
+statement: |
+  L'équation $x^{2} - 9x + 20 = 0$ a pour racine $x_{1} = 4$.
+  Quelle est l'autre racine $x_{2}$ ?
+choices:
+  a: '$5$'
+  b: '$4$'
+  c: '$-5$'
+  d: '$20$'
+hints:
+  - 'Utilise la somme $x_{1} + x_{2} = -\dfrac{b}{a}$, puis déduis $x_{2} = 9 - x_{1}$.'
+solution: |
+  La somme des racines vaut $x_{1} + x_{2} = -\dfrac{-9}{1} = 9$.
+
+  Donc $x_{2} = 9 - 4 = 5$. Vérification : $4 \times 5 = 20 = \dfrac{c}{a}$.
+
+  La réponse b confond avec $x_{1}$ ; la réponse c a le mauvais signe ; la réponse d utilise le produit au lieu de la somme.

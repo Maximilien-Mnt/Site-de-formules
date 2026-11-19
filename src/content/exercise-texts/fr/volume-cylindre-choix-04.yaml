@@ -1,0 +1,19 @@
+title: Le bon calcul du volume
+statement: |
+  Un cylindre a un rayon de base de 3 cm et une hauteur de 7 cm.
+  Quel est son volume ?
+  Utilise $\\pi \\approx 3{,}14$.
+choices:
+  a: '$197{,}8$ cm³'
+  b: '$791{,}3$ cm³'
+  c: '$131{,}9$ cm³'
+  d: '$65{,}9$ cm³'
+hints:
+  - 'Le volume est l''aire de la base fois la hauteur : pi x r² x h.'
+  - 'Vérifie que tu utilises bien le rayon, pas le diamètre.'
+solution: |
+  $V = \\pi \\times r^{2} \\times h = 3,14 \\times 3^{2} \\times 7 = 3,14 \\times 9 \\times 7 = 197,82$ cm³.
+
+  Arrondi au dixième, $V \\approx 197,8$ cm³.
+
+  La réponse b utilise le diamètre (6 cm) à la place du rayon. La réponse c calcule l'aire latérale (2 π r h), pas le volume. La réponse d oublie le carré sur r (π × r × h).

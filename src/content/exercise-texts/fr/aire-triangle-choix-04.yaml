@@ -1,0 +1,19 @@
+title: Quelle hauteur utiliser ?
+statement: |
+  Un triangle a une base de 12 cm et la hauteur correspondante mesure 8 cm (cette hauteur tombe en dehors du triangle).
+  Un autre côté du triangle mesure 10 cm.
+  Quelle est l'aire du triangle ?
+choices:
+  a: '$48$ cm²'
+  b: '$96$ cm²'
+  c: '$60$ cm²'
+  d: '$20$ cm²'
+hints:
+  - 'La hauteur doit correspondre à la base choisie et former un angle droit avec elle.'
+  - 'Le côté de 10 cm est oblique : ce n''est pas la hauteur.'
+solution: |
+  On prend la base de 12 cm et sa hauteur correspondante de 8 cm (même si elle tombe en dehors du triangle).
+
+  $A = \\dfrac{b \\times h}{2} = \\dfrac{12 \\times 8}{2} = \\dfrac{96}{2} = 48$ cm².
+
+  La réponse b oublie de diviser par 2. La réponse c utilise le côté oblique 10 cm comme hauteur (12 × 10 / 2 = 60). La réponse d additionne base et hauteur (12 + 8 = 20).

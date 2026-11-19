@@ -1,0 +1,9 @@
+title: Quotient de puissances de 7
+statement: |
+  Calcule $\dfrac{7^{6}}{7^{2}}$ sans développer les puissances.
+hints:
+  - 'Même base : on soustrait les exposants, $6 - 2 = 4$.'
+solution: |
+  $\dfrac{7^{6}}{7^{2}} = 7^{6-2} = 7^{4} = 2\,401$.
+
+  Le piège serait de diviser les exposants ($6/2 = 3$) au lieu de les soustraire.

@@ -1,0 +1,15 @@
+title: Un angle avec la loi des cosinus
+statement: |
+  Dans le triangle $ABC$, on a $BC = 8$, $AC = 6$ et $AB = 10$.
+  Calcule l'angle $\widehat{BAC}$, en degrés, arrondi au centième.
+hints:
+  - 'Le côté $BC$ est opposé à l''angle $\widehat{A} : \cos \widehat{A} = \dfrac{AC^{2} + AB^{2} - BC^{2}}{2 \times AC \times AB}$.'
+  - 'Remplace les longueurs, puis utilise la touche $\cos^{-1}$ de la calculatrice.'
+solution: |
+  Ici $a = BC = 8$, $b = AC = 6$, $c = AB = 10$.
+
+  $\cos \widehat{A} = \dfrac{b^{2} + c^{2} - a^{2}}{2bc} = \dfrac{6^{2} + 10^{2} - 8^{2}}{2 \times 6 \times 10} = \dfrac{36 + 100 - 64}{120} = \dfrac{72}{120} = 0{,}6$.
+
+  Donc $\widehat{A} = \cos^{-1}(0{,}6) \approx 53{,}13^\circ$.
+
+  Pièges : oublier le facteur $2$ dans $2bc$, se tromper d'angle (le côté au numérateur est celui opposé à l'angle cherché), oublier d'appliquer $\cos^{-1}$ après le cosinus, ou laisser la calculatrice en radians.

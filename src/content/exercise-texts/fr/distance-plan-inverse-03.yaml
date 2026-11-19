@@ -1,0 +1,16 @@
+title: Trouver une coordonnée
+statement: |
+  Dans un repère orthonormé, on donne A(2 ; 3) et B(5 ; y).
+  On sait que AB = 5 et que y > 3.
+  Trouve y.
+hints:
+  - '$AB^{2} = (x_{B} - x_{A})^{2} + (y_{B} - y_{A})^{2}$.'
+  - 'Remplace : 5² = (5 - 2)² + (y - 3)².'
+solution: |
+  $AB^{2} = (x_{B} - x_{A})^{2} + (y_{B} - y_{A})^{2}$, donc :
+
+  $5^{2} = (5 - 2)^{2} + (y - 3)^{2}$
+
+  $25 = 9 + (y - 3)^{2}$, donc $(y - 3)^{2} = 16$.
+
+  Comme $y > 3$, on a $y - 3 = 4$, donc $y = 7$.

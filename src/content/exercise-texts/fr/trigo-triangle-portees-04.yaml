@@ -1,0 +1,21 @@
+title: Portées du sinus, du cosinus et de la tangente
+statement: |
+  Soit $\alpha$ un angle aigu d'un triangle rectangle.
+  Laquelle de ces affirmations est toujours vraie ?
+choices:
+  a: '$\sin \alpha > 1$'
+  b: '$0 < \cos \alpha < 1$'
+  c: '$\tan \alpha < 1$'
+  d: '$\sin \alpha = \cos \alpha$'
+hints:
+  - 'Pour un angle aigu, le sinus et le cosinus sont toujours compris entre 0 et 1.'
+  - 'La tangente dépasse 1 dès que l''angle est supérieur à $45^\circ$.'
+solution: |
+  Pour un angle aigu $\alpha$ ($0^\circ < \alpha < 90^\circ$) :
+
+  - $\sin \alpha$ et $\cos \alpha$ sont toujours compris entre 0 et 1 : **a** est faux.
+  - $\cos \alpha$ est strictement compris entre 0 et 1 : **b** est vraie.
+  - $\tan \alpha$ peut dépasser 1 (par exemple $\tan 60^\circ > 1$) : **c** est faux.
+  - $\sin \alpha = \cos \alpha$ seulement pour $\alpha = 45^\circ$ : **d** est faux.
+
+  Piège : croire qu'un rapport trigonométrique peut prendre n'importe quelle valeur, ou que le sinus et le cosinus sont toujours égaux.

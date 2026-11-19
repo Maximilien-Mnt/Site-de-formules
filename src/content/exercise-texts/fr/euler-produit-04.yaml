@@ -1,0 +1,14 @@
+title: Produit de deux exponentielles complexes
+statement: |
+  Calcule $e^{i\pi/6} \times e^{i\pi/3}$.
+choices:
+  a: '$i$'
+  b: '$1$'
+  c: '$-1$'
+  d: '$-i$'
+hints:
+  - 'Utilise $e^{i\theta} \times e^{i\varphi} = e^{i(\theta + \varphi)}$.'
+solution: |
+  $e^{i\pi/6} \times e^{i\pi/3} = e^{i(\pi/6 + \pi/3)} = e^{i\pi/2} = \cos\dfrac{\pi}{2} + i\sin\dfrac{\pi}{2} = i$.
+
+  La réponse b fait disparaître l'exposant ; la réponse c confond avec $e^{i\pi} = -1$ ; la réponse d a le mauvais signe.

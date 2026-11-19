@@ -1,0 +1,12 @@
+title: Retrouver une dimension
+statement: |
+  Une salle rectangulaire a une aire de 48 m².
+  Sa longueur mesure 8 m.
+  Quelle est sa largeur, en m ?
+hints:
+  - 'L''aire est le produit de la longueur par la largeur.'
+  - 'Pour retrouver la largeur, divise l''aire par la longueur : 48 / 8.'
+solution: |
+  $A = L \\times \\ell$, donc $\\ell = A \\div L = 48 \\div 8 = 6$ m.
+
+  La largeur de la salle est de 6 m.

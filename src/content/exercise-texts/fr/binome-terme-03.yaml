@@ -1,0 +1,9 @@
+title: Un coefficient dans (x + 3)⁵
+statement: |
+  Dans le développement de $(x + 3)^{5}$, quel est le coefficient de $x^{4}$ ?
+hints:
+  - 'Le terme en $x^{4}$ est $\dbinom{5}{1}\,x^{4}\,3^{1}$.'
+solution: |
+  Le terme en $x^{4}$ est $\dbinom{5}{1}\,x^{5-1}\,3^{1} = 5 \times 3\,x^{4} = 15x^{4}$.
+
+  Le coefficient est donc $15$. Le piège serait d'oublier le facteur $3$ ou de prendre $\dbinom{5}{4} = 5$ sans le $3$.

@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 4
+difficulty: 3
+formulas: [viete-somme-produit]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: -1.25
+  tolerance: 0.001
+status: draft

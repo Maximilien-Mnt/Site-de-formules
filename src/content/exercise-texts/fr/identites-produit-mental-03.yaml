@@ -1,0 +1,9 @@
+title: Produit de nombres proches de 100
+statement: |
+  Calcule $99 \times 101$ en utilisant une identité remarquable, sans calculatrice.
+hints:
+  - 'Écris $99 = 100 - 1$ et $101 = 100 + 1$, puis applique $(a - b)(a + b) = a^{2} - b^{2}$.'
+solution: |
+  $99 \times 101 = (100 - 1)(100 + 1) = 100^{2} - 1^{2} = 10\,000 - 1 = 9\,999$.
+
+  Le piège serait de faire $100 \times 100 = 10\,000$ et d'oublier le $-1$.

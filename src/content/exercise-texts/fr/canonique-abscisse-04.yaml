@@ -1,0 +1,14 @@
+title: Abscisse du sommet
+statement: |
+  Quelle est l'abscisse $\alpha$ du sommet de la parabole $f(x) = 2x^{2} - 8x + 3$ ?
+choices:
+  a: '$2$'
+  b: '$-2$'
+  c: '$4$'
+  d: '$-4$'
+hints:
+  - 'Utilise $\alpha = -\dfrac{b}{2a}$ avec $a = 2$ et $b = -8$.'
+solution: |
+  $\alpha = -\dfrac{-8}{2 \times 2} = \dfrac{8}{4} = 2$.
+
+  La réponse b oublie le signe moins au numérateur ; la réponse c oublie le $2$ dans $2a$ ; la réponse d cumule les deux erreurs.

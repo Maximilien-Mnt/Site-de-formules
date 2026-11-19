@@ -1,0 +1,14 @@
+title: Puissance avec exposant négatif
+statement: |
+  Quelle est la valeur de $10^{3} \times 10^{-3}$ ?
+choices:
+  a: '$1$'
+  b: '$10^{6}$'
+  c: '$10^{-6}$'
+  d: '$10^{-3}$'
+hints:
+  - 'Même base : on additionne les exposants, $3 + (-3) = 0$, puis $a^{0} = 1$.'
+solution: |
+  $10^{3} \times 10^{-3} = 10^{3+(-3)} = 10^{0} = 1$.
+
+  La réponse b additionne sans tenir compte du signe de $-3$ ; la réponse c soustrait au lieu d'additionner ; la réponse d confond le résultat avec le second facteur.

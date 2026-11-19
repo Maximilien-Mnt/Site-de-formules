@@ -1,0 +1,14 @@
+title: Équation d'une droite par deux points
+statement: |
+  La droite passe par $A(-1\,;\,1)$ et $B(3\,;\,5)$. Quelle est son équation $f(x) = ax + b$ ?
+choices:
+  a: '$x + 2$'
+  b: '$2x + 3$'
+  c: '$x - 2$'
+  d: '$-x + 2$'
+hints:
+  - 'Calcule $a = \dfrac{y_{B} - y_{A}}{x_{B} - x_{A}}$, puis déduis $b$ avec un des points.'
+solution: |
+  $a = \dfrac{5 - 1}{3 - (-1)} = \dfrac{4}{4} = 1$. Puis $1 = 1 \times (-1) + b$, donc $b = 2$.
+
+  L'équation est $f(x) = x + 2$. La réponse c se trompe de signe sur $b$ ; la réponse d inverse la pente ; la réponse b prend des valeurs au hasard.

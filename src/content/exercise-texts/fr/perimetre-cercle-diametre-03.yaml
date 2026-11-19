@@ -1,0 +1,14 @@
+title: Un tour de roue
+statement: |
+  Une roue a un diamètre de 1,4 m.
+  Quelle distance parcourt-elle en un tour complet ?
+  Utilise $\\pi \\approx 3{,}14$ et arrondis au dixième.
+hints:
+  - 'Le diamètre est le double du rayon : r = 0,7 m.'
+  - 'La formule est P = 2 \\pi r, ou aussi P = pi x d.'
+solution: |
+  $P = \\pi \\times d = 3,14 \\times 1,4 = 4,396$ m.
+
+  Arrondi au dixième, $P \\approx 4,4$ m.
+
+  La roue parcourt environ 4,4 m en un tour.

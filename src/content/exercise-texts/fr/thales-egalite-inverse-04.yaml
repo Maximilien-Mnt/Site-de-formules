@@ -1,0 +1,19 @@
+title: Quelle égalité vérifier ?
+statement: |
+  Dans le triangle ABC, M est sur [AB] et N est sur [AC], avec (MN) parallèle à (BC).
+  On connaît AM = 6, AB = 18, AN = 4, AC = 12, MN = 5 et BC = 15.
+  Quelle égalité est vérifiée ?
+choices:
+  a: '$\\dfrac{AM}{AB} = \\dfrac{MN}{BC}$'
+  b: '$\\dfrac{AM}{AB} = \\dfrac{AN}{MN}$'
+  c: '$\\dfrac{AM}{MB} = \\dfrac{AN}{AC}$'
+  d: '$\\dfrac{AM}{BC} = \\dfrac{AN}{MN}$'
+hints:
+  - 'Le petit triangle au numérateur, le grand triangle au dénominateur.'
+  - 'Vérifie que chaque rapport vaut 1/3.'
+solution: |
+  AM/AB = 6/18 = 1/3. AN/AC = 4/12 = 1/3. MN/BC = 5/15 = 1/3.
+
+  L'égalité $\\dfrac{AM}{AB} = \\dfrac{MN}{BC}$ est vérifiée : les deux rapports valent 1/3.
+
+  La réponse b mélange les côtés des deux triangles. La réponse c utilise un morceau (MB) au lieu du côté entier (AB). La réponse d n'a pas de sens géométrique.

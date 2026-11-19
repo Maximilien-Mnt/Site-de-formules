@@ -1,0 +1,11 @@
+subject: math
+domain: algebra
+level: 4
+difficulty: 2
+formulas: [forme-canonique-trinome]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: -4
+  tolerance: 0
+status: draft
