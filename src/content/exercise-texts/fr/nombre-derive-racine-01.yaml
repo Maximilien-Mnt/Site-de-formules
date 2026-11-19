@@ -1,0 +1,11 @@
+title: Nombre dérivé de la racine carrée au point 4
+statement: |
+  Soit $f(x) = \sqrt{x}$. Calcule le nombre dérivé $f'(4)$.
+hints:
+  - 'Utilise $(\sqrt{x})^{\prime} = \dfrac{1}{2\sqrt{x}}$ et remplace $x$ par $4$ après dérivation.'
+solution: |
+  $(\sqrt{x})^{\prime} = \dfrac{1}{2\sqrt{x}}$, donc $f'(x) = \dfrac{1}{2\sqrt{x}}$.
+
+  À $x = 4$ : $\sqrt{4} = 2$, donc $f'(4) = \dfrac{1}{2 \times 2} = \dfrac14 = 0{,}25$.
+
+  Piège : $f'(4)$ est un **nombre** ($0{,}25$), pas une fonction ; on dérive d'abord, puis on remplace $x$ par $4$.

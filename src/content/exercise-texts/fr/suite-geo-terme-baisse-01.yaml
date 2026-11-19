@@ -1,0 +1,11 @@
+title: Baisse de 20 % pendant 3 ans
+statement: |
+  Une population de 500 animaux baisse de 20 % chaque année. Quelle est la population au bout de 3 ans ?
+hints:
+  - 'Une baisse de 20 % correspond à multiplier par $q = 1 - 0{,}20 = 0{,}8$, puis $u_{3} = 500 \times 0{,}8^{3}$.'
+solution: |
+  Une baisse de 20 % signifie qu'il reste 80 %, donc $q = 0{,}8$ (et non $0{,}2$).
+
+  $u_{3} = 500 \times 0{,}8^{3} = 500 \times 0{,}512 = 256$.
+
+  Piège : ne pas prendre $q = 0{,}2$ (on garde 80 %, pas 20 %), et compter 3 ans donc l'exposant 3.

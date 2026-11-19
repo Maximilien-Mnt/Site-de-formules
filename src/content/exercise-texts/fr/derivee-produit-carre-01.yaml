@@ -1,0 +1,13 @@
+title: Dérivée de x^2(x+1) au point 1
+statement: |
+  Soit $f(x) = x^{2}(x + 1)$. Calcule $f'(1)$.
+hints:
+  - 'Soit $u = x^{2}$ et $v = x + 1$. Calcule $u^{\prime}$ et $v^{\prime}$ séparément, puis applique $(uv)^{\prime} = u^{\prime}v + uv^{\prime}$.'
+solution: |
+  $u = x^{2}$ donc $u^{\prime} = 2x$ ; $v = x + 1$ donc $v^{\prime} = 1$.
+
+  $(uv)^{\prime} = u^{\prime}v + uv^{\prime} = 2x(x + 1) + x^{2} \times 1$.
+
+  À $x = 1$ : $2 \times 1 \times 2 + 1^{2} \times 1 = 4 + 1 = 5$. Donc $f'(1) = 5$.
+
+  Piège : $(uv)^{\prime} \neq u^{\prime}v^{\prime}$ ; il y a deux termes, et il ne faut pas oublier le second terme $uv^{\prime}$.

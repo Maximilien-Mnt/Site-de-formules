@@ -1,0 +1,11 @@
+title: Dérivée de 5 fois racine carrée en 4
+statement: |
+  Soit $f(x) = 5\sqrt{x}$. Calcule $f'(4)$.
+hints:
+  - 'La dérivée de $\sqrt{x}$ est $\dfrac{1}{2\sqrt{x}}$ ; le facteur multiplicatif $5$ reste.'
+solution: |
+  $f^{\prime}(x) = 5 \times \dfrac{1}{2\sqrt{x}} = \dfrac{5}{2\sqrt{x}}$.
+
+  À $x = 4$ : $\sqrt{4} = 2$, donc $f'(4) = \dfrac{5}{2 \times 2} = \dfrac54 = 1{,}25$.
+
+  Piège : ne pas oublier le coefficient $5$, et ne pas dériver la constante $5$ comme si elle était multipliée par $x$.

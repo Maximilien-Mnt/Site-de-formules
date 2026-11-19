@@ -1,0 +1,16 @@
+title: Somme de 4 termes d'une suite géométrique
+statement: |
+  $(u_{n})$ est géométrique avec $u_{0} = 3$ et raison $q = 2$. Quelle est la somme $u_{0} + u_{1} + u_{2} + u_{3}$ ?
+choices:
+  a: '$45$'
+  b: '$24$'
+  c: '$21$'
+  d: '$48$'
+hints:
+  - 'De $u_{0}$ à $u_{3}$, il y a 4 termes. Somme = $u_{0} \times \dfrac{1 - q^{4}}{1 - q}$.'
+solution: |
+  Les termes sont $3,\ 6,\ 12,\ 24$. Leur somme vaut $3 + 6 + 12 + 24 = 45$.
+
+  Vérification : $3 \times \dfrac{1 - 2^{4}}{1 - 2} = 3 \times \dfrac{-15}{-1} = 3 \times 15 = 45$.
+
+  Pièges : il y a 4 termes (c en compte 3), la somme n'est pas le dernier terme (b) ni le terme suivant $u_{4} = 48$ (d). La réponse **a** est correcte.

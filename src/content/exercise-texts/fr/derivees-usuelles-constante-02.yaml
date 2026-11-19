@@ -1,0 +1,14 @@
+title: Dérivée de 4x + 9
+statement: |
+  Soit $f(x) = 4x + 9$. Quelle est $f'(x)$ ?
+choices:
+  a: '$4$'
+  b: '$4x + 9$'
+  c: '$13$'
+  d: '$0$'
+hints:
+  - 'La dérivée de $4x$ est $4$ et celle de la constante $9$ est $0$.'
+solution: |
+  $(4x)^{\prime} = 4$ et $(9)^{\prime} = 0$, donc $f^{\prime}(x) = 4 + 0 = 4$.
+
+  Pièges : on ne recopie pas la fonction (b), on n'additionne pas $4$ et $9$ (c), et on ne traite pas le terme $4x$ comme une constante (d). La réponse **a** est correcte.

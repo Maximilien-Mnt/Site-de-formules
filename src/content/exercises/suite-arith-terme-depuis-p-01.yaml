@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 4
+difficulty: 3
+formulas: [suite-arithmetique]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 45
+  tolerance: 0
+status: draft

@@ -1,0 +1,16 @@
+title: Somme de 5 termes d'une suite arithmétique
+statement: |
+  $(u_{n})$ est arithmétique avec $u_{0} = 4$ et raison $r = 3$. Quelle est la somme $u_{0} + u_{1} + u_{2} + u_{3} + u_{4}$ ?
+choices:
+  a: '$50$'
+  b: '$40$'
+  c: '$20$'
+  d: '$100$'
+hints:
+  - 'De $u_{0}$ à $u_{4}$, il y a 5 termes. Somme = nombre de termes × (premier + dernier)/2.'
+solution: |
+  Les termes sont $4,\ 7,\ 10,\ 13,\ 16$. Leur somme vaut $4 + 7 + 10 + 13 + 16 = 50$.
+
+  Vérification : $5 \times \dfrac{4 + 16}{2} = 5 \times 10 = 50$.
+
+  Pièges : il y a 5 termes (b en oublie un), on ne peut pas oublier la raison (c), et il faut diviser par 2 dans la moyenne (d). La réponse **a** est correcte.

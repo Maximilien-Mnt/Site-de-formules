@@ -1,0 +1,16 @@
+title: Tangente à une cubique au point 2
+statement: |
+  Soit $f(x) = x^{3}$. Quelle est l'équation de la tangente à la courbe de $f$ au point d'abscisse $2$ ?
+choices:
+  a: '$y = 12x - 16$'
+  b: '$y = 12x + 8$'
+  c: '$y = 6x - 4$'
+  d: '$y = 4x - 4$'
+hints:
+  - 'Calcule $f^{\prime}(2)$ puis applique $y = f^{\prime}(2)(x - 2) + f(2)$.'
+solution: |
+  $f^{\prime}(x) = 3x^{2}$, donc $f^{\prime}(2) = 3 \times 2^{2} = 12$. Et $f(2) = 2^{3} = 8$.
+
+  La tangente a pour équation $y = 12(x - 2) + 8 = 12x - 24 + 8 = 12x - 16$.
+
+  Pièges : la pente est $12$ (et non $6$ ni $4$), et il faut utiliser $x - 2$ (et non ajouter $8$ directement). La réponse **a** est correcte.

@@ -1,0 +1,11 @@
+title: Terme de rang 12 depuis deux termes
+statement: |
+  $(u_{n})$ est une suite arithmétique avec $u_{5} = 17$ et $u_{8} = 29$. Calcule $u_{12}$.
+hints:
+  - 'La raison vaut $(u_{8} - u_{5})/(8 - 5)$. Puis $u_{12} = u_{8} + (12 - 8) \times r$.'
+solution: |
+  $r = \dfrac{29 - 17}{8 - 5} = \dfrac{12}{3} = 4$.
+
+  $u_{12} = u_{8} + (12 - 8) \times r = 29 + 4 \times 4 = 29 + 16 = 45$.
+
+  Piège : de rang $5$ à rang $12$, il y a $7$ pas de raison, pas $12$ ; on utilise bien $(12 - 8) \times r$ à partir de $u_{8}$.

@@ -1,0 +1,16 @@
+title: Dérivée de x^2/(x+1)
+statement: |
+  Soit $f(x) = \dfrac{x^{2}}{x + 1}$. Quelle est $f'(x)$ ?
+choices:
+  a: '$\dfrac{x^{2} + 2x}{(x + 1)^{2}}$'
+  b: '$\dfrac{2x - x^{2}}{(x + 1)^{2}}$'
+  c: '$\dfrac{x^{2} + 2x}{x + 1}$'
+  d: '$2x$'
+hints:
+  - 'Ordre du numérateur : $u^{\prime}v - uv^{\prime}$. Puis dénominateur $v^{2}$.'
+solution: |
+  $u = x^{2}$ donc $u^{\prime} = 2x$ ; $v = x + 1$ donc $v^{\prime} = 1$.
+
+  $\left(\dfrac{u}{v}\right)^{\prime} = \dfrac{u^{\prime}v - uv^{\prime}}{v^{2}} = \dfrac{2x(x + 1) - x^{2} \times 1}{(x + 1)^{2}} = \dfrac{x^{2} + 2x}{(x + 1)^{2}}$.
+
+  Pièges : l'ordre du numérateur compte (b), le dénominateur est $v^{2}$ et non $v$ (c), et on ne dérive pas numérateur et dénominateur séparément (d). La réponse **a** est correcte.
