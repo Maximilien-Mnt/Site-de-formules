@@ -8,7 +8,7 @@ variants:
   - id: rate
     latex: 'p = \dfrac{V}{T} \times 100'
   - id: total
-    latex: 'T = \dfrac{V \times 100}{p}'
+    latex: 'T = \dfrac{V \times 100}{p} \quad (p \neq 0)'
 variables:
   - { symbol: 'V' }
   - { symbol: 'T' }

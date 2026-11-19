@@ -1,0 +1,20 @@
+title: Tournoi de 7 équipes
+statement: |
+  Un tournoi réunit 7 équipes. Chaque équipe affronte chaque autre équipe une seule fois.
+  Combien y a-t-il de matchs en tout ?
+choices:
+  a: '21'
+  b: '42'
+  c: '49'
+  d: '35'
+hints:
+  - 'La première équipe joue 6 matchs, la suivante 5 nouveaux, etc.'
+  - 'C''est $6 + 5 + 4 + 3 + 2 + 1$.'
+solution: |
+  $6 + 5 + 4 + 3 + 2 + 1 = 21$. Ou bien $\\dbinom{7}{2} = \\dfrac{7 \\times 6}{2} = 21$.
+
+  - b : 42 compte chaque match deux fois ($7 \\times 6$).
+  - c : 49 $= 7 \\times 7$ n'a pas de sens ici.
+  - d : 35 $= \\dbinom{7}{3}$, ce serait choisir 3 équipes, pas 2.
+
+  La bonne réponse est **a**.

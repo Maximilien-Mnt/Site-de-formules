@@ -1,0 +1,12 @@
+title: Une somme maligne
+statement: |
+  Calcule $7 + 25 + 3 + 15$ en changeant l'ordre des nombres pour simplifier.
+hints:
+  - 'Change l''ordre : quels deux nombres font un nombre rond ?'
+  - '$7 + 3 = 10$, puis ajoute le reste.'
+solution: |
+  On change l'ordre : $7 + 25 + 3 + 15 = 7 + 3 + 25 + 15$.
+
+  Puis $7 + 3 = 10$, donc $10 + 25 + 15 = 50$.
+
+  Piège : on ne peut pas faire de même avec une soustraction ou une division.

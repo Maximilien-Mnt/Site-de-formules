@@ -1,0 +1,11 @@
+subject: math
+domain: arithmetic
+level: 2
+difficulty: 1
+formulas: [pourcentage]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 20
+  tolerance: 0
+status: draft

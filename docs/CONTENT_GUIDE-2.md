@@ -75,6 +75,14 @@ Fais le changement minimal dans chaque fichier, sans reformuler le reste. Puis n
 
 ### C5 — Mode : Act — Exercices d'une formule
 ~~~
-Pour la formule <id> : lis son yaml et son mdx, et les exercices qui la référencent déjà. Crée 2 ou 3 nouveaux exercices (src/content/exercises/<id>-<thème>-<nn>.yaml + src/content/exercise-texts/fr/<même nom>.yaml), en status: draft : au moins un numeric et un qcm, de difficultés différentes, qui ne répètent pas les exemples du texte.
+Pour le lot de formules LOT : lis leurs yaml et leurs mdx, et les exercices qui les référencent déjà. Crée 2 ou 3 nouveaux exercices pour chaque formule du lot (src/content/exercises/<id>-<thème>-<nn>.yaml + src/content/exercise-texts/fr/<même nom>.yaml), en status: draft : au moins un numeric et un qcm, de difficultés différentes, qui ne répètent pas les exemples du texte.
 Numeric : réponse simple à saisir, tolerance adaptée. QCM : 4 choix a à d, une seule bonne réponse, chaque mauvais choix correspond à une erreur réelle. Chaque exercice a au moins un indice et une solution rédigée qui explique les pièges. Recalcule chaque réponse avant de l'écrire. Puis npm run check:content && npm run audit:content.
 ~~~
+- **arithmétique et dénombrement** : commutativite, division-euclidienne, pourcentage, coefficient-binomial, somme-premiers-entiers
+- **géométrie** : perimetre-rectangle, aire-rectangle, aire-triangle, perimetre-cercle, thales, volume-cylindre, distance-plan
+- **trigonométrie** : trigonometrie-triangle-rectangle, loi-des-cosinus
+- **algèbre** : identites-remarquables, regles-puissances, fonction-affine, forme-canonique-trinome, viete-somme-produit, binome-newton, euler-formule
+- **analyse A (dérivation, suites)** : nombre-derive, derivees-usuelles, derivee-produit-quotient, suite-arithmetique, suite-geometrique
+- **analyse B (exp, ln, intégrales, séries)** : exponentielle-proprietes, logarithme-proprietes, theoreme-fondamental-analyse, integration-par-parties, taylor, serie-geometrique, integrale-gaussienne
+- **probabilités et statistiques** : moyenne-arithmetique, probabilite-equiprobable, variance-ecart-type, probabilite-conditionnelle, loi-binomiale, theoreme-de-bayes
+- **algèbre linéaire** : determinant-inverse-2x2, produit-matriciel

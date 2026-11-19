@@ -1,0 +1,13 @@
+title: Deux cartes parmi six
+statement: |
+  On tire 2 cartes parmi 6, sans tenir compte de l'ordre.
+  Combien de tirages différents existe-t-il ?
+hints:
+  - 'C''est « 2 parmi 6 » : $\\dbinom{6}{2}$.'
+  - '$\\dbinom{6}{2} = \\dfrac{6 \\times 5}{2 \\times 1}$.'
+solution: |
+  $\\dbinom{6}{2} = \\dfrac{6!}{2!\\,4!} = \\dfrac{6 \\times 5}{2 \\times 1} = \\dfrac{30}{2} = 15$.
+
+  Il y a 15 tirages différents.
+
+  Piège : ne pas oublier de diviser par 2! car l'ordre n'a pas d'importance.

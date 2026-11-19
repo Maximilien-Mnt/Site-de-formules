@@ -1,0 +1,11 @@
+subject: math
+domain: discrete
+level: 4
+difficulty: 2
+formulas: [coefficient-binomial]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 15
+  tolerance: 0
+status: draft

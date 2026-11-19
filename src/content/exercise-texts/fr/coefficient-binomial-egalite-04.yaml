@@ -1,0 +1,18 @@
+title: Quelle égalité binomiale est vraie ?
+statement: |
+  Quelle égalité est vraie ?
+choices:
+  a: '$\\dbinom{6}{2} = \\dbinom{6}{3}$'
+  b: '$\\dbinom{6}{2} = \\dbinom{6}{4}$'
+  c: '$\\dbinom{4}{0} = 0$'
+  d: '$\\dbinom{5}{7} = 15$'
+hints:
+  - 'Utilise la symétrie $\\dbinom{n}{k} = \\dbinom{n}{n-k}$.'
+  - 'Vérifie chaque égalité numériquement.'
+solution: |
+  - a : $\\dbinom{6}{2} = 15$, mais $\\dbinom{6}{3} = 20$ : faux.
+  - b : $\\dbinom{6}{2} = 15$ et $\\dbinom{6}{4} = \\dbinom{6}{6-4} = \\dbinom{6}{2} = 15$ : vrai (symétrie).
+  - c : $\\dbinom{4}{0} = 1$ (une seule façon de ne rien choisir), pas 0.
+  - d : on ne peut pas choisir 7 éléments parmi 5, donc $\\dbinom{5}{7} = 0$, pas 15.
+
+  La bonne réponse est **b**.

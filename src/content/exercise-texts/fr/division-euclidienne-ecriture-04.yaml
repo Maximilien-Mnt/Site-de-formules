@@ -1,0 +1,18 @@
+title: Écrire 38 divisé par 7
+statement: |
+  Quelle égalité traduit correctement la division euclidienne de $38$ par $7$ ?
+choices:
+  a: '$38 = 7 \\times 5 + 3$'
+  b: '$38 = 7 \\times 4 + 10$'
+  c: '$38 = 7 \\times 6 - 4$'
+  d: '$38 = 7 \\times 5 + 4$'
+hints:
+  - 'Le reste doit être positif ou nul et strictement plus petit que 7.'
+  - 'Vérifie que $7 \\times q + r = 38$.'
+solution: |
+  - a : $7 \\times 5 + 3 = 35 + 3 = 38$ et $0 \\leq 3 < 7$ : correct.
+  - b : l'égalité est vraie ($28 + 10 = 38$), mais le reste $10$ est plus grand que $7$.
+  - c : le « reste » $-4$ est négatif.
+  - d : $7 \\times 5 + 4 = 39 \\neq 38$, ce n'est pas vérifié.
+
+  La bonne réponse est **a**.

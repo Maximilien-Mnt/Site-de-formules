@@ -1,0 +1,13 @@
+title: Une remise de 25 %
+statement: |
+  Un article coûte 80 €. Une remise de 25 % est appliquée.
+  Quel est le montant de la remise ?
+hints:
+  - '25 % veut dire $\\dfrac{25}{100}$, soit un quart.'
+  - 'Calcule $\\dfrac{25}{100} \\times 80$.'
+solution: |
+  $25\\,\\%$ de 80 € $= \\dfrac{25}{100} \\times 80 = 0{,}25 \\times 80 = 20$.
+
+  La remise est de 20 €.
+
+  Piège : ne soustrais pas 25 directement de 80 ; il faut calculer 25 % de la quantité.

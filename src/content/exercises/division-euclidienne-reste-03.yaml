@@ -1,0 +1,11 @@
+subject: math
+domain: arithmetic
+level: 2
+difficulty: 1
+formulas: [division-euclidienne]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 8
+  tolerance: 0
+status: draft

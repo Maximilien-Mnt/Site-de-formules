@@ -1,0 +1,11 @@
+subject: math
+domain: discrete
+level: 4
+difficulty: 1
+formulas: [somme-premiers-entiers]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 210
+  tolerance: 0
+status: draft

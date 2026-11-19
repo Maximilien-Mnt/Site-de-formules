@@ -1,0 +1,10 @@
+title: La somme de 1 à 20
+statement: |
+  Calcule $1 + 2 + 3 + \\dots + 20$.
+hints:
+  - 'Utilise $\\dfrac{n(n+1)}{2}$ avec $n = 20$.'
+  - '$20 \\times 21 = 420$, puis divise par 2.'
+solution: |
+  $1 + 2 + \\dots + 20 = \\dfrac{20 \\times 21}{2} = \\dfrac{420}{2} = 210$.
+
+  Piège : le résultat n'est ni 20, ni $20 \\times 21$ sans diviser par 2.

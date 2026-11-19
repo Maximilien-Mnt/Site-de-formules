@@ -1,0 +1,22 @@
+title: Quel pourcentage de personnes ?
+statement: |
+  Dans un groupe de 60 personnes, 18 portent des lunettes.
+  Quel pourcentage des personnes porte des lunettes ?
+choices:
+  a: '30\\,%'
+  b: '18\\,%'
+  c: '3\\,%'
+  d: '0{,}3\\,%'
+hints:
+  - 'Calcule la part $\\dfrac{18}{60}$, puis multiplie par 100.'
+  - 'Le résultat est un pourcentage, pas un nombre de personnes.'
+solution: |
+  $p = \\dfrac{18}{60} \\times 100 = 0{,}3 \\times 100 = 30$.
+
+  Donc 30 % des personnes portent des lunettes.
+
+  - b : 18 est le nombre de personnes, pas le pourcentage.
+  - c : 0,3 sans × 100, c'est la part décimale.
+  - d : 0,3 % vaudrait 0,003, ce n'est pas 30 %.
+
+  La bonne réponse est **a**.

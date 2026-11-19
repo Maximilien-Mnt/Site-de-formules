@@ -1,0 +1,11 @@
+subject: math
+domain: arithmetic
+level: 1
+difficulty: 1
+formulas: [commutativite]
+kind: numeric
+estimatedMinutes: 2
+answer:
+  value: 50
+  tolerance: 0
+status: draft

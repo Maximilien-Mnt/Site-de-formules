@@ -1,0 +1,13 @@
+title: Le reste de 44 par 9
+statement: |
+  On effectue la division euclidienne de $44$ par $9$.
+  Quel est le reste ?
+hints:
+  - 'Cherche le plus grand multiple de 9 qui ne dépasse pas 44.'
+  - 'Vérifie que le reste est strictement plus petit que 9.'
+solution: |
+  $9 \\times 4 = 36$ et $9 \\times 5 = 45 > 44$.
+
+  Le quotient est donc $4$ et le reste est $44 - 36 = 8$. Comme $0 \\leq 8 < 9$, c'est correct.
+
+  Piège : un reste égal ou supérieur au diviseur signifie que le quotient est trop petit.

@@ -1,0 +1,15 @@
+title: Retrouver l'effectif total
+statement: |
+  42 élèves représentent 30 % de l'effectif d'une classe.
+  Quel est l'effectif total ?
+hints:
+  - 'Si 42 est 30 % du total, alors le total vaut $42 \\times \\dfrac{100}{30}$.'
+  - 'Vérifie que 30 % de 140 font bien 42.'
+solution: |
+  $T = 42 \\times \\dfrac{100}{30} = \\dfrac{4200}{30} = 140$.
+
+  L'effectif total est de 140 élèves.
+
+  Vérification : $30\\,\\%$ de 140 $= 0{,}3 \\times 140 = 42$. ✓
+
+  Piège : ne pas faire $42 \\times 30 / 100$ (ce qui donnerait une partie, pas le total).

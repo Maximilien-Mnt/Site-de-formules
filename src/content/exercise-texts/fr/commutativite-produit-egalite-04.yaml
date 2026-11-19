@@ -1,0 +1,20 @@
+title: Quelle égalité est toujours vraie ?
+statement: |
+  Quelle égalité est vraie pour tous les nombres $a$ et $b$ ?
+choices:
+  a: '$a \\times b = b \\times a$'
+  b: '$a - b = b - a$'
+  c: '$a \\div b = b \\div a$'
+  d: '$10 + 4 - 2 = 2 - 4 + 10$'
+hints:
+  - 'Teste avec $a = 6$ et $b = 3$.'
+  - 'La division et la soustraction ne sont pas commutatives.'
+solution: |
+  Avec $a = 6$ et $b = 3$ :
+
+  - a : $6 \\times 3 = 3 \\times 6 = 18$ : vrai.
+  - b : $6 - 3 = 3$ mais $3 - 6 = -3$ : faux.
+  - c : $6 \\div 3 = 2$ mais $3 \\div 6 = 0{,}5$ : faux.
+  - d : $10 + 4 - 2 = 12$ mais $2 - 4 + 10 = 8$ : changer l'ordre dans un calcul mêlé change les signes, c'est faux.
+
+  Seule l'égalité **a** est vraie.
