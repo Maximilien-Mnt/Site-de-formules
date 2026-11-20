@@ -1,0 +1,7 @@
+﻿title: Déterminant d'une matrice 2×2
+statement: |
+  Calcule le déterminant de la matrice $A = \begin{pmatrix} 6 & 4 \ 3 & 5 \end{pmatrix}$.
+hints:
+  - 'Utilise $\det A = ad - bc$ avec $a = 6$, $b = 4$, $c = 3$, $d = 5$.'
+solution: |
+  $\det A = 6 \times 5 - 4 \times 3 = 30 - 12 = 18$.

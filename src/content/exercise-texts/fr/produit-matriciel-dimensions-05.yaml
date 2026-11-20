@@ -1,0 +1,15 @@
+﻿title: Quand le produit n'existe pas
+statement: |
+  $A$ est une matrice de taille $3 \times 2$ et $B$ une matrice de taille $4 \times 3$.
+  Que peut-on dire du produit $AB$ ?
+choices:
+  a: "Il n'existe pas."
+  b: "Il existe et est de taille $3 \times 3$."
+  c: "Il existe et est de taille $2 \times 4$."
+  d: "Il existe et est de taille $4 \times 2$."
+hints:
+  - 'Le produit $AB$ existe seulement si le nombre de colonnes de $A$ (ici $2$) est égal au nombre de lignes de $B$ (ici $4$).'
+solution: |
+  $A$ a $2$ colonnes et $B$ a $4$ lignes. Puisque $2 \neq 4$, le produit $AB$ n'existe pas.
+
+  Pièges : b et c associent les tailles n'importe comment ; d est la taille de $BA$ (qui existe ici, car $B$ a 3 colonnes et $A$ a 3 lignes), ce qui répond à une autre question que celle posée.

@@ -1,0 +1,12 @@
+﻿title: Un coefficient d'un produit 2×2
+statement: |
+  Soit $A = \begin{pmatrix} 1 & 2 \ 3 & 4 \end{pmatrix}$ et $B = \begin{pmatrix} 2 & 1 \ 0 & 3 \end{pmatrix}$.
+  Quel est le coefficient en bas à droite de $AB$ ?
+hints:
+  - 'Pour la case (2 ; 2), multiplie la deuxième ligne de $A$ par la deuxième colonne de $B$, terme à terme, puis additionne.'
+solution: |
+  $(AB)_{22} = 3 \times 1 + 4 \times 3 = 3 + 12 = 15$.
+
+  (Pour contrôle : $AB = \begin{pmatrix} 2 & 7 \ 6 & 15 \end{pmatrix}$.)
+
+  Piège : multiplier case par case (produit de Hadamard) donnerait $4 \times 3 = 12$ ici, ce qui est faux pour le produit matriciel.

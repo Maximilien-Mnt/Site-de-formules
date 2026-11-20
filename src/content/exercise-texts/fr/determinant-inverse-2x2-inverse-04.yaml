@@ -1,0 +1,16 @@
+﻿title: Inverse d'une matrice 2×2
+statement: |
+  Quelle est l'inverse de $A = \begin{pmatrix} 2 & 1 \ 1 & 1 \end{pmatrix}$ ?
+choices:
+  a: '$\begin{pmatrix} 1 & -1 \ -1 & 2 \end{pmatrix}$'
+  b: '$\begin{pmatrix} 2 & 1 \ 1 & 1 \end{pmatrix}$'
+  c: '$\begin{pmatrix} 1 & 1 \ -1 & 2 \end{pmatrix}$'
+  d: '$\begin{pmatrix} 1 & -1 \ 1 & 2 \end{pmatrix}$'
+hints:
+  - 'Vérifie d’abord que $\det A$ n’est pas nul (ici $\det A = 1$). Ensuite, échange $a$ et $d$, change le signe de $b$ et $c$, puis divise par le déterminant.'
+solution: |
+  $\det A = 2 \times 1 - 1 \times 1 = 1 \neq 0$, donc $A$ est inversible.
+
+  $A^{-1} = \dfrac{1}{1}\begin{pmatrix} 1 & -1 \ -1 & 2 \end{pmatrix} = \begin{pmatrix} 1 & -1 \ -1 & 2 \end{pmatrix}$.
+
+  Pièges : b est la matrice $A$ elle-même (confusion matrice / inverse) ; c n'échange pas $a$ et $d$ ; d oublie de changer le signe de $c$ (il devrait valoir $-1$).
