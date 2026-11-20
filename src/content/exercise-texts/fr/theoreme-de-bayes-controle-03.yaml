@@ -1,0 +1,16 @@
+title: Contrôle qualité à l'usine
+statement: |
+  Dans une usine, $2\\,\\%$ des pièces produites sont défectueuses. Un test détecte $95\\,\\%$ des pièces défectueuses et signale à tort $4\\,\\%$ des pièces conformes comme défectueuses.
+  Une pièce est signalée défectueuse par le test. Quelle est la probabilité qu'elle soit vraiment défectueuse ?
+  (Résultat décimal arrondi au millième.)
+hints:
+  - 'Nomme $D$ l''événement « pièce défectueuse » et $+$ l''événement « test positif ».'
+  - 'Calcule $P(+)$ avec les probabilités totales avant d''appliquer Bayes.'
+solution: |
+  $P(D) = 0{,}02$, $P_{D}(+) = 0{,}95$, $P_{\\overline{D}}(+) = 0{,}04$.
+
+  $P(+) = P_{D}(+) \\, P(D) + P_{\\overline{D}}(+) \\, P(\\overline{D}) = 0{,}95 \\times 0{,}02 + 0{,}04 \\times 0{,}98 = 0{,}019 + 0{,}0392 = 0{,}0582$.
+
+  $P_{+}(D) = \\dfrac{0{,}95 \\times 0{,}02}{0{,}0582} = \\dfrac{0{,}019}{0{,}0582} \\approx 0{,}326$.
+
+  Malgré un test apparemment fiable, seule environ une pièce sur trois signalée est vraiment défectueuse, car la plupart des pièces sont conformes.

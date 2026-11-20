@@ -1,0 +1,16 @@
+title: Deux cartes rouges sans remise
+statement: |
+  On tire deux cartes successivement sans remise dans un jeu de $32$ cartes, dont $16$ sont rouges.
+  Quelle est la probabilité que les deux cartes soient rouges ?
+  (Résultat décimal arrondi au millième.)
+hints:
+  - 'La probabilité que la première carte soit rouge est $\\dfrac{16}{32}$.'
+  - 'Si la première est rouge, il reste $15$ cartes rouges sur $31$ pour le second tirage.'
+solution: |
+  $P(\\text{1ère rouge}) = \\dfrac{16}{32} = \\dfrac{1}{2}$.
+
+  $P(\\text{2ème rouge} \\mid \\text{1ère rouge}) = \\dfrac{15}{31}$.
+
+  $P(\\text{2 rouges}) = \\dfrac{16}{32} \\times \\dfrac{15}{31} = \\dfrac{240}{992} = \\dfrac{15}{62} \\approx 0{,}242$.
+
+  Le piège : utiliser $\\dfrac{16}{32} \\times \\dfrac{16}{32}$ comme si les tirages étaient indépendants (avec remise), ce qui donnerait $0{,}25$.

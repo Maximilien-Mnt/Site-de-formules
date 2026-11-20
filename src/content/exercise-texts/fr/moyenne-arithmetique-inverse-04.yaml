@@ -1,0 +1,15 @@
+title: Trouver la note manquante
+statement: |
+  La moyenne de cinq nombres est $10$. On connaît quatre d'entre eux : $7$, $9$, $11$ et $14$.
+  Quel est le cinquième nombre ?
+hints:
+  - 'La somme totale des cinq nombres est $5 \\times 10 = 50$.'
+  - 'Soustrais la somme des quatre nombres connus de $50$.'
+solution: |
+  Somme totale : $5 \\times 10 = 50$.
+
+  Somme des quatre nombres connus : $7 + 9 + 11 + 14 = 41$.
+
+  Cinquième nombre : $50 - 41 = 9$.
+
+  Le piège à éviter : ne pas diviser par 4 ou chercher une moyenne des moyennes.

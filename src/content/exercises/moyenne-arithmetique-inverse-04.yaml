@@ -1,0 +1,11 @@
+subject: math
+domain: statistics
+level: 3
+difficulty: 3
+formulas: [moyenne-arithmetique]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 9
+  tolerance: 0
+status: draft

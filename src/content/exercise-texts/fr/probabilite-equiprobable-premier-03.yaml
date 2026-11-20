@@ -1,0 +1,12 @@
+title: Nombre premier au dé
+statement: |
+  On lance un dé équilibré à $6$ faces. Quelle est la probabilité d'obtenir un nombre premier ?
+  (Donne le résultat sous forme décimale.)
+hints:
+  - 'Quels sont les nombres premiers parmi $1$, $2$, $3$, $4$, $5$, $6$ ?'
+solution: |
+  Les nombres premiers sur un dé sont $2$, $3$ et $5$ : soit $3$ cas favorables sur $6$ cas possibles.
+
+  $P(\\text{premier}) = \\dfrac{3}{6} = 0{,}5$.
+
+  Le nombre $1$ n'est pas premier.

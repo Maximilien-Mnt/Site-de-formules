@@ -1,0 +1,11 @@
+title: Probabilité conditionnelle simple
+statement: |
+  On considère deux événements $A$ et $B$ tels que $P(A) = 0{,}6$, $P(B) = 0{,}5$ et $P(A \\cap B) = 0{,}3$.
+  Calcule la probabilité de $B$ sachant $A$.
+  (Résultat décimal.)
+hints:
+  - 'Utilise $P_{A}(B) = \\dfrac{P(A \\cap B)}{P(A)}$.'
+solution: |
+  $P_{A}(B) = \\dfrac{P(A \\cap B)}{P(A)} = \\dfrac{0{,}3}{0{,}6} = 0{,}5$.
+
+  Le piège : diviser par $P(B) = 0{,}5$ au lieu de $P(A) = 0{,}6$ donnerait $0{,}6$, ce qui est faux car la condition est $A$, donc c'est $P(A)$ au dénominateur.

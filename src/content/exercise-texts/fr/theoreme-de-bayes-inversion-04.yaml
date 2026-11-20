@@ -1,0 +1,22 @@
+title: Inversion de conditionnement
+statement: |
+  Une maladie touche $1\\,\\%$ de la population. Un test est positif pour $99\\,\\%$ des malades et pour $2\\,\\%$ des personnes saines.
+  Une personne tirée au hasard a un test positif. Quelle est la probabilité qu'elle soit malade ?
+choices:
+  a: '$\\dfrac{1}{3} \\approx 0{,}333$'
+  b: '$0{,}99$'
+  c: '$0{,}01$'
+  d: '$0{,}5$'
+hints:
+  - 'Calcule d''abord $P(\\text{positif})$ en additionnant malades positifs et sains positifs.'
+  - 'Divise ensuite $P(\\text{malade et positif})$ par $P(\\text{positif})$.'
+solution: |
+  $P(\\text{malade et positif}) = 0{,}01 \\times 0{,}99 = 0{,}0099$.
+
+  $P(\\text{sain et positif}) = 0{,}99 \\times 0{,}02 = 0{,}0198$.
+
+  $P(\\text{positif}) = 0{,}0099 + 0{,}0198 = 0{,}0297$.
+
+  $P_{+}(\\text{malade}) = \\dfrac{0{,}0099}{0{,}0297} = \\dfrac{1}{3} \\approx 0{,}333$.
+
+  Le choix b confond $P_{+}(\\text{malade})$ avec $P_{\\text{malade}}(+) = 0{,}99$ : c'est l'erreur d'inversion classique. Le choix c est seulement la prévalence, sans tenir compte du test positif.

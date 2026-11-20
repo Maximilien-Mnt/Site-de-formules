@@ -1,0 +1,18 @@
+title: Exactement un six en trois lancers
+statement: |
+  On lance $3$ fois un dé équilibré. Soit $X$ le nombre de « six » obtenus.
+  Quelle est l'expression de $P(X = 1)$ ?
+choices:
+  a: '$\\dbinom{3}{1} \\times \\dfrac{1}{6} \\times \\left(\\dfrac{5}{6}\\right)^{2}$'
+  b: '$\\dfrac{1}{6} \\times \\left(\\dfrac{5}{6}\\right)^{2}$'
+  c: '$\\dbinom{3}{1} \\times \\left(\\dfrac{1}{6}\\right)^{2} \\times \\dfrac{5}{6}$'
+  d: '$\\left(\\dfrac{1}{6}\\right)^{3}$'
+hints:
+  - 'Applique la formule de la loi binomiale avec $n = 3$, $p = \\dfrac{1}{6}$ et $k = 1$.'
+  - 'N''oublie pas le coefficient $\\dbinom{n}{k}$ qui compte le nombre de façons de placer le succès.'
+solution: |
+  Avec $n = 3$, $p = \\dfrac{1}{6}$ et $k = 1$ :
+
+  $P(X = 1) = \\dbinom{3}{1} \\times \\left(\\dfrac{1}{6}\\right)^{1} \\times \\left(1 - \\dfrac{1}{6}\\right)^{3-1} = \\dbinom{3}{1} \\times \\dfrac{1}{6} \\times \\left(\\dfrac{5}{6}\\right)^{2}$.
+
+  Le choix b oublie le coefficient $\\dbinom{3}{1}$ (il ne compte qu'un ordre). Le choix c échange les exposants de $p$ et de $1-p$ (c'est $P(X=2)$). Le choix d calcule $P(X=3)$.

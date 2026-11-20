@@ -1,0 +1,15 @@
+title: Pièces défectueuses dans un lot
+statement: |
+  Dans une série de $10$ pièces, chaque pièce a une probabilité de $0{,}1$ d'être défectueuse, indépendamment des autres.
+  Quelle est la probabilité d'avoir exactement $2$ pièces défectueuses ?
+  (Résultat décimal arrondi au millième.)
+hints:
+  - 'Applique la loi binomiale avec $n = 10$, $p = 0{,}1$ et $k = 2$.'
+solution: |
+  $P(X = 2) = \\dbinom{10}{2} \\times 0{,}1^{2} \\times (1 - 0{,}1)^{10-2}$.
+
+  $\\dbinom{10}{2} = \\dfrac{10 \\times 9}{2} = 45$.
+
+  $P(X = 2) = 45 \\times 0{,}01 \\times 0{,}9^{8} = 45 \\times 0{,}01 \\times 0{,}43046721 \\approx 0{,}194$.
+
+  Le piège : oublier le coefficient $\\dbinom{10}{2}$ donnerait $0{,}0043$, ce qui est bien trop petit car il ne compte qu'un arrangement particulier.

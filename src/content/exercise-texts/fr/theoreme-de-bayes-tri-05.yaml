@@ -1,0 +1,16 @@
+title: Tri de pièces à l'usine
+statement: |
+  Dans un lot, $40\\,\\%$ des pièces sont défectueuses. Un capteur signale $80\\,\\%$ des pièces défectueuses comme défectueuses, et $10\\,\\%$ des pièces conformes comme défectueuses.
+  Une pièce est signalée défectueuse par le capteur. Quelle est la probabilité qu'elle soit vraiment défectueuse ?
+  (Résultat décimal arrondi au millième.)
+hints:
+  - 'Nomme $D$ l''événement « pièce défectueuse » et $S$ l''événement « capteur signale défectueuse ».'
+  - 'Calcule $P(S)$ avec les probabilités totales.'
+solution: |
+  $P(D) = 0{,}4$, $P_{D}(S) = 0{,}8$, $P_{\\overline{D}}(S) = 0{,}1$.
+
+  $P(S) = P_{D}(S) \\, P(D) + P_{\\overline{D}}(S) \\, P(\\overline{D}) = 0{,}8 \\times 0{,}4 + 0{,}1 \\times 0{,}6 = 0{,}32 + 0{,}06 = 0{,}38$.
+
+  $P_{S}(D) = \\dfrac{0{,}8 \\times 0{,}4}{0{,}38} = \\dfrac{0{,}32}{0{,}38} = \\dfrac{16}{19} \\approx 0{,}842$.
+
+  Le piège : oublier le terme $P_{\\overline{D}}(S) \\, P(\\overline{D}) = 0{,}06$ au dénominateur surestimerait fortement le résultat.

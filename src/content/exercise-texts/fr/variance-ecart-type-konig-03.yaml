@@ -1,0 +1,14 @@
+title: Variance avec la formule de König
+statement: |
+  Soit la série $3$, $5$, $7$. Calcule sa variance $V$ (résultat décimal arrondi au millième).
+hints:
+  - 'Commence par calculer la moyenne.'
+  - 'Utilise la formule de König : $V = \\dfrac{1}{n}\\sum x_{i}^{2} - \\bar{x}^{2}$.'
+solution: |
+  Moyenne : $\\bar{x} = \\dfrac{3 + 5 + 7}{3} = 5$.
+
+  Moyenne des carrés : $\\dfrac{3^{2} + 5^{2} + 7^{2}}{3} = \\dfrac{9 + 25 + 49}{3} = \\dfrac{83}{3} \\approx 27{,}667$.
+
+  Variance : $V = \\dfrac{83}{3} - 5^{2} = \\dfrac{83}{3} - \\dfrac{75}{3} = \\dfrac{8}{3} \\approx 2{,}667$.
+
+  Le piège : oublier que la variance est la moyenne des carrés des écarts, et non l'écart moyen. La somme des écarts sans carré vaut toujours $0$.

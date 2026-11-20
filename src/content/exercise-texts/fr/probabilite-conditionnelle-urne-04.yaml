@@ -1,0 +1,17 @@
+title: Deux tirages sans remise à l'urne
+statement: |
+  Une urne contient $5$ boules rouges et $3$ boules noires. On tire deux boules successivement sans remise.
+  Sachant que la première boule tirée est rouge, quelle est la probabilité que la deuxième soit aussi rouge ?
+choices:
+  a: '$\\dfrac{4}{7}$'
+  b: '$\\dfrac{5}{8}$'
+  c: '$\\dfrac{4}{8}$'
+  d: '$\\frac{5}{7}$'
+hints:
+  - 'Après avoir retiré une boule rouge, combien de boules rouges restent-elles ? Combien de boules en tout ?'
+solution: |
+  Après le premier tirage rouge, il reste $4$ boules rouges sur un total de $7$ boules.
+
+  $P(\\text{2ème rouge} \\mid \\text{1ère rouge}) = \\dfrac{4}{7}$.
+
+  Le choix b ignore que le premier tirage a déjà eu lieu. Le choix c met le numérateur à jour mais pas le dénominateur. Le choix d inverse les rôles.

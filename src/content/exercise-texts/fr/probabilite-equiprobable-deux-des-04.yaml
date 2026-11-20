@@ -1,0 +1,19 @@
+title: Somme de 7 avec deux dés
+statement: |
+  On lance deux dés équilibrés à $6$ faces. Quelle est la probabilité que la somme des deux faces soit égale à $7$ ?
+choices:
+  a: '$\\dfrac{1}{6}$'
+  b: '$\\dfrac{1}{12}$'
+  c: '$\\dfrac{1}{36}$'
+  d: '$\\dfrac{5}{36}$'
+hints:
+  - 'Liste toutes les combinaisons possibles : il y en a $6 \\times 6 = 36$.'
+  - 'Compte les paires dont la somme vaut $7$.'
+solution: |
+  Il y a $36$ issues équiprobables.
+
+  Les paires donnant une somme de $7$ sont : $(1,6)$, $(2,5)$, $(3,4)$, $(4,3)$, $(5,2)$, $(6,1)$ : soit $6$ cas favorables.
+
+  $P(\\text{somme } 7) = \\dfrac{6}{36} = \\dfrac{1}{6}$.
+
+  Le choix b oublie les ordres inversés (ne compte que $(1,6)$, $(2,5)$ et $(3,4)$). Le choix c ne compte qu'une seule combinaison. Le choix d correspond à une somme de $8$.

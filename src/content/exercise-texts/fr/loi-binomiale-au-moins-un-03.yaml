@@ -1,0 +1,14 @@
+title: Au moins un succès
+statement: |
+  On lance $4$ fois une pièce équilibrée. Soit $X$ le nombre de « face ».
+  Quelle est la probabilité d'obtenir au moins une « face » ?
+  (Résultat décimal.)
+hints:
+  - '$X$ suit la loi binomiale $\\mathcal{B}(4\\,;\\,0{,}5)$.'
+  - 'Utilise l''événement contraire : $P(X \\geq 1) = 1 - P(X = 0)$.'
+solution: |
+  $P(X = 0) = \\dbinom{4}{0} \\times 0{,}5^{0} \\times 0{,}5^{4} = \\dfrac{1}{16} = 0{,}0625$.
+
+  $P(X \\geq 1) = 1 - P(X = 0) = 1 - 0{,}0625 = 0{,}9375$.
+
+  Le piège : essayer d'additionner $P(X=1) + P(X=2) + P(X=3) + P(X=4)$ au lieu d'utiliser l'événement contraire.

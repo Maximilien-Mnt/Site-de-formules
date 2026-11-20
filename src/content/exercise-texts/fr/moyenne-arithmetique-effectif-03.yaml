@@ -1,0 +1,12 @@
+title: Moyenne de cinq notes
+statement: |
+  Un élève a obtenu les notes $4$, $6$, $6$, $8$ et $11$.
+  Calcule sa moyenne.
+hints:
+  - 'Additionne les cinq notes, puis divise par le nombre de notes.'
+solution: |
+  Somme : $4 + 6 + 6 + 8 + 11 = 35$.
+
+  Moyenne : $\dfrac{35}{5} = 7$.
+
+  Vérifie : le résultat est bien compris entre la plus petite note ($4$) et la plus grande ($11$).

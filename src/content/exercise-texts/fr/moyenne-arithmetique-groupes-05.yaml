@@ -1,0 +1,24 @@
+title: Moyenne de deux groupes
+statement: |
+  Une classe est formée de deux groupes : le premier compte $20$ élèves avec une moyenne de $12$, et le second $10$ élèves avec une moyenne de $16$.
+  Quelle est la moyenne de toute la classe ?
+choices:
+  a: '$14$'
+  b: '$13{,}33$'
+  c: '$12$'
+  d: '$16$'
+hints:
+  - 'Calcule le total des points de chaque groupe, puis divise par le nombre total d''élèves.'
+  - 'Ne fais pas simplement la moyenne de $12$ et de $16$.'
+solution: |
+  Total des points du premier groupe : $20 \\times 12 = 240$.
+
+  Total des points du second groupe : $10 \\times 16 = 160$.
+
+  Total des points de la classe : $240 + 160 = 400$.
+
+  Nombre total d'élèves : $20 + 10 = 30$.
+
+  Moyenne de la classe : $\\dfrac{400}{30} = 13{,}33\\ldots$
+
+  Le choix a ($14$) est la moyenne des moyennes, ce qui ignore que les groupes n'ont pas le même effectif. C'est une erreur classique.

@@ -1,0 +1,11 @@
+subject: math
+domain: probability
+level: 5
+difficulty: 2
+formulas: [loi-binomiale]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 0.9375
+  tolerance: 0.001
+status: draft

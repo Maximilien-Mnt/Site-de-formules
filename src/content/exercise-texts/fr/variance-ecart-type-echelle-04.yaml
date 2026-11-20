@@ -1,0 +1,20 @@
+title: Multiplier toutes les valeurs par 3
+statement: |
+  On multiplie chaque valeur d'une série statistique par $3$.
+  Que devient son écart type $\\sigma$ ?
+choices:
+  a: 'Il est multiplié par $3$.'
+  b: 'Il est multiplié par $9$.'
+  c: 'Il ne change pas.'
+  d: 'Il est divisé par $3$.'
+hints:
+  - 'La moyenne est aussi multipliée par $3$. Que devient chaque écart $x_{i} - \\bar{x}$ ?'
+  - 'L''écart type est la racine carrée de la variance.'
+solution: |
+  Toutes les valeurs et la moyenne sont multipliées par $3$.
+
+  Chaque écart devient $3x_{i} - 3\\bar{x} = 3(x_{i} - \\bar{x})$, donc chaque écart est multiplié par $3$.
+
+  La variance est multipliée par $3^{2} = 9$, et l'écart type, qui en est la racine carrée, est multiplié par $\\sqrt{9} = 3$.
+
+  Le choix b confond variance et écart type. Le choix c correspond à l'ajout d'une constante, non à une multiplication.

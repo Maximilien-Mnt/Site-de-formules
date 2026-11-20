@@ -1,0 +1,10 @@
+subject: math
+domain: statistics
+level: 3
+difficulty: 3
+formulas: [moyenne-arithmetique]
+kind: qcm
+estimatedMinutes: 3
+choices: [a, b, c, d]
+correct: [b]
+status: draft
