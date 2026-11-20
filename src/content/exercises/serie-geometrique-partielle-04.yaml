@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 6
+difficulty: 4
+formulas: [serie-geometrique]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 1.875
+  tolerance: 0
+status: draft

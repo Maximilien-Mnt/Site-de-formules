@@ -1,0 +1,7 @@
+title: Intégrale gaussienne standard
+statement: |
+  Quelle est la valeur de $\displaystyle\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx$ ?
+hints:
+  - 'Le résultat est $\sqrt{\pi}$.'
+solution: |
+  $\displaystyle\int_{-\infty}^{+\infty} e^{-x^{2}}\,dx = \sqrt{\pi} \approx 1{,}772$.

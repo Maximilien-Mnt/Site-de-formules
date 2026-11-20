@@ -1,0 +1,10 @@
+subject: math
+domain: calculus
+level: 7
+difficulty: 2
+formulas: [integrale-gaussienne]
+kind: qcm
+estimatedMinutes: 2
+choices: [a, b, c, d]
+correct: [a]
+status: draft

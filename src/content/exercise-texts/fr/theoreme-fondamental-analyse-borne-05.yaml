@@ -1,0 +1,16 @@
+title: Formule du théorème fondamental
+statement: |
+  Si $f$ est continue sur $[a, b]$ et $F$ est une primitive de $f$, que vaut $\displaystyle\int_{a}^{b} f(x)\,dx$ ?
+choices:
+  a: '$F(b) - F(a)$'
+  b: '$F(a) - F(b)$'
+  c: '$f(b) - f(a)$'
+  d: '$F(b) + F(a)$'
+hints:
+  - 'Le théorème dit : intégrale = différence de la primitive aux bornes.'
+solution: |
+  Le théorème fondamental donne $\displaystyle\int_{a}^{b} f(x)\,dx = F(b) - F(a)$ : la réponse **a** est correcte.
+
+  - La réponse b inverse les bornes et change le signe.
+  - La réponse c confond fonction et primitive.
+  - La réponse d met un signe plus au lieu d'un moins.

@@ -1,0 +1,7 @@
+title: Cosinus par Taylor
+statement: |
+  À l'ordre 2 autour de 0, approximer $\cos(0{,}1)$ par son développement de Maclaurin.
+hints:
+  - '$\cos x \approx 1 - x^{2}/2!$ à l''ordre 2.'
+solution: |
+  $\cos x \approx 1 - \dfrac{x^{2}}{2}$. Pour $x = 0{,}1$ : $\cos(0{,}1) \approx 1 - \dfrac{0{,}1^{2}}{2} = 1 - 0{,}005 = 0{,}995$.

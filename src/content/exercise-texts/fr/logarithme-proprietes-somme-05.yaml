@@ -1,0 +1,16 @@
+title: Quelle égalité de logarithme est vraie ?
+statement: |
+  Quelle égalité est vraie pour tous les réels strictement positifs $a$ et $b$ ?
+choices:
+  a: '$\ln(ab) = \ln a + \ln b$'
+  b: '$\ln(a+b) = \ln a + \ln b$'
+  c: '$\ln(a^{n}) = (\ln a)^{n}$'
+  d: '$\ln(a/b) = \ln a / \ln b$'
+hints:
+  - 'Le logarithme transforme un produit en somme.'
+solution: |
+  La propriété du produit est $\ln(ab) = \ln a + \ln b$ : la réponse **a** est correcte.
+
+  - La réponse b est fausse : il n'existe pas de formule simple pour $\ln(a+b)$.
+  - La réponse c confond $n\ln a$ avec $(\ln a)^{n}$.
+  - La réponse d est fausse : le logarithme d'un quotient est une différence, pas un quotient de logarithmes.

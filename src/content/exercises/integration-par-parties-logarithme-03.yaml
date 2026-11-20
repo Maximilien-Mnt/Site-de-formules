@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 5
+difficulty: 3
+formulas: [integration-par-parties]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 1
+  tolerance: 0
+status: draft

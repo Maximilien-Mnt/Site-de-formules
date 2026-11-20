@@ -1,0 +1,7 @@
+title: Exposant opposé
+statement: |
+  On sait que $e^{a} = 8$. Calcule $e^{-a}$.
+hints:
+  - 'L''exposant opposé donne l''inverse : $e^{-a} = \dfrac{1}{e^{a}}$.'
+solution: |
+  $e^{-a} = \dfrac{1}{e^{a}} = \dfrac{1}{8} = 0{,}125$.

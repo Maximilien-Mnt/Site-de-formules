@@ -1,0 +1,7 @@
+title: Série géométrique décalée
+statement: |
+  Calcule $\displaystyle\sum_{k=2}^{\infty} (1/2)^{k}$.
+hints:
+  - 'Le premier terme (k=2) vaut $(1/2)^{2} = 1/4$.'
+solution: |
+  Série de premier terme $1/4$ et raison $1/2$ : $\dfrac{1/4}{1 - 1/2} = \dfrac{1/4}{1/2} = 0{,}5$.

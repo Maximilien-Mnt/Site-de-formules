@@ -1,0 +1,16 @@
+title: Choisir u et v'
+statement: |
+  Pour calculer $\displaystyle\int x\ln x\,dx$ par parties, quel choix simplifie le plus ?
+choices:
+  a: '$u = \ln x,\quad dv = x\,dx$'
+  b: '$u = x,\quad dv = \ln x\,dx$'
+  c: '$u = x\ln x,\quad dv = dx$'
+  d: '$u = 1,\quad dv = x\ln x\,dx$'
+hints:
+  - 'Choisis $u$ comme le facteur qui se simplifie quand on le dérive.'
+solution: |
+  Le bon choix est $u = \ln x$ (qui se simplifie en $1/x$) et $dv = x\,dx$ (primitive facile $x^{2}/2$) : la réponse **a** est correcte.
+
+  - La réponse b oblige à intégrer $\ln x$ dès le départ, ce qui complique.
+  - La réponse c ne simplifie pas le problème.
+  - La réponse d est absurde : on ne peut pas poser $u = 1$ et intégrer ce qu'on cherche.

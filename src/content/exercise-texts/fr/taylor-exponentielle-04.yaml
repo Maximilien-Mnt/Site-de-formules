@@ -1,0 +1,7 @@
+title: Exponentielle par Maclaurin
+statement: |
+  À l'ordre 2 autour de 0, approximer $e^{1}$ par son développement de Maclaurin.
+hints:
+  - '$e^{x} \approx 1 + x + x^{2}/2!$ à l''ordre 2.'
+solution: |
+  $e^{x} \approx 1 + x + \dfrac{x^{2}}{2}$. Pour $x = 1$ : $e^{1} \approx 1 + 1 + \dfrac{1}{2} = 2{,}5$.

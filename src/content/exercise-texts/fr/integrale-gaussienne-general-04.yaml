@@ -1,0 +1,7 @@
+title: Intégrale gaussienne centrée
+statement: |
+  Calcule $\displaystyle\int_{-\infty}^{+\infty} e^{-(x-1)^{2}/2}\,dx$.
+hints:
+  - 'Poser $u = (x-1)/\sqrt{2}$, puis utiliser $\int e^{-u^{2}}\,du = \sqrt{\pi}$.'
+solution: |
+  Avec $u = (x-1)/\sqrt{2}$, on a $dx = \sqrt{2}\,du$, donc l'intégrale vaut $\sqrt{2}\times\sqrt{\pi} = \sqrt{2\pi} \approx 2{,}507$.

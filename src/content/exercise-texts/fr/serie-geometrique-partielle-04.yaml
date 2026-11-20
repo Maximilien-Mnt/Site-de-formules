@@ -1,0 +1,7 @@
+title: Somme partielle géométrique
+statement: |
+  Calcule $\displaystyle\sum_{k=0}^{3} (1/2)^{k}$.
+hints:
+  - 'Somme partielle : $(1 - q^{n+1})/(1 - q)$ avec $q = 1/2$ et $n = 3$.'
+solution: |
+  $\dfrac{1 - (1/2)^{4}}{1 - 1/2} = \dfrac{1 - 1/16}{1/2} = \dfrac{15/16}{1/2} = \dfrac{15}{8} = 1{,}875$.

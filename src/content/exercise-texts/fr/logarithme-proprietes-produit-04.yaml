@@ -1,0 +1,7 @@
+title: Logarithme d'un produit puissance
+statement: |
+  On sait que $\ln a = 2$ et $\ln b = 3$. Calcule $\ln(a^{2}b)$.
+hints:
+  - 'Applique $\ln(a^{n}) = n\ln a$ puis $\ln(ab) = \ln a + \ln b$.'
+solution: |
+  $\ln(a^{2}b) = 2\ln a + \ln b = 2\times2 + 3 = 7$.

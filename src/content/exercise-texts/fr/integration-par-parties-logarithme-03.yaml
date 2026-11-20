@@ -1,0 +1,8 @@
+title: Intégrale du logarithme
+statement: |
+  Calcule $\displaystyle\int_{1}^{e} \ln x\,dx$.
+hints:
+  - 'Pose $u = \ln x$ et $v'' = 1$, donc $v = x$.'
+solution: |
+  Avec $u = \ln x$ et $v' = 1$, on a $u' = 1/x$ et $v = x$ :
+  $\displaystyle\int_{1}^{e} \ln x\,dx = [x\ln x]_{1}^{e} - \displaystyle\int_{1}^{e} x\cdot\frac{1}{x}\,dx = [x\ln x - x]_{1}^{e} = (e - e) - (0 - 1) = 1$.

@@ -1,0 +1,7 @@
+title: Logarithme d'une exponentielle
+statement: |
+  Calcule $\ln(e^{7})$.
+hints:
+  - 'Le logarithme népérien est la réciproque de l''exponentielle.'
+solution: |
+  $\ln(e^{7}) = 7$.

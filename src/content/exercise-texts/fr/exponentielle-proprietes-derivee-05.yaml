@@ -1,0 +1,16 @@
+title: Dérivée de l'exponentielle
+statement: |
+  Quelle est la dérivée de $e^{x}$ ?
+choices:
+  a: '$e^{x}$'
+  b: '$x\,e^{x-1}$'
+  c: '$\dfrac{e^{x}}{x}$'
+  d: '$e^{x+1}$'
+hints:
+  - 'L''exponentielle est égale à sa propre dérivée.'
+solution: |
+  Par définition, $(e^{x})' = e^{x}$ : la réponse **a** est correcte.
+
+  - La réponse b confond avec la dérivée d'une puissance $x^{n}$.
+  - La réponse c confond avec la dérivée de $\ln x$.
+  - La réponse d décale l'exposant sans raison.

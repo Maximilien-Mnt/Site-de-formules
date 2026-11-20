@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 6
+difficulty: 3
+formulas: [taylor]
+kind: numeric
+estimatedMinutes: 4
+answer:
+  value: 0.995
+  tolerance: 0.001
+status: draft

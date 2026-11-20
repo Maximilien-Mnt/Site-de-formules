@@ -1,0 +1,11 @@
+subject: math
+domain: calculus
+level: 5
+difficulty: 3
+formulas: [logarithme-proprietes]
+kind: numeric
+estimatedMinutes: 3
+answer:
+  value: 7
+  tolerance: 0
+status: draft

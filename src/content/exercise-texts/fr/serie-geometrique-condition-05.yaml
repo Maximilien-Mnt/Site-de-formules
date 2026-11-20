@@ -1,0 +1,16 @@
+title: Condition de convergence
+statement: |
+  Quelle condition garantit la convergence de $\displaystyle\sum_{k=0}^{\infty} q^{k}$ ?
+choices:
+  a: '$\|q\| < 1$'
+  b: '$\|q\| \le 1$'
+  c: '$q < 1$'
+  d: '$q > 0$'
+hints:
+  - 'Il faut que les termes tendent vers 0, donc que $\|q\| < 1$.'
+solution: |
+  La série géométrique converge si et seulement si $\|q\| < 1$ : la réponse **a** est correcte.
+
+  - La réponse b est fausse : pour $q = 1$ ou $q = -1$, les termes ne tendent pas vers 0.
+  - La réponse c est fausse : $q = -2$ vérifie $q < 1$ mais diverge.
+  - La réponse d est fausse : $q = 2$ vérifie $q > 0$ mais diverge.

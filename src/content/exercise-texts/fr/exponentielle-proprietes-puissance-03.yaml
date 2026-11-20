@@ -1,0 +1,7 @@
+title: Puissance d'une exponentielle
+statement: |
+  On sait que $e^{a} = 4$. Calcule $e^{2a}$.
+hints:
+  - 'Écris $2a = a + a$ et applique la règle du produit.'
+solution: |
+  $e^{2a} = e^{a+a} = e^{a} \times e^{a} = 4 \times 4 = 16$.

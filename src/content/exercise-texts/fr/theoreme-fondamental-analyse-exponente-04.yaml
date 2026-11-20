@@ -1,0 +1,7 @@
+title: Intégrale de l'exponentielle
+statement: |
+  Calcule $\displaystyle\int_{0}^{1} e^{x}\,dx$.
+hints:
+  - 'L''exponentielle est égale à sa propre dérivée, donc à sa propre primitive.'
+solution: |
+  Une primitive de $e^{x}$ est $e^{x}$. Donc $\displaystyle\int_{0}^{1} e^{x}\,dx = [e^{x}]_{0}^{1} = e - 1 \approx 1{,}718$.

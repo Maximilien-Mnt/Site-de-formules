@@ -1,0 +1,8 @@
+title: Produit x sinus
+statement: |
+  Calcule $\displaystyle\int_{0}^{\pi/2} x\sin x\,dx$.
+hints:
+  - 'Pose $u = x$ et $v'' = \sin x$, donc $v = -\cos x$.'
+solution: |
+  Avec $u = x$ et $v' = \sin x$, on a $u' = 1$ et $v = -\cos x$ :
+  $\displaystyle\int_{0}^{\pi/2} x\sin x\,dx = [-x\cos x]_{0}^{\pi/2} + \displaystyle\int_{0}^{\pi/2} \cos x\,dx = 0 + [\sin x]_{0}^{\pi/2} = 1 - 0 = 1$.

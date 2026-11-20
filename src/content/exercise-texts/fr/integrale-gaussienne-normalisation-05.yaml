@@ -1,0 +1,16 @@
+title: Constante normalisante de la loi normale
+statement: |
+  Quelle constante $c$ rend $\int_{-\infty}^{+\infty} c\,e^{-(x-\mu)^{2}/(2\sigma^{2})}\,dx = 1$ ?
+choices:
+  a: '$\dfrac{1}{\sigma\sqrt{2\pi}}$'
+  b: '$\dfrac{1}{\sigma^{2}\sqrt{2\pi}}$'
+  c: '$\dfrac{1}{\sqrt{2\pi}}$'
+  d: '$\dfrac{1}{2\sigma\sqrt{\pi}}$'
+hints:
+  - 'L''intégrale sans constante vaut $\sigma\sqrt{2\pi}$.'
+solution: |
+  Puisque $\displaystyle\int_{-\infty}^{+\infty} e^{-(x-\mu)^{2}/(2\sigma^{2})}\,dx = \sigma\sqrt{2\pi}$, il faut $c = \dfrac{1}{\sigma\sqrt{2\pi}}$ : la réponse **a** est correcte.
+
+  - La réponse b confond $\sigma$ et $\sigma^{2}$.
+  - La réponse c oublie le facteur $\sigma$.
+  - La réponse d est une mauvaise constante.
