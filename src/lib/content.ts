@@ -77,6 +77,12 @@ export interface ExerciseView extends ExerciseLight {
   text: ExerciseText | undefined
   lang: string
   isFallback: boolean
+  /** Réponse numérique attendue (tolerance normalisée à 0 si absente). */
+  answer?: { value: number; tolerance: number; unit?: string }
+  /** Choix QCM assemblés (libellés localisés) — uniquement pour kind === 'qcm'. */
+  choices?: { id: string; label: string }[]
+  correct?: string[]
+  isMultiple: boolean
 }
 
 // ---------------------------------------------------------------------------
@@ -298,11 +304,27 @@ function buildExerciseView(e: ExerciseShared, lang: string): ExerciseView {
     difficulty: e.difficulty,
     formulas: e.formulas,
     kind: e.kind,
-    estimatedMinutes: e.estimatedMinutes,
+    estimatedMinutes: e.estimatedMinutes ?? 3,
     status: e.status,
     text: textResult.value,
     lang: textResult.lang,
     isFallback: textResult.isFallback,
+    answer: e.answer
+      ? {
+          value: e.answer.value,
+          tolerance: e.answer.tolerance ?? 0,
+          unit: e.answer.unit,
+        }
+      : undefined,
+    choices:
+      e.kind === 'qcm' && e.choices
+        ? e.choices.map((id) => ({
+            id,
+            label: textResult.value?.choices?.[id] ?? id,
+          }))
+        : undefined,
+    correct: e.correct,
+    isMultiple: (e.correct?.length ?? 0) > 1,
   }
 }
 

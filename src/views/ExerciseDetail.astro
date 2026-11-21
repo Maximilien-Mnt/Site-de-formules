@@ -1,0 +1,111 @@
+---
+import { localizedPath, type Lang } from '@/i18n/config'
+import { t, type TranslationKey } from '@/i18n/index'
+import { renderMd } from '@/lib/md'
+import { getFormulaTitle, type ExerciseView } from '@/lib/content'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Breadcrumb from '@/components/ui/Breadcrumb.astro'
+import LevelDots from '@/components/ui/LevelDots.astro'
+import DifficultyMark from '@/components/ui/DifficultyMark.astro'
+import ExercisePlayer from '@/components/islands/ExercisePlayer.tsx'
+
+interface Props {
+  lang: Lang
+  exercise: ExerciseView
+  next?: { url: string; title: string }
+}
+
+const { lang, exercise: view, next } = Astro.props
+
+const title = view.text?.title ?? view.id
+const domainLabel = t(lang, `domain.${view.domain}` as TranslationKey)
+const kindLabel = t(lang, `exercise.kind.${view.kind}` as TranslationKey)
+const catalogPath = localizedPath(lang, 'exercises')
+
+// Texte rendu au build par renderMd() (Markdown + LaTeX) ; l'îlot reçoit du HTML.
+const statementHtml = view.text?.statement ? await renderMd(view.text.statement) : ''
+const hintsHtml = await Promise.all((view.text?.hints ?? []).map((h) => renderMd(h)))
+const solutionHtml = view.text?.solution ? await renderMd(view.text.solution) : ''
+const choicesHtml = await Promise.all(
+  (view.choices ?? []).map(async (c) => ({ id: c.id, html: await renderMd(c.label) })),
+)
+
+// Formules liées (sens exercice → formule), titres localisés.
+const relatedFormulas = view.formulas.map((id) => ({
+  url: localizedPath(lang, 'formula', { id }),
+  title: getFormulaTitle(lang, id) ?? id,
+}))
+---
+
+<BaseLayout lang={lang} title={title}>
+  <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+    <div class="print:hidden">
+      <Breadcrumb
+        lang={lang}
+        items={[
+          { label: t(lang, 'exercise.title'), href: catalogPath },
+          { label: domainLabel, href: `${catalogPath}?domain=${view.domain}` },
+          { label: title },
+        ]}
+      />
+    </div>
+
+    <header class="mt-4">
+      <h1 class="font-serif text-4xl font-semibold tracking-tight text-text">{title}</h1>
+      <div class="mt-3 flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text">
+          {kindLabel}
+        </span>
+        <span class="inline-flex items-center rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text">
+          {t(lang, 'exercise.minutes', { count: view.estimatedMinutes })}
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text">
+          <LevelDots lang={lang} level={view.level} size="sm" />
+          <span>{t(lang, `level.${view.level}` as TranslationKey)}</span>
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text">
+          <DifficultyMark lang={lang} difficulty={view.difficulty} size="sm" />
+          <span>{t(lang, `difficulty.${view.difficulty}` as TranslationKey)}</span>
+        </span>
+      </div>
+    </header>
+
+    <div class="mt-8 max-w-[var(--w-prose)]">
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-subtle">{t(lang, 'exercise.statement')}</h2>
+      <div class="mt-2 text-base" set:html={statementHtml} />
+    </div>
+
+    <section class="mt-10 max-w-[var(--w-prose)]" aria-label={t(lang, 'exercise.check')}>
+      <ExercisePlayer
+        client:visible
+        lang={lang}
+        kind={view.kind}
+        answer={view.answer}
+        choices={choicesHtml}
+        correct={view.correct}
+        isMultiple={view.isMultiple}
+        hintsHtml={hintsHtml}
+        solutionHtml={solutionHtml}
+        next={next}
+      />
+    </section>
+
+    {relatedFormulas.length > 0 && (
+      <section class="mt-10 max-w-[var(--w-prose)]">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-subtle">{t(lang, 'exercise.relatedFormulas')}</h2>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {relatedFormulas.map((f) => (
+            <li>
+              <a
+                href={f.url}
+                class="inline-flex items-center rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-primary transition-colors duration-[var(--dur-fast)] hover:border-border-strong hover:bg-surface-2"
+              >
+                {f.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</BaseLayout>

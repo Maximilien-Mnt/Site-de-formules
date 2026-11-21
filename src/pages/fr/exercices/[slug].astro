@@ -1,0 +1,38 @@
+---
+import { getExercises } from '@/lib/content'
+import { localizedPath, type Lang } from '@/i18n/config'
+import { getNextExercise } from '@/lib/exercise-next'
+import ExerciseDetail from '@/views/ExerciseDetail.astro'
+
+export const prerender = true
+
+export async function getStaticPaths() {
+  const lang: Lang = 'fr'
+  const exercises = getExercises(lang)
+  return exercises.map((exercise) => {
+    const found = getNextExercise(
+      exercises.map((e) => ({
+        id: e.id,
+        domain: e.domain,
+        level: e.level,
+        title: e.text?.title ?? e.id,
+      })),
+      exercise.id,
+    )
+    return {
+      params: { slug: exercise.id },
+      props: {
+        lang,
+        exercise,
+        next: found
+          ? { url: localizedPath(lang, 'exercise', { id: found.id }), title: found.title }
+          : undefined,
+      },
+    }
+  })
+}
+
+const { lang, exercise, next } = Astro.props
+---
+
+<ExerciseDetail lang={lang} exercise={exercise} next={next} />
