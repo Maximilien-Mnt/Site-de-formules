@@ -1,0 +1,35 @@
+---
+import { t } from '@/i18n/index'
+import type { Lang, TranslationKey } from '@/i18n/index'
+import LevelDots from './LevelDots.astro'
+
+interface Props {
+  lang: Lang
+  exercise: {
+    id: string
+    title: string
+    kind: 'numeric' | 'qcm' | 'open'
+    estimatedMinutes: number
+    level: number
+    url: string
+  }
+}
+
+const { lang, exercise } = Astro.props
+const kindKey = `exercise.kind.${exercise.kind}` as TranslationKey
+---
+<article class="flex flex-col gap-3 rounded-lg border border-border bg-surface p-4">
+  <a
+    href={exercise.url}
+    class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)] ease-[var(--ease-out)]"
+  >
+    <h3 class="font-serif text-base font-semibold leading-tight">{exercise.title}</h3>
+  </a>
+  <div class="flex flex-wrap gap-2 items-center">
+    <span class="inline-flex items-center rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs font-medium text-text">
+      {t(lang, kindKey)}
+    </span>
+    <span class="text-xs text-muted">{t(lang, 'exercise.minutes', { count: exercise.estimatedMinutes })}</span>
+    <LevelDots lang={lang} level={exercise.level} size="sm" />
+  </div>
+</article>

@@ -1,0 +1,128 @@
+---
+import { getExercises } from '@/lib/content'
+import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+import { t } from '@/i18n/index'
+import {
+  parseExerciseFilters,
+  filterExercises,
+  sortExercises,
+  type SearchExercise,
+} from '@/lib/exercise-filters'
+import ExerciseCard from '@/components/ui/ExerciseCard.astro'
+import EmptyState from '@/components/ui/EmptyState.astro'
+import ExerciseCatalogApp from '@/components/islands/ExerciseCatalogApp.tsx'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang = DEFAULT_LANG } = Astro.props
+const { pathname, searchParams } = new URL(Astro.request.url)
+const state = parseExerciseFilters(searchParams)
+
+// Données partagées publiées, adaptées à la forme des filtres.
+const cards: SearchExercise[] = getExercises(lang)
+  .filter((e) => e.status === 'published')
+  .map((e) => ({
+    id: e.id,
+    title: e.text?.title ?? e.id,
+    statement: e.text?.statement ?? '',
+    subject: e.subject,
+    domain: e.domain,
+    level: e.level,
+    difficulty: e.difficulty,
+    kind: e.kind,
+    estimatedMinutes: e.estimatedMinutes,
+    url: localizedPath(lang, 'exercise', { id: e.id }),
+  }))
+
+// Recherche texte côté serveur (sous-chaîne, casse/accents insensibles) —
+// fallback sans JavaScript. L'îlot reprend avec MiniSearch après hydratation.
+const q = state.q.toLowerCase().trim()
+const serverFiltered = q
+  ? cards.filter((e) => {
+      const haystack = [e.id, e.title, e.statement]
+        .join(' ')
+        .toLowerCase()
+      return haystack.includes(q)
+    })
+  : cards
+
+const filtered = sortExercises(filterExercises(serverFiltered, state), state.sort)
+---
+
+<section aria-label={t(lang, 'exercise.catalogTitle')}>
+  <header class="mb-6">
+    <h1 class="font-serif text-2xl font-semibold text-text">{t(lang, 'exercise.catalogTitle')}</h1>
+    <p class="text-muted text-sm mt-1">
+      {t(lang, 'common.results.other', { count: filtered.length })}
+    </p>
+  </header>
+
+  <!-- Recherche + tri : formulaire GET, fonctionne sans JavaScript. -->
+  <form
+    action={pathname}
+    method="GET"
+    class="flex flex-col sm:flex-row sm:items-end gap-3 mb-6 border-b border-border pb-4"
+  >
+    <label class="sr-only">{t(lang, 'exercise.search.placeholder')}</label>
+    <input
+      name="q"
+      value={state.q}
+      placeholder={t(lang, 'exercise.search.placeholder')}
+      class="flex-1 px-4 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
+    />
+    <label class="sr-only">{t(lang, 'catalog.sort')}</label>
+    <select
+      name="sort"
+      value={state.sort}
+      onchange="this.form.submit()"
+      class="px-3 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
+    >
+      <option value="alpha">{t(lang, 'catalog.sort.alpha')}</option>
+      <option value="levelAsc">{t(lang, 'catalog.sort.levelAsc')}</option>
+      <option value="levelDesc">{t(lang, 'catalog.sort.levelDesc')}</option>
+      <option value="difficulty">{t(lang, 'catalog.sort.difficulty')}</option>
+    </select>
+    <input type="hidden" name="subject" value={state.subject.join(',') || undefined} />
+    <input type="hidden" name="domain" value={state.domain.join(',') || undefined} />
+    <input
+      type="hidden"
+      name="level"
+      value={
+        state.level
+          ? state.level.min === state.level.max
+            ? String(state.level.min)
+            : `${state.level.min}-${state.level.max}`
+          : undefined
+      }
+    />
+    <input type="hidden" name="difficulty" value={state.difficulty.join(',') || undefined} />
+    <input type="hidden" name="kind" value={state.kind.join(',') || undefined} />
+  </form>
+
+  <div id="exercise-catalog-shell" class="grid grid-cols-1 gap-6">
+    {filtered.length === 0 ? (
+      <EmptyState
+        lang={lang}
+        title={t(lang, 'exercise.empty')}
+        hint={t(lang, 'catalog.empty.hint')}
+      />
+    ) : (
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        role="list"
+        aria-label={t(lang, 'common.results.other', { count: filtered.length })}
+      >
+        {filtered.map((exercise) => (
+          <li key={exercise.id}>
+            <ExerciseCard lang={lang} exercise={exercise} />
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+
+  <!-- Îlot React : recherche MiniSearch, filtres/tri côté client, état dans l'URL. -->
+  <ExerciseCatalogApp client:idle lang={lang} />
+</section>
