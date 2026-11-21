@@ -1,4 +1,4 @@
-import { DEFAULT_LANG, Lang, SUPPORTED_LANGS, localizedPath, getLangFromUrl } from './config';
+import { DEFAULT_LANG, SUPPORTED_LANGS, localizedPath, getLangFromUrl, type Lang } from './config';
 import frMessages from './ui/fr.json';
 
 // Toutes les clés feuilles de fr.json (ex. 'nav.formulas', 'common.results.one', 'common.results.other').

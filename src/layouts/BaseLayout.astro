@@ -22,7 +22,7 @@ interface Props {
 const { lang = DEFAULT_LANG, title, description, canonical } = Astro.props;
 const dir = LANGS[lang]?.dir ?? 'ltr';
 const siteName = t(lang, 'site.name');
-const formulesPath = localizedPath(lang, 'formules');
+const formulesPath = localizedPath(lang, 'formulas');
 const exercicesPath = localizedPath(lang, 'exercises');
 const reviserPath = localizedPath(lang, 'review');
 const progressionPath = localizedPath(lang, 'progress');
@@ -37,7 +37,7 @@ const aboutPath = localizedPath(lang, 'about');
     {description && <meta name="description" content={description} />}
     {canonical && <link rel="canonical" href={canonical} />}
     {SUPPORTED_LANGS.map((l) => (
-      <link rel="alternate" hreflang={l} href={canonical ?? localizedPath(l, 'formules')} />
+      <link rel="alternate" hreflang={l} href={canonical ?? localizedPath(l, 'formulas')} />
     ))}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <ViewTransitions />

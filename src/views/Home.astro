@@ -133,7 +133,7 @@ const destinations = [
               <span class="hero-live-idx-total">{formulas.length}</span>
             </div>
           </div>
-          {formulas.map((f, i) => (
+          {formulas.map((_f, i) => (
             <div class={`formula-panel${i === 0 ? ' active' : ''}`} data-panel={i}>
               <div class="formula" set:html={formulaHtmls[i]} />
               <div class="terms" data-terms>
@@ -166,7 +166,7 @@ const destinations = [
         <a class="strip-card" href={localizedPath(lang, 'formulas') + `?level=${item.level}`}>
           <span class="strip-card-num">{item.level}</span>
           <span class="strip-card-label">{item.label}</span>
-          <span class="strip-card-count">{t(lang, 'common.formulas', { count: item.count })}</span>
+          <span class="strip-card-count">{t(lang, 'common.formulas' as import('@/i18n/index').TranslationKey, { count: item.count })}</span>
         </a>
       ))}
     </div>
@@ -179,7 +179,7 @@ const destinations = [
         <a class="tile" href={localizedPath(lang, 'formulas') + `?domain=${tile.domain}`}>
           <span class="tile-icon"><Icon name={`lucide:${tile.icon}`} /></span>
           <span class="tile-name">{tile.label}</span>
-          <span class="tile-count">{t(lang, 'common.formulas', { count: tile.count })}</span>
+          <span class="tile-count">{t(lang, 'common.formulas' as import('@/i18n/index').TranslationKey, { count: tile.count })}</span>
         </a>
       ))}
     </div>
@@ -282,7 +282,7 @@ const destinations = [
     Array.prototype.forEach.call(searchForms, function (form) {
       form.addEventListener("submit", function (event) {
         event.preventDefault();
-        var input = form.querySelector("input[name=\"q\\"]");
+        var input = form.querySelector("input[name=\"q\"]");
         if (!input) { return; }
         var query = input.value.trim();
         if (!query) { return; }

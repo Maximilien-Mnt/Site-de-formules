@@ -5,7 +5,7 @@
 import { useEffect, useState } from 'react'
 import type { Lang } from '@/i18n/config'
 import { t } from '@/i18n/index'
-import { formatNumber, type FunctionGraphConfig, type GraphConfig, type MathJs } from '@/lib/graph'
+import { formatNumber, type GraphParam, type FunctionGraphConfig, type GraphConfig, type MathJs } from '@/lib/graph'
 import FunctionPlot from './graph/FunctionPlot'
 import ParamSlider from './graph/ParamSlider'
 import RightTriangle from './graph/RightTriangle'

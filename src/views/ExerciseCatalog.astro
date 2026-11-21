@@ -115,7 +115,7 @@ const filtered = sortExercises(filterExercises(serverFiltered, state), state.sor
         aria-label={t(lang, 'common.results.other', { count: filtered.length })}
       >
         {filtered.map((exercise) => (
-          <li key={exercise.id}>
+          <li>
             <ExerciseCard lang={lang} exercise={exercise} />
           </li>
         ))}

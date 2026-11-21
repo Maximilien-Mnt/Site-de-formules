@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useStore } from '@nanostores/react'
-import { t } from '@/i18n/index'
+import { t, type TranslationKey } from '@/i18n/index'
 import type { Lang } from '@/i18n/config'
 import { ALL_DOMAINS, DIFFICULTIES, LEVELS, SUBJECTS } from '@/data/taxonomy'
 import { bindFilterStoreToUrl, filterStore } from '@/lib/filter-store'
@@ -106,11 +106,11 @@ function FilterPanelClient({
   const chips = [
     state.q && { label: state.q, onRemove: () => set({ ...state, q: '' }) },
     ...state.subject.map((s: string) => ({
-      label: t(lang, `subject.${s}`),
+      label: t(lang, `subject.${s}` as TranslationKey),
       onRemove: () => set({ ...state, subject: state.subject.filter((v: string) => v !== s) }),
     })),
     ...state.domain.map((d: string) => ({
-      label: t(lang, `domain.${d}`),
+      label: t(lang, `domain.${d}` as TranslationKey),
       onRemove: () => set({ ...state, domain: state.domain.filter((v: string) => v !== d) }),
     })),
     state.level && {
@@ -120,9 +120,9 @@ function FilterPanelClient({
           : `Niveau ${state.level.min}–${state.level.max}`,
       onRemove: () => set({ ...state, level: null }),
     },
-    ...state.difficulty.map((d: string) => ({
+    ...state.difficulty.map((d: number) => ({
       label: t(lang, `difficulty.${d}` as import('@/i18n/index').TranslationKey),
-      onRemove: () => set({ ...state, difficulty: state.difficulty.filter((v: string) => v !== d) }),
+      onRemove: () => set({ ...state, difficulty: state.difficulty.filter((v: number) => v !== d) }),
     })),
     state.hasGraph && { label: t(lang, 'filter.content.graph'), onRemove: () => set({ ...state, hasGraph: false }) },
     state.hasProof && { label: t(lang, 'filter.content.proof'), onRemove: () => set({ ...state, hasProof: false }) },
@@ -131,7 +131,7 @@ function FilterPanelClient({
       label: t(lang, 'filter.content.exercises'),
       onRemove: () => set({ ...state, hasExercises: false }),
     },
-  ].filter(Boolean)
+  ].filter(Boolean) as { label: string; onRemove: () => void }[]
 
   const isLevelSelected = (level: number): boolean =>
     Boolean(state.level && level >= state.level.min && level <= state.level.max)
@@ -164,7 +164,7 @@ function FilterPanelClient({
               key={i}
               onClick={chip.onRemove}
               className="inline-flex items-center gap-1.5 rounded-full border border-primary bg-primary-soft text-primary px-3 py-1 text-xs font-medium"
-              aria-label={`Retirer ${chip.label}`}
+              aria-label={t(lang, 'filter.remove', { label: chip.label })}
             >
               {chip.label}
               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -195,7 +195,7 @@ function FilterPanelClient({
                 onClick={() => set({ ...state, subject: toggle(state.subject, subject) })}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${active ? 'border-primary bg-primary-soft text-primary' : 'border-border bg-surface text-text hover:bg-surface-2'}`}
               >
-                {t(lang, `subject.${subject}`)}
+                {t(lang, `subject.${subject}` as TranslationKey)}
               </button>
             )
           })}
@@ -216,7 +216,7 @@ function FilterPanelClient({
                 onClick={() => set({ ...state, domain: toggle(state.domain, domain) })}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${active ? 'border-primary bg-primary-soft text-primary' : 'border-border bg-surface text-text hover:bg-surface-2'}`}
               >
-                {t(lang, `domain.${domain}`)}
+                {t(lang, `domain.${domain}` as TranslationKey)}
               </button>
             )
           })}
@@ -258,7 +258,7 @@ function FilterPanelClient({
           )}
         </div>
         <div className="p-3 flex flex-wrap gap-2">
-          {LEVELS.map((level: string) => {
+          {LEVELS.map((level: number) => {
             const active = isLevelSelected(level)
             return (
               <button
@@ -279,7 +279,7 @@ function FilterPanelClient({
           <span className="text-xs text-muted ml-2">{state.difficulty.length}</span>
         </div>
         <div className="p-3 flex flex-wrap gap-2">
-          {DIFFICULTIES.map((difficulty: string) => {
+          {DIFFICULTIES.map((difficulty: number) => {
             const active = state.difficulty.includes(difficulty)
             return (
               <button
@@ -469,7 +469,7 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
             <label className="sr-only">{t(lang, 'catalog.search.label')}</label>
             <input
               value={state.q}
-              onInput={(e: React.ChangeEvent<HTMLInputElement>) => set({ ...state, q: e.target.value })}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => set({ ...state, q: e.target.value })}
               placeholder={t(lang, 'catalog.search.placeholder')}
               className="w-full px-4 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
             />

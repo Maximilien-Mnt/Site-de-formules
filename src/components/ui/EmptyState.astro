@@ -1,16 +1,14 @@
 ---
 import Button from './Button.astro';
-import { t } from '@/i18n/index';
-import type { Lang } from '@/i18n/config';
 
 interface Props {
-  lang?: Lang;
+  lang?: string;
   title: string;
   hint: string;
   action?: { label: string; href: string };
 }
 
-const { lang = 'fr', title, hint, action } = Astro.props;
+const { title, hint, action } = Astro.props;
 ---
 
 <div class="flex flex-col items-center justify-center gap-4 p-10 text-center rounded-lg border border-border bg-surface-2">

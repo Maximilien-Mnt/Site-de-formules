@@ -36,7 +36,7 @@ const cards: SearchFormula[] = getFormulas(lang)
     topics: f.topics,
     latex: f.latex,
     originYear: f.originYear,
-    graph: f.graph,
+    graph: Boolean(f.graph),
     hasProof: f.sections?.some((s) => s.kind === 'proof') ?? false,
     hasHistory: f.sections?.some((s) => s.kind === 'history') ?? false,
     hasExercises: (f.exercises?.length ?? 0) > 0,

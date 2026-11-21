@@ -34,7 +34,7 @@ const total = count ?? formulas.length
       aria-label={t(lang, 'common.results.other', { count: total })}
     >
       {formulas.map((formula) => (
-        <li key={formula.id}>
+        <li>
           <FormulaCard lang={lang} formula={formula} />
         </li>
       ))}

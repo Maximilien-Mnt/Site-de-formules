@@ -12,13 +12,15 @@ import {
   sortExercises,
   type ExerciseFilterState,
   type SearchExercise,
+  type ExerciseKind,
 } from '@/lib/exercise-filters'
 import { createExerciseSearchIndex, searchExercises } from '@/lib/search'
 
 const INDEX_URL = (lang: Lang) => `/search/${lang}/exercises.json`
 
-const toggle = (arr: string[], value: string): string[] =>
-  arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value]
+function toggle<T>(arr: readonly T[], value: T): T[] {
+  return arr.includes(value) ? arr.filter((v: T) => v !== value) : [...arr, value]
+}
 
 const toggleNum = (arr: number[], value: number): number[] =>
   arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value]
@@ -103,11 +105,11 @@ function FilterPanelClient({ lang, state }: { lang: Lang; state: ExerciseFilterS
   const chips = [
     state.q && { label: state.q, onRemove: () => set({ ...state, q: '' }) },
     ...state.subject.map((s: string) => ({
-      label: t(lang, `subject.${s}`),
+      label: t(lang, `subject.${s}` as TranslationKey),
       onRemove: () => set({ ...state, subject: state.subject.filter((v: string) => v !== s) }),
     })),
     ...state.domain.map((d: string) => ({
-      label: t(lang, `domain.${d}`),
+      label: t(lang, `domain.${d}` as TranslationKey),
       onRemove: () => set({ ...state, domain: state.domain.filter((v: string) => v !== d) }),
     })),
     state.level && {
@@ -125,7 +127,7 @@ function FilterPanelClient({ lang, state }: { lang: Lang; state: ExerciseFilterS
       label: t(lang, `exercise.kind.${k}` as TranslationKey),
       onRemove: () => set({ ...state, kind: state.kind.filter((v: string) => v !== k) }),
     })),
-  ].filter(Boolean)
+  ].filter(Boolean) as { label: string; onRemove: () => void }[]
 
   const isLevelSelected = (level: number): boolean =>
     Boolean(state.level && level >= state.level.min && level <= state.level.max)
@@ -142,7 +144,7 @@ function FilterPanelClient({ lang, state }: { lang: Lang; state: ExerciseFilterS
     set({ ...state, level: state.level ? { min: state.level.min, max: n } : { min: n, max: n } })
   }
 
-  const kinds = [
+  const kinds: { value: ExerciseKind; label: string }[] = [
     { value: 'qcm', label: t(lang, 'exercise.kind.qcm') },
     { value: 'numeric', label: t(lang, 'exercise.kind.numeric') },
     { value: 'open', label: t(lang, 'exercise.kind.open') },
@@ -188,7 +190,7 @@ function FilterPanelClient({ lang, state }: { lang: Lang; state: ExerciseFilterS
                 onClick={() => set({ ...state, subject: toggle(state.subject, subject) })}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${active ? 'border-primary bg-primary-soft text-primary' : 'border-border bg-surface text-text hover:bg-surface-2'}`}
               >
-                {t(lang, `subject.${subject}`)}
+                {t(lang, `subject.${subject}` as TranslationKey)}
               </button>
             )
           })}
@@ -209,7 +211,7 @@ function FilterPanelClient({ lang, state }: { lang: Lang; state: ExerciseFilterS
                 onClick={() => set({ ...state, domain: toggle(state.domain, domain) })}
                 className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${active ? 'border-primary bg-primary-soft text-primary' : 'border-border bg-surface text-text hover:bg-surface-2'}`}
               >
-                {t(lang, `domain.${domain}`)}
+                {t(lang, `domain.${domain}` as TranslationKey)}
               </button>
             )
           })}
@@ -444,7 +446,7 @@ export default function ExerciseCatalogApp({ lang }: { lang: Lang }) {
             <label className="sr-only">{t(lang, 'exercise.search.placeholder')}</label>
             <input
               value={state.q}
-              onInput={(e: React.ChangeEvent<HTMLInputElement>) => set({ ...state, q: e.target.value })}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => set({ ...state, q: e.target.value })}
               placeholder={t(lang, 'exercise.search.placeholder')}
               className="w-full px-4 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
             />
