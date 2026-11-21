@@ -16,4 +16,4 @@ variables:
 prerequisites: [pythagore, trigonometrie-triangle-rectangle]
 related: [pythagore, distance-plan]
 confusedWith: []
-status: draft
+status: published

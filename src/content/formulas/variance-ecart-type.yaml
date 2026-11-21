@@ -16,4 +16,4 @@ variables:
 prerequisites: [moyenne-arithmetique]
 related: [loi-binomiale]
 confusedWith: []
-status: draft
+status: published

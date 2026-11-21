@@ -25,4 +25,4 @@ graph:
   viewport:
     x: [-6, 6]
     y: [-0.1, 1.4]
-status: draft
+status: published

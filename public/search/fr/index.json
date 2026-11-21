@@ -31,6 +31,270 @@
     "url": "/fr/formules/aire-disque/"
   },
   {
+    "id": "aire-rectangle",
+    "title": "Aire d'un rectangle",
+    "summary": "L'aire d'un rectangle est égale au produit de sa longueur par sa largeur. Elle mesure la taille de sa surface.",
+    "keywords": [
+      "surface",
+      "cm²",
+      "m²",
+      "carré",
+      "carrelage"
+    ],
+    "aliases": [
+      "aire du carré",
+      "surface d'un rectangle",
+      "longueur fois largeur"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 2,
+    "difficulty": 1,
+    "topics": [
+      "rectangle",
+      "area"
+    ],
+    "latex": "A = L \\times \\ell",
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/aire-rectangle/"
+  },
+  {
+    "id": "aire-triangle",
+    "title": "Aire d'un triangle",
+    "summary": "L'aire d'un triangle est égale à la moitié du produit d'une base par la hauteur correspondante.",
+    "keywords": [
+      "base",
+      "hauteur",
+      "moitié",
+      "surface"
+    ],
+    "aliases": [
+      "surface d'un triangle",
+      "base fois hauteur sur deux",
+      "hauteur d'un triangle"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 2,
+    "difficulty": 2,
+    "topics": [
+      "triangles",
+      "area"
+    ],
+    "latex": "A = \\dfrac{b \\times h}{2}",
+    "originYear": -1650,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/aire-triangle/"
+  },
+  {
+    "id": "pourcentage",
+    "title": "Calculer avec des pourcentages",
+    "summary": "Prendre p % d'une quantité T, c'est la multiplier par p/100. On retrouve un taux ou un total avec la même relation.",
+    "keywords": [
+      "soldes",
+      "remise",
+      "TVA",
+      "part",
+      "proportion"
+    ],
+    "aliases": [
+      "pourcentage",
+      "proportion",
+      "taux",
+      "pour cent"
+    ],
+    "subject": "math",
+    "domain": "arithmetic",
+    "level": 2,
+    "difficulty": 2,
+    "topics": [
+      "percentages",
+      "proportionality"
+    ],
+    "latex": "V = \\dfrac{p}{100} \\times T",
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/pourcentage/"
+  },
+  {
+    "id": "coefficient-binomial",
+    "title": "Coefficients binomiaux et triangle de Pascal",
+    "summary": "Le coefficient binomial « k parmi n » compte les façons de choisir k éléments parmi n, sans tenir compte de l'ordre.",
+    "keywords": [
+      "dénombrement",
+      "choisir",
+      "combinaison",
+      "factorielle",
+      "loto"
+    ],
+    "aliases": [
+      "combinaisons",
+      "k parmi n",
+      "triangle de Pascal",
+      "factorielle",
+      "nombre de parties"
+    ],
+    "subject": "math",
+    "domain": "discrete",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "combinatorics",
+      "pascal-triangle",
+      "counting"
+    ],
+    "latex": "\\binom{n}{k} = \\dfrac{n!}{k!\\,(n - k)!}",
+    "originYear": -200,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/coefficient-binomial/"
+  },
+  {
+    "id": "commutativite",
+    "title": "Commutativité de l'addition et de la multiplication",
+    "summary": "Dans une addition ou une multiplication, on peut changer l'ordre des nombres sans changer le résultat.",
+    "keywords": [
+      "addition",
+      "multiplication",
+      "calcul mental",
+      "propriété"
+    ],
+    "aliases": [
+      "commutativité",
+      "changer l'ordre",
+      "ordre des nombres"
+    ],
+    "subject": "math",
+    "domain": "arithmetic",
+    "level": 1,
+    "difficulty": 1,
+    "topics": [
+      "addition",
+      "multiplication",
+      "properties"
+    ],
+    "latex": "a + b = b + a \\qquad a \\times b = b \\times a",
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/commutativite/"
+  },
+  {
+    "id": "derivee-produit-quotient",
+    "title": "Dérivée d'un produit et d'un quotient",
+    "summary": "La dérivée d'un produit uv est u'v + uv'. La dérivée d'un quotient u/v est (u'v − uv')/v².",
+    "keywords": [
+      "dérivation",
+      "produit",
+      "quotient",
+      "fonctions"
+    ],
+    "aliases": [
+      "dérivée d'un produit",
+      "dérivée d'un quotient",
+      "règle de Leibniz",
+      "formule du produit"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "derivative",
+      "product",
+      "quotient"
+    ],
+    "latex": "(uv)^{\\prime} = u^{\\prime}v + uv^{\\prime}",
+    "originYear": 1675,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/derivee-produit-quotient/"
+  },
+  {
+    "id": "derivees-usuelles",
+    "title": "Dérivées des fonctions usuelles",
+    "summary": "Les dérivées de x puissance n, des constantes, de 1/x et de la racine carrée, à connaître par cœur pour dériver rapidement.",
+    "keywords": [
+      "dérivation",
+      "polynôme",
+      "puissance",
+      "racine carrée",
+      "inverse"
+    ],
+    "aliases": [
+      "dérivée de x^n",
+      "dérivée d'un polynôme",
+      "dérivées usuelles",
+      "tableau des dérivées",
+      "règle des puissances"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "derivative",
+      "powers"
+    ],
+    "latex": "(x^{n})^{\\prime} = n\\,x^{n-1}",
+    "originYear": 1670,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/derivees-usuelles/"
+  },
+  {
+    "id": "determinant-inverse-2x2",
+    "title": "Déterminant et inverse d'une matrice 2×2",
+    "summary": "Le déterminant d'une matrice 2×2 vaut ad − bc. La matrice est inversible si et seulement si il est non nul, et son inverse se calcule directement.",
+    "keywords": [
+      "matrice",
+      "déterminant",
+      "inverse",
+      "système",
+      "colinéarité",
+      "aire"
+    ],
+    "aliases": [
+      "déterminant",
+      "matrice inverse",
+      "matrice 2x2",
+      "matrice inversible",
+      "colinéarité",
+      "système linéaire"
+    ],
+    "subject": "math",
+    "domain": "linear-algebra",
+    "level": 5,
+    "difficulty": 2,
+    "topics": [
+      "matrices",
+      "determinant",
+      "inverse"
+    ],
+    "latex": "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
+    "originYear": 1683,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/determinant-inverse-2x2/"
+  },
+  {
     "id": "discriminant-trinome",
     "title": "Discriminant et racines d'un trinôme du second degré",
     "summary": "Le discriminant Δ = b² − 4ac indique le nombre de solutions réelles de l'équation ax² + bx + c = 0 et permet de les calculer.",
@@ -64,6 +328,750 @@
     "url": "/fr/formules/discriminant-trinome/"
   },
   {
+    "id": "distance-plan",
+    "title": "Distance entre deux points du plan",
+    "summary": "Dans un repère orthonormé, la distance entre A et B se calcule avec leurs coordonnées grâce au théorème de Pythagore.",
+    "keywords": [
+      "coordonnées",
+      "repère orthonormé",
+      "abscisse",
+      "ordonnée",
+      "vecteur"
+    ],
+    "aliases": [
+      "distance entre deux points",
+      "longueur d'un segment",
+      "distance euclidienne",
+      "formule de la distance"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "coordinates",
+      "distances"
+    ],
+    "latex": "AB = \\sqrt{(x_{B} - x_{A})^{2} + (y_{B} - y_{A})^{2}}",
+    "originYear": 1637,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/distance-plan/"
+  },
+  {
+    "id": "division-euclidienne",
+    "title": "Division euclidienne",
+    "summary": "Diviser a par b (non nul), c'est trouver un quotient q et un reste r plus petit que b tels que a = b × q + r.",
+    "keywords": [
+      "reste",
+      "quotient",
+      "dividende",
+      "diviseur",
+      "partage"
+    ],
+    "aliases": [
+      "division avec reste",
+      "quotient et reste",
+      "dividende diviseur"
+    ],
+    "subject": "math",
+    "domain": "arithmetic",
+    "level": 2,
+    "difficulty": 2,
+    "topics": [
+      "division",
+      "remainder",
+      "integers"
+    ],
+    "latex": "a = b \\times q + r \\quad\\text{avec } b > 0 \\text{ et } 0 \\leq r < b",
+    "originYear": -300,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/division-euclidienne/"
+  },
+  {
+    "id": "fonction-affine",
+    "title": "Fonction affine",
+    "summary": "Une fonction affine f(x) = ax + b a pour courbe une droite. Le nombre a est sa pente, et b est l'ordonnée à l'origine.",
+    "keywords": [
+      "droite",
+      "pente",
+      "proportionnalité",
+      "représentation graphique"
+    ],
+    "aliases": [
+      "droite",
+      "coefficient directeur",
+      "pente",
+      "ordonnée à l'origine",
+      "fonction linéaire",
+      "y = ax + b"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 3,
+    "difficulty": 2,
+    "topics": [
+      "linear-functions",
+      "lines",
+      "slope"
+    ],
+    "latex": "f(x) = ax + b",
+    "originYear": 1637,
+    "graph": true,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/fonction-affine/"
+  },
+  {
+    "id": "exponentielle-proprietes",
+    "title": "Fonction exponentielle et ses propriétés",
+    "summary": "La fonction exponentielle transforme les sommes en produits (e^(a+b) = e^a × e^b) et elle est égale à sa propre dérivée.",
+    "keywords": [
+      "exp",
+      "nombre e",
+      "croissance",
+      "dérivée",
+      "positif"
+    ],
+    "aliases": [
+      "exponentielle",
+      "fonction exp",
+      "nombre e",
+      "e puissance x",
+      "croissance exponentielle"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 5,
+    "difficulty": 2,
+    "topics": [
+      "exponential",
+      "functions"
+    ],
+    "latex": "e^{a + b} = e^{a} \\times e^{b}",
+    "originYear": 1683,
+    "graph": true,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/exponentielle-proprietes/"
+  },
+  {
+    "id": "forme-canonique-trinome",
+    "title": "Forme canonique d'un trinôme du second degré",
+    "summary": "On peut écrire ax² + bx + c sous la forme a(x − α)² + β. Le point (α ; β) est le sommet de la parabole.",
+    "keywords": [
+      "parabole",
+      "sommet",
+      "minimum",
+      "maximum",
+      "second degré"
+    ],
+    "aliases": [
+      "forme canonique",
+      "sommet de la parabole",
+      "complétion du carré",
+      "extremum d'un trinôme"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "quadratic-equations",
+      "parabola",
+      "polynomials"
+    ],
+    "latex": "ax^{2} + bx + c = a\\,(x - \\alpha)^{2} + \\beta",
+    "originYear": 820,
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/forme-canonique-trinome/"
+  },
+  {
+    "id": "euler-formule",
+    "title": "Formule d'Euler",
+    "summary": "Le nombre complexe e^(iθ) est le point du cercle unité d'angle θ. La formule relie l'exponentielle, le cosinus et le sinus.",
+    "keywords": [
+      "nombre complexe",
+      "cercle unité",
+      "exponentielle",
+      "cosinus",
+      "sinus",
+      "module",
+      "argument"
+    ],
+    "aliases": [
+      "formule d'Euler",
+      "identité d'Euler",
+      "exponentielle complexe",
+      "forme exponentielle",
+      "nombres complexes"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 5,
+    "difficulty": 3,
+    "topics": [
+      "complex-numbers",
+      "exponential",
+      "trigonometry"
+    ],
+    "latex": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta",
+    "originYear": 1748,
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/euler-formule/"
+  },
+  {
+    "id": "taylor",
+    "title": "Formule de Taylor",
+    "summary": "Près d'un point a, une fonction suffisamment dérivable se rapproche d'un polynôme construit avec ses dérivées successives.",
+    "keywords": [
+      "approximation",
+      "polynôme",
+      "dérivées successives",
+      "reste",
+      "série entière"
+    ],
+    "aliases": [
+      "développement de Taylor",
+      "formule de Maclaurin",
+      "développement limité",
+      "approximation polynomiale",
+      "série de Taylor"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 6,
+    "difficulty": 4,
+    "topics": [
+      "taylor-series",
+      "approximation",
+      "series"
+    ],
+    "latex": "f(x) = \\sum_{k=0}^{n}\\dfrac{f^{(k)}(a)}{k!}\\,(x - a)^{k} + R_{n}(x)",
+    "originYear": 1400,
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/taylor/"
+  },
+  {
+    "id": "binome-newton",
+    "title": "Formule du binôme de Newton",
+    "summary": "La formule du binôme développe (a + b)^n avec les coefficients binomiaux, qui se lisent dans le triangle de Pascal.",
+    "keywords": [
+      "développement",
+      "puissance",
+      "coefficients binomiaux",
+      "identités remarquables"
+    ],
+    "aliases": [
+      "binôme de Newton",
+      "développement de (a+b)^n",
+      "formule du binôme",
+      "triangle de Pascal"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 5,
+    "difficulty": 3,
+    "topics": [
+      "expansion",
+      "binomial-theorem",
+      "combinatorics"
+    ],
+    "latex": "(a + b)^{n} = \\sum_{k=0}^{n}\\binom{n}{k}\\,a^{\\,n-k}\\,b^{\\,k}",
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/binome-newton/"
+  },
+  {
+    "id": "identites-remarquables",
+    "title": "Identités remarquables",
+    "summary": "Trois égalités à connaître par cœur pour développer et factoriser vite. Elles servent à calculer (a+b)², (a−b)² et (a−b)(a+b).",
+    "keywords": [
+      "développement",
+      "factorisation",
+      "calcul mental",
+      "produit"
+    ],
+    "aliases": [
+      "identités remarquables",
+      "carré d'une somme",
+      "carré d'une différence",
+      "différence de deux carrés",
+      "développer",
+      "factoriser"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 3,
+    "difficulty": 2,
+    "topics": [
+      "expansion",
+      "factorisation",
+      "polynomials"
+    ],
+    "latex": "(a + b)^{2} = a^{2} + 2ab + b^{2}",
+    "originYear": -300,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/identites-remarquables/"
+  },
+  {
+    "id": "integrale-gaussienne",
+    "title": "Intégrale de Gauss et loi normale",
+    "summary": "L'intégrale de exp(−x²) sur toute la droite réelle vaut racine de π. Elle fixe la constante de la densité de la loi normale.",
+    "keywords": [
+      "gaussienne",
+      "cloche",
+      "loi normale",
+      "densité",
+      "intégrale impropre",
+      "probabilités"
+    ],
+    "aliases": [
+      "intégrale gaussienne",
+      "loi normale",
+      "courbe en cloche",
+      "densité gaussienne",
+      "loi de Gauss",
+      "racine de pi"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 7,
+    "difficulty": 4,
+    "topics": [
+      "integral",
+      "gaussian",
+      "probability"
+    ],
+    "latex": "\\int_{-\\infty}^{+\\infty} e^{-x^{2}}\\,dx = \\sqrt{\\pi}",
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/integrale-gaussienne/"
+  },
+  {
+    "id": "integration-par-parties",
+    "title": "Intégration par parties",
+    "summary": "Pour intégrer un produit u·v', on transporte la dérivée sur l'autre facteur. C'est la règle du produit lue à l'envers.",
+    "keywords": [
+      "intégrale",
+      "produit",
+      "primitive",
+      "calcul intégral"
+    ],
+    "aliases": [
+      "IPP",
+      "intégration par parties",
+      "intégrale d'un produit"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 5,
+    "difficulty": 4,
+    "topics": [
+      "integral",
+      "product"
+    ],
+    "latex": "\\int_{a}^{b} u(x)\\,v^{\\prime}(x)\\,dx = \\Big[u(x)\\,v(x)\\Big]_{a}^{b} - \\int_{a}^{b} u^{\\prime}(x)\\,v(x)\\,dx",
+    "originYear": 1715,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/integration-par-parties/"
+  },
+  {
+    "id": "logarithme-proprietes",
+    "title": "Logarithme népérien et ses propriétés",
+    "summary": "Le logarithme népérien ln est la réciproque de l'exponentielle. Il transforme les produits en sommes, pour des nombres strictement positifs.",
+    "keywords": [
+      "ln",
+      "produit en somme",
+      "puissance",
+      "équation",
+      "exponentielle"
+    ],
+    "aliases": [
+      "logarithme",
+      "ln",
+      "logarithme népérien",
+      "logarithme naturel",
+      "réciproque de exp"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 5,
+    "difficulty": 2,
+    "topics": [
+      "logarithm",
+      "functions"
+    ],
+    "latex": "\\ln(ab) = \\ln a + \\ln b",
+    "originYear": 1614,
+    "graph": true,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/logarithme-proprietes/"
+  },
+  {
+    "id": "loi-binomiale",
+    "title": "Loi binomiale",
+    "summary": "Si on répète n fois la même expérience indépendante, avec une probabilité de succès p, le nombre de succès X suit la loi binomiale.",
+    "keywords": [
+      "succès",
+      "échec",
+      "répétition",
+      "indépendance",
+      "espérance",
+      "variance"
+    ],
+    "aliases": [
+      "loi binomiale",
+      "schéma de Bernoulli",
+      "épreuve de Bernoulli",
+      "nombre de succès",
+      "B(n;p)"
+    ],
+    "subject": "math",
+    "domain": "probability",
+    "level": 5,
+    "difficulty": 3,
+    "topics": [
+      "binomial-distribution",
+      "random-variables"
+    ],
+    "latex": "P(X = k) = \\binom{n}{k}\\,p^{k}\\,(1 - p)^{n-k}",
+    "originYear": 1713,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/loi-binomiale/"
+  },
+  {
+    "id": "loi-des-cosinus",
+    "title": "Loi des cosinus (théorème d'Al-Kashi)",
+    "summary": "Dans un triangle quelconque, a² = b² + c² − 2bc cos A. C'est le théorème de Pythagore généralisé à un triangle non rectangle.",
+    "keywords": [
+      "triangle",
+      "angle",
+      "côté",
+      "cosinus",
+      "longueur"
+    ],
+    "aliases": [
+      "théorème d'Al-Kashi",
+      "Pythagore généralisé",
+      "formule d'Al-Kashi",
+      "triangle quelconque"
+    ],
+    "subject": "math",
+    "domain": "trigonometry",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "triangles",
+      "law-of-cosines"
+    ],
+    "latex": "a^{2} = b^{2} + c^{2} - 2bc\\cos A",
+    "originYear": -300,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/loi-des-cosinus/"
+  },
+  {
+    "id": "moyenne-arithmetique",
+    "title": "Moyenne arithmétique",
+    "summary": "La moyenne de n valeurs est leur somme divisée par n. Avec des coefficients, on parle de moyenne pondérée.",
+    "keywords": [
+      "notes",
+      "coefficient",
+      "effectif",
+      "statistiques",
+      "valeur centrale"
+    ],
+    "aliases": [
+      "moyenne",
+      "moyenne pondérée",
+      "moyenne des notes",
+      "moyenne simple"
+    ],
+    "subject": "math",
+    "domain": "statistics",
+    "level": 3,
+    "difficulty": 1,
+    "topics": [
+      "mean",
+      "data"
+    ],
+    "latex": "\\bar{x} = \\dfrac{x_{1} + x_{2} + \\dots + x_{n}}{n}",
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/moyenne-arithmetique/"
+  },
+  {
+    "id": "nombre-derive",
+    "title": "Nombre dérivé et tangente",
+    "summary": "Le nombre dérivé f'(a) est la limite du taux d'accroissement de f en a. C'est la pente de la tangente à la courbe au point d'abscisse a.",
+    "keywords": [
+      "dérivation",
+      "vitesse instantanée",
+      "variation",
+      "courbe",
+      "limite"
+    ],
+    "aliases": [
+      "dérivée",
+      "nombre dérivé",
+      "tangente",
+      "taux d'accroissement",
+      "pente de la tangente",
+      "limite"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "derivative",
+      "limits",
+      "tangent"
+    ],
+    "latex": "f^{\\prime}(a) = \\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}",
+    "originYear": 1636,
+    "graph": true,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/nombre-derive/"
+  },
+  {
+    "id": "perimetre-cercle",
+    "title": "Périmètre d'un cercle",
+    "summary": "Le périmètre d'un cercle de rayon r vaut 2πr. C'est aussi π fois son diamètre.",
+    "keywords": [
+      "pi",
+      "rayon",
+      "diamètre",
+      "roue",
+      "circonférence"
+    ],
+    "aliases": [
+      "circonférence",
+      "longueur d'un cercle",
+      "tour d'un cercle",
+      "périmètre d'un disque"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 1,
+    "topics": [
+      "circle",
+      "perimeter",
+      "pi"
+    ],
+    "latex": "P = 2 \\pi r",
+    "originYear": -1800,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/perimetre-cercle/"
+  },
+  {
+    "id": "perimetre-rectangle",
+    "title": "Périmètre d'un rectangle",
+    "summary": "Le périmètre d'un rectangle est la longueur de son tour. Il vaut deux fois la somme de la longueur et de la largeur.",
+    "keywords": [
+      "longueur",
+      "largeur",
+      "tour",
+      "clôture",
+      "carré"
+    ],
+    "aliases": [
+      "périmètre du carré",
+      "tour d'un rectangle",
+      "périmètre"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 1,
+    "difficulty": 1,
+    "topics": [
+      "rectangle",
+      "perimeter"
+    ],
+    "latex": "P = 2 \\times (L + \\ell)",
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/perimetre-rectangle/"
+  },
+  {
+    "id": "probabilite-conditionnelle",
+    "title": "Probabilité conditionnelle",
+    "summary": "La probabilité de B sachant que A est réalisé vaut P(A ∩ B) divisé par P(A), avec P(A) non nul.",
+    "keywords": [
+      "arbre de probabilités",
+      "sachant que",
+      "intersection",
+      "indépendance"
+    ],
+    "aliases": [
+      "probabilité sachant",
+      "probabilités totales",
+      "arbre pondéré",
+      "événements indépendants",
+      "P(B|A)"
+    ],
+    "subject": "math",
+    "domain": "probability",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "conditional-probability",
+      "events"
+    ],
+    "latex": "P_{A}(B) = \\dfrac{P(A \\cap B)}{P(A)}",
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/probabilite-conditionnelle/"
+  },
+  {
+    "id": "probabilite-equiprobable",
+    "title": "Probabilité dans une situation équiprobable",
+    "summary": "Quand toutes les issues ont la même chance, la probabilité d'un événement est le nombre de cas favorables divisé par le nombre de cas possibles.",
+    "keywords": [
+      "dé",
+      "pièce",
+      "urne",
+      "chance",
+      "événement",
+      "complémentaire"
+    ],
+    "aliases": [
+      "probabilité",
+      "cas favorables sur cas possibles",
+      "hasard",
+      "équiprobabilité",
+      "événement contraire"
+    ],
+    "subject": "math",
+    "domain": "probability",
+    "level": 3,
+    "difficulty": 1,
+    "topics": [
+      "probability",
+      "counting"
+    ],
+    "latex": "P(A) = \\dfrac{\\text{nombre de cas favorables}}{\\text{nombre de cas possibles}}",
+    "originYear": 1654,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/probabilite-equiprobable/"
+  },
+  {
+    "id": "produit-matriciel",
+    "title": "Produit matriciel",
+    "summary": "Le coefficient de la ligne i et de la colonne j du produit AB est la somme des produits des coefficients de la ligne i de A par ceux de la colonne j de B.",
+    "keywords": [
+      "matrice",
+      "produit",
+      "ligne",
+      "colonne",
+      "transformation linéaire"
+    ],
+    "aliases": [
+      "multiplication de matrices",
+      "produit de matrices",
+      "ligne par colonne",
+      "composition de transformations"
+    ],
+    "subject": "math",
+    "domain": "linear-algebra",
+    "level": 6,
+    "difficulty": 3,
+    "topics": [
+      "matrices",
+      "matrix-product"
+    ],
+    "latex": "(AB)_{ij} = \\sum_{k=1}^{n} a_{ik}\\,b_{kj}",
+    "originYear": 1858,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/produit-matriciel/"
+  },
+  {
+    "id": "regles-puissances",
+    "title": "Règles de calcul sur les puissances",
+    "summary": "Pour multiplier, diviser ou élever à une puissance des nombres écrits avec des exposants, on additionne, soustrait ou multiplie les exposants.",
+    "keywords": [
+      "exposant",
+      "puissance de 10",
+      "carré",
+      "cube",
+      "simplifier"
+    ],
+    "aliases": [
+      "puissances",
+      "exposants",
+      "règles des exposants",
+      "produit de puissances",
+      "puissance négative"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 3,
+    "difficulty": 2,
+    "topics": [
+      "powers",
+      "exponents"
+    ],
+    "latex": "a^{m} \\times a^{n} = a^{m+n}",
+    "originYear": -250,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/regles-puissances/"
+  },
+  {
     "id": "identite-trigonometrique",
     "title": "Relation fondamentale de la trigonométrie",
     "summary": "Pour tout angle θ, le carré du cosinus plus le carré du sinus vaut 1.",
@@ -93,6 +1101,249 @@
     "hasHistory": true,
     "hasExercises": true,
     "url": "/fr/formules/identite-trigonometrique/"
+  },
+  {
+    "id": "serie-geometrique",
+    "title": "Série géométrique",
+    "summary": "Si la raison q est comprise strictement entre −1 et 1, la somme infinie des puissances de q converge et vaut 1/(1 − q).",
+    "keywords": [
+      "série",
+      "convergence",
+      "somme infinie",
+      "raison",
+      "limite"
+    ],
+    "aliases": [
+      "somme infinie",
+      "série convergente",
+      "somme d'une suite géométrique infinie",
+      "0,999... égale 1",
+      "paradoxe de Zénon"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 6,
+    "difficulty": 3,
+    "topics": [
+      "series",
+      "geometric-sequence",
+      "convergence"
+    ],
+    "latex": "\\sum_{k=0}^{\\infty} q^{k} = \\dfrac{1}{1 - q} \\quad (|q| < 1)",
+    "originYear": -250,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/serie-geometrique/"
+  },
+  {
+    "id": "trigonometrie-triangle-rectangle",
+    "title": "Sinus, cosinus et tangente dans un triangle rectangle",
+    "summary": "Dans un triangle rectangle, le sinus, le cosinus et la tangente d'un angle aigu sont des rapports de longueurs de côtés.",
+    "keywords": [
+      "angle",
+      "côté opposé",
+      "côté adjacent",
+      "hypoténuse",
+      "rapport"
+    ],
+    "aliases": [
+      "trigonométrie",
+      "SOH CAH TOA",
+      "CAH SOH TOA",
+      "sinus",
+      "cosinus",
+      "tangente",
+      "angle aigu"
+    ],
+    "subject": "math",
+    "domain": "trigonometry",
+    "level": 3,
+    "difficulty": 2,
+    "topics": [
+      "right-triangle",
+      "sine",
+      "cosine",
+      "tangent"
+    ],
+    "latex": "\\sin\\alpha = \\dfrac{\\text{opposé}}{\\text{hypoténuse}} \\qquad \\cos\\alpha = \\dfrac{\\text{adjacent}}{\\text{hypoténuse}} \\qquad \\tan\\alpha = \\dfrac{\\text{opposé}}{\\text{adjacent}}",
+    "originYear": -150,
+    "graph": true,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/trigonometrie-triangle-rectangle/"
+  },
+  {
+    "id": "somme-premiers-entiers",
+    "title": "Somme des premiers entiers",
+    "summary": "La somme des entiers de 1 à n vaut n(n+1)/2. Ces nombres s'appellent les nombres triangulaires.",
+    "keywords": [
+      "somme",
+      "entiers",
+      "Gauss",
+      "triangulaire",
+      "récurrence"
+    ],
+    "aliases": [
+      "somme de Gauss",
+      "nombres triangulaires",
+      "somme de 1 à n",
+      "somme des n premiers entiers"
+    ],
+    "subject": "math",
+    "domain": "discrete",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "sums",
+      "sequences",
+      "induction"
+    ],
+    "latex": "1 + 2 + 3 + \\dots + n = \\dfrac{n(n+1)}{2}",
+    "originYear": -500,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/somme-premiers-entiers/"
+  },
+  {
+    "id": "viete-somme-produit",
+    "title": "Somme et produit des racines",
+    "summary": "Si l'équation ax² + bx + c = 0 a deux solutions x1 et x2, leur somme vaut −b/a et leur produit vaut c/a.",
+    "keywords": [
+      "second degré",
+      "racines",
+      "somme",
+      "produit",
+      "équation"
+    ],
+    "aliases": [
+      "relations de Viète",
+      "somme et produit des racines",
+      "relations coefficients racines",
+      "racine évidente"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "quadratic-equations",
+      "roots"
+    ],
+    "latex": "x_{1} + x_{2} = -\\dfrac{b}{a} \\qquad x_{1}\\,x_{2} = \\dfrac{c}{a}",
+    "originYear": 1600,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/viete-somme-produit/"
+  },
+  {
+    "id": "suite-arithmetique",
+    "title": "Suite arithmétique",
+    "summary": "Dans une suite arithmétique, on passe d'un terme au suivant en ajoutant toujours la même raison r. Le terme de rang n vaut u0 + n × r.",
+    "keywords": [
+      "raison",
+      "terme",
+      "somme",
+      "rang",
+      "ajouter"
+    ],
+    "aliases": [
+      "progression arithmétique",
+      "raison",
+      "terme général",
+      "somme des termes",
+      "suite"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "sequences",
+      "arithmetic-sequence"
+    ],
+    "latex": "u_{n} = u_{0} + n \\times r",
+    "originYear": -1650,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/suite-arithmetique/"
+  },
+  {
+    "id": "suite-geometrique",
+    "title": "Suite géométrique",
+    "summary": "Dans une suite géométrique, on passe d'un terme au suivant en multipliant toujours par la même raison q. Le terme de rang n vaut u0 × q^n.",
+    "keywords": [
+      "raison",
+      "multiplier",
+      "puissance",
+      "intérêts",
+      "croissance",
+      "décroissance"
+    ],
+    "aliases": [
+      "progression géométrique",
+      "raison",
+      "croissance exponentielle",
+      "intérêts composés",
+      "terme général"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "sequences",
+      "geometric-sequence"
+    ],
+    "latex": "u_{n} = u_{0} \\times q^{n}",
+    "originYear": -300,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/suite-geometrique/"
+  },
+  {
+    "id": "theoreme-de-bayes",
+    "title": "Théorème de Bayes",
+    "summary": "La formule de Bayes permet d'inverser un conditionnement et de calculer P(A sachant B) à partir de P(B sachant A).",
+    "keywords": [
+      "probabilité conditionnelle",
+      "test médical",
+      "faux positif",
+      "prévalence",
+      "cause"
+    ],
+    "aliases": [
+      "formule de Bayes",
+      "probabilité des causes",
+      "inversion de conditionnement",
+      "test positif",
+      "faux positifs"
+    ],
+    "subject": "math",
+    "domain": "probability",
+    "level": 5,
+    "difficulty": 3,
+    "topics": [
+      "conditional-probability",
+      "bayes"
+    ],
+    "latex": "P_{B}(A) = \\dfrac{P_{A}(B)\\,P(A)}{P(B)}",
+    "originYear": 1763,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/theoreme-de-bayes/"
   },
   {
     "id": "pythagore",
@@ -126,5 +1377,143 @@
     "hasHistory": true,
     "hasExercises": true,
     "url": "/fr/formules/pythagore/"
+  },
+  {
+    "id": "thales",
+    "title": "Théorème de Thalès",
+    "summary": "Si une droite parallèle à un côté d'un triangle coupe les deux autres côtés, les longueurs obtenues sont proportionnelles à celles du grand triangle.",
+    "keywords": [
+      "parallèles",
+      "rapport",
+      "proportionnel",
+      "agrandissement",
+      "réduction"
+    ],
+    "aliases": [
+      "théorème de Thalès",
+      "proportionnalité dans un triangle",
+      "droites parallèles",
+      "produit en croix",
+      "théorème d'intercept"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 3,
+    "topics": [
+      "triangles",
+      "proportionality",
+      "similar-triangles"
+    ],
+    "latex": "\\dfrac{AM}{AB} = \\dfrac{AN}{AC} = \\dfrac{MN}{BC}",
+    "originYear": -300,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/thales/"
+  },
+  {
+    "id": "theoreme-fondamental-analyse",
+    "title": "Théorème fondamental de l'analyse",
+    "summary": "L'intégrale d'une fonction continue entre a et b s'obtient avec une primitive F de f, par la différence F(b) − F(a).",
+    "keywords": [
+      "intégrale",
+      "primitive",
+      "aire",
+      "dérivée",
+      "calcul intégral"
+    ],
+    "aliases": [
+      "théorème fondamental",
+      "intégrale",
+      "primitive",
+      "calcul d'aire",
+      "aire sous la courbe"
+    ],
+    "subject": "math",
+    "domain": "calculus",
+    "level": 5,
+    "difficulty": 3,
+    "topics": [
+      "integral",
+      "antiderivative"
+    ],
+    "latex": "\\int_{a}^{b} f(x)\\,dx = F(b) - F(a)",
+    "originYear": 1670,
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/theoreme-fondamental-analyse/"
+  },
+  {
+    "id": "variance-ecart-type",
+    "title": "Variance et écart type",
+    "summary": "La variance mesure la dispersion d'une série autour de sa moyenne. L'écart type en est la racine carrée et s'exprime dans la même unité que les données.",
+    "keywords": [
+      "dispersion",
+      "moyenne",
+      "statistiques",
+      "écart",
+      "étalement"
+    ],
+    "aliases": [
+      "écart type",
+      "écart-type",
+      "dispersion",
+      "variance d'une série",
+      "sigma",
+      "formule de König"
+    ],
+    "subject": "math",
+    "domain": "statistics",
+    "level": 4,
+    "difficulty": 3,
+    "topics": [
+      "variance",
+      "standard-deviation",
+      "dispersion"
+    ],
+    "latex": "V = \\dfrac{1}{n}\\sum_{i=1}^{n}\\left(x_{i} - \\bar{x}\\right)^{2} \\qquad \\sigma = \\sqrt{V}",
+    "graph": false,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/variance-ecart-type/"
+  },
+  {
+    "id": "volume-cylindre",
+    "title": "Volume d'un cylindre",
+    "summary": "Le volume d'un cylindre est l'aire de sa base multipliée par sa hauteur. Pour un cylindre de révolution, V = πr²h.",
+    "keywords": [
+      "cylindre",
+      "base",
+      "hauteur",
+      "capacité",
+      "litre"
+    ],
+    "aliases": [
+      "cylindre de révolution",
+      "volume d'un cylindre droit",
+      "volume d'une boîte de conserve",
+      "volume d'un tube"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 2,
+    "topics": [
+      "cylinder",
+      "volume",
+      "solids"
+    ],
+    "latex": "V = \\pi r^{2} h",
+    "originYear": -1650,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/volume-cylindre/"
   }
 ]

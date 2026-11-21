@@ -20,4 +20,4 @@ variables:
 prerequisites: [fonction-affine]
 related: [somme-premiers-entiers, suite-geometrique]
 confusedWith: [suite-geometrique]
-status: draft
+status: published

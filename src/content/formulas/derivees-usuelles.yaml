@@ -21,4 +21,4 @@ variables:
 prerequisites: [nombre-derive, regles-puissances]
 related: [derivee-produit-quotient, exponentielle-proprietes]
 confusedWith: []
-status: draft
+status: published

@@ -19,4 +19,4 @@ variables:
 prerequisites: [discriminant-trinome]
 related: [forme-canonique-trinome]
 confusedWith: []
-status: draft
+status: published

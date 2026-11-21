@@ -15,4 +15,4 @@ variables:
 prerequisites: [probabilite-equiprobable]
 related: [theoreme-de-bayes, loi-binomiale]
 confusedWith: [theoreme-de-bayes]
-status: draft
+status: published

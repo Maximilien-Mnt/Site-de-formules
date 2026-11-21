@@ -17,4 +17,4 @@ variables:
 prerequisites: [aire-disque]
 related: [perimetre-cercle]
 confusedWith: []
-status: draft
+status: published

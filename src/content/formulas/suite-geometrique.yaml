@@ -17,4 +17,4 @@ variables:
 prerequisites: [regles-puissances]
 related: [suite-arithmetique, serie-geometrique, exponentielle-proprietes]
 confusedWith: [suite-arithmetique]
-status: draft
+status: published

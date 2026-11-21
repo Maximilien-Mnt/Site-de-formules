@@ -18,4 +18,4 @@ variables:
 prerequisites: [coefficient-binomial, probabilite-equiprobable]
 related: [variance-ecart-type, binome-newton, probabilite-conditionnelle]
 confusedWith: []
-status: draft
+status: published

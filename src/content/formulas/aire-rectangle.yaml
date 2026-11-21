@@ -15,4 +15,4 @@ variables:
 prerequisites: []
 related: [aire-triangle, perimetre-rectangle]
 confusedWith: [perimetre-rectangle]
-status: draft
+status: published

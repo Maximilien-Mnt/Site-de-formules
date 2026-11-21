@@ -7,4 +7,4 @@ kind: qcm
 estimatedMinutes: 3
 choices: [a, b, c, d]
 correct: [b]
-status: draft
+status: published

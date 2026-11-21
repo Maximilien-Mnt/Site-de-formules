@@ -17,4 +17,4 @@ variables:
 prerequisites: [theoreme-fondamental-analyse, derivee-produit-quotient]
 related: []
 confusedWith: []
-status: draft
+status: published

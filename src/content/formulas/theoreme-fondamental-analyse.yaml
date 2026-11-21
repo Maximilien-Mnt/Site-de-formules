@@ -22,4 +22,4 @@ variables:
 prerequisites: [derivees-usuelles]
 related: [integration-par-parties, integrale-gaussienne]
 confusedWith: []
-status: draft
+status: published

@@ -18,4 +18,4 @@ variables:
 prerequisites: [suite-geometrique]
 related: [taylor]
 confusedWith: []
-status: draft
+status: published

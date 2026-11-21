@@ -16,4 +16,4 @@ variables:
 prerequisites: []
 related: [binome-newton, loi-binomiale, somme-premiers-entiers]
 confusedWith: []
-status: draft
+status: published
