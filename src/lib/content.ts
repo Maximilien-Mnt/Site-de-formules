@@ -49,6 +49,7 @@ export interface FormulaView extends FormulaLight {
   prerequisites: FormulaLight[]
   related: FormulaLight[]
   confusedWith: FormulaLight[]
+  graph: boolean
 }
 
 export interface ExerciseLight {
@@ -104,6 +105,7 @@ interface FormulaShared extends FormulaLight {
   prerequisites: string[]
   related: string[]
   confusedWith: string[]
+  graph: boolean
 }
 
 interface ExerciseShared extends ExerciseLight {
@@ -273,6 +275,7 @@ function buildFormulaView(
     sections,
     body: textResult.value?.body ?? '',
     exercises,
+    graph: f.graph ?? false,
     prerequisites: resolveRefs(f.prerequisites),
     related: resolveRefs(f.related),
     confusedWith: resolveRefs(f.confusedWith),

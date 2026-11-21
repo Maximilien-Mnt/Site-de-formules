@@ -1,0 +1,130 @@
+[
+  {
+    "id": "aire-disque",
+    "title": "Aire d'un disque",
+    "summary": "L'aire d'un disque de rayon r est égale à π fois le carré du rayon.",
+    "keywords": [
+      "cercle",
+      "rayon",
+      "diamètre",
+      "pi"
+    ],
+    "aliases": [
+      "aire du cercle",
+      "surface d'un disque",
+      "pi r au carré"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 1,
+    "topics": [
+      "circle",
+      "area"
+    ],
+    "latex": "A = \\pi r^{2}",
+    "originYear": -1650,
+    "graph": false,
+    "hasProof": false,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/aire-disque/"
+  },
+  {
+    "id": "discriminant-trinome",
+    "title": "Discriminant et racines d'un trinôme du second degré",
+    "summary": "Le discriminant Δ = b² − 4ac indique le nombre de solutions réelles de l'équation ax² + bx + c = 0 et permet de les calculer.",
+    "keywords": [
+      "second degré",
+      "parabole",
+      "solutions",
+      "équation"
+    ],
+    "aliases": [
+      "équation du second degré",
+      "delta",
+      "racines",
+      "trinôme",
+      "formule quadratique"
+    ],
+    "subject": "math",
+    "domain": "algebra",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "quadratic-equations",
+      "polynomials"
+    ],
+    "latex": "\\Delta = b^{2} - 4ac",
+    "originYear": -1800,
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/discriminant-trinome/"
+  },
+  {
+    "id": "identite-trigonometrique",
+    "title": "Relation fondamentale de la trigonométrie",
+    "summary": "Pour tout angle θ, le carré du cosinus plus le carré du sinus vaut 1.",
+    "keywords": [
+      "cosinus",
+      "sinus",
+      "cercle trigonométrique",
+      "angle"
+    ],
+    "aliases": [
+      "cos² + sin² = 1",
+      "identité trigonométrique",
+      "relation de Pythagore trigonométrique"
+    ],
+    "subject": "math",
+    "domain": "trigonometry",
+    "level": 4,
+    "difficulty": 2,
+    "topics": [
+      "unit-circle",
+      "sine",
+      "cosine"
+    ],
+    "latex": "\\cos^{2}\\theta + \\sin^{2}\\theta = 1",
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/identite-trigonometrique/"
+  },
+  {
+    "id": "pythagore",
+    "title": "Théorème de Pythagore",
+    "summary": "Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés.",
+    "keywords": [
+      "longueur",
+      "distance",
+      "côté",
+      "équerre"
+    ],
+    "aliases": [
+      "relation de Pythagore",
+      "hypoténuse",
+      "triangle rectangle",
+      "réciproque de Pythagore"
+    ],
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 2,
+    "topics": [
+      "triangles",
+      "right-triangle",
+      "distances"
+    ],
+    "latex": "a^{2} + b^{2} = c^{2}",
+    "originYear": -1800,
+    "graph": true,
+    "hasProof": true,
+    "hasHistory": true,
+    "hasExercises": true,
+    "url": "/fr/formules/pythagore/"
+  }
+]

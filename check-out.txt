@@ -1,0 +1,179 @@
+
+> formulo@0.1.0 check
+> astro check && npm run check:content && npm run audit:content
+
+[2m23:40:53[22m [34m[content][39m Syncing content
+[2m23:40:53[22m [34m[content][39m Synced content
+[2m23:40:53[22m [34m[types][39m Generated [2m866ms[22m
+[2m23:40:53[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\maxim\Site-de-formules...
+[96msrc/lib/filters.test.ts[0m:[93m229[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m229[0m   it "oldest sort", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m224[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m224[0m   it "difficulty sort", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m219[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m219[0m   it "levelDesc sort", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m214[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m214[0m   it "levelAsc sort", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m209[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m209[0m   it "alpha sort default", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m203[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m203[0m   it "search text via MiniSearch client ; server ignores q", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m180[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m180[0m   it "filter by content (graph / proof / history / exercises)", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m175[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m175[0m   it "filter by level and difficulty", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m170[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m170[0m   it "filter by exact level (min === max)", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m160[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m160[0m   it "filter by level range (inclusive)", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m155[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m155[0m   it "filter by domain", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m150[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m150[0m   it "filter by subject", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m146[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m146[0m   it "filter nothing by default", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m135[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m135[0m   it "serialize level range and omit if full", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m127[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m127[0m   it "parse level range min-max", () => {
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m229[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m229[0m   it "oldest sort", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m224[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m224[0m   it "difficulty sort", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m219[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m219[0m   it "levelDesc sort", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m214[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m214[0m   it "levelAsc sort", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m209[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m209[0m   it "alpha sort default", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m206[0m:[93m1[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m206[0m }
+[7m   [0m [91m~[0m
+[96msrc/lib/filters.test.ts[0m:[93m203[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m203[0m   it "search text via MiniSearch client ; server ignores q", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m201[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m201[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m180[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m180[0m   it "filter by content (graph / proof / history / exercises)", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m175[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m175[0m   it "filter by level and difficulty", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m173[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m173[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m170[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m170[0m   it "filter by exact level (min === max)", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m168[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m168[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m160[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m160[0m   it "filter by level range (inclusive)", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m158[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m158[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m155[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m155[0m   it "filter by domain", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m153[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m153[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m150[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m150[0m   it "filter by subject", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m148[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m148[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m146[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m146[0m   it "filter nothing by default", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m143[0m:[93m1[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m143[0m }
+[7m   [0m [91m~[0m
+[96msrc/lib/filters.test.ts[0m:[93m135[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m135[0m   it "serialize level range and omit if full", () => {
+[7m   [0m [91m  ~~[0m
+[96msrc/lib/filters.test.ts[0m:[93m133[0m:[93m4[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m133[0m   })
+[7m   [0m [91m   ~[0m
+[96msrc/lib/filters.test.ts[0m:[93m127[0m:[93m3[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m127[0m   it "parse level range min-max", () => {
+[7m   [0m [91m  ~~[0m
+
+[96msrc/lib/search.test.ts[0m:[93m2[0m:[93m65[0m - [91merror[0m[90m ts(2305): [0mModule '"./search"' has no exported member 'SearchResult'.
+
+[7m2[0m import { normalizeText, createSearchIndex, searchFormulas, type SearchResult } from './search'
+[7m [0m [91m                                                                ~~~~~~~~~~~~[0m
+[96msrc/lib/search.test.ts[0m:[93m2[0m:[93m65[0m - [93mwarning[0m[90m ts(6133): [0m'SearchResult' is declared but its value is never read.
+
+[7m2[0m import { normalizeText, createSearchIndex, searchFormulas, type SearchResult } from './search'
+[7m [0m [93m                                                                ~~~~~~~~~~~~[0m
+
+Result (16 files): 
+- 40 errors
+- 0 warnings
+- 1 hint
+

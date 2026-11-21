@@ -1,0 +1,47 @@
+---
+import { t } from '@/i18n/index'
+import type { Lang, TranslationKey } from '@/i18n/config'
+import katex from 'katex'
+import Chip from './Chip.astro'
+import LevelDots from './LevelDots.astro'
+import DifficultyMark from './DifficultyMark.astro'
+
+interface Props {
+  lang: Lang
+  formula: {
+    id: string
+    title: string
+    domain: string
+    level: number
+    difficulty: number
+    latex: string
+    url: string
+  }
+}
+
+const { lang, formula } = Astro.props
+
+function renderLatex(latex: string): string {
+  try {
+    return katex.renderToString(latex, { displayMode: false, throwOnError: false })
+  } catch {
+    return `<code class="font-mono text-xs text-muted">${String(latex).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`
+  }
+}
+
+const domainKey = `domain.${formula.domain}` as TranslationKey
+---
+<article class="flex flex-col gap-3 rounded-lg border border-border bg-surface p-4">
+  <a
+    href={formula.url}
+    class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)] ease-[var(--ease-out)]"
+  >
+    <h3 class="font-serif text-base font-semibold leading-tight">{formula.title}</h3>
+    <div class="text-[var(--text-xs)] text-muted">{renderLatex(formula.latex)}</div>
+  </a>
+  <div class="flex flex-wrap gap-2 items-center">
+    <Chip lang={lang} label={t(lang, domainKey)} href={formula.url} />
+    <LevelDots lang={lang} level={formula.level} size="sm" />
+    <DifficultyMark lang={lang} difficulty={formula.difficulty} size="sm" />
+  </div>
+</article>

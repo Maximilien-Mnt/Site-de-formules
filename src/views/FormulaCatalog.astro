@@ -1,0 +1,126 @@
+---
+import { getFormulas } from '@/lib/content'
+import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+import { t } from '@/i18n/index'
+import {
+  parseFilters,
+  filterFormulas,
+  sortFormulas,
+  type SearchFormula,
+} from '@/lib/filters'
+import FilterPanel from '@/components/ui/FilterPanel.astro'
+import ResultsGrid from '@/components/ui/ResultsGrid.astro'
+import CatalogApp from '@/components/islands/CatalogApp.tsx'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang = DEFAULT_LANG } = Astro.props
+const { pathname, searchParams } = new URL(Astro.request.url)
+const state = parseFilters(searchParams)
+
+// Données partagées publiées, adaptées à la forme de l'index de recherche.
+const cards: SearchFormula[] = getFormulas(lang)
+  .filter((f) => f.status === 'published')
+  .map((f) => ({
+    id: f.id,
+    title: f.text?.title ?? f.id,
+    summary: f.text?.summary ?? '',
+    keywords: f.text?.keywords ?? [],
+    aliases: f.text?.aliases ?? [],
+    subject: f.subject,
+    domain: f.domain,
+    level: f.level,
+    difficulty: f.difficulty,
+    topics: f.topics,
+    latex: f.latex,
+    originYear: f.originYear,
+    graph: f.graph,
+    hasProof: f.sections?.some((s) => s.kind === 'proof') ?? false,
+    hasHistory: f.sections?.some((s) => s.kind === 'history') ?? false,
+    hasExercises: (f.exercises?.length ?? 0) > 0,
+    url: localizedPath(lang, 'formula', { id: f.id }),
+  }))
+
+// Recherche texte côté serveur (sous-chaîne, casse/accents insensibles) —
+// fallback sans JavaScript. L'îlot reprend avec MiniSearch après hydratation.
+const q = state.q.toLowerCase().trim()
+const serverFiltered = q
+  ? cards.filter((f) => {
+      const haystack = [f.id, f.title, f.summary, ...f.keywords, ...f.aliases]
+        .join(' ')
+        .toLowerCase()
+      return haystack.includes(q)
+    })
+  : cards
+
+const filtered = sortFormulas(filterFormulas(serverFiltered, state), state.sort)
+---
+
+<section aria-label={t(lang, 'catalog.title')}>
+  <header class="mb-6">
+    <h1 class="font-serif text-2xl font-semibold text-text">{t(lang, 'catalog.title')}</h1>
+    <p class="text-muted text-sm mt-1">
+      {t(lang, 'common.results.other', { count: filtered.length })}
+    </p>
+  </header>
+
+  <!-- Recherche + tri : formulaire GET, fonctionne sans JavaScript. -->
+  <form
+    action={pathname}
+    method="GET"
+    class="flex flex-col sm:flex-row sm:items-end gap-3 mb-6 border-b border-border pb-4"
+  >
+    <label class="sr-only">{t(lang, 'catalog.search.label')}</label>
+    <input
+      name="q"
+      value={state.q}
+      placeholder={t(lang, 'catalog.search.placeholder')}
+      class="flex-1 px-4 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
+    />
+    <label class="sr-only">{t(lang, 'catalog.sort')}</label>
+    <select
+      name="sort"
+      value={state.sort}
+      onchange="this.form.submit()"
+      class="px-3 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
+    >
+      <option value="alpha">{t(lang, 'catalog.sort.alpha')}</option>
+      <option value="levelAsc">{t(lang, 'catalog.sort.levelAsc')}</option>
+      <option value="levelDesc">{t(lang, 'catalog.sort.levelDesc')}</option>
+      <option value="difficulty">{t(lang, 'catalog.sort.difficulty')}</option>
+      <option value="oldest">{t(lang, 'catalog.sort.oldest')}</option>
+    </select>
+    <input type="hidden" name="subject" value={state.subject.join(',') || undefined} />
+    <input type="hidden" name="domain" value={state.domain.join(',') || undefined} />
+    <input
+      type="hidden"
+      name="level"
+      value={
+        state.level
+          ? state.level.min === state.level.max
+            ? String(state.level.min)
+            : `${state.level.min}-${state.level.max}`
+          : undefined
+      }
+    />
+    <input type="hidden" name="difficulty" value={state.difficulty.join(',') || undefined} />
+    <input type="hidden" name="graph" value={state.hasGraph ? '1' : undefined} />
+    <input type="hidden" name="proof" value={state.hasProof ? '1' : undefined} />
+    <input type="hidden" name="history" value={state.hasHistory ? '1' : undefined} />
+    <input type="hidden" name="exercises" value={state.hasExercises ? '1' : undefined} />
+  </form>
+
+  <div id="catalog-shell" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+    <aside class="lg:col-span-3">
+      <FilterPanel lang={lang} state={state} progressEnabled={false} />
+    </aside>
+    <div class="lg:col-span-9">
+      <ResultsGrid lang={lang} formulas={filtered} count={filtered.length} />
+    </div>
+  </div>
+
+  <!-- Îlot React : recherche MiniSearch, filtres/tri côté client, état dans l'URL. -->
+  <CatalogApp client:idle lang={lang} />
+</section>
