@@ -1,1 +1,7 @@
-export const prerender = true;` `n<p>Hello</p>`
+---
+import { DEFAULT_LANG } from '@/i18n/config'
+import Home from '@/views/Home.astro'
+
+export const prerender = true
+---
+<Home lang={DEFAULT_LANG} />

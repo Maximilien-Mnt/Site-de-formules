@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import icon from 'astro-icon';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import path from 'node:path';
@@ -9,7 +10,7 @@ import path from 'node:path';
 export default defineConfig({
   output: 'static',
   site: import.meta.env.SITE_URL ?? 'https://example.com',
-  integrations: [react(), mdx(), sitemap()],
+  integrations: [react(), mdx(), sitemap(), icon()],
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
