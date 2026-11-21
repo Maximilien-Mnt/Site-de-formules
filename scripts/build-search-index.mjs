@@ -86,4 +86,42 @@ const outDir = join(PUBLIC, 'search', LANG)
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true })
 writeFileSync(join(outDir, 'index.json'), JSON.stringify(index, null, 2))
 
+// --- Index des exercices (catalogue d'exercices, recherche côté client) ---
+const exerciseData = {}
+for (const f of list(join(ROOT, 'exercises'), '.yaml')) {
+  const id = basename(f, '.yaml')
+  exerciseData[id] = readYaml(join(ROOT, 'exercises', f))
+}
+
+const exercisesIndex = []
+for (const [id, d] of Object.entries(exerciseData)) {
+  if (d.status !== 'published') continue
+
+  const textPath = join(ROOT, 'exercise-texts', LANG, `${id}.yaml`)
+  let title = id
+  let statement = ''
+  if (existsSync(textPath)) {
+    const t = readYaml(textPath)
+    title = t.title ?? id
+    statement = t.statement ?? ''
+  }
+
+  exercisesIndex.push({
+    id,
+    title,
+    statement,
+    subject: d.subject,
+    domain: d.domain,
+    level: d.level,
+    difficulty: d.difficulty,
+    kind: d.kind,
+    estimatedMinutes: d.estimatedMinutes ?? 3,
+    url: `/${LANG}/exercices/${id}/`,
+  })
+}
+
+exercisesIndex.sort((a, b) => a.title.localeCompare(b.title, 'fr'))
+writeFileSync(join(outDir, 'exercises.json'), JSON.stringify(exercisesIndex, null, 2))
+
 console.log(`${index.length} formules indexées dans public/search/${LANG}/index.json`)
+console.log(`${exercisesIndex.length} exercices indexés dans public/search/${LANG}/exercises.json`)

@@ -53,7 +53,7 @@ const defaultState: FilterState = {
 const VALID_SORTS: Sort[] = ['alpha', 'levelAsc', 'levelDesc', 'difficulty', 'oldest']
 const FULL_LEVEL_RANGE: LevelRange = { min: 1, max: 7 }
 
-function parseLevelRange(value: string | null): LevelRange | null {
+export function parseLevelRange(value: string | null): LevelRange | null {
   if (!value) return null
   const parts = value.split(',')
   let min: number

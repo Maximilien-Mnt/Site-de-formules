@@ -1,0 +1,62 @@
+[
+  {
+    "id": "aire-disque-01",
+    "title": "Aire d'un disque",
+    "statement": "Un disque a un rayon de $3$ cm. Calcule son aire, arrondie au centième (en cm²).\n",
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 1,
+    "kind": "numeric",
+    "estimatedMinutes": 2,
+    "url": "/fr/exercices/aire-disque-01/"
+  },
+  {
+    "id": "discriminant-calcul-01",
+    "title": "Calculer un discriminant",
+    "statement": "Calcule le discriminant $\\Delta$ de l'équation $2x^{2} - 3x - 2 = 0$.\n",
+    "subject": "math",
+    "domain": "algebra",
+    "level": 4,
+    "difficulty": 1,
+    "kind": "numeric",
+    "estimatedMinutes": 2,
+    "url": "/fr/exercices/discriminant-calcul-01/"
+  },
+  {
+    "id": "pythagore-reciproque-01",
+    "title": "Ce triangle est-il rectangle ?",
+    "statement": "Un triangle a pour côtés $5$ cm, $12$ cm et $13$ cm. Est-il rectangle ?\n",
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 2,
+    "kind": "qcm",
+    "estimatedMinutes": 2,
+    "url": "/fr/exercices/pythagore-reciproque-01/"
+  },
+  {
+    "id": "pythagore-hypotenuse-01",
+    "title": "Longueur d'une hypoténuse",
+    "statement": "Le triangle $ABC$ est rectangle en $A$, avec $AB = 6$ cm et $AC = 8$ cm.\nCalcule la longueur $BC$, en cm.\n",
+    "subject": "math",
+    "domain": "geometry",
+    "level": 3,
+    "difficulty": 1,
+    "kind": "numeric",
+    "estimatedMinutes": 2,
+    "url": "/fr/exercices/pythagore-hypotenuse-01/"
+  },
+  {
+    "id": "trigo-sinus-01",
+    "title": "Trouver un sinus à partir d'un cosinus",
+    "statement": "Soit $x$ un angle aigu tel que $\\cos x = \\dfrac{3}{5}$. Calcule $\\sin x$ (réponse décimale).\n",
+    "subject": "math",
+    "domain": "trigonometry",
+    "level": 4,
+    "difficulty": 2,
+    "kind": "numeric",
+    "estimatedMinutes": 3,
+    "url": "/fr/exercices/trigo-sinus-01/"
+  }
+]

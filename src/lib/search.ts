@@ -1,5 +1,6 @@
 import MiniSearch from "minisearch"
 import type { SearchFormula } from "./filters"
+import type { SearchExercise } from "./exercise-filters"
 
 // Normalisation de la recherche : insensible à la casse ET aux accents
 // (décomposition NFD + suppression des marques diacritiques), ponctuation
@@ -58,4 +59,43 @@ export function searchFormulas(index: MiniSearch<SearchFormula>, q: string): Sea
     fuzzy: 0,
   })
   return results as unknown as SearchFormula[]
+}
+
+// ---------------------------------------------------------------------------
+// Index de recherche du catalogue d'exercices (champs : titre + énoncé).
+// ---------------------------------------------------------------------------
+
+export function createExerciseSearchIndex(exercises: readonly SearchExercise[]): MiniSearch<SearchExercise> {
+  const index = new MiniSearch<SearchExercise>({
+    fields: ["title", "statement", "id"],
+    storeFields: [
+      "id",
+      "title",
+      "statement",
+      "subject",
+      "domain",
+      "level",
+      "difficulty",
+      "kind",
+      "estimatedMinutes",
+      "url",
+    ],
+    processTerm: (term) => normalizeText(term),
+    searchOptions: {
+      prefix: true,
+      fuzzy: 0,
+    },
+  })
+  index.addAll(exercises)
+  return index
+}
+
+export function searchExercises(index: MiniSearch<SearchExercise>, q: string): SearchExercise[] {
+  const normalized = normalizeText(q)
+  if (!normalized) return []
+  const results = index.search(normalized, {
+    prefix: true,
+    fuzzy: 0,
+  })
+  return results as unknown as SearchExercise[]
 }
