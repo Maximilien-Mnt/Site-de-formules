@@ -8,6 +8,7 @@ import {
   type Subject,
   type Domain,
 } from '@/data/taxonomy'
+import { normalizeGraph, type GraphConfig } from '@/lib/graph'
 
 const CONTENT_ROOT = join(process.cwd(), 'src', 'content')
 
@@ -49,7 +50,7 @@ export interface FormulaView extends FormulaLight {
   prerequisites: FormulaLight[]
   related: FormulaLight[]
   confusedWith: FormulaLight[]
-  graph: boolean
+  graph: GraphConfig | undefined
 }
 
 export interface ExerciseLight {
@@ -105,7 +106,8 @@ interface FormulaShared extends FormulaLight {
   prerequisites: string[]
   related: string[]
   confusedWith: string[]
-  graph: boolean
+  /** Valeur brute YAML : normalisée par normalizeGraph au moment de la vue. */
+  graph: unknown
 }
 
 interface ExerciseShared extends ExerciseLight {
@@ -276,7 +278,7 @@ function buildFormulaView(
     sections,
     body: textResult.value?.body ?? '',
     exercises,
-    graph: f.graph ?? false,
+    graph: normalizeGraph(f.graph),
     prerequisites: resolveRefs(f.prerequisites),
     related: resolveRefs(f.related),
     confusedWith: resolveRefs(f.confusedWith),

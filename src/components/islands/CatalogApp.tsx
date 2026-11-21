@@ -105,13 +105,13 @@ function FilterPanelClient({
 
   const chips = [
     state.q && { label: state.q, onRemove: () => set({ ...state, q: '' }) },
-    ...state.subject.map((s) => ({
+    ...state.subject.map((s: string) => ({
       label: t(lang, `subject.${s}`),
-      onRemove: () => set({ ...state, subject: state.subject.filter((v) => v !== s) }),
+      onRemove: () => set({ ...state, subject: state.subject.filter((v: string) => v !== s) }),
     })),
-    ...state.domain.map((d) => ({
+    ...state.domain.map((d: string) => ({
       label: t(lang, `domain.${d}`),
-      onRemove: () => set({ ...state, domain: state.domain.filter((v) => v !== d) }),
+      onRemove: () => set({ ...state, domain: state.domain.filter((v: string) => v !== d) }),
     })),
     state.level && {
       label:
@@ -120,9 +120,9 @@ function FilterPanelClient({
           : `Niveau ${state.level.min}–${state.level.max}`,
       onRemove: () => set({ ...state, level: null }),
     },
-    ...state.difficulty.map((d) => ({
+    ...state.difficulty.map((d: string) => ({
       label: t(lang, `difficulty.${d}` as import('@/i18n/index').TranslationKey),
-      onRemove: () => set({ ...state, difficulty: state.difficulty.filter((v) => v !== d) }),
+      onRemove: () => set({ ...state, difficulty: state.difficulty.filter((v: string) => v !== d) }),
     })),
     state.hasGraph && { label: t(lang, 'filter.content.graph'), onRemove: () => set({ ...state, hasGraph: false }) },
     state.hasProof && { label: t(lang, 'filter.content.proof'), onRemove: () => set({ ...state, hasProof: false }) },
@@ -187,7 +187,7 @@ function FilterPanelClient({
           <span className="text-xs text-muted ml-2">{state.subject.length}</span>
         </div>
         <div className="p-3 flex flex-wrap gap-2">
-          {SUBJECTS.map((subject) => {
+          {SUBJECTS.map((subject: string) => {
             const active = state.subject.includes(subject)
             return (
               <button
@@ -208,7 +208,7 @@ function FilterPanelClient({
           <span className="text-xs text-muted ml-2">{state.domain.length}</span>
         </div>
         <div className="p-3 flex flex-wrap gap-2">
-          {ALL_DOMAINS.map((domain) => {
+          {ALL_DOMAINS.map((domain: string) => {
             const active = state.domain.includes(domain)
             return (
               <button
@@ -258,7 +258,7 @@ function FilterPanelClient({
           )}
         </div>
         <div className="p-3 flex flex-wrap gap-2">
-          {LEVELS.map((level) => {
+          {LEVELS.map((level: string) => {
             const active = isLevelSelected(level)
             return (
               <button
@@ -279,7 +279,7 @@ function FilterPanelClient({
           <span className="text-xs text-muted ml-2">{state.difficulty.length}</span>
         </div>
         <div className="p-3 flex flex-wrap gap-2">
-          {DIFFICULTIES.map((difficulty) => {
+          {DIFFICULTIES.map((difficulty: string) => {
             const active = state.difficulty.includes(difficulty)
             return (
               <button
@@ -385,7 +385,7 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
   const [loading, setLoading] = useState(true)
   const state = useStore(filterStore)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const focusTarget = useRef<HTMLElement | null>(null)
+  const focusTarget = useRef<HTMLButtonElement | null>(null)
 
   useEffect(() => {
     const unbind = bindFilterStoreToUrl(filterStore)
@@ -426,13 +426,13 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
 
   const searchIndex = useMemo(() => createSearchIndex(index), [index])
   const passIds = useMemo(
-    () => new Set(filterFormulas(index, state).map((f) => f.id)),
+    () => new Set(filterFormulas(index, state).map((f: SearchFormula) => f.id)),
     [index, state],
   )
 
   let results: SearchFormula[]
   if (state.q) {
-    results = searchFormulas(searchIndex, state.q).filter((f) => passIds.has(f.id))
+    results = searchFormulas(searchIndex, state.q).filter((f: SearchFormula) => passIds.has(f.id))
   } else {
     results = filterFormulas(index, state)
   }
@@ -469,14 +469,14 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
             <label className="sr-only">{t(lang, 'catalog.search.label')}</label>
             <input
               value={state.q}
-              onInput={(e) => set({ ...state, q: e.target.value })}
+              onInput={(e: React.ChangeEvent<HTMLInputElement>) => set({ ...state, q: e.target.value })}
               placeholder={t(lang, 'catalog.search.placeholder')}
               className="w-full px-4 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
           <select
             value={state.sort}
-            onChange={(e) => set({ ...state, sort: e.target.value as import('@/lib/filters').Sort })}
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => set({ ...state, sort: e.target.value as import('@/lib/filters').Sort })}
             className="px-3 py-2 rounded-md border border-border-strong bg-surface text-text focus:outline-none focus:ring-2 focus:ring-primary"
           >
             <option value="alpha">{t(lang, 'catalog.sort.alpha')}</option>

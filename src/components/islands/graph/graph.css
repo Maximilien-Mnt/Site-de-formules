@@ -1,0 +1,39 @@
+/* Graphes interactifs (P8) — habillement Mafs par les tokens Formulo.
+   Mafs déclare ses valeurs par défaut (fond noir, fg blanc) sur .MafsView :
+   on les surcharge ici avec une spécificité supérieure, en ne citant que des tokens. */
+.formulo-graph {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+
+.formulo-graph .MafsView {
+  --mafs-bg: var(--surface);
+  --mafs-fg: var(--text);
+  --mafs-origin-color: var(--text-muted);
+  --mafs-line-color: var(--border);
+  --grid-line-subdivision-color: var(--surface-2);
+  /* Le graphe est statique (pan/zoom désactivés) : on rend le scroll tactile
+     de la page possible sur la zone du graphe. */
+  touch-action: auto;
+}
+
+.formulo-graph .MafsView text {
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Étiquettes des polygones : léger contraste pour rester lisibles sur les aires. */
+.formulo-graph .graph-label {
+  font-weight: 600;
+}
+
+/* Curseurs : couleur d'action depuis les tokens, navigation clavier native,
+   cible tactile plus confortable et pas de délai de double-tap. */
+.formulo-graph input[type='range'] {
+  accent-color: var(--primary);
+  cursor: pointer;
+  height: var(--space-6);
+  touch-action: manipulation;
+}

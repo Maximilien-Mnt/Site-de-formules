@@ -13,6 +13,7 @@ import DifficultyMark from '@/components/ui/DifficultyMark.astro';
 import FormulaDisplay from '@/components/math/FormulaDisplay.astro';
 import Section from '@/components/ui/Section.astro';
 import Callout from '@/components/ui/Callout.astro';
+import FunctionGraph from '@/components/islands/FunctionGraph';
 
 interface NeighborLink {
   id: string;
@@ -208,8 +209,20 @@ const MdxContent = entry ? (await render(entry)).Content : undefined;
           </section>
         )}
 
-        {/* Emplacement vide : bloc graphique interactif (P8). */}
-        {view.graph && <div class="mt-8" data-graph-slot aria-hidden="true" />}
+        {/* Bloc graphique interactif : îlot React chargé à l'entrée dans le viewport. */}
+        {view.graph && (
+          <section class="mt-8 print:hidden" aria-labelledby="formula-graph-title">
+            <h2
+              id="formula-graph-title"
+              class="font-serif text-2xl font-semibold tracking-tight"
+            >
+              {t(lang, 'formula.graph')}
+            </h2>
+            <div class="mt-4">
+              <FunctionGraph client:visible lang={lang} config={view.graph} />
+            </div>
+          </section>
+        )}
 
         <div class="mdx mt-10">
           {MdxContent ? (
