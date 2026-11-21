@@ -1,0 +1,382 @@
+---
+import { getCollection, render } from 'astro:content';
+import katex from 'katex';
+import { t, localizedPath } from '@/i18n/index';
+import type { Lang, TranslationKey } from '@/i18n/index';
+import { getFormulaTitle, type FormulaLight, type FormulaView } from '@/lib/content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumb from '@/components/ui/Breadcrumb.astro';
+import Button from '@/components/ui/Button.astro';
+import Chip from '@/components/ui/Chip.astro';
+import LevelDots from '@/components/ui/LevelDots.astro';
+import DifficultyMark from '@/components/ui/DifficultyMark.astro';
+import FormulaDisplay from '@/components/math/FormulaDisplay.astro';
+import Section from '@/components/ui/Section.astro';
+import Callout from '@/components/ui/Callout.astro';
+
+interface NeighborLink {
+  id: string;
+  title: string;
+}
+
+interface Props {
+  lang: Lang;
+  formula: FormulaView;
+  neighbors: { prev: NeighborLink | undefined; next: NeighborLink | undefined };
+}
+
+const { lang, formula: view, neighbors } = Astro.props;
+
+const title = view.text?.title ?? view.id;
+const summary = view.text?.summary ?? '';
+const domainLabel = t(lang, `domain.${view.domain}` as TranslationKey);
+const catalogPath = localizedPath(lang, 'formulas');
+
+/** Sommaire : sections présentes dans le corps MDX, dans leur ordre d'apparition. */
+const toc = view.sections.map((s) => ({
+  href: `#${s.kind}`,
+  label: t(lang, `section.${s.kind}` as TranslationKey),
+}));
+
+/** Exercices liés : 3 maximum dans le rail, plus un lien « tout voir ». */
+const railExercises = view.exercises.slice(0, 3);
+const hasMoreExercises = view.exercises.length > railExercises.length;
+
+/** Titres localisés des formules référencées (prérequis, liées, confondues). */
+function railLinks(refs: FormulaLight[]) {
+  return refs.map((ref) => ({
+    href: localizedPath(lang, 'formula', { id: ref.id }),
+    label: getFormulaTitle(lang, ref.id) ?? ref.id,
+  }));
+}
+const prerequisites = railLinks(view.prerequisites);
+const related = railLinks(view.related);
+const confusedWith = railLinks(view.confusedWith);
+
+/** Légende des variables : symbole rendu par KaTeX + nom localisé + unité. */
+function renderSymbol(symbol: string): string {
+  try {
+    return katex.renderToString(symbol, { displayMode: false, throwOnError: false });
+  } catch {
+    return `<code>${symbol.replace(/</g, '&' + 'lt;')}</code>`;
+  }
+}
+const variables = view.variables.map((v) => ({
+  symbol: v.symbol,
+  name: view.text?.variableNames?.[v.symbol] ?? '',
+  unit: v.unit,
+  html: renderSymbol(v.symbol),
+}));
+
+/** URL canonique + JSON-LD (LearningResource). */
+const site = Astro.site ?? new URL('https://example.com');
+const canonical = new URL(localizedPath(lang, 'formula', { id: view.id }), site).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LearningResource',
+  name: title,
+  description: summary,
+  url: canonical,
+  inLanguage: lang,
+  learningResourceType: 'Formula',
+  educationalLevel: t(lang, `level.${view.level}` as TranslationKey),
+  teaches: domainLabel,
+  keywords: [...(view.text?.keywords ?? []), ...(view.text?.aliases ?? [])].join(', '),
+  isPartOf: { '@type': 'WebSite', name: t(lang, 'site.name'), url: site.href },
+};
+
+/** Corps MDX rendu par le content layer, avec nos composants Section et Callout. */
+const texts = await getCollection('formulaTexts');
+const entry = texts.find((e) => e.id === `${view.lang}/${view.id}`);
+const MdxContent = entry ? (await render(entry)).Content : undefined;
+---
+
+<BaseLayout lang={lang} title={title} description={summary} canonical={canonical}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+    {view.isFallback && (
+      <div
+        class="mb-6 flex items-start gap-3 rounded-md border border-border-strong bg-surface-2 p-4 print:hidden"
+        role="status"
+      >
+        <svg
+          class="mt-0.5 h-5 w-5 shrink-0 text-muted"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+        <p class="text-sm text-text">{t(lang, 'fallback.notice')}</p>
+      </div>
+    )}
+
+    <div class="print:hidden">
+      <Breadcrumb
+        lang={lang}
+        items={[
+          { label: t(lang, 'nav.formulas'), href: catalogPath },
+          { label: domainLabel, href: `${catalogPath}?domain=${view.domain}` },
+          { label: title },
+        ]}
+      />
+    </div>
+
+    <header class="mt-4">
+      <h1 class="font-serif text-4xl font-semibold tracking-tight text-text">{title}</h1>
+
+      <div class="mt-3 flex flex-wrap items-center gap-2">
+        <Chip lang={lang} label={domainLabel} href={`${catalogPath}?domain=${view.domain}`} />
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text">
+          <LevelDots lang={lang} level={view.level} size="sm" />
+          <span>{t(lang, `level.${view.level}` as TranslationKey)}</span>
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-text">
+          <DifficultyMark lang={lang} difficulty={view.difficulty} size="sm" />
+          <span>{t(lang, `difficulty.${view.difficulty}` as TranslationKey)}</span>
+        </span>
+      </div>
+
+      {summary && <p class="mt-4 max-w-[var(--w-prose)] text-lg text-muted">{summary}</p>}
+
+      <div class="mt-5 flex flex-wrap items-center gap-3 print:hidden">
+        <Button lang={lang} variant="secondary" size="sm" disabled>
+          {t(lang, 'formula.markMastered')}
+          <span class="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-on-accent">
+            {t(lang, 'common.soon')}
+          </span>
+        </Button>
+        <Button lang={lang} variant="secondary" size="sm" disabled>
+          {t(lang, 'formula.addToDeck')}
+          <span class="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-on-accent">
+            {t(lang, 'common.soon')}
+          </span>
+        </Button>
+      </div>
+    </header>
+
+    <div class="mt-10 lg:grid lg:grid-cols-[minmax(0,1fr)_var(--w-sidebar)] lg:gap-10">
+      <div class="min-w-0 max-w-[var(--w-prose)]">
+        {toc.length > 0 && (
+          <details class="sticky top-[calc(var(--header-h)_+_var(--space-2))] z-20 mb-8 rounded-lg border border-border bg-surface px-4 py-3 lg:hidden print:hidden">
+            <summary class="cursor-pointer select-none text-sm font-semibold text-text">
+              {t(lang, 'formula.onThisPage')}
+            </summary>
+            <ul class="mt-3 space-y-2">
+              {toc.map((item) => (
+                <li>
+                  <a class="text-sm text-muted transition-colors hover:text-primary" href={item.href}>
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
+
+        <div class="avoid-break">
+          <FormulaDisplay
+            lang={lang}
+            latex={view.latex}
+            variants={view.variants}
+            variantLabels={view.text?.variantLabels}
+            groupId={view.id}
+          />
+        </div>
+
+        {variables.length > 0 && (
+          <section class="avoid-break mt-8" aria-labelledby="variables-title">
+            <h2 class="rail-title">{t(lang, 'formula.variables')}</h2>
+            <dl class="mt-3 space-y-2">
+              {variables.map((v) => (
+                <div class="flex items-baseline gap-3">
+                  <dt class="min-w-8 shrink-0 text-end" set:html={v.html} />
+                  <dd class="text-sm text-muted">
+                    {v.name}
+                    {v.unit && <span class="ms-1 text-xs text-subtle">({v.unit})</span>}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
+
+        {/* Emplacement vide : bloc graphique interactif (P8). */}
+        {view.graph && <div class="mt-8" data-graph-slot aria-hidden="true" />}
+
+        <div class="mdx mt-10">
+          {MdxContent ? (
+            <MdxContent components={{ Section, Callout }} />
+          ) : (
+            <p class="text-sm text-muted">{t(lang, 'detail.noText')}</p>
+          )}
+        </div>
+
+        {(neighbors.prev || neighbors.next) && (
+          <nav
+            class="mt-12 grid gap-4 sm:grid-cols-2 print:hidden"
+            aria-label={t(lang, 'detail.sameDomain')}
+          >
+            {neighbors.prev ? (
+              <a
+                href={localizedPath(lang, 'formula', { id: neighbors.prev.id })}
+                class="group rounded-lg border border-border bg-surface p-4 transition-colors duration-[var(--dur-fast)] hover:border-border-strong"
+              >
+                <span class="flex items-center gap-1 text-xs text-muted">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                  {t(lang, 'formula.previous')}
+                </span>
+                <span class="mt-1 block font-serif text-sm font-semibold text-text transition-colors group-hover:text-primary">
+                  {neighbors.prev.title}
+                </span>
+              </a>
+            ) : (
+              <span class="hidden sm:block" aria-hidden="true" />
+            )}
+            {neighbors.next ? (
+              <a
+                href={localizedPath(lang, 'formula', { id: neighbors.next.id })}
+                class="group rounded-lg border border-border bg-surface p-4 text-end transition-colors duration-[var(--dur-fast)] hover:border-border-strong"
+              >
+                <span class="flex items-center justify-end gap-1 text-xs text-muted">
+                  {t(lang, 'formula.next')}
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </span>
+                <span class="mt-1 block font-serif text-sm font-semibold text-text transition-colors group-hover:text-primary">
+                  {neighbors.next.title}
+                </span>
+              </a>
+            ) : (
+              <span class="hidden sm:block" aria-hidden="true" />
+            )}
+          </nav>
+        )}
+      </div>
+
+      <aside class="mt-12 lg:mt-0 print:hidden">
+        <div class="space-y-8 lg:sticky lg:top-[calc(var(--header-h)_+_var(--space-6))]">
+          {toc.length > 0 && (
+            <section>
+              <h2 class="rail-title">{t(lang, 'formula.onThisPage')}</h2>
+              <ul class="mt-3 space-y-2">
+                {toc.map((item) => (
+                  <li>
+                    <a class="text-sm text-muted transition-colors hover:text-primary" href={item.href}>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {view.exercises.length > 0 && (
+            <section>
+              <h2 class="rail-title">{t(lang, 'formula.exercises')}</h2>
+              <ul class="mt-2 space-y-1">
+                {railExercises.map((ex) => (
+                  <li>
+                    <a
+                      href={localizedPath(lang, 'exercise', { id: ex.id })}
+                      class="group -mx-2 flex flex-col gap-0.5 rounded-md p-2 transition-colors hover:bg-surface-2"
+                    >
+                      <span class="text-sm font-medium text-text transition-colors group-hover:text-primary">
+                        {ex.text?.title ?? ex.id}
+                      </span>
+                      <span class="text-xs text-muted">
+                        {t(lang, `exercise.kind.${ex.kind}` as TranslationKey)}
+                        {' · '}
+                        {t(lang, 'exercise.minutes', { count: ex.estimatedMinutes })}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              {hasMoreExercises && (
+                <a
+                  href={localizedPath(lang, 'exercises')}
+                  class="mt-2 inline-block text-sm font-medium text-primary transition-colors hover:text-primary-hover"
+                >
+                  {t(lang, 'common.seeAll')}
+                </a>
+              )}
+            </section>
+          )}
+
+          {prerequisites.length > 0 && (
+            <section>
+              <h2 class="rail-title">{t(lang, 'formula.prerequisites')}</h2>
+              <ul class="mt-3 space-y-2">
+                {prerequisites.map((link) => (
+                  <li>
+                    <a class="text-sm text-muted transition-colors hover:text-primary" href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {related.length > 0 && (
+            <section>
+              <h2 class="rail-title">{t(lang, 'formula.related')}</h2>
+              <ul class="mt-3 space-y-2">
+                {related.map((link) => (
+                  <li>
+                    <a class="text-sm text-muted transition-colors hover:text-primary" href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
+          {confusedWith.length > 0 && (
+            <section>
+              <h2 class="rail-title">{t(lang, 'formula.confusedWith')}</h2>
+              <ul class="mt-3 space-y-2">
+                {confusedWith.map((link) => (
+                  <li>
+                    <a class="text-sm text-muted transition-colors hover:text-primary" href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .rail-title {
+    font-family: var(--font-ui);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-subtle);
+  }
+  @media print {
+    .avoid-break {
+      break-inside: avoid;
+    }
+  }
+</style>
+

@@ -2,38 +2,150 @@
 import katex from 'katex';
 import CopyButton from '@/components/islands/CopyButton.tsx';
 import { t } from '@/i18n/index';
-import type { Lang } from '@/i18n/config';
+import type { Lang } from '@/i18n/index';
 
 interface Props {
   latex: string;
   lang?: Lang;
   displayMode?: boolean;
+  /** Variantes de la formule (données partagées du YAML). */
+  variants?: { id: string; latex: string }[];
+  /** Libellés des variantes (textes localisés du MDX). */
+  variantLabels?: Record<string, string>;
+  /** Identifiant unique (nom du groupe de radios), requis avec des variantes. */
+  groupId?: string;
 }
 
-const { latex, lang = 'fr', displayMode = true } = Astro.props;
+const {
+  latex,
+  lang = 'fr',
+  displayMode = true,
+  variants = [],
+  variantLabels = {},
+  groupId,
+} = Astro.props;
 
-let html = '';
-let hasError = false;
-try {
-  html = katex.renderToString(latex, { displayMode, throwOnError: false });
-  hasError = /katex-error/.test(html);
-} catch {
-  hasError = true;
-  html = `<code class="text-muted font-mono text-sm">${String(latex).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code>`;
+const hasVariants = variants.length > 0 && !!groupId;
+
+/** Échappement HTML du repli code (l'entité est construite par concaténation). */
+const escapeHtml = (s: string): string =>
+  s.replace(/</g, '&' + 'lt;').replace(/>/g, '&' + 'gt;');
+
+function renderKatex(src: string): { html: string; hasError: boolean } {
+  try {
+    const html = katex.renderToString(src, { displayMode, throwOnError: false });
+    return { html, hasError: /katex-error/.test(html) };
+  } catch {
+    return {
+      html: `<code class="text-muted font-mono text-sm">${escapeHtml(String(src))}</code>`,
+      hasError: true,
+    };
+  }
 }
+
+const main = renderKatex(latex);
+
+/** Onglets : formule principale d'abord, puis les variantes (libellés = variantLabels). */
+const tabs = hasVariants
+  ? [
+      { key: '__main', label: t(lang, 'detail.mainVariant'), latex },
+      ...variants.map((v) => ({
+        key: v.id,
+        label: variantLabels[v.id] ?? v.id,
+        latex: v.latex,
+      })),
+    ].map((tab) => ({ ...tab, ...renderKatex(tab.latex) }))
+  : [];
+
 ---
 
-<div class="rounded-lg border border-border bg-surface-2 p-8">
-  <div class="flex flex-col md:flex-row items-end justify-between gap-4 mb-4">
-    <h3 class="font-sans text-sm font-semibold text-muted uppercase tracking-widest">
-      {t(lang, 'math.displayLabel')}
-    </h3>
-    <CopyButton client:idle latex={latex} lang={lang} />
+{!hasVariants ? (
+  <div class="rounded-lg border border-border bg-surface-2 p-8">
+    <div class="mb-4 flex flex-col items-end justify-between gap-4 md:flex-row">
+      <h3 class="font-sans text-sm font-semibold uppercase tracking-widest text-muted">
+        {t(lang, 'math.displayLabel')}
+      </h3>
+      <CopyButton client:idle latex={latex} lang={lang} />
+    </div>
+    <div class="overflow-x-auto">
+      <div set:html={main.html} />
+    </div>
+    {main.hasError && <p class="mt-2 text-xs text-danger">{t(lang, 'math.error')}</p>}
   </div>
-  <div class="overflow-x-auto">
-    <div set:html={html} />
+) : (
+  <div class="rounded-lg border border-border bg-surface-2 p-8">
+    {/* Onglets en CSS pur (radios) : formule affichée au-dessus, onglets soulignés dessous. */}
+    <div class="flex flex-wrap items-start gap-x-1 gap-y-3">
+      {tabs.map((tab) => (
+        <input
+          type="radio"
+          name={groupId}
+          id={`${groupId}-${tab.key}`}
+          class="fx-input"
+          checked={tab.key === '__main'}
+        />
+      ))}
+      {tabs.map((tab) => (
+        <div class="fx-panel" style="order: -1">
+          <div class="mb-3 flex items-start gap-4">
+            <span class="hidden font-sans text-xs font-semibold uppercase tracking-widest text-muted print:block">
+              {tab.label}
+            </span>
+            <div class="ms-auto shrink-0 print:hidden">
+              <CopyButton client:idle latex={tab.latex} lang={lang} />
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <div set:html={tab.html} />
+          </div>
+          {tab.hasError && <p class="mt-2 text-xs text-danger">{t(lang, 'math.error')}</p>}
+        </div>
+      ))}
+      {tabs.map((tab, i) => (
+        <label
+          for={`${groupId}-${tab.key}`}
+          class="fx-label cursor-pointer select-none border-b-2 border-transparent px-3 pb-2 pt-1 font-sans text-sm font-medium text-muted transition-colors duration-[var(--dur-fast)] ease-[var(--ease-out)] hover:text-text"
+          style={`order: ${i}`}
+        >
+          {tab.label}
+        </label>
+      ))}
+    </div>
   </div>
-  {hasError && (
-    <p class="mt-2 text-xs text-danger">{t(lang, 'math.error')}</p>
-  )}
-</div>
+)}
+
+<style>
+  .fx-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .fx-panel {
+    display: none;
+    flex-basis: 100%;
+    min-width: 0;
+  }
+  .fx-input:checked + .fx-panel {
+    display: block;
+  }
+  .fx-input:checked + .fx-panel + .fx-label {
+    border-color: var(--primary);
+    color: var(--text);
+  }
+  .fx-input:focus-visible + .fx-panel + .fx-label {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+  @media print {
+    .fx-input {
+      display: none;
+    }
+    .fx-panel {
+      display: block !important;
+    }
+    .fx-label {
+      display: none;
+    }
+  }
+</style>

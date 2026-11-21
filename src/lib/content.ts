@@ -255,13 +255,14 @@ function buildFormulaView(
   )
   const sections = detectSections(textResult.value?.body ?? '')
   const exerciseIds = index.get(f.id) ?? []
-  const exercises = exerciseIds.map((eid) =>
-    buildExerciseView(getExercisesShared().get(eid)!, lang),
-  )
+  const exercises = exerciseIds
+    .map((eid) => getExercisesShared().get(eid))
+    .filter((e): e is ExerciseShared => !!e && (!isProd() || isPublished(e)))
+    .map((e) => buildExerciseView(e, lang))
   const resolveRefs = (ids: string[]): FormulaLight[] =>
     ids
       .map((rid) => getFormulasShared().get(rid))
-      .filter((r): r is FormulaShared => !!r)
+      .filter((r): r is FormulaShared => !!r && (!isProd() || isPublished(r)))
       .map(toFormulaLight)
 
   return {
@@ -350,4 +351,9 @@ export function getExercise(
   if (!e) return undefined
   if (isProd() && !isPublished(e)) return undefined
   return buildExerciseView(e, lang)
+}
+
+/** Titre localisé d'une formule (repli sur fr), sans construire la vue complète. */
+export function getFormulaTitle(lang: string, id: string): string | undefined {
+  return resolveText((l) => loadFormulaText(l, id), lang).value?.title
 }

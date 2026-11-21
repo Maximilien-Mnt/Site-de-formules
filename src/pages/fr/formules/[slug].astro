@@ -1,0 +1,33 @@
+---
+import { getFormulas } from '@/lib/content';
+import { getFormulaNeighbors } from '@/lib/neighbors';
+import FormulaDetail from '@/views/FormulaDetail.astro';
+import type { Lang } from '@/i18n/config';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const lang: Lang = 'fr';
+  const formulas = getFormulas(lang);
+  return formulas.map((formula) => ({
+    params: { slug: formula.id },
+    props: {
+      lang,
+      formula,
+      neighbors: getFormulaNeighbors(
+        formulas.map((f) => ({
+          id: f.id,
+          domain: f.domain,
+          level: f.level,
+          title: f.text?.title ?? f.id,
+        })),
+        formula.id,
+      ),
+    },
+  }));
+}
+
+const { lang, formula, neighbors } = Astro.props;
+---
+
+<FormulaDetail lang={lang} formula={formula} neighbors={neighbors} />

@@ -11,7 +11,7 @@ interface Props {
 const { lang = 'fr', items = [], label } = Astro.props;
 ---
 
-<nav aria-label={label ?? t(lang, 'breadcrumb.label') ?? 'Fil d\'Ariane'} class="flex flex-wrap gap-1 text-sm font-sans text-muted">
+<nav aria-label={label ?? t(lang, 'breadcrumb')} class="flex flex-wrap gap-1 text-sm font-sans text-muted">
   <ol class="flex flex-wrap gap-1">
     {items.map((item, i) => {
       const last = i === items.length - 1;

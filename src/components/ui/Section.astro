@@ -1,18 +1,24 @@
 ---
 import { t } from '@/i18n/index';
-import type { Lang, TranslationKey } from '@/i18n/config';
+import type { Lang, TranslationKey } from '@/i18n/index';
 
 interface Props {
-  lang: Lang;
+  /** Langue optionnelle : les sections MDX n'en passent pas (repli sur fr). */
+  lang?: Lang;
   kind: string;
 }
 
-const { lang, kind } = Astro.props;
+const { lang = 'fr', kind } = Astro.props;
 ---
 
-<section id={kind} class="mb-10">
-  <h2 id={kind} class="font-serif text-2xl font-semibold tracking-tight">
-    <a href={`#${kind}`} class="text-text hover:text-primary transition-colors duration-[var(--dur-fast)]" aria-hidden="true">
+<section id={kind} class="mb-10 scroll-mt-[calc(var(--header-h)_+_var(--space-4))]">
+  <h2 class="font-serif text-2xl font-semibold tracking-tight">
+    <a
+      href={`#${kind}`}
+      class="text-text transition-colors duration-[var(--dur-fast)] hover:text-primary print:hidden"
+      tabindex="-1"
+      aria-hidden="true"
+    >
       #
     </a>
     {t(lang, (`section.${kind}` as unknown) as TranslationKey)}

@@ -3,7 +3,7 @@ import { useStore } from '@nanostores/react'
 import { t } from '@/i18n/index'
 import type { Lang } from '@/i18n/config'
 import { ALL_DOMAINS, DIFFICULTIES, LEVELS, SUBJECTS } from '@/data/taxonomy'
-import { filterStore } from '@/lib/filter-store'
+import { bindFilterStoreToUrl, filterStore } from '@/lib/filter-store'
 import {
   filterFormulas,
   sortFormulas,
@@ -70,6 +70,11 @@ function ResultsGridClient({ formulas, lang, count }: { formulas: SearchFormula[
           <li key={f.id}>
             <FormulaCardClient formula={f} lang={lang} />
           </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
 // --- Panneau de filtres interactif (pilote le store) -----------------------
 function FilterPanelClient({
@@ -207,6 +212,16 @@ function FilterPanelClient({
             const active = state.domain.includes(domain)
             return (
               <button
+                key={domain}
+                onClick={() => set({ ...state, domain: toggle(state.domain, domain) })}
+                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${active ? 'border-primary bg-primary-soft text-primary' : 'border-border bg-surface text-text hover:bg-surface-2'}`}
+              >
+                {t(lang, `domain.${domain}`)}
+              </button>
+            )
+          })}
+        </div>
+      </section>
 
       <section className="border border-border rounded-lg overflow-hidden">
         <div className="p-3 border-b border-border bg-surface-2 flex items-center justify-between">
@@ -315,7 +330,10 @@ function FilterPanelClient({
             </button>
           </div>
         </section>
-import { bindFilterStoreToUrl } from '@/lib/filter-store'
+      )}
+    </section>
+  )
+}
 
 // --- Tiroir de filtres mobile ----------------------------------------------
 function MobileFilterDrawer({
@@ -366,12 +384,12 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
   const [index, setIndex] = useState<SearchFormula[]>([])
   const [loading, setLoading] = useState(true)
   const state = useStore(filterStore)
-  const shell = document.getElementById('catalog-shell')
   const [mobileOpen, setMobileOpen] = useState(false)
   const focusTarget = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const unbind = bindFilterStoreToUrl(filterStore)
+    const shell = document.getElementById('catalog-shell')
     if (shell) shell.style.display = 'none'
     return () => {
       unbind()
@@ -473,25 +491,6 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
         </div>
         <ResultsGridClient formulas={results} lang={lang} count={results.length} />
       </div>
-    </div>
-  )
-}
-      )}
-    </section>
-  )
-}
-                key={domain}
-                onClick={() => set({ ...state, domain: toggle(state.domain, domain) })}
-                className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium ${active ? 'border-primary bg-primary-soft text-primary' : 'border-border bg-surface text-text hover:bg-surface-2'}`}
-              >
-                {t(lang, `domain.${domain}`)}
-              </button>
-            )
-          })}
-        </div>
-      </section>
-        ))}
-      </ul>
     </div>
   )
 }

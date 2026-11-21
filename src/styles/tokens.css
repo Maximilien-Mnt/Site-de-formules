@@ -89,36 +89,39 @@
   --z-overlay: 60;
 }
 
-[data-theme='dark'] {
-  color-scheme: dark;
-  --bg: #111113;
-  --surface: #1a1a1e;
-  --surface-2: #232328;
-  --border: #2e2e34;
-  --border-strong: #43434b;
-  --text: #ecebe6;
-  --text-muted: #a3a19a;
-  --text-subtle: #75736c;
+/* Le thème sombre ne s'applique qu'à l'écran : l'impression reste toujours claire. */
+@media screen {
+  [data-theme='dark'] {
+    color-scheme: dark;
+    --bg: #111113;
+    --surface: #1a1a1e;
+    --surface-2: #232328;
+    --border: #2e2e34;
+    --border-strong: #43434b;
+    --text: #ecebe6;
+    --text-muted: #a3a19a;
+    --text-subtle: #75736c;
 
-  --primary: #7c98ff;
-  --primary-hover: #9bb0ff;
-  --primary-soft: #1c2442;
-  --on-primary: #0b1230;
-  --focus-ring: #7c98ff;
+    --primary: #7c98ff;
+    --primary-hover: #9bb0ff;
+    --primary-soft: #1c2442;
+    --on-primary: #0b1230;
+    --focus-ring: #7c98ff;
 
-  --accent: #f5c542;
-  --accent-soft: #3a2f0c;
-  --on-accent: #1b1b1f;
+    --accent: #f5c542;
+    --accent-soft: #3a2f0c;
+    --on-accent: #1b1b1f;
 
-  --success: #4cc38a;
-  --success-soft: #12301f;
-  --warning: #f0a24b;
-  --warning-soft: #36260f;
-  --danger: #f2766b;
-  --danger-soft: #3b1815;
+    --success: #4cc38a;
+    --success-soft: #12301f;
+    --warning: #f0a24b;
+    --warning-soft: #36260f;
+    --danger: #f2766b;
+    --danger-soft: #3b1815;
 
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --shadow-md: 0 8px 24px -8px rgb(0 0 0 / 0.6);
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 8px 24px -8px rgb(0 0 0 / 0.6);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

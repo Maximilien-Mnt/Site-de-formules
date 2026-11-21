@@ -11,6 +11,7 @@
   "nav.search": "Rechercher",
   "nav.menu": "Menu",
   "nav.skip": "Aller au contenu",
+  "breadcrumb": "Fil d'Ariane",
   "theme.toggle": "Changer de thème",
   "theme.light": "Clair",
   "theme.dark": "Sombre",
@@ -91,6 +92,10 @@
   "formula.addToDeck": "Ajouter aux fiches",
   "formula.previous": "Formule précédente",
   "formula.next": "Formule suivante",
+
+  "detail.mainVariant": "Formule de base",
+  "detail.noText": "Le contenu détaillé de cette formule n'est pas encore rédigé.",
+  "detail.sameDomain": "Formules du même domaine",
 
   "catalog.title": "Catalogue de formules",
   "catalog.search.placeholder": "Rechercher une formule, un mot-clé…",

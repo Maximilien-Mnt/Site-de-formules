@@ -1,15 +1,20 @@
 import { describe, it, expect } from 'vitest'
-import { getFormula, getFormulas, getExercise, getExercises } from '@/lib/content'
+import { getFormula, getFormulas, getExercise, getExercises, getFormulaTitle } from '@/lib/content'
 
 describe('getFormulas / getFormula', () => {
-  it('retourne toutes les formules publiées en français', () => {
+  it('retourne toutes les formules en français (brouillons inclus hors prod)', () => {
     const formulas = getFormulas('fr')
-    expect(formulas.map((f) => f.id).sort()).toEqual([
+    const ids = formulas.map((f) => f.id)
+    expect(formulas.length).toBeGreaterThan(0)
+    // Les formules du starter sont toujours présentes.
+    for (const id of [
       'aire-disque',
       'discriminant-trinome',
       'identite-trigonometrique',
       'pythagore',
-    ])
+    ]) {
+      expect(ids).toContain(id)
+    }
     for (const f of formulas) {
       expect(f.isFallback).toBe(false)
       expect(f.lang).toBe('fr')
@@ -34,18 +39,20 @@ describe('getFormulas / getFormula', () => {
     expect(p.body).toContain('BC^{2}')
   })
 
-  it('index inversé : pythagore a trois exercices liés', () => {
+  it('index inversé : les exercices liés à pythagore, sans faux positifs', () => {
     const p = getFormula('fr', 'pythagore')!
-    expect(p.exercises.map((e) => e.id).sort()).toEqual([
-      'pythagore-hypotenuse-01',
-      'pythagore-reciproque-01',
-      'trigo-sinus-01',
-    ])
+    const ids = p.exercises.map((e) => e.id)
+    expect(ids).toContain('pythagore-hypotenuse-01')
+    expect(ids).toContain('pythagore-reciproque-01')
+    expect(ids).toContain('trigo-sinus-01')
+    expect(ids).not.toContain('aire-disque-01')
   })
 
-  it('index inversé : aire-disque a un seul exercice, pas de faux positifs', () => {
+  it('index inversé : aire-disque inclut son exercice, pas de faux positifs', () => {
     const a = getFormula('fr', 'aire-disque')!
-    expect(a.exercises.map((e) => e.id)).toEqual(['aire-disque-01'])
+    const ids = a.exercises.map((e) => e.id)
+    expect(ids).toContain('aire-disque-01')
+    expect(ids).not.toContain('pythagore-hypotenuse-01')
   })
 
   it('résout les prérequis en formules légères', () => {
@@ -66,13 +73,21 @@ describe('getFormulas / getFormula', () => {
 describe('getExercises / getExercise', () => {
   it('retourne tous les exercices avec texte', () => {
     const exs = getExercises('fr')
-    expect(exs.map((e) => e.id).sort()).toEqual([
+    expect(exs.length).toBeGreaterThan(0)
+    for (const e of exs) {
+      expect(e.text).toBeDefined()
+    }
+    // Les exercices du starter sont toujours présents.
+    const ids = exs.map((e) => e.id)
+    for (const id of [
       'aire-disque-01',
       'discriminant-calcul-01',
       'pythagore-hypotenuse-01',
       'pythagore-reciproque-01',
       'trigo-sinus-01',
-    ])
+    ]) {
+      expect(ids).toContain(id)
+    }
   })
 
   it('détaille un exercice avec son texte localisé', () => {
@@ -114,5 +129,19 @@ describe('repli de langue sur fr', () => {
   it('fr demandé n\'est pas un repli', () => {
     const p = getFormula('fr', 'pythagore')!
     expect(p.isFallback).toBe(false)
+  })
+})
+
+describe('getFormulaTitle', () => {
+  it("retourne le titre localisé d'une formule", () => {
+    expect(getFormulaTitle('fr', 'pythagore')).toBe('Théorème de Pythagore')
+  })
+
+  it('replie sur fr quand la langue demandée manque', () => {
+    expect(getFormulaTitle('de', 'pythagore')).toBe('Théorème de Pythagore')
+  })
+
+  it('retourne undefined pour une formule inconnue', () => {
+    expect(getFormulaTitle('fr', 'n-existe-pas')).toBeUndefined()
   })
 })
