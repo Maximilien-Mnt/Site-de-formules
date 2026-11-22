@@ -18,6 +18,9 @@ export const DIRECTIONS: readonly Direction[] = [
   'variablesToFormula',
 ]
 
+/** Identifiant du paquet par défaut (« Mes fiches »), créé à la première utilisation. */
+export const DEFAULT_DECK_ID = 'deck_default'
+
 /** Carte persistée dans le store (dates ISO, state sous forme numérique). */
 export interface SrsCard {
   due: string

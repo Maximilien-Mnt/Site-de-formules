@@ -6,7 +6,6 @@ import type { Lang, TranslationKey } from '@/i18n/index';
 import { getFormulaTitle, type FormulaLight, type FormulaView } from '@/lib/content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumb from '@/components/ui/Breadcrumb.astro';
-import Button from '@/components/ui/Button.astro';
 import Chip from '@/components/ui/Chip.astro';
 import LevelDots from '@/components/ui/LevelDots.astro';
 import DifficultyMark from '@/components/ui/DifficultyMark.astro';
@@ -15,6 +14,7 @@ import Section from '@/components/ui/Section.astro';
 import Callout from '@/components/ui/Callout.astro';
 import FunctionGraph from '@/components/islands/FunctionGraph'
 import MarkMasteredButton from '@/components/islands/MarkMasteredButton.tsx';
+import AddToFlashcards from '@/components/islands/AddToFlashcards.tsx';
 
 interface NeighborLink {
   id: string;
@@ -150,12 +150,7 @@ const MdxContent = entry ? (await render(entry)).Content : undefined;
 
       <div class="mt-5 flex flex-wrap items-center gap-3 print:hidden">
                 <MarkMasteredButton client:visible lang={lang} formulaId={view.id} />
-        <Button lang={lang} variant="secondary" size="sm" disabled>
-          {t(lang, 'formula.addToDeck')}
-          <span class="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-on-accent">
-            {t(lang, 'common.soon')}
-          </span>
-        </Button>
+        <AddToFlashcards client:visible lang={lang} formulaId={view.id} />
       </div>
     </header>
 

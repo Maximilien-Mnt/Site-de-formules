@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useStore } from '@nanostores/react'
 import { t, type Lang } from '@/i18n/index'
+import { localizedPath } from '@/i18n/config'
 import { bindFilterStoreToUrl, filterStore } from '@/lib/filter-store'
 import { filterFormulas, type SearchFormula } from '@/lib/filters'
 import { addDeck } from '@/lib/progress'
@@ -60,7 +61,7 @@ export default function DeckBuilder({ lang }: { lang: Lang }) {
   if (created) {
     // Petit délai pour laisser le store se persistre avant navigation.
     setTimeout(() => {
-      window.location.href = `/fr/reviser/fiches/?deck=${created}`
+      window.location.href = `${localizedPath(lang, 'reviewFlashcards')}?deck=${created}`
     }, 100)
     return null
   }

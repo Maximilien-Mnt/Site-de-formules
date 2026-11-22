@@ -168,28 +168,47 @@ export default function ReviserFiches({ lang, formulas, deckId, hubUrl, catalogU
         </a>
       </div>
 
-      {/* Carte : recto → verso */}
+      {/* Carte : recto → verso (retournement 3D, 320 ms) */}
       <button
         type="button"
         onClick={flip}
         aria-expanded={flipped}
-        className="mx-auto flex min-h-[16rem] w-full max-w-2xl cursor-pointer flex-col items-center justify-center gap-6 rounded-xl border border-border bg-surface p-10 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring"
+        className="mx-auto flex min-h-[16rem] w-full max-w-2xl cursor-pointer items-center justify-center rounded-xl border border-border bg-surface p-10 text-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring"
       >
-        <div ref={cardRef} tabIndex={-1} className="w-full outline-none">
-          <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
-            {flipped ? t(lang, 'review.back') : t(lang, 'review.front')}
+        <div
+          ref={cardRef}
+          tabIndex={-1}
+          className="relative w-full h-[14rem] outline-none preserve-3d transition-transform duration-[var(--dur-slow)] ease-[var(--ease-out)]"
+          style={{ transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+        >
+          {/* Face recto */}
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center rounded-xl border border-border bg-surface"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
+            <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
+              {t(lang, 'review.front')}
+            </div>
+            {front.html ? (
+              <div className="w-full" dangerouslySetInnerHTML={{ __html: front.html }} />
+            ) : (
+              <div className="font-serif text-2xl font-semibold text-text">{front.text}</div>
+            )}
           </div>
-          {flipped ? (
-            back.html ? (
+          {/* Face verso */}
+          <div
+            className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center rounded-xl border border-border bg-surface"
+            style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          >
+            <div className="mb-3 text-xs font-semibold uppercase tracking-widest text-muted">
+              {t(lang, 'review.back')}
+            </div>
+            {back.html ? (
               <div className="w-full" dangerouslySetInnerHTML={{ __html: back.html }} />
             ) : (
               <div className="font-serif text-2xl font-semibold text-text">{back.text}</div>
-            )
-          ) : front.html ? (
-            <div className="w-full" dangerouslySetInnerHTML={{ __html: front.html }} />
-          ) : (
-            <div className="font-serif text-2xl font-semibold text-text">{front.text}</div>
-          )}
+            )}
+          </div>
         </div>
       </button>
 

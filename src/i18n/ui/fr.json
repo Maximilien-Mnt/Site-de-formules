@@ -19,6 +19,7 @@
 
   "common.copy": "Copier",
   "common.copied": "Copié",
+  "common.added": "Ajouté",
   "common.close": "Fermer",
   "common.back": "Retour",
   "common.next": "Suivant",
@@ -207,6 +208,7 @@
   "review.quiz": "Quiz",
   "review.dueToday": "À réviser aujourd'hui",
   "review.dueCount.one": "{count} fiche à réviser",
+  "review.defaultDeck": "Mes fiches",
   "review.dueCount.other": "{count} fiches à réviser",
   "review.start": "Commencer",
   "review.flip": "Retourner",
@@ -238,6 +240,7 @@
   "review.deckName": "Nom du paquet",
   "review.deckNamePlaceholder": "ex. Géométrie niveau 3",
   "review.directions": "Sens des fiches",
+  "review.inDeck": "Déjà dans les fiches",
   "review.cardCount": "{count} cartes",
   "review.dueCards": "{count} à réviser",
   "review.chooseDirections": "Choisis au moins un sens.",
