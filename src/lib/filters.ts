@@ -128,7 +128,11 @@ export function serializeFilters(state: FilterState): string {
   return params.toString()
 }
 
-export function filterFormulas(formulas: SearchFormula[], state: FilterState): SearchFormula[] {
+export function filterFormulas(
+  formulas: SearchFormula[],
+  state: FilterState,
+  progressIds?: ReadonlySet<string>,
+): SearchFormula[] {
   return formulas.filter((f) => {
     if (state.subject.length && !state.subject.includes(f.subject)) return false
     if (state.domain.length && !state.domain.includes(f.domain)) return false
@@ -138,8 +142,7 @@ export function filterFormulas(formulas: SearchFormula[], state: FilterState): S
     if (state.hasProof && !f.hasProof) return false
     if (state.hasHistory && !f.hasHistory) return false
     if (state.hasExercises && !f.hasExercises) return false
-    // Le filtre « progression » nécessite le store de progression (lot P10) :
-    // tant qu'il n'existe pas, le contrôle est masqué et ne filtre rien.
+    if (state.progress && !(progressIds && progressIds.has(f.id))) return false
     return true
   })
 }

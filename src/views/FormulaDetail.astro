@@ -13,7 +13,8 @@ import DifficultyMark from '@/components/ui/DifficultyMark.astro';
 import FormulaDisplay from '@/components/math/FormulaDisplay.astro';
 import Section from '@/components/ui/Section.astro';
 import Callout from '@/components/ui/Callout.astro';
-import FunctionGraph from '@/components/islands/FunctionGraph';
+import FunctionGraph from '@/components/islands/FunctionGraph'
+import MarkMasteredButton from '@/components/islands/MarkMasteredButton.tsx';
 
 interface NeighborLink {
   id: string;
@@ -148,12 +149,7 @@ const MdxContent = entry ? (await render(entry)).Content : undefined;
       {summary && <p class="mt-4 max-w-[var(--w-prose)] text-lg text-muted">{summary}</p>}
 
       <div class="mt-5 flex flex-wrap items-center gap-3 print:hidden">
-        <Button lang={lang} variant="secondary" size="sm" disabled>
-          {t(lang, 'formula.markMastered')}
-          <span class="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-on-accent">
-            {t(lang, 'common.soon')}
-          </span>
-        </Button>
+                <MarkMasteredButton client:visible lang={lang} formulaId={view.id} />
         <Button lang={lang} variant="secondary" size="sm" disabled>
           {t(lang, 'formula.addToDeck')}
           <span class="rounded-full bg-accent-soft px-2 py-0.5 text-xs font-medium text-on-accent">

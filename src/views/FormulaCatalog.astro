@@ -11,6 +11,7 @@ import {
 import FilterPanel from '@/components/ui/FilterPanel.astro'
 import ResultsGrid from '@/components/ui/ResultsGrid.astro'
 import CatalogApp from '@/components/islands/CatalogApp.tsx'
+import DeckBuilder from '@/components/islands/DeckBuilder.tsx'
 
 interface Props {
   lang: Lang
@@ -123,4 +124,5 @@ const filtered = sortFormulas(filterFormulas(serverFiltered, state), state.sort)
 
   <!-- Îlot React : recherche MiniSearch, filtres/tri côté client, état dans l'URL. -->
   <CatalogApp client:idle lang={lang} />
+  <DeckBuilder client:idle lang={lang} />
 </section>

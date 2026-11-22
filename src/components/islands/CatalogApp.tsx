@@ -11,6 +11,7 @@ import {
   type SearchFormula,
 } from '@/lib/filters'
 import { createSearchIndex, searchFormulas } from '@/lib/search'
+import { progressStore } from '@/lib/progress'
 
 const INDEX_URL = (lang: Lang) => `/search/${lang}/index.json`
 
@@ -130,6 +131,10 @@ function FilterPanelClient({
     state.hasExercises && {
       label: t(lang, 'filter.content.exercises'),
       onRemove: () => set({ ...state, hasExercises: false }),
+    },
+    state.progress && {
+      label: t(lang, 'filter.progress'),
+      onRemove: () => set({ ...state, progress: false }),
     },
   ].filter(Boolean) as { label: string; onRemove: () => void }[]
 
@@ -373,7 +378,7 @@ function MobileFilterDrawer({
         </button>
       </div>
       <div className="flex-1 overflow-y-auto p-4">
-        <FilterPanelClient lang={lang} state={state} progressEnabled={false} />
+        <FilterPanelClient lang={lang} state={state} progressEnabled />
       </div>
     </div>
   )
@@ -384,6 +389,7 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
   const [index, setIndex] = useState<SearchFormula[]>([])
   const [loading, setLoading] = useState(true)
   const state = useStore(filterStore)
+  const progress = useStore(progressStore)
   const [mobileOpen, setMobileOpen] = useState(false)
   const focusTarget = useRef<HTMLButtonElement | null>(null)
 
@@ -425,16 +431,25 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
   }, [lang])
 
   const searchIndex = useMemo(() => createSearchIndex(index), [index])
+  const progressIds = useMemo(
+    () =>
+      new Set(
+        Object.entries(progress.formulas)
+          .filter(([, s]) => s !== 'new')
+          .map(([id]) => id),
+      ),
+    [progress.formulas],
+  )
   const passIds = useMemo(
-    () => new Set(filterFormulas(index, state).map((f: SearchFormula) => f.id)),
-    [index, state],
+    () => new Set(filterFormulas(index, state, progressIds).map((f: SearchFormula) => f.id)),
+    [index, state, progressIds],
   )
 
   let results: SearchFormula[]
   if (state.q) {
     results = searchFormulas(searchIndex, state.q).filter((f: SearchFormula) => passIds.has(f.id))
   } else {
-    results = filterFormulas(index, state)
+    results = filterFormulas(index, state, progressIds)
   }
   if (!(state.q && state.sort === 'alpha')) {
     results = sortFormulas(results, state.sort)
@@ -461,7 +476,15 @@ export default function CatalogApp({ lang }: { lang: Lang }) {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <MobileFilterDrawer lang={lang} state={state} open={mobileOpen} onClose={() => setMobileOpen(false)} />
+        <div className="hidden lg:block">
+          <FilterPanelClient lang={lang} state={state} progressEnabled />
+        </div>
+        <MobileFilterDrawer
+          lang={lang}
+          state={state}
+          open={mobileOpen}
+          onClose={() => setMobileOpen(false)}
+        />
       </aside>
       <div className="lg:col-span-9 flex flex-col">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6 border-b border-border pb-4">

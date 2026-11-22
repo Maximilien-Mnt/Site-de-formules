@@ -1,0 +1,39 @@
+---
+import { getFormulas } from '@/lib/content'
+import { DEFAULT_LANG, type Lang } from '@/i18n/config'
+import { t } from '@/i18n/index'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Breadcrumb from '@/components/ui/Breadcrumb.astro'
+import ProgressApp, { type ProgressFormula } from '@/components/islands/ProgressApp.tsx'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang = DEFAULT_LANG } = Astro.props
+
+// Métadonnées minimales du catalogue (id/domaine/niveau) transmises à l'îlot
+// pour calculer les barres par niveau et par domaine à partir du store local.
+const catalog = getFormulas(lang).filter((f) => f.status === 'published')
+const formulas: ProgressFormula[] = catalog.map((f) => ({
+  id: f.id,
+  domain: f.domain,
+  level: f.level,
+}))
+---
+
+<BaseLayout lang={lang} title={t(lang, 'progress.title')}>
+  <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+    <div class="print:hidden">
+      <Breadcrumb lang={lang} items={[{ label: t(lang, 'progress.title') }]} />
+    </div>
+    <header class="mt-4">
+      <h1 class="font-serif text-4xl font-semibold tracking-tight text-text">
+        {t(lang, 'progress.title')}
+      </h1>
+    </header>
+    <section class="mt-8" aria-label={t(lang, 'progress.title')}>
+      <ProgressApp client:visible lang={lang} formulas={formulas} />
+    </section>
+  </div>
+</BaseLayout>

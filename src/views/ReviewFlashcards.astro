@@ -1,0 +1,41 @@
+---
+import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+import { t } from '@/i18n/index'
+import { getFormulas } from '@/lib/content'
+import katex from 'katex'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import ReviserFiches from '@/components/islands/ReviserFiches.tsx'
+
+interface Props {
+  lang?: Lang
+}
+
+const { lang = DEFAULT_LANG } = Astro.props
+const { searchParams } = new URL(Astro.request.url)
+const deckId = searchParams.get('deck') ?? undefined
+
+// Métadonnées des formules publiées, enrichies au build pour l'îlot de session.
+// Le LaTeX est rendu une fois ici (KaTeX au build) ; l'île n'affiche que du HTML.
+const catalog = getFormulas(lang).filter((f) => f.status === 'published')
+const formulas = catalog.map((f) => {
+  let latexHtml = ''
+  try {
+    latexHtml = katex.renderToString(f.latex, { displayMode: false, throwOnError: false })
+  } catch {
+    latexHtml = `<code class="text-muted font-mono text-sm">${f.latex}</code>`
+  }
+  const variableLabels = f.text?.variableNames ? Object.values(f.text.variableNames) : []
+  return { id: f.id, title: f.text?.title ?? f.id, latexHtml, variableLabels }
+})
+---
+
+<BaseLayout lang={lang} title={t(lang, 'review.title')}>
+  <ReviserFiches
+    client:visible
+    lang={lang}
+    formulas={formulas}
+    deckId={deckId}
+    hubUrl={localizedPath(lang, 'review')}
+    catalogUrl={localizedPath(lang, 'formulas')}
+  />
+</BaseLayout>

@@ -1,0 +1,10 @@
+---
+import ReviewFlashcards from '@/views/ReviewFlashcards.astro'
+import { DEFAULT_LANG } from '@/i18n/config'
+
+export const prerender = true
+
+const { lang = DEFAULT_LANG } = Astro.props
+---
+
+<ReviewFlashcards lang={lang} />

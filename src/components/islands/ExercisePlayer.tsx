@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { t, type Lang } from '@/i18n/index'
 import { checkQcm, checkNumeric } from '@/lib/exercise-check'
+import { recordAttempt } from '@/lib/progress'
 
 interface QcmChoice {
   id: string
@@ -9,6 +10,7 @@ interface QcmChoice {
 
 export interface ExercisePlayerProps {
   lang: Lang
+  exerciseId: string
   kind: 'numeric' | 'qcm' | 'open'
   answer?: { value: number; tolerance: number; unit?: string }
   choices?: QcmChoice[]
@@ -58,18 +60,21 @@ export default function ExercisePlayer(props: ExercisePlayerProps) {
       const ok = checkQcm(qcmSelected, props.correct ?? [])
       setAttempt(ok ? 'correct' : 'wrong')
       setLocked(ok)
+      recordAttempt({ exerciseId: props.exerciseId, result: ok ? 'correct' : 'wrong' })
       return
     }
     const result = checkNumeric(numericInput, props.answer ?? { value: 0, tolerance: 0 })
     if (result.ok) {
       setAttempt('correct')
       setLocked(true)
+      recordAttempt({ exerciseId: props.exerciseId, result: 'correct' })
     } else if (result.reason === 'invalid') {
       setAttempt('invalid')
       setLocked(false)
     } else {
       setAttempt('wrong')
       setLocked(false)
+      recordAttempt({ exerciseId: props.exerciseId, result: 'wrong' })
       setWrongParsed(result.parsed)
     }
   }
@@ -78,6 +83,7 @@ export default function ExercisePlayer(props: ExercisePlayerProps) {
     setSelfAssessed(outcome)
     setAttempt(outcome === 'yes' ? 'correct' : 'wrong')
     setLocked(true)
+    recordAttempt({ exerciseId: props.exerciseId, result: outcome === 'yes' ? 'correct' : 'wrong' })
   }
 
   // --- Zone de réponse ---

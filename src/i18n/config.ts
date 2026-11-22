@@ -22,6 +22,7 @@ export const ROUTE_SEGMENTS = {
     exercises: 'exercices',
     exercise: 'exercices/:id',
     review: 'reviser',
+    reviewFlashcards: 'reviser/fiches',
     progress: 'progression',
     about: 'a-propos',
     legal: 'mentions-legales',
