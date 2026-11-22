@@ -18,9 +18,10 @@ interface Props {
   title?: string;
   description?: string;
   canonical?: string;
+  siteUrl?: string;
 }
 
-const { lang = DEFAULT_LANG, title, description, canonical } = Astro.props;
+const { lang = DEFAULT_LANG, title, description, canonical, siteUrl = import.meta.env.SITE_URL ?? 'https://site-de-formules.maximilien-montant.workers.dev' } = Astro.props;
 const dir = LANGS[lang]?.dir ?? 'ltr';
 const siteName = t(lang, 'site.name');
 const formulesPath = localizedPath(lang, 'formulas');
@@ -40,6 +41,35 @@ const aboutPath = localizedPath(lang, 'about');
     {SUPPORTED_LANGS.map((l) => (
       <link rel="alternate" hreflang={l} href={canonical ?? localizedPath(l, 'formulas')} />
     ))}
+    <!-- JSON-LD Schema -->
+    <script is:inline type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Website",
+      "name": "{siteName}",
+      "description": "Formules de mathématiques expliquées, démontrées et à réviser, du début du primaire à l'université.",
+      "url": "{siteUrl}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{siteUrl}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <!-- Cloudflare Web Analytics -->
+    {import.meta.env.PUBLIC_CF_BEACON_TOKEN && (
+      <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon-token="{import.meta.env.PUBLIC_CF_BEACON_TOKEN}"></script>
+    )}
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content={title ? `${title} — ${siteName}` : siteName} />
+    <meta property="og:description" content={description || siteName} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical ?? siteUrl} />
+    <meta property="og:image" content="/default-og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title ? `${title} — ${siteName}` : siteName} />
+    <meta name="twitter:description" content={description || siteName} />
+    <meta name="twitter:image" content="/default-og-image.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <ViewTransitions />
     <style is:global>
@@ -219,8 +249,8 @@ const aboutPath = localizedPath(lang, 'about');
             </svg>
             <span>{t(lang, 'nav.search')}</span>
           </Button>
-          <SearchPalette client:visible lang={lang} />
-          <ThemeToggle client:idle lang={lang} />
+          <SearchPalette client:visible lang={lang} aria-label={t(lang, 'nav.search')} />
+          <ThemeToggle client:idle lang={lang} aria-label={t(lang, 'theme.toggle')} />
           {SUPPORTED_LANGS.length > 1 ? (
             <button class="hidden" aria-label={t(lang, 'lang.switch')}>
               …

@@ -1,0 +1,16 @@
+---
+import { t } from '@/i18n/index';
+
+const { lang } = Astro.props;
+--- 
+<h1>{t(lang, 'footer.privacy')}</h1>
+<p>{t(lang, 'site.tagline')}</p>
+<ul class="mt-4">
+  <li>Aucune donnée personnelle n'est collectée ou stockée sur des serveurs</li>
+  <li>La progression d'apprentissage est stockée localement dans le navigateur (localStorage) avec une clé versionnée</li>
+  <li>L'export/import de progression se fait via fichier JSON depuis le navigateur de l'utilisateur</li>
+  <li>La mesure d'audience utilise un snippet Cloudflare Web Analytics conditionnel (variable d'environnement PUBLIC_CF_BEACON_TOKEN)</li>
+  <li>Aucun cookie ni tracker n'est déposé sur votre navigateur</li>
+</ul>
+<p class="mt-6"><strong>[À COMPLÉTER]</strong> - Ajouter les détails de la politique de confidentialité selon vos exigences.</p>
+

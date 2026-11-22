@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "node scripts/build-search-index.mjs && astro build",
-    "preview": "astro preview",
+    "preview": "npm run build && npx wrangler dev",
     "check": "astro check && npm run check:content && npm run audit:content",
     "audit:content": "node scripts/audit-content.mjs",
     "content:status": "node scripts/content-status.mjs",

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /fr/progression/
+Sitemap: https://example.com/sitemap-0.xml

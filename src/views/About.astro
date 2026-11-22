@@ -1,0 +1,21 @@
+---
+import { t } from '@/i18n/index';
+
+const { lang } = Astro.props;
+
+title: {t(lang, 'footer.about')},
+---
+
+<article class="prose max-w-[var(--w-content)]">
+  <h1>{t(lang, 'footer.about')}</h1>
+  <p>{t(lang, 'site.tagline')}</p>
+  <hr />
+  <p>Formulo est une application d'apprentissage et de révision de formules de mathématiques.</p>
+  <p>Du début du primaire à l'université, nous aidons les étudiants à comprendre, retenir et maîtriser chaque formule.</p>
+  <ul class="mt-4">
+    <li>Catalogue complet de formules de mathématiques</li>
+    <li>Exercices liés à chaque formule</li>
+    <li>Révision avec système de répétition espacée (FSRS)</li>
+    <li>Interface claire et accessible</li>
+  </ul>
+</article>
