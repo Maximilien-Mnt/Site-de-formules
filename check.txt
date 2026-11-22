@@ -1,0 +1,110 @@
+
+> formulo@0.1.0 check
+> astro check && npm run check:content && npm run audit:content
+
+[2m20:11:18[22m [34m[content][39m Syncing content
+[2m20:11:18[22m [34m[content][39m Synced content
+[2m20:11:18[22m [34m[types][39m Generated [2m554ms[22m
+[2m20:11:18[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\maxim\Site-de-formules...
+[96msrc/components/islands/DeckBuilder.tsx[0m:[93m8[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'cardKey' is declared but its value is never read.
+
+[7m8[0m import { cardKey, type Deck, type Direction } from '@/lib/srs'
+[7m [0m [93m         ~~~~~~~[0m
+
+[96msrc/components/islands/QuizApp.tsx[0m:[93m134[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'retryQuiz' is declared but its value is never read.
+
+[7m134[0m   const retryQuiz = () => {
+[7m   [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m106[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'nextQuestion' is declared but its value is never read.
+
+[7m106[0m   const nextQuestion = () => {
+[7m   [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m65[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'startQuiz' is declared but its value is never read.
+
+[7m65[0m   const startQuiz = () => {
+[7m  [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m56[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'toggleDomain' is declared but its value is never read.
+
+[7m56[0m   const toggleDomain = (domain: string) => {
+[7m  [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m47[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'toggleLevel' is declared but its value is never read.
+
+[7m47[0m   const toggleLevel = (level: number) => {
+[7m  [0m [93m        ~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m45[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'kindLabel' is declared but its value is never read.
+
+[7m45[0m   const kindLabel = (k: 'qcm' | 'numeric') => t(lang, `exercise.kind.${k}` as never)
+[7m  [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m43[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'isMultiple' is declared but its value is never read.
+
+[7m43[0m   const isMultiple = current ? current.correct.length > 1 : false
+[7m  [0m [93m        ~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m39[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'timeLeft' is declared but its value is never read.
+
+[7m39[0m   const [timeLeft, setTimeLeft] = useState(0)
+[7m  [0m [93m         ~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m35[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'result' is declared but its value is never read.
+
+[7m35[0m   const [result, setResult] = useState<ReturnType<typeof grade> | null>(null)
+[7m  [0m [93m         ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m24[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'phase' is declared but its value is never read.
+
+[7m24[0m   const [phase, setPhase] = useState('configure')
+[7m  [0m [93m         ~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m23[0m:[93m74[0m - [93mwarning[0m[90m ts(6133): [0m'catalogUrl' is declared but its value is never read.
+
+[7m23[0m export default function QuizApp({ lang, questions: allQuestions, hubUrl, catalogUrl }: Props) {
+[7m  [0m [93m                                                                         ~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m23[0m:[93m66[0m - [93mwarning[0m[90m ts(6133): [0m'hubUrl' is declared but its value is never read.
+
+[7m23[0m export default function QuizApp({ lang, questions: allQuestions, hubUrl, catalogUrl }: Props) {
+[7m  [0m [93m                                                                 ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m10[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'formatTimeLeft' is declared but its value is never read.
+
+[7m10[0m function formatTimeLeft(seconds: number): string {
+[7m  [0m [93m         ~~~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m8[0m:[93m6[0m - [93mwarning[0m[90m ts(6196): [0m'Phase' is declared but never used.
+
+[7m8[0m type Phase = 'configure' | 'empty' | 'question' | 'results'
+[7m [0m [93m     ~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m6[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'COUNTS' is declared but its value is never read.
+
+[7m6[0m const COUNTS: (5 | 10 | 20)[] = [5, 10, 20]
+[7m [0m [93m      ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m3[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'failedFormulas' is declared but its value is never read.
+
+[7m3[0m import { drawQuestions, failedFormulas, grade, type QuizQuestion } from '@/lib/quiz'
+[7m [0m [93m                        ~~~~~~~~~~~~~~[0m
+
+[96msrc/components/islands/SearchPalette.tsx[0m:[93m17[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'setSearchHistory' is declared but its value is never read.
+
+[7m17[0m   const [searchHistory, setSearchHistory] = useState<string[]>(() => {
+[7m  [0m [93m                        ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/ui/Callout.astro[0m:[93m23[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'bgColor' is declared but its value is never read.
+
+[7m23[0m const bgColor: Record<string, string> = {
+[7m  [0m [93m      ~~~~~~~[0m
+[96msrc/components/ui/Callout.astro[0m:[93m18[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'borderColor' is declared but its value is never read.
+
+[7m18[0m const borderColor: Record<string, string> = {
+[7m  [0m [93m      ~~~~~~~~~~~[0m
+
+[96msrc/layouts/BaseLayout.astro[0m:[93m186[0m:[93m12[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'SearchPalette'.
+
+[7m186[0m           <SearchPalette client:visible lang={lang} />
+[7m   [0m [91m           ~~~~~~~~~~~~~[0m
+[96msrc/layouts/BaseLayout.astro[0m:[93m43[0m:[93m6[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m43[0m     <ViewTransitions />
+[7m  [0m [93m     ~~~~~~~~~~~~~~~[0m
+[96msrc/layouts/BaseLayout.astro[0m:[93m3[0m:[93m10[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m3[0m import { ViewTransitions } from 'astro:transitions';
+[7m [0m [93m         ~~~~~~~~~~~~~~~[0m
+
+Result (85 files): 
+- 1 error
+- 0 warnings
+- 22 hints
+

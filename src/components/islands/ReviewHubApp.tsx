@@ -7,10 +7,11 @@ import { deckSize, dueForDeck, type Deck } from '@/lib/srs'
 interface Props {
   lang: Lang
   sessionUrl: string
+  quizUrl: string
   catalogUrl: string
 }
 
-export default function ReviewHubApp({ lang, sessionUrl, catalogUrl }: Props) {
+export default function ReviewHubApp({ lang, sessionUrl, quizUrl, catalogUrl }: Props) {
   const progress = useStore(progressStore)
 
   const decks = useMemo(() => Object.values(progress.decks), [progress.decks])
@@ -25,6 +26,12 @@ export default function ReviewHubApp({ lang, sessionUrl, catalogUrl }: Props) {
           className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-base font-medium text-on-primary transition-colors duration-[var(--dur-fast)] ease-[var(--ease-out)] hover:bg-primary-hover"
         >
           {t(lang, 'review.createDeck')}
+        </a>
+        <a
+          href={quizUrl}
+          className="inline-flex items-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors duration-[var(--dur-fast)] ease-[var(--ease-out)] hover:bg-surface-2"
+        >
+          {t(lang, 'review.quiz')}
         </a>
       </div>
     )
@@ -62,6 +69,22 @@ export default function ReviewHubApp({ lang, sessionUrl, catalogUrl }: Props) {
           </li>
         )
       })}
+
+      {/* Entrée « Quiz » (toujours disponible, même sans paquet de fiches). */}
+      <li key="quiz" className="flex flex-col gap-3 rounded-lg border border-border bg-surface p-5">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="font-serif text-lg font-semibold text-text">{t(lang, 'review.quiz')}</h3>
+        </div>
+        <p className="text-sm text-muted">
+          {t(lang, 'home.review.hints.quiz')}
+        </p>
+        <a
+          href={quizUrl}
+          className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-base font-medium text-on-primary transition-colors duration-[var(--dur-fast)] ease-[var(--ease-out)] hover:bg-primary-hover"
+        >
+          {t(lang, 'review.start')}
+        </a>
+      </li>
     </ul>
   )
 }

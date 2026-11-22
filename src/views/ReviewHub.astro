@@ -16,6 +16,7 @@ const { lang = DEFAULT_LANG } = Astro.props
     client:visible
     lang={lang}
     sessionUrl={localizedPath(lang, 'reviewFlashcards')}
+    quizUrl={localizedPath(lang, 'reviewQuiz')}
     catalogUrl={localizedPath(lang, 'formulas')}
   />
 </BaseLayout>

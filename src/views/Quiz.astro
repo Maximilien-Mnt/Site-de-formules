@@ -1,0 +1,84 @@
+---
+import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+import { t } from '@/i18n/index'
+import { renderMd } from '@/lib/md'
+import { getExercises, getFormulaTitle } from '@/lib/content'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import QuizApp from '@/components/islands/QuizApp.tsx'
+
+interface Props {
+  lang?: Lang
+}
+
+const { lang = DEFAULT_LANG } = Astro.props
+
+// Seuls les exercices publiés, types jouables (qcm / numeric ; « open » exclu).
+const catalog = getExercises(lang).filter(
+  (e) => e.status === 'published' && (e.kind === 'qcm' || e.kind === 'numeric'),
+)
+
+const questions = await Promise.all(
+  catalog.map(async (e): Promise<{
+    id: string
+    title: string
+    domain: string
+    level: number
+    difficulty: number
+    kind: 'qcm' | 'numeric'
+    statementHtml: string
+    solutionHtml?: string
+    choices?: { id: string; html: string }[]
+    correct: string[]
+    answer?: { value: number; tolerance: number; unit?: string }
+    formulas: { id: string; url: string; title: string }[]
+    estimatedMinutes: number
+  }> => {
+    const statementHtml = e.text?.statement ? await renderMd(e.text.statement) : ''
+    const solutionHtml = e.text?.solution ? await renderMd(e.text.solution) : ''
+    // e.kind est déjà filtré à 'qcm' | 'numeric' par le filtre du catalogue ci-dessus.
+    const kind = e.kind as 'qcm' | 'numeric'
+    const choicesHtml =
+      e.kind === 'qcm' && e.choices
+        ? await Promise.all(
+            e.choices.map(async (c) => ({ id: c.id, html: await renderMd(c.label) })),
+          )
+        : undefined
+    const formulas = e.formulas.map((id) => ({
+      id,
+      url: localizedPath(lang, 'formula', { id }),
+      title: getFormulaTitle(lang, id) ?? id,
+    }))
+
+    return {
+      id: e.id,
+      title: e.text?.title ?? e.id,
+      domain: e.domain,
+      level: e.level,
+      difficulty: e.difficulty,
+      kind,
+      statementHtml,
+      choices: choicesHtml,
+      solutionHtml,
+      correct: e.correct ?? [],
+      answer: e.answer,
+      formulas,
+      estimatedMinutes: e.estimatedMinutes,
+    }
+  }),
+)
+
+const hubUrl = localizedPath(lang, 'review')
+const catalogUrl = localizedPath(lang, 'exercises')
+---
+
+<BaseLayout lang={lang} title={t(lang, 'quiz.title')}>
+  <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+    <QuizApp
+      client:visible
+      lang={lang}
+      questions={questions}
+      hubUrl={hubUrl}
+      catalogUrl={catalogUrl}
+    />
+  </div>
+</BaseLayout>

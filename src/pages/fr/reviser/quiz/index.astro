@@ -1,0 +1,10 @@
+---
+import Quiz from '@/views/Quiz.astro'
+import { DEFAULT_LANG } from '@/i18n/config'
+
+export const prerender = true
+
+const { lang = DEFAULT_LANG } = Astro.props
+---
+
+<Quiz lang={lang} />
