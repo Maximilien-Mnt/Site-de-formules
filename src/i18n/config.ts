@@ -25,6 +25,7 @@ export const ROUTE_SEGMENTS = {
     reviewFlashcards: 'reviser/fiches',
     reviewQuiz: 'reviser/quiz',
     progress: 'progression',
+    formulaSummary: 'formules/resume',
     about: 'a-propos',
     legal: 'mentions-legales',
     privacy: 'confidentialite',

@@ -1,0 +1,581 @@
+[2m19:33:03[22m [34m[content][39m Syncing content
+[2m19:33:03[22m [34m[content][39m Synced content
+[2m19:33:03[22m [34m[types][39m Generated [2m798ms[22m
+[2m19:33:03[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\maxim\Site-de-formules...
+[96msrc/components/islands/DeckBuilder.tsx[0m:[93m8[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'cardKey' is declared but its value is never read.
+
+[7m8[0m import { cardKey, type Deck, type Direction } from '@/lib/srs'
+[7m [0m [93m         ~~~~~~~[0m
+
+[96msrc/components/islands/ErrorReportForm.tsx[0m:[93m49[0m:[93m15[0m - [93mwarning[0m[90m ts(6385): [0m'FormEvent' is deprecated.
+
+[7m49[0m     (e: React.FormEvent) => {
+[7m  [0m [93m              ~~~~~~~~~[0m
+
+[96msrc/components/islands/FormulaSummaryApp.tsx[0m:[93m14[0m:[93m51[0m - [93mwarning[0m[90m ts(6133): [0m'itemIds' is declared but its value is never read.
+
+[7m14[0m export default function FormulaSummaryApp({ lang, itemIds }: Props) {
+[7m  [0m [93m                                                  ~~~~~~~[0m
+[96msrc/components/islands/FormulaSummaryApp.tsx[0m:[93m5[0m:[93m30[0m - [93mwarning[0m[90m ts(6133): [0m'FormulaStatus' is declared but its value is never read.
+
+[7m5[0m import { progressStore, type FormulaStatus } from '@/lib/progress'
+[7m [0m [93m                             ~~~~~~~~~~~~~[0m
+
+[96msrc/components/islands/QuizApp.tsx[0m:[93m134[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'retryQuiz' is declared but its value is never read.
+
+[7m134[0m   const retryQuiz = () => {
+[7m   [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m106[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'nextQuestion' is declared but its value is never read.
+
+[7m106[0m   const nextQuestion = () => {
+[7m   [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m65[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'startQuiz' is declared but its value is never read.
+
+[7m65[0m   const startQuiz = () => {
+[7m  [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m56[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'toggleDomain' is declared but its value is never read.
+
+[7m56[0m   const toggleDomain = (domain: string) => {
+[7m  [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m47[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'toggleLevel' is declared but its value is never read.
+
+[7m47[0m   const toggleLevel = (level: number) => {
+[7m  [0m [93m        ~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m45[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'kindLabel' is declared but its value is never read.
+
+[7m45[0m   const kindLabel = (k: 'qcm' | 'numeric') => t(lang, `exercise.kind.${k}` as never)
+[7m  [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m43[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'isMultiple' is declared but its value is never read.
+
+[7m43[0m   const isMultiple = current ? current.correct.length > 1 : false
+[7m  [0m [93m        ~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m39[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'timeLeft' is declared but its value is never read.
+
+[7m39[0m   const [timeLeft, setTimeLeft] = useState(0)
+[7m  [0m [93m         ~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m35[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'result' is declared but its value is never read.
+
+[7m35[0m   const [result, setResult] = useState<ReturnType<typeof grade> | null>(null)
+[7m  [0m [93m         ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m24[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'phase' is declared but its value is never read.
+
+[7m24[0m   const [phase, setPhase] = useState('configure')
+[7m  [0m [93m         ~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m23[0m:[93m74[0m - [93mwarning[0m[90m ts(6133): [0m'catalogUrl' is declared but its value is never read.
+
+[7m23[0m export default function QuizApp({ lang, questions: allQuestions, hubUrl, catalogUrl }: Props) {
+[7m  [0m [93m                                                                         ~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m23[0m:[93m66[0m - [93mwarning[0m[90m ts(6133): [0m'hubUrl' is declared but its value is never read.
+
+[7m23[0m export default function QuizApp({ lang, questions: allQuestions, hubUrl, catalogUrl }: Props) {
+[7m  [0m [93m                                                                 ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m10[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'formatTimeLeft' is declared but its value is never read.
+
+[7m10[0m function formatTimeLeft(seconds: number): string {
+[7m  [0m [93m         ~~~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m8[0m:[93m6[0m - [93mwarning[0m[90m ts(6196): [0m'Phase' is declared but never used.
+
+[7m8[0m type Phase = 'configure' | 'empty' | 'question' | 'results'
+[7m [0m [93m     ~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m6[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'COUNTS' is declared but its value is never read.
+
+[7m6[0m const COUNTS: (5 | 10 | 20)[] = [5, 10, 20]
+[7m [0m [93m      ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m3[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'failedFormulas' is declared but its value is never read.
+
+[7m3[0m import { drawQuestions, failedFormulas, grade, type QuizQuestion } from '@/lib/quiz'
+[7m [0m [93m                        ~~~~~~~~~~~~~~[0m
+
+[96msrc/components/islands/SearchPalette.tsx[0m:[93m17[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'setSearchHistory' is declared but its value is never read.
+
+[7m17[0m   const [searchHistory, setSearchHistory] = useState<string[]>(() => {
+[7m  [0m [93m                        ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/ui/Callout.astro[0m:[93m23[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'bgColor' is declared but its value is never read.
+
+[7m23[0m const bgColor: Record<string, string> = {
+[7m  [0m [93m      ~~~~~~~[0m
+[96msrc/components/ui/Callout.astro[0m:[93m18[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'borderColor' is declared but its value is never read.
+
+[7m18[0m const borderColor: Record<string, string> = {
+[7m  [0m [93m      ~~~~~~~~~~~[0m
+
+[96msrc/layouts/BaseLayout.astro[0m:[93m75[0m:[93m6[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m75[0m     <ViewTransitions />
+[7m  [0m [93m     ~~~~~~~~~~~~~~~[0m
+[96msrc/layouts/BaseLayout.astro[0m:[93m3[0m:[93m10[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m3[0m import { ViewTransitions } from 'astro:transitions';
+[7m [0m [93m         ~~~~~~~~~~~~~~~[0m
+
+[96msrc/lib/guards.test.ts[0m:[93m7[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'NumericGuardContext' is declared but its value is never read.
+
+[7m7[0m   type NumericGuardContext,
+[7m [0m [93m       ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/guards.test.ts[0m:[93m6[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'GuardResult' is declared but its value is never read.
+
+[7m6[0m   type GuardResult,
+[7m [0m [93m       ~~~~~~~~~~~[0m
+
+[96msrc/lib/summary.test.ts[0m:[93m74[0m:[93m7[0m - [91merror[0m[90m ts(2353): [0mObject literal may only specify known properties, and 'title' does not exist in type 'Partial<Omit<FormulaView, "text">> & { text?: Partial<FormulaText | undefined>; }'.
+
+[7m74[0m       title: 'Th├®or├¿me de Pythagore',
+[7m  [0m [91m      ~~~~~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m37[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m                                    ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m19[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m                  ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m7[0m - [91merror[0m[90m ts(1117): [0mAn object literal cannot have multiple properties with the same name.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m      ~~~~~~~~[0m
+[96msrc/lib/summary.test.ts[0m:[93m60[0m:[93m28[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m60[0m formulas: { a: 'mastered', b: 'new' },
+[7m  [0m [91m                           ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m60[0m:[93m13[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m60[0m formulas: { a: 'mastered', b: 'new' },
+[7m  [0m [91m            ~[0m
+
+[96msrc/views/FormulaSummary.astro[0m:[93m150[0m:[93m3[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'BaseLayout'.
+
+[7m150[0m </BaseLayout>
+[7m   [0m [91m  ~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m147[0m:[93m27[0m - [91merror[0m[90m ts(7006): [0mParameter 'i' implicitly has an 'any' type.
+
+[7m147[0m       itemIds={items.map((i) => i.id)}
+[7m   [0m [91m                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m147[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'items'.
+
+[7m147[0m       itemIds={items.map((i) => i.id)}
+[7m   [0m [91m               ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m146[0m:[93m13[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m146[0m       lang={lang}
+[7m   [0m [91m            ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m144[0m:[93m6[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'FormulaSummaryApp'.
+
+[7m144[0m     <FormulaSummaryApp
+[7m   [0m [91m     ~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m140[0m:[93m34[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m140[0m         <p class="text-muted">{t(lang, 'summary.noFormulas')}</p>
+[7m   [0m [91m                                 ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m140[0m:[93m32[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m140[0m         <p class="text-muted">{t(lang, 'summary.noFormulas')}</p>
+[7m   [0m [91m                               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m138[0m:[93m2[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'items'.
+
+[7m138[0m {items.length === 0 && (
+[7m   [0m [91m ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m130[0m:[93m65[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'TranslationKey'.
+
+[7m130[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                                                                ~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m130[0m:[93m24[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m130[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                       ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m130[0m:[93m22[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m130[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m125[0m:[93m55[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'TranslationKey'.
+
+[7m125[0m                     {t(lang, `level.${item.level}` as TranslationKey)}
+[7m   [0m [91m                                                      ~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m125[0m:[93m24[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m125[0m                     {t(lang, `level.${item.level}` as TranslationKey)}
+[7m   [0m [91m                       ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m125[0m:[93m22[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m125[0m                     {t(lang, `level.${item.level}` as TranslationKey)}
+[7m   [0m [91m                     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m109[0m:[93m29[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; key: any; class: string; }' is not assignable to type 'LiHTMLAttributes'.
+  Property 'key' does not exist on type 'LiHTMLAttributes'.
+
+[7m109[0m                         <li key={v.id} class="flex items-baseline gap-1">
+[7m   [0m [91m                            ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m108[0m:[93m43[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m108[0m                       {item.variants.map((v) => (
+[7m   [0m [91m                                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m105[0m:[93m26[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m105[0m                       {t(lang, 'formula.variants')}
+[7m   [0m [91m                         ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m105[0m:[93m24[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m105[0m                       {t(lang, 'formula.variants')}
+[7m   [0m [91m                       ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m90[0m:[93m28[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; key: any; class: string; }' is not assignable to type 'HTMLAttributes'.
+  Property 'key' does not exist on type 'HTMLAttributes'.
+
+[7m90[0m                       <div key={v.symbol} class="flex items-baseline gap-1">
+[7m  [0m [91m                           ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m89[0m:[93m42[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m89[0m                     {item.variables.map((v) => (
+[7m  [0m [91m                                         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m73[0m:[93m33[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m73[0m                   aria-label={t(lang, 'summary.selectFormula', { title: item.title })}
+[7m  [0m [91m                                ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m73[0m:[93m31[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m73[0m                   aria-label={t(lang, 'summary.selectFormula', { title: item.title })}
+[7m  [0m [91m                              ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m63[0m:[93m31[0m - [91merror[0m[90m ts(7006): [0mParameter 'item' implicitly has an 'any' type.
+
+[7m63[0m             {group.items.map((item) => (
+[7m  [0m [91m                              ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m60[0m:[93m50[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'TranslationKey'.
+
+[7m60[0m             {t(lang, `domain.${group.domain}` as TranslationKey)}
+[7m  [0m [91m                                                 ~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m60[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m60[0m             {t(lang, `domain.${group.domain}` as TranslationKey)}
+[7m  [0m [91m               ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m60[0m:[93m14[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m60[0m             {t(lang, `domain.${group.domain}` as TranslationKey)}
+[7m  [0m [91m             ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m51[0m:[93m20[0m - [91merror[0m[90m ts(7006): [0mParameter 'group' implicitly has an 'any' type.
+
+[7m51[0m       {groups.map((group) => (
+[7m  [0m [91m                   ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m51[0m:[93m8[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'groups'.
+
+[7m51[0m       {groups.map((group) => (
+[7m  [0m [91m       ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m48[0m:[93m42[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'items'.
+
+[7m48[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m                                         ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m48[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m48[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m         ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m48[0m:[93m8[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m48[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m       ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m43[0m:[93m12[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m43[0m         {t(lang, 'summary.print')}
+[7m  [0m [91m           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m43[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m43[0m         {t(lang, 'summary.print')}
+[7m  [0m [91m         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m40[0m:[93m12[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m40[0m         {t(lang, 'summary.selectNone')}
+[7m  [0m [91m           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m40[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m40[0m         {t(lang, 'summary.selectNone')}
+[7m  [0m [91m         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m37[0m:[93m12[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m37[0m         {t(lang, 'summary.selectAll')}
+[7m  [0m [91m           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m37[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m37[0m         {t(lang, 'summary.selectAll')}
+[7m  [0m [91m         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m32[0m:[93m45[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m32[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m  [0m [91m                                            ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m32[0m:[93m43[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m32[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m  [0m [91m                                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m30[0m:[93m12[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m30[0m         {t(lang, 'summary.title')}
+[7m  [0m [91m           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m30[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m30[0m         {t(lang, 'summary.title')}
+[7m  [0m [91m         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m26[0m:[93m34[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m26[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                                 ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m26[0m:[93m32[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m26[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m26[0m:[93m19[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m26[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                  ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m26[0m:[93m2[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'BaseLayout'.
+
+[7m26[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m ~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'd'.
+
+[7m24[0m   t(lang, `domain.${d}` as TranslationKey),
+[7m  [0m [91m                    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m20[0m:[93m41[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'id'.
+
+[7m20[0m   url: localizedPath(lang, 'formula', { id: item.id }),
+[7m  [0m [91m                                        ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m20[0m:[93m3[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'url'.
+
+[7m20[0m   url: localizedPath(lang, 'formula', { id: item.id }),
+[7m  [0m [91m  ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m19[0m:[93m6[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m19[0m   ...item,
+[7m  [0m [91m     ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m19[0m:[93m6[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'item'.
+
+[7m19[0m   ...item,
+[7m  [0m [91m     ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m18[0m:[93m80[0m - [91merror[0m[90m ts(2609): [0mJSX spread child must be an array type.
+
+[7m18[0m const items: FormulaSummaryItem[] = buildSummaryItems(formulas).map((item) => ({
+[7m  [0m [91m                                                                               ~[0m
+[7m19[0m   ...item,
+[7m  [0m [91m~~~~~~~~~~[0m
+[7m20[0m   url: localizedPath(lang, 'formula', { id: item.id }),
+[7m  [0m [91m~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m15[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'DEFAULT_LANG'.
+
+[7m15[0m const { lang = DEFAULT_LANG } = Astro.props
+[7m  [0m [91m               ~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m15[0m:[93m9[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m15[0m const { lang = DEFAULT_LANG } = Astro.props
+[7m  [0m [91m        ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m12[0m:[93m3[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'lang'.
+
+[7m12[0m   lang: Lang
+[7m  [0m [91m  ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m44[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'type'.
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m                                           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m29[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'groupByDomain'.
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m                            ~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m10[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m10[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'buildSummaryItems'.
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m6[0m:[93m13[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'type'.
+
+[7m6[0m import { t, type TranslationKey } from '@/i18n/index'
+[7m [0m [91m            ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m6[0m:[93m10[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m6[0m import { t, type TranslationKey } from '@/i18n/index'
+[7m [0m [91m         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m6[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 't'.
+
+[7m6[0m import { t, type TranslationKey } from '@/i18n/index'
+[7m [0m [91m         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m39[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'type'.
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m                                      ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m25[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'DEFAULT_LANG'.
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m                        ~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m10[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m10[0m - [91merror[0m[90m ts(2695): [0mLeft side of comma operator is unused and has no side effects.
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m         ~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'localizedPath'.
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m         ~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m4[0m:[93m10[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'getFormulas'.
+
+[7m4[0m import { getFormulas } from '@/lib/content'
+[7m [0m [91m         ~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'creation'.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m                    ~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m16[0m - [91merror[0m[90m ts(2552): [0mCannot find name 'file'. Did you mean 'File'?
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m               ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m11[0m - [91merror[0m[90m ts(2582): [0mCannot find name 'test'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m          ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m9[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'a'.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m6[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'is'.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m     ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m1[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'This'.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m27[0m:[93m4[0m - [91merror[0m[90m ts(17008): [0mHTML element 'div' has no corresponding closing tag.
+
+[7m27[0m   <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+[7m  [0m [91m   ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m21[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m21[0m }))
+[7m  [0m [91m~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m20[0m:[93m53[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m20[0m   url: localizedPath(lang, 'formula', { id: item.id }),
+[7m  [0m [91m                                                    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m20[0m:[93m43[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m20[0m   url: localizedPath(lang, 'formula', { id: item.id }),
+[7m  [0m [91m                                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m20[0m:[93m6[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m20[0m   url: localizedPath(lang, 'formula', { id: item.id }),
+[7m  [0m [91m     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m13[0m:[93m1[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m13[0m }
+[7m  [0m [91m~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m12[0m:[93m7[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m12[0m   lang: Lang
+[7m  [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m68[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m                                                                   ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m49[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m6[0m:[93m33[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m6[0m import { t, type TranslationKey } from '@/i18n/index'
+[7m [0m [91m                                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m6[0m:[93m18[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m6[0m import { t, type TranslationKey } from '@/i18n/index'
+[7m [0m [91m                 ~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m49[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m                                                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m44[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m                                           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m3[0m:[93m1[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m3[0m ---
+[7m [0m [91m[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m16[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m               ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m11[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m          ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m9[0m - [91merror[0m[90m ts(1434): [0mUnexpected keyword or identifier.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m6[0m - [91merror[0m[90m ts(1228): [0mA type predicate is only allowed in return type position for functions and methods.
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m     ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m1[0m - [91merror[0m[90m ts(1435): [0mUnknown keyword or identifier. Did you mean 'this'?
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m150[0m:[93m14[0m - [91merror[0m[90m astro: [0mExpected a closing tag but instead found the end of the file.
+
+[7m150[0m </BaseLayout>
+[7m   [0m [91m             [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m150[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</BaseLayout>'.
+
+[7m150[0m </BaseLayout>
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m19[0m:[93m3[0m - [91merror[0m[90m astro: [0mExpected a valid expression in template syntax
+
+[7m19[0m   ...item,
+[7m  [0m [91m  ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m12[0m:[93m7[0m - [91merror[0m[90m astro: [0mTemplate expressions can only contain a single expression
+
+[7m12[0m   lang: Lang
+[7m  [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m7[0m:[93m49[0m - [91merror[0m[90m astro: [0mTemplate expressions can only contain a single expression
+
+[7m7[0m import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib/summary'
+[7m [0m [91m                                                ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m6[0m:[93m18[0m - [91merror[0m[90m astro: [0mTemplate expressions can only contain a single expression
+
+[7m6[0m import { t, type TranslationKey } from '@/i18n/index'
+[7m [0m [91m                 ~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m5[0m:[93m44[0m - [91merror[0m[90m astro: [0mTemplate expressions can only contain a single expression
+
+[7m5[0m import { localizedPath, DEFAULT_LANG, type Lang } from '@/i18n/config'
+[7m [0m [91m                                           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m3[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected an identifier but instead found the end of the file.
+
+[7m3[0m ---
+[7m [0m [91m[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m21[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m                    ~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m16[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m               ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m11[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m          ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m9[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m2[0m:[93m6[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m2[0m This is a test file creation.
+[7m [0m [91m     ~~[0m
+
+Result (104 files): 
+- 112 errors
+- 0 warnings
+- 27 hints
+

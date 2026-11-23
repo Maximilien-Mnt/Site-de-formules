@@ -1,15 +1,25 @@
-
-> formulo@0.1.0 check
-> astro check && npm run check:content && npm run audit:content
-
-[2m20:08:58[22m [34m[content][39m Syncing content
-[2m20:08:58[22m [34m[content][39m Synced content
-[2m20:08:58[22m [34m[types][39m Generated [2m803ms[22m
-[2m20:08:59[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\maxim\Site-de-formules...
+[2m19:53:43[22m [34m[content][39m Syncing content
+[2m19:53:43[22m [34m[content][39m Synced content
+[2m19:53:43[22m [34m[types][39m Generated [2m707ms[22m
+[2m19:53:43[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\maxim\Site-de-formules...
 [96msrc/components/islands/DeckBuilder.tsx[0m:[93m8[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'cardKey' is declared but its value is never read.
 
 [7m8[0m import { cardKey, type Deck, type Direction } from '@/lib/srs'
 [7m [0m [93m         ~~~~~~~[0m
+
+[96msrc/components/islands/ErrorReportForm.tsx[0m:[93m49[0m:[93m15[0m - [93mwarning[0m[90m ts(6385): [0m'FormEvent' is deprecated.
+
+[7m49[0m     (e: React.FormEvent) => {
+[7m  [0m [93m              ~~~~~~~~~[0m
+
+[96msrc/components/islands/FormulaSummaryApp.tsx[0m:[93m14[0m:[93m51[0m - [93mwarning[0m[90m ts(6133): [0m'itemIds' is declared but its value is never read.
+
+[7m14[0m export default function FormulaSummaryApp({ lang, itemIds }: Props) {
+[7m  [0m [93m                                                  ~~~~~~~[0m
+[96msrc/components/islands/FormulaSummaryApp.tsx[0m:[93m5[0m:[93m30[0m - [93mwarning[0m[90m ts(6133): [0m'FormulaStatus' is declared but its value is never read.
+
+[7m5[0m import { progressStore, type FormulaStatus } from '@/lib/progress'
+[7m [0m [93m                             ~~~~~~~~~~~~~[0m
 
 [96msrc/components/islands/QuizApp.tsx[0m:[93m134[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'retryQuiz' is declared but its value is never read.
 
@@ -76,22 +86,10 @@
 [7m3[0m import { drawQuestions, failedFormulas, grade, type QuizQuestion } from '@/lib/quiz'
 [7m [0m [93m                        ~~~~~~~~~~~~~~[0m
 
-[96msrc/components/islands/SearchPalette.tsx[0m:[93m16[0m:[93m60[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'SearchGroup'.
-
-[7m16[0m   const [lastResultsGroup, setLastResultsGroup] = useState<SearchGroup | null>(null)
-[7m  [0m [91m                                                           ~~~~~~~~~~~[0m
 [96msrc/components/islands/SearchPalette.tsx[0m:[93m17[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'setSearchHistory' is declared but its value is never read.
 
 [7m17[0m   const [searchHistory, setSearchHistory] = useState<string[]>(() => {
 [7m  [0m [93m                        ~~~~~~~~~~~~~~~~[0m
-[96msrc/components/islands/SearchPalette.tsx[0m:[93m16[0m:[93m28[0m - [93mwarning[0m[90m ts(6133): [0m'setLastResultsGroup' is declared but its value is never read.
-
-[7m16[0m   const [lastResultsGroup, setLastResultsGroup] = useState<SearchGroup | null>(null)
-[7m  [0m [93m                           ~~~~~~~~~~~~~~~~~~~[0m
-[96msrc/components/islands/SearchPalette.tsx[0m:[93m16[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'lastResultsGroup' is declared but its value is never read.
-
-[7m16[0m   const [lastResultsGroup, setLastResultsGroup] = useState<SearchGroup | null>(null)
-[7m  [0m [93m         ~~~~~~~~~~~~~~~~[0m
 
 [96msrc/components/ui/Callout.astro[0m:[93m23[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'bgColor' is declared but its value is never read.
 
@@ -102,21 +100,461 @@
 [7m18[0m const borderColor: Record<string, string> = {
 [7m  [0m [93m      ~~~~~~~~~~~[0m
 
-[96msrc/layouts/BaseLayout.astro[0m:[93m186[0m:[93m12[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'SearchPalette'.
+[96msrc/layouts/BaseLayout.astro[0m:[93m75[0m:[93m6[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
 
-[7m186[0m           <SearchPalette client:visible lang={lang} />
-[7m   [0m [91m           ~~~~~~~~~~~~~[0m
-[96msrc/layouts/BaseLayout.astro[0m:[93m43[0m:[93m6[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
-
-[7m43[0m     <ViewTransitions />
+[7m75[0m     <ViewTransitions />
 [7m  [0m [93m     ~~~~~~~~~~~~~~~[0m
 [96msrc/layouts/BaseLayout.astro[0m:[93m3[0m:[93m10[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
 
 [7m3[0m import { ViewTransitions } from 'astro:transitions';
 [7m [0m [93m         ~~~~~~~~~~~~~~~[0m
 
-Result (85 files): 
-- 2 errors
+[96msrc/lib/guards.test.ts[0m:[93m7[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'NumericGuardContext' is declared but its value is never read.
+
+[7m7[0m   type NumericGuardContext,
+[7m [0m [93m       ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/guards.test.ts[0m:[93m6[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'GuardResult' is declared but its value is never read.
+
+[7m6[0m   type GuardResult,
+[7m [0m [93m       ~~~~~~~~~~~[0m
+
+[96msrc/lib/summary.test.ts[0m:[93m74[0m:[93m7[0m - [91merror[0m[90m ts(2353): [0mObject literal may only specify known properties, and 'title' does not exist in type 'Partial<Omit<FormulaView, "text">> & { text?: Partial<FormulaText | undefined>; }'.
+
+[7m74[0m       title: 'Th├®or├¿me de Pythagore',
+[7m  [0m [91m      ~~~~~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m37[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m                                    ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m19[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m                  ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m7[0m - [91merror[0m[90m ts(1117): [0mAn object literal cannot have multiple properties with the same name.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m      ~~~~~~~~[0m
+[96msrc/lib/summary.test.ts[0m:[93m60[0m:[93m28[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m60[0m formulas: { a: 'mastered', b: 'new' },
+[7m  [0m [91m                           ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m60[0m:[93m13[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m60[0m formulas: { a: 'mastered', b: 'new' },
+[7m  [0m [91m            ~[0m
+
+[96msrc/views/FormulaSummary.astro[0m:[93m107[0m:[93m29[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; key: any; class: string; }' is not assignable to type 'LiHTMLAttributes'.
+  Property 'key' does not exist on type 'LiHTMLAttributes'.
+
+[7m107[0m                         <li key={v.id} class="flex items-baseline gap-1">
+[7m   [0m [91m                            ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m106[0m:[93m43[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m106[0m                       {item.variants.map((v) => (
+[7m   [0m [91m                                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m88[0m:[93m28[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; key: any; class: string; }' is not assignable to type 'HTMLAttributes'.
+  Property 'key' does not exist on type 'HTMLAttributes'.
+
+[7m88[0m                       <div key={v.symbol} class="flex items-baseline gap-1">
+[7m  [0m [91m                           ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m87[0m:[93m42[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m87[0m                     {item.variables.map((v) => (
+[7m  [0m [91m                                         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m61[0m:[93m31[0m - [91merror[0m[90m ts(7006): [0mParameter 'item' implicitly has an 'any' type.
+
+[7m61[0m             {group.items.map((item) => (
+[7m  [0m [91m                              ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m49[0m:[93m20[0m - [91merror[0m[90m ts(7006): [0mParameter 'group' implicitly has an 'any' type.
+
+[7m49[0m       {groups.map((group) => (
+[7m  [0m [91m                   ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m49[0m:[93m15[0m - [91merror[0m[90m ts(2339): [0mProperty 'map' does not exist on type 'boolean'.
+
+[7m49[0m       {groups.map((group) => (
+[7m  [0m [91m              ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m39[0m - [91merror[0m[90m ts(7006): [0mParameter '(Missing)' implicitly has an 'any' type.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                                      [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m34[0m - [91merror[0m[90m ts(7006): [0mParameter 'lang' implicitly has an 'any' type.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                                 ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m ts(2451): [0mCannot redeclare block-scoped variable 'lang'.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m            ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m21[0m:[93m16[0m - [91merror[0m[90m ts(2365): [0mOperator '<' cannot be applied to types 'DomainGroup[]' and '(_props: Props) => any'.
+
+[7m21[0m const groups = groupByDomain(items, (d) =>
+[7m  [0m [91m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m22[0m   t(lang, `domain.${d}` as TranslationKey),
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m23[0m )
+[7m  [0m [91m~[0m
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m13[0m:[93m9[0m - [91merror[0m[90m ts(2451): [0mCannot redeclare block-scoped variable 'lang'.
+
+[7m13[0m const { lang = DEFAULT_LANG } = Astro.props
+[7m  [0m [91m        ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m148[0m:[93m3[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m148[0m </BaseLayout>
+[7m   [0m [91m  ~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m40[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m25[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                        ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m            ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m148[0m:[93m14[0m - [91merror[0m[90m astro: [0mexpected `---` but instead the file ends
+
+[7m148[0m </BaseLayout>
+[7m   [0m [91m             [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m128[0m:[93m61[0m - [91merror[0m[90m astro: [0munterminated template literal
+
+[7m128[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                                                            ~~~~~~~~~~~~~~~~~~~~[0m
+[7m129[0m                   </span>
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m147[0m   </div>
+[7m   [0m [91m~~~~~~~~[0m
+[7m148[0m </BaseLayout>
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m128[0m:[93m43[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m128[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m128[0m:[93m31[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m128[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                              ~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m123[0m:[93m38[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m123[0m                     {t(lang, `level.${item.level}` as TranslationKey)}
+[7m   [0m [91m                                     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m123[0m:[93m31[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m123[0m                     {t(lang, `level.${item.level}` as TranslationKey)}
+[7m   [0m [91m                              ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m63[0m:[93m36[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m63[0m                 id={`summary-item-${item.id}`}
+[7m  [0m [91m                                   ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m63[0m:[93m22[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m63[0m                 id={`summary-item-${item.id}`}
+[7m  [0m [91m                     ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m58[0m:[93m31[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m58[0m             {t(lang, `domain.${group.domain}` as TranslationKey)}
+[7m  [0m [91m                              ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m58[0m:[93m23[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m58[0m             {t(lang, `domain.${group.domain}` as TranslationKey)}
+[7m  [0m [91m                      ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m40[0m - [91merror[0m[90m astro: [0mExpected an identifier, a string literal, a number literal, a private field name, or a computed name but instead found '.'.
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                                       ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m35[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                                  ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m34[0m - [91merror[0m[90m astro: [0mExpected an identifier, a string literal, a number literal, a private field name, or a computed name but instead found '{'.
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                                 ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m33[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m32[0m - [91merror[0m[90m astro: [0mExpected an identifier, a string literal, a number literal, a private field name, or a computed name but instead found '-'.
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m26[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                         ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m25[0m - [91merror[0m[90m astro: [0mExpected an identifier, a string literal, a number literal, a private field name, or a computed name but instead found '-'.
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m55[0m:[93m18[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m55[0m             id={`summary-domain-${group.domain}`}
+[7m  [0m [91m                 ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m52[0m:[93m15[0m - [91merror[0m[90m astro: [0mexpected `,` but instead found `-`
+
+[7m52[0m           aria-labelledby={`summary-domain-${group.domain}`}
+[7m  [0m [91m              ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m52[0m:[93m11[0m - [91merror[0m[90m astro: [0mexpected `,` but instead found `aria`
+
+[7m52[0m           aria-labelledby={`summary-domain-${group.domain}`}
+[7m  [0m [91m          ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m51[0m:[93m16[0m - [91merror[0m[90m astro: [0mexpected `:` but instead found `=`
+
+[7m51[0m           class="summary-domain print:break-inside-avoid"
+[7m  [0m [91m               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m51[0m:[93m11[0m - [91merror[0m[90m astro: [0mexpected `,` but instead found `class`
+
+[7m51[0m           class="summary-domain print:break-inside-avoid"
+[7m  [0m [91m          ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m50[0m:[93m9[0m - [91merror[0m[90m astro: [0mexpected `,` but instead found `<`
+
+[7m50[0m         <section
+[7m  [0m [91m        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m49[0m:[93m14[0m - [91merror[0m[90m astro: [0mexpected `,` but instead found `.`
+
+[7m49[0m       {groups.map((group) => (
+[7m  [0m [91m             ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m48[0m:[93m24[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m 48[0m <div id="summary-grid" class="grid gap-6">
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~~~[0m
+[7m 49[0m       {groups.map((group) => (
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 54[0m           <h2
+[7m   [0m [91m~~~~~~~~~~~~~[0m
+[7m 55[0m             id={`summary-domain-${group.domain}`}
+[7m   [0m [91m~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m48[0m:[93m6[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m48[0m <div id="summary-grid" class="grid gap-6">
+[7m  [0m [91m     ~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m47[0m:[93m9[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m47[0m     </p>
+[7m  [0m [91m        [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m46[0m:[93m57[0m - [91merror[0m[90m astro: [0mExpected a function body but instead found '}'.
+
+[7m46[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m                                                        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m46[0m:[93m47[0m - [91merror[0m[90m astro: [0mexpected `,` but instead found `.`
+
+[7m46[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m                                              ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m46[0m:[93m16[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.count''.
+
+[7m46[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m               ~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m45[0m:[93m53[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m45[0m     <p class="print:hidden mb-6 text-sm text-muted" id="summary-count">
+[7m  [0m [91m                                                    ~~~~~~~~~~~~~~~~~~~[0m
+[7m46[0m       {t(lang, 'summary.count', { count: items.length })}
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m47[0m     </p>
+[7m  [0m [91m~~~~~~~~[0m
+[7m48[0m <div id="summary-grid" class="grid gap-6">
+[7m  [0m [91m~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m45[0m:[93m8[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m45[0m     <p class="print:hidden mb-6 text-sm text-muted" id="summary-count">
+[7m  [0m [91m       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m43[0m:[93m11[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m43[0m     </div>
+[7m  [0m [91m          [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m42[0m:[93m16[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m42[0m       </button>
+[7m  [0m [91m               [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m41[0m:[93m34[0m - [91merror[0m[90m astro: [0mExpected a function body but instead found '}'.
+
+[7m41[0m         {t(lang, 'summary.print')}
+[7m  [0m [91m                                 ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m41[0m:[93m18[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.print''.
+
+[7m41[0m         {t(lang, 'summary.print')}
+[7m  [0m [91m                 ~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m40[0m:[93m48[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m 40[0m       <button type="button" id="summary-print" class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-base font-medium text-on-primary transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m   [0m [91m                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 41[0m         {t(lang, 'summary.print')}
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 44[0m 
+[7m   [0m [91m[0m
+[7m 45[0m     <p class="print:hidden mb-6 text-sm text-muted" id="summary-count">
+[7m   [0m [91m~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m40[0m:[93m29[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m40[0m       <button type="button" id="summary-print" class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-base font-medium text-on-primary transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m40[0m:[93m15[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m40[0m       <button type="button" id="summary-print" class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-base font-medium text-on-primary transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m              ~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m39[0m:[93m16[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m39[0m       </button>
+[7m  [0m [91m               [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m38[0m:[93m39[0m - [91merror[0m[90m astro: [0mExpected a function body but instead found '}'.
+
+[7m38[0m         {t(lang, 'summary.selectNone')}
+[7m  [0m [91m                                      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m38[0m:[93m18[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.selectNone''.
+
+[7m38[0m         {t(lang, 'summary.selectNone')}
+[7m  [0m [91m                 ~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m37[0m:[93m54[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m37[0m       <button type="button" id="summary-select-none" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m38[0m         {t(lang, 'summary.selectNone')}
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m39[0m       </button>
+[7m  [0m [91m~~~~~~~~~~~~~~~[0m
+[7m40[0m       <button type="button" id="summary-print" class="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-base font-medium text-on-primary transition-colors hover:bg-primary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m37[0m:[93m29[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m37[0m       <button type="button" id="summary-select-none" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m37[0m:[93m15[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m37[0m       <button type="button" id="summary-select-none" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m              ~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m36[0m:[93m16[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m36[0m       </button>
+[7m  [0m [91m               [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m35[0m:[93m38[0m - [91merror[0m[90m astro: [0mExpected a function body but instead found '}'.
+
+[7m35[0m         {t(lang, 'summary.selectAll')}
+[7m  [0m [91m                                     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m35[0m:[93m18[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.selectAll''.
+
+[7m35[0m         {t(lang, 'summary.selectAll')}
+[7m  [0m [91m                 ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m34[0m:[93m53[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m34[0m       <button type="button" id="summary-select-all" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m35[0m         {t(lang, 'summary.selectAll')}
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m36[0m       </button>
+[7m  [0m [91m~~~~~~~~~~~~~~~[0m
+[7m37[0m       <button type="button" id="summary-select-none" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m34[0m:[93m29[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m34[0m       <button type="button" id="summary-select-all" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m                            ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m34[0m:[93m15[0m - [91merror[0m[90m astro: [0mexpected `>` but instead found `type`
+
+[7m34[0m       <button type="button" id="summary-select-all" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m              ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m33[0m:[93m16[0m - [91merror[0m[90m astro: [0mInvalid assignment to `"print:hidden mb-8 flex flex-wrap items-center gap-2">
+      <button type`
+
+[7m33[0m     <div class="print:hidden mb-8 flex flex-wrap items-center gap-2">
+[7m  [0m [91m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m34[0m       <button type="button" id="summary-select-all" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m33[0m:[93m10[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m33[0m     <div class="print:hidden mb-8 flex flex-wrap items-center gap-2">
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m34[0m       <button type="button" id="summary-select-all" class="inline-flex items-center justify-center gap-2 rounded-md border border-border-strong bg-surface px-4 py-2 text-base font-medium text-text transition-colors hover:bg-surface-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-2">
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m31[0m:[93m11[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m31[0m     </div>
+[7m  [0m [91m          [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m30[0m:[93m75[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m30[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m  [0m [91m                                                                          [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m30[0m:[93m70[0m - [91merror[0m[90m astro: [0mExpected a function body but instead found '}'.
+
+[7m30[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m  [0m [91m                                                                     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m30[0m:[93m51[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.subtitle''.
+
+[7m30[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m  [0m [91m                                                  ~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m30[0m:[93m10[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m30[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m  [0m [91m         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m31[0m     </div>
+[7m  [0m [91m~~~~~~~~~~[0m
+[7m32[0m 
+[7m  [0m [91m[0m
+[7m33[0m     <div class="print:hidden mb-8 flex flex-wrap items-center gap-2">
+[7m  [0m [91m~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m29[0m:[93m12[0m - [91merror[0m[90m astro: [0munterminated regex literal
+
+[7m29[0m       </h1>
+[7m  [0m [91m           [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m28[0m:[93m18[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.title''.
+
+[7m28[0m         {t(lang, 'summary.title')}
+[7m  [0m [91m                 ~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m27[0m:[93m16[0m - [91merror[0m[90m astro: [0mexpected `{` but instead found `=`
+
+[7m27[0m       <h1 class="font-serif text-4xl font-semibold tracking-tight text-text">
+[7m  [0m [91m               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m27[0m:[93m11[0m - [91merror[0m[90m astro: [0mexpected `>` but instead found `class`
+
+[7m27[0m       <h1 class="font-serif text-4xl font-semibold tracking-tight text-text">
+[7m  [0m [91m          ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m26[0m:[93m10[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m 26[0m     <div class="print:hidden">
+[7m   [0m [91m         ~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 27[0m       <h1 class="font-serif text-4xl font-semibold tracking-tight text-text">
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 29[0m       </h1>
+[7m   [0m [91m~~~~~~~~~~~[0m
+[7m 30[0m       <p class="mt-2 text-lg text-muted">{t(lang, 'summary.subtitle')}</p>
+[7m   [0m [91m~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m26[0m:[93m6[0m - [91merror[0m[90m astro: [0mexpected a semicolon to end the class property, but found none
+
+[7m26[0m     <div class="print:hidden">
+[7m  [0m [91m     ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m25[0m:[93m13[0m - [91merror[0m[90m astro: [0mexpected `{` but instead found `=`
+
+[7m25[0m   <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+[7m  [0m [91m            ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m25[0m:[93m8[0m - [91merror[0m[90m astro: [0mexpected `>` but instead found `class`
+
+[7m25[0m   <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+[7m  [0m [91m       ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m56[0m - [91merror[0m[90m astro: [0mExpected a function body but instead found '}'.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                                                       ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m40[0m - [91merror[0m[90m astro: [0mExpected a parameter but instead found ''summary.title''.
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m25[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m                        ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m astro: [0mExpected a semicolon or an implicit semicolon after a statement, but found none
+
+[7m24[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m  [0m [91m            ~~~~[0m
+
+Result (104 files): 
+- 92 errors
 - 0 warnings
-- 24 hints
+- 27 hints
 

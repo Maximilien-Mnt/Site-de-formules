@@ -35,6 +35,16 @@
   "common.formulas.one": "{count} formule",
   "common.formulas.other": "{count} formules",
 
+  "summary.title": "Ma fiche-résumé",
+  "summary.subtitle": "Sélectionnez les formules à inclure, puis imprimez ou enregistrez en PDF.",
+  "summary.selectAll": "Tout sélectionner",
+  "summary.selectNone": "Tout désélectionner",
+  "summary.print": "Imprimer / PDF",
+  "summary.printing": "Préparation de l'impression…",
+  "summary.noFormulas": "Aucune formule sélectionnée.",
+  "summary.count": "{count} formule(s)",
+  "summary.selectFormula": "Sélectionner {title}",
+
   "subject.math": "Mathématiques",
 
   "domain.arithmetic": "Arithmétique",

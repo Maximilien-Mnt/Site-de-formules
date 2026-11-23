@@ -1,0 +1,678 @@
+[2m19:19:31[22m [34m[content][39m Syncing content
+[2m19:19:31[22m [34m[content][39m Synced content
+[2m19:19:31[22m [34m[types][39m Generated [2m641ms[22m
+[2m19:19:31[22m [34m[check][39m Getting diagnostics for Astro files in C:\Users\maxim\Site-de-formules...
+[96msrc/components/islands/DeckBuilder.tsx[0m:[93m8[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'cardKey' is declared but its value is never read.
+
+[7m8[0m import { cardKey, type Deck, type Direction } from '@/lib/srs'
+[7m [0m [93m         ~~~~~~~[0m
+
+[96msrc/components/islands/ErrorReportForm.tsx[0m:[93m49[0m:[93m15[0m - [93mwarning[0m[90m ts(6385): [0m'FormEvent' is deprecated.
+
+[7m49[0m     (e: React.FormEvent) => {
+[7m  [0m [93m              ~~~~~~~~~[0m
+
+[96msrc/components/islands/FormulaSummaryApp.tsx[0m:[93m14[0m:[93m51[0m - [93mwarning[0m[90m ts(6133): [0m'itemIds' is declared but its value is never read.
+
+[7m14[0m export default function FormulaSummaryApp({ lang, itemIds }: Props) {
+[7m  [0m [93m                                                  ~~~~~~~[0m
+[96msrc/components/islands/FormulaSummaryApp.tsx[0m:[93m5[0m:[93m30[0m - [93mwarning[0m[90m ts(6133): [0m'FormulaStatus' is declared but its value is never read.
+
+[7m5[0m import { progressStore, type FormulaStatus } from '@/lib/progress'
+[7m [0m [93m                             ~~~~~~~~~~~~~[0m
+
+[96msrc/components/islands/QuizApp.tsx[0m:[93m134[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'retryQuiz' is declared but its value is never read.
+
+[7m134[0m   const retryQuiz = () => {
+[7m   [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m106[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'nextQuestion' is declared but its value is never read.
+
+[7m106[0m   const nextQuestion = () => {
+[7m   [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m65[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'startQuiz' is declared but its value is never read.
+
+[7m65[0m   const startQuiz = () => {
+[7m  [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m56[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'toggleDomain' is declared but its value is never read.
+
+[7m56[0m   const toggleDomain = (domain: string) => {
+[7m  [0m [93m        ~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m47[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'toggleLevel' is declared but its value is never read.
+
+[7m47[0m   const toggleLevel = (level: number) => {
+[7m  [0m [93m        ~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m45[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'kindLabel' is declared but its value is never read.
+
+[7m45[0m   const kindLabel = (k: 'qcm' | 'numeric') => t(lang, `exercise.kind.${k}` as never)
+[7m  [0m [93m        ~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m43[0m:[93m9[0m - [93mwarning[0m[90m ts(6133): [0m'isMultiple' is declared but its value is never read.
+
+[7m43[0m   const isMultiple = current ? current.correct.length > 1 : false
+[7m  [0m [93m        ~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m39[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'timeLeft' is declared but its value is never read.
+
+[7m39[0m   const [timeLeft, setTimeLeft] = useState(0)
+[7m  [0m [93m         ~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m35[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'result' is declared but its value is never read.
+
+[7m35[0m   const [result, setResult] = useState<ReturnType<typeof grade> | null>(null)
+[7m  [0m [93m         ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m24[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'phase' is declared but its value is never read.
+
+[7m24[0m   const [phase, setPhase] = useState('configure')
+[7m  [0m [93m         ~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m23[0m:[93m74[0m - [93mwarning[0m[90m ts(6133): [0m'catalogUrl' is declared but its value is never read.
+
+[7m23[0m export default function QuizApp({ lang, questions: allQuestions, hubUrl, catalogUrl }: Props) {
+[7m  [0m [93m                                                                         ~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m23[0m:[93m66[0m - [93mwarning[0m[90m ts(6133): [0m'hubUrl' is declared but its value is never read.
+
+[7m23[0m export default function QuizApp({ lang, questions: allQuestions, hubUrl, catalogUrl }: Props) {
+[7m  [0m [93m                                                                 ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m10[0m:[93m10[0m - [93mwarning[0m[90m ts(6133): [0m'formatTimeLeft' is declared but its value is never read.
+
+[7m10[0m function formatTimeLeft(seconds: number): string {
+[7m  [0m [93m         ~~~~~~~~~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m8[0m:[93m6[0m - [93mwarning[0m[90m ts(6196): [0m'Phase' is declared but never used.
+
+[7m8[0m type Phase = 'configure' | 'empty' | 'question' | 'results'
+[7m [0m [93m     ~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m6[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'COUNTS' is declared but its value is never read.
+
+[7m6[0m const COUNTS: (5 | 10 | 20)[] = [5, 10, 20]
+[7m [0m [93m      ~~~~~~[0m
+[96msrc/components/islands/QuizApp.tsx[0m:[93m3[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'failedFormulas' is declared but its value is never read.
+
+[7m3[0m import { drawQuestions, failedFormulas, grade, type QuizQuestion } from '@/lib/quiz'
+[7m [0m [93m                        ~~~~~~~~~~~~~~[0m
+
+[96msrc/components/islands/SearchPalette.tsx[0m:[93m17[0m:[93m25[0m - [93mwarning[0m[90m ts(6133): [0m'setSearchHistory' is declared but its value is never read.
+
+[7m17[0m   const [searchHistory, setSearchHistory] = useState<string[]>(() => {
+[7m  [0m [93m                        ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/components/ui/Callout.astro[0m:[93m23[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'bgColor' is declared but its value is never read.
+
+[7m23[0m const bgColor: Record<string, string> = {
+[7m  [0m [93m      ~~~~~~~[0m
+[96msrc/components/ui/Callout.astro[0m:[93m18[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'borderColor' is declared but its value is never read.
+
+[7m18[0m const borderColor: Record<string, string> = {
+[7m  [0m [93m      ~~~~~~~~~~~[0m
+
+[96msrc/layouts/BaseLayout.astro[0m:[93m75[0m:[93m6[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m75[0m     <ViewTransitions />
+[7m  [0m [93m     ~~~~~~~~~~~~~~~[0m
+[96msrc/layouts/BaseLayout.astro[0m:[93m3[0m:[93m10[0m - [93mwarning[0m[90m ts(6385): [0m'ViewTransitions' is deprecated.
+
+[7m3[0m import { ViewTransitions } from 'astro:transitions';
+[7m [0m [93m         ~~~~~~~~~~~~~~~[0m
+
+[96msrc/lib/guards.test.ts[0m:[93m7[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'NumericGuardContext' is declared but its value is never read.
+
+[7m7[0m   type NumericGuardContext,
+[7m [0m [93m       ~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/lib/guards.test.ts[0m:[93m6[0m:[93m8[0m - [93mwarning[0m[90m ts(6133): [0m'GuardResult' is declared but its value is never read.
+
+[7m6[0m   type GuardResult,
+[7m [0m [93m       ~~~~~~~~~~~[0m
+
+[96msrc/lib/summary.test.ts[0m:[93m74[0m:[93m7[0m - [91merror[0m[90m ts(2353): [0mObject literal may only specify known properties, and 'title' does not exist in type 'Partial<Omit<FormulaView, "text">> & { text?: Partial<FormulaText | undefined>; }'.
+
+[7m74[0m       title: 'Th├®or├¿me de Pythagore',
+[7m  [0m [91m      ~~~~~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m37[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m                                    ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m19[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m                  ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m61[0m:[93m7[0m - [91merror[0m[90m ts(1117): [0mAn object literal cannot have multiple properties with the same name.
+
+[7m61[0m       formulas: { a: 'some-status', b: 'some-status' },
+[7m  [0m [91m      ~~~~~~~~[0m
+[96msrc/lib/summary.test.ts[0m:[93m60[0m:[93m28[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m60[0m formulas: { a: 'mastered', b: 'new' },
+[7m  [0m [91m                           ~[0m
+[96msrc/lib/summary.test.ts[0m:[93m60[0m:[93m13[0m - [91merror[0m[90m ts(2322): [0mType '"some-status"' is not assignable to type 'FormulaStatus'.
+
+[7m60[0m formulas: { a: 'mastered', b: 'new' },
+[7m  [0m [91m            ~[0m
+
+[96msrc/views/FormulaSummary.astro[0m:[93m195[0m:[93m3[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'style'.
+
+[7m195[0m </style>
+[7m   [0m [91m  ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m191[0m:[93m28[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'avoid'.
+
+[7m191[0m         page-break-inside: avoid;
+[7m   [0m [91m                           ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m191[0m:[93m20[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'inside'.
+
+[7m191[0m         page-break-inside: avoid;
+[7m   [0m [91m                   ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m191[0m:[93m9[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'page'.
+
+[7m191[0m         page-break-inside: avoid;
+[7m   [0m [91m        ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m190[0m:[93m23[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'avoid'.
+
+[7m190[0m         break-inside: avoid;
+[7m   [0m [91m                      ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m190[0m:[93m15[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'inside'.
+
+[7m190[0m         break-inside: avoid;
+[7m   [0m [91m              ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m189[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'domain'.
+
+[7m189[0m       .summary-domain {
+[7m   [0m [91m               ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m189[0m:[93m8[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'summary'.
+
+[7m189[0m       .summary-domain {
+[7m   [0m [91m       ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m187[0m:[93m24[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'important'.
+
+[7m187[0m         display: none !important;
+[7m   [0m [91m                       ~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m187[0m:[93m18[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'none'.
+
+[7m187[0m         display: none !important;
+[7m   [0m [91m                 ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m34[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'selected'.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                                 ~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m26[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'summary'.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                         ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'not'.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                    ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'card'.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m               ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m185[0m:[93m17[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'article'.
+
+[7m185[0m               </article>
+[7m   [0m [91m                ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m182[0m:[93m44[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'item'.
+
+[7m182[0m                     {t(lang, `difficulty.${item.difficulty}` as TranslationKey)}
+[7m   [0m [91m                                           ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m177[0m:[93m39[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'item'.
+
+[7m177[0m                     {t(lang, `level.${item.level}` as TranslationKey)}
+[7m   [0m [91m                                      ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m158[0m:[93m29[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; key: any; class: string; }' is not assignable to type 'LiHTMLAttributes'.
+  Property 'key' does not exist on type 'LiHTMLAttributes'.
+
+[7m158[0m                         <li key={v.id} class="flex items-baseline gap-1">
+[7m   [0m [91m                            ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m157[0m:[93m43[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m157[0m                       {item.variants.map((v) => (
+[7m   [0m [91m                                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m157[0m:[93m24[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'item'.
+
+[7m157[0m                       {item.variants.map((v) => (
+[7m   [0m [91m                       ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m149[0m:[93m18[0m - [91merror[0m[90m ts(2552): [0mCannot find name 'item'. Did you mean 'items'?
+
+[7m149[0m                 {item.variants.length > 0 && (
+[7m   [0m [91m                 ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m147[0m:[93m21[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'dl'.
+
+[7m147[0m                   </dl>
+[7m   [0m [91m                    ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m145[0m:[93m25[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'div'.
+
+[7m145[0m                       </div>
+[7m   [0m [91m                        ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m142[0m:[93m31[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'v'.
+
+[7m142[0m                             ({v.unit})
+[7m   [0m [91m                              ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m140[0m:[93m26[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'v'.
+
+[7m140[0m                         {v.unit && (
+[7m   [0m [91m                         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m138[0m:[93m28[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'v'.
+
+[7m138[0m                           {v.name}
+[7m   [0m [91m                           ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m49[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [91m                                                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m36[0m - [91merror[0m[90m ts(2362): [0mThe left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [91m                                   ~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m31[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'html'.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [91m                              ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m126[0m:[93m9[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'display'.
+
+[7m126[0m         display: none !important;
+[7m   [0m [91m        ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m125[0m:[93m16[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'card'.
+
+[7m125[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m               ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m119[0m:[93m5[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'div'.
+
+[7m119[0m   </div>
+[7m   [0m [91m    ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m117[0m:[93m27[0m - [91merror[0m[90m ts(7006): [0mParameter 'i' implicitly has an 'any' type.
+
+[7m117[0m       itemIds={items.map((i) => i.id)}
+[7m   [0m [91m                          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m117[0m:[93m15[0m - [91merror[0m[90m ts(2362): [0mThe left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+
+[7m117[0m       itemIds={items.map((i) => i.id)}
+[7m   [0m [91m              ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m117[0m:[93m7[0m - [91merror[0m[90m ts(2552): [0mCannot find name 'itemIds'. Did you mean 'items'?
+
+[7m117[0m       itemIds={items.map((i) => i.id)}
+[7m   [0m [91m      ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m116[0m:[93m7[0m - [91merror[0m[90m ts(2588): [0mCannot assign to 'lang' because it is a constant.
+
+[7m116[0m       lang={lang}
+[7m   [0m [91m      ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m115[0m:[93m14[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'visible'.
+
+[7m115[0m       client:visible
+[7m   [0m [91m             ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m ts(2365): [0mOperator '<' cannot be applied to types 'boolean' and '({ lang, itemIds }: Props) => Element | null'.
+
+[7m106[0m     </div>
+[7m   [0m [91m      ~~~~[0m
+[7m107[0m 
+[7m   [0m [91m[0m
+[7m...[0m 
+[7m113[0m 
+[7m   [0m [91m[0m
+[7m114[0m     <FormulaSummaryApp
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m106[0m:[93m7[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'div'.
+
+[7m106[0m     </div>
+[7m   [0m [91m      ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m104[0m:[93m11[0m - [91merror[0m[90m ts(2552): [0mCannot find name 'section'. Did you mean 'Selection'?
+
+[7m104[0m         </section>
+[7m   [0m [91m          ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m95[0m:[93m25[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any; key: any; class: string; }' is not assignable to type 'HTMLAttributes'.
+  Property 'key' does not exist on type 'HTMLAttributes'.
+
+[7m95[0m                         key={v.symbol}
+[7m  [0m [91m                        ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m93[0m:[93m42[0m - [91merror[0m[90m ts(7006): [0mParameter 'v' implicitly has an 'any' type.
+
+[7m93[0m                     {item.variables.map((v) => (
+[7m  [0m [91m                                         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m93[0m:[93m22[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'item'.
+
+[7m93[0m                     {item.variables.map((v) => (
+[7m  [0m [91m                     ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m91[0m:[93m18[0m - [91merror[0m[90m ts(2304): [0mCannot find name 'item'.
+
+[7m91[0m                 {item.variables.length > 0 && (
+[7m  [0m [91m                 ~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m12[0m - [91merror[0m[90m ts(2322): [0mType 'boolean' is not assignable to type 'string'.
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m           ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m74[0m:[93m12[0m - [91merror[0m[90m ts(2322): [0mType 'boolean' is not assignable to type 'string'.
+
+[7m74[0m       <div class=\"print:hidden text-center py-12\">
+[7m  [0m [91m           ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m187[0m:[93m9[0m - [93mwarning[0m[90m ts(7028): [0mUnused label.
+
+[7m187[0m         display: none !important;
+[7m   [0m [93m        ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m49[0m - [93mwarning[0m[90m ts(6133): [0m'v' is declared but its value is never read.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [93m                                                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m27[0m - [93mwarning[0m[90m ts(7028): [0mUnused label.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [93m                          ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m115[0m:[93m7[0m - [93mwarning[0m[90m ts(7028): [0mUnused label.
+
+[7m115[0m       client:visible
+[7m   [0m [93m      ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m195[0m:[93m1[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m195[0m </style>
+[7m   [0m [91m~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m194[0m:[93m3[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m194[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m193[0m:[93m5[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m193[0m     }
+[7m   [0m [91m    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m191[0m:[93m26[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m191[0m         page-break-inside: avoid;
+[7m   [0m [91m                         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m191[0m:[93m19[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m191[0m         page-break-inside: avoid;
+[7m   [0m [91m                  ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m191[0m:[93m14[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m191[0m         page-break-inside: avoid;
+[7m   [0m [91m             ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m190[0m:[93m21[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m190[0m         break-inside: avoid;
+[7m   [0m [91m                    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m190[0m:[93m14[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m190[0m         break-inside: avoid;
+[7m   [0m [91m             ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m189[0m:[93m23[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m189[0m       .summary-domain {
+[7m   [0m [91m                      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m189[0m:[93m7[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m189[0m       .summary-domain {
+[7m   [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m187[0m:[93m24[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m187[0m         display: none !important;
+[7m   [0m [91m                       ~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m44[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                                           ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m25[0m - [91merror[0m[90m ts(1135): [0mArgument expression expected.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m20[0m - [91merror[0m[90m ts(1005): [0m';' expected.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                   ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m186[0m:[93m7[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m186[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m185[0m:[93m15[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m185[0m               </article>
+[7m   [0m [91m              ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m148[0m:[93m18[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m148[0m                 )}
+[7m   [0m [91m                 ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m148[0m:[93m17[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m148[0m                 )}
+[7m   [0m [91m                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m147[0m:[93m19[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m147[0m                   </dl>
+[7m   [0m [91m                  ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m146[0m:[93m23[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m146[0m                     ))}
+[7m   [0m [91m                      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m146[0m:[93m22[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m146[0m                     ))}
+[7m   [0m [91m                     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m146[0m:[93m21[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m146[0m                     ))}
+[7m   [0m [91m                    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m145[0m:[93m23[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m145[0m                       </div>
+[7m   [0m [91m                      ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m136[0m:[93m26[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m136[0m                         />
+[7m   [0m [91m                         ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m57[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [91m                                                        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m135[0m:[93m50[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m135[0m                           set:html={renderLatex(v.symbol)}
+[7m   [0m [91m                                                 ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m133[0m:[93m3[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m133[0m   }
+[7m   [0m [91m  ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m132[0m:[93m5[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m132[0m     }
+[7m   [0m [91m    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m131[0m:[93m7[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m131[0m       }
+[7m   [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m129[0m:[93m9[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m129[0m         break-inside: avoid;
+[7m   [0m [91m        ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m127[0m:[93m7[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m127[0m       }
+[7m   [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m126[0m:[93m16[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m126[0m         display: none !important;
+[7m   [0m [91m               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m125[0m:[93m20[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m125[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m                   ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m125[0m:[93m7[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m125[0m       .summary-card:not(.summary-selected) {
+[7m   [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m124[0m:[93m12[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m124[0m     @media print {
+[7m   [0m [91m           ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m124[0m:[93m11[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m124[0m     @media print {
+[7m   [0m [91m          [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m120[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m120[0m </BaseLayout>
+[7m   [0m [91m~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m119[0m:[93m3[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m119[0m   </div>
+[7m   [0m [91m  ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m118[0m:[93m6[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m118[0m     />
+[7m   [0m [91m     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m117[0m:[93m21[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m117[0m       itemIds={items.map((i) => i.id)}
+[7m   [0m [91m                    ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m108[0m:[93m11[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m108[0m     {items.length === 0 && (
+[7m   [0m [91m          ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m106[0m:[93m5[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m106[0m     </div>
+[7m   [0m [91m    ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m105[0m:[93m9[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m105[0m       ))}
+[7m   [0m [91m        ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m105[0m:[93m8[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m105[0m       ))}
+[7m   [0m [91m       ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m105[0m:[93m7[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m105[0m       ))}
+[7m   [0m [91m      ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m104[0m:[93m9[0m - [91merror[0m[90m ts(1128): [0mDeclaration or statement expected.
+
+[7m104[0m         </section>
+[7m   [0m [91m        ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m103[0m:[93m13[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'Fragment'.
+
+[7m103[0m           </div>
+[7m   [0m [91m            ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m103[0m:[93m11[0m - [91merror[0m[90m ts(1005): [0m')' expected.
+
+[7m103[0m           </div>
+[7m   [0m [91m          ~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m102[0m:[93m15[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'dl'.
+
+[7m102[0m             </div>
+[7m   [0m [91m              ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m100[0m:[93m3[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m100[0m </article>
+[7m   [0m [91m  ~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m100[0m:[93m1[0m - [91merror[0m[90m ts(1003): [0mIdentifier expected.
+
+[7m100[0m </article>
+[7m   [0m [91m~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m91[0m:[93m17[0m - [91merror[0m[90m ts(1005): [0m')' expected.
+
+[7m91[0m                 {item.variables.length > 0 && (
+[7m  [0m [91m                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m90[0m:[93m3[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'style'.
+
+[7m90[0m </a>
+[7m  [0m [91m  ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m90[0m:[93m1[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m90[0m </a>
+[7m  [0m [91m~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m89[0m:[93m12[0m - [91merror[0m[90m ts(1005): [0m'}' expected.
+
+[7m89[0m     @media print {
+[7m  [0m [91m           ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m89[0m:[93m11[0m - [91merror[0m[90m ts(1109): [0mExpression expected.
+
+[7m89[0m     @media print {
+[7m  [0m [91m          [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m77[0m:[93m6[0m - [91merror[0m[90m ts(1005): [0m',' expected.
+
+[7m77[0m     )}
+[7m  [0m [91m     ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m76[0m:[93m9[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'section'.
+
+[7m76[0m       </div>
+[7m  [0m [91m        ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m68[0m - [91merror[0m[90m ts(17002): [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m                                                                   ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m65[0m - [91merror[0m[90m ts(1381): [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m                                                                ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m42[0m - [91merror[0m[90m ts(1127): [0mInvalid character.
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m                                         [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m32[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m                               ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m18[0m - [91merror[0m[90m ts(1127): [0mInvalid character.
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m                 [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m74[0m:[93m52[0m - [91merror[0m[90m ts(1382): [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m74[0m       <div class=\"print:hidden text-center py-12\">
+[7m  [0m [91m                                                   ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m74[0m:[93m18[0m - [91merror[0m[90m ts(1127): [0mInvalid character.
+
+[7m74[0m       <div class=\"print:hidden text-center py-12\">
+[7m  [0m [91m                 [0m
+[96msrc/views/FormulaSummary.astro[0m:[93m37[0m:[93m4[0m - [91merror[0m[90m ts(17008): [0mHTML element 'div' has no corresponding closing tag.
+
+[7m37[0m   <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+[7m  [0m [91m   ~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m36[0m:[93m1[0m - [91merror[0m[90m ts(2657): [0mJSX expressions must have one parent element.
+
+[7m 36[0m <BaseLayout lang={lang} title={t(lang, 'summary.title')}>
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m 37[0m   <div class="mx-auto w-full max-w-[var(--w-content)] px-4 py-8 lg:py-12">
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m...[0m 
+[7m 89[0m     @media print {
+[7m   [0m [91m~~~~~~~~~~~~~~~~~~[0m
+[7m 90[0m </a>
+[7m   [0m [91m~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m196[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected a closing tag but instead found the end of the file.
+
+[7m196[0m 
+[7m   [0m [91m[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m195[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</style>'.
+
+[7m195[0m </style>
+[7m   [0m [91m~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m185[0m:[93m15[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</article>'.
+
+[7m185[0m               </article>
+[7m   [0m [91m              ~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m147[0m:[93m19[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</dl>'.
+
+[7m147[0m                   </dl>
+[7m   [0m [91m                  ~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m145[0m:[93m23[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</div>'.
+
+[7m145[0m                       </div>
+[7m   [0m [91m                      ~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m85[0m:[93m1[0m - [91merror[0m[90m astro: [0mExpected a matching closing tag but instead found '</BaseLayout>'.
+
+[7m85[0m </BaseLayout>
+[7m  [0m [91m~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m75[0m:[93m66[0m - [91merror[0m[90m astro: [0mExpected an attribute but instead found '<'.
+
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m                                                                 ~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m74[0m:[93m51[0m - [91merror[0m[90m astro: [0mExpected an attribute but instead found '">
+        <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}'.
+
+[7m74[0m       <div class=\"print:hidden text-center py-12\">
+[7m  [0m [91m                                                  ~~[0m
+[7m75[0m         <p class=\"text-muted\">{t(lang, \'summary.noFormulas\')}</p>
+[7m  [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m62[0m:[93m7[0m - [91merror[0m[90m astro: [0mFound a text expression that doesn't have the closing expression:
+
+[7m62[0m       {groups.map((group) => (
+[7m  [0m [91m      ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/views/FormulaSummary.astro[0m:[93m35[0m:[93m8[0m - [91merror[0m[90m astro: [0mFound a text expression that doesn't have the closing expression:
+
+[7m35[0m ---    {items.length === 0 && (
+[7m  [0m [91m       ~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+Result (104 files): 
+- 129 errors
+- 0 warnings
+- 31 hints
+
