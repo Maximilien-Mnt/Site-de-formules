@@ -168,18 +168,7 @@ const aboutPath = localizedPath(lang, 'about');
             newPalette.role = 'dialog';
             newPalette.setAttribute('aria-modal', 'true');
             newPalette.className = 'fixed inset-0 z-[var(--z-search)]';
-            newPalette.innerHTML = \`
-              <div class="flex min-h-screen items-center justify-center bg-bg/60 backdrop-blur-sm">
-                <div class="search-palette-wrapper max-w-md w-full bg-bg border-b border-border rounded-t-lg p-4">
-                  <div class="relative w-full">
-                    <input type="search" autocomplete="off" class="w-full px-4 py-3 pr-12 bg-surface border border-border strong rounded-xl text-text outline-none focus:ring-2 focus:ring-primary focus-ring-offset-2" aria-label="Rechercher" />
-                    <button class="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-surface-2 focus-visible:bg-primary focus-visible:text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[2px] transition-colors">
-                      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            \`;
+            newPalette.innerHTML = '<div class="flex min-h-screen items-center justify-center bg-bg/60 backdrop-blur-sm"><div class="search-palette-wrapper max-w-md w-full bg-bg border-b border-border rounded-t-lg p-4"><div class="relative w-full"><input type="search" autocomplete="off" class="w-full px-4 py-3 pr-12 bg-surface border border-border strong rounded-xl text-text outline-none focus:ring-2 focus:ring-primary focus-ring-offset-2" aria-label="Rechercher" /><button class="absolute right-3 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-surface-2 focus-visible:bg-primary focus-visible:text-on-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-[2px] transition-colors"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg></button></div></div>';
             document.body.appendChild(newPalette);
             const input = newPalette.querySelector('input');
             if (input) input.focus();

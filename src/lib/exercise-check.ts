@@ -1,39 +1,41 @@
-// Vérification des réponses d'exercices — logique pure, sans DOM, testée par
-// src/lib/exercise-check.test.ts.
-//
-// Formats numériques acceptés :
-//   - décimaux à virgule « 3,14 » ou à point « 3.14 » (virgule terminale « 3, »,
-//     virgule initiale « ,5 », signe moins typographique « − »)
-//   - fractions simples « 4/5 », « 4 / 5 » (numérateur et dénominateur décimaux,
-//     dénominateur non nul)
-//   - groupes de milliers par espace « 1 000 » (espace normal, fine  ou insécable)
-// Toute autre entrée est invalide (lettres, « 4/0 », « 1/2/3 », « 1 2 »,
-// notation scientifique…).
+/**
+ * Vérification des réponses d'exercices — logique pure, sans DOM, testée par
+ * src/lib/exercise-check.test.ts.
+ * Formats numériques acceptés :
+ *   - décimaux à virgule « 3,14 » ou à point « 3.14 » (virgule terminale « 3, »,
+ *     virgule initiale « ,5 », signe moins typographique « − »)
+ *   - fractions simples « 4/5 », « 4 / 5 » (numérateur et dénominateur décimaux,
+ *     dénominateur non nul)
+ *   - groupes de milliers par espace « 1 000 » (espace normal, fine  ou insécable)
+ * Toute autre entrée est invalide (lettres, « 4/0 », « 1/2/3 », « 1 2 »,
+ * notation scientifique…).
 
+/** Formats numériques acceptés. */
 export interface NumericAnswer {
   value: number
   tolerance: number
   unit?: string
 }
 
+/** Résultat du parsing d'une entrée numérique. */
 export type ParseResult = { ok: true; value: number } | { ok: false }
 
+/** Type de vérification pour une réponse numérique. */
 export type NumericCheck =
   | { ok: true; parsed: number }
   | { ok: false; reason: 'invalid' | 'wrong'; parsed?: number }
 
-// Espace normal, espace fine (U+2009), espace fine insécable (U+202F), espace insécable (U+00A0).
-const SPACE_RE = /[\s\u2009\u202f\u00a0]/g
+ // Espace normal, espace fine (U+2009), espace fine insécable (U+202F), espace insécable (U+00A0).
+ const SPACE_RE = /[\\s\\u2009\\u202f\\u00a0]/g
 
-// Décimale : signe optionnel, partie entière (avec virgule finale possible),
-// partie fractionnaire (avec virgule initiale possible).
-const DECIMAL_RE = /^[+-]?\d+(\.\d*)?$|^[+-]?\.\d+$/
+ // Décimale : signe optionnel, partie entière (avec virgule finale possible),
+ // partie fractionnaire (avec virgule initiale possible).
+ const DECIMAL_RE = /^[+-]?\\d+(\\.\\d*)?$|^[+-]?\\.\\d+$/
 
-// Groupes de milliers : « 1 000 », « 12 345 », « 1 234,5 ».
-const GROUPED_RE = /^[+-]?\d{1,3}(?:[ \u2009\u202f\u00a0]\d{3})+(?:\.\d+)?$/
+ // Groupes de milliers : « 1 000 », « 12 345 », « 1 234,5 ».
+ const GROUPED_RE = /^[+-]?\\d{1,3}(?:[ \\u2009\\u202f\\u00a0]\\d{3})+(?:\\.\\d+)?$/
 
-/**
- * Analyse une réponse numérique libre. Renvoie `{ ok: true, value }` ou
+/** Analyse une réponse numérique libre. Renvoie `{ ok: true, value }` ou
  * `{ ok: false }` pour tout ce qui n'est pas un nombre reconnaissable.
  */
 export function parseNumericInput(raw: string): ParseResult {
@@ -80,8 +82,7 @@ function parseDecimalToken(token: string): number | null {
   return Number.isFinite(value) ? value : null
 }
 
-/**
- * Vérifie une réponse numérique : tolérance absolue (bornes incluses).
+/** Vérifie une réponse numérique : tolérance absolue (bornes incluses).
  * `tolerance` est normalisée à 0 si absente ou négative.
  */
 export function checkNumeric(raw: string, answer: NumericAnswer): NumericCheck {
@@ -94,8 +95,7 @@ export function checkNumeric(raw: string, answer: NumericAnswer): NumericCheck {
     : { ok: false, reason: 'wrong', parsed: parsed.value }
 }
 
-/**
- * Vérifie un QCM : égalité exacte des ensembles de réponses (ordre indifférent,
+/** Vérifie un QCM : égalité exacte des ensembles de réponses (ordre indifférent,
  * ni réponse manquante ni réponse en trop).
  */
 export function checkQcm(selected: readonly string[], correct: readonly string[]): boolean {

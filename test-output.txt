@@ -1,0 +1,94 @@
+
+> formulo@0.1.0 test
+> vitest run --run lib/guards
+
+
+[1m[46m RUN [49m[22m [36mv3.2.7 [39m[90mC:/Users/maxim/Site-de-formules[39m
+
+ [31mÔØ»[39m src/lib/guards.test.ts [2m([22m[2m17 tests[22m[2m | [22m[31m3 failed[39m[2m)[22m[32m 22[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur dans une plage born├®e[32m 3[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur hors plage[32m 1[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur interdite (d├®nominateur nul)[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur positive stricte[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur non-n├®gative[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur sup├®rieure ├á une borne[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mvaleur inf├®rieure ├á une borne[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateNumericValue[2m > [22mavec formule et contraintes de variable[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateQCMQuestion[2m > [22mQCM valide avec une bonne r├®ponse[32m 1[2mms[22m[39m
+   [32mÔ£ô[39m validateQCMQuestion[2m > [22mQCM invalide - bonne r├®ponse manquante[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateQCMQuestion[2m > [22mQCM invalide - doublons dans les choix[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateQCMQuestion[2m > [22mQCM avec contraintes math├®matiques[32m 0[2mms[22m[39m
+   [32mÔ£ô[39m validateOpenExerciseStatement[2m > [22m├®nonc├® sans probl├¿me math├®matique[32m 1[2mms[22m[39m
+[31m   [31m├ù[31m validateOpenExerciseStatement[2m > [22mracine carr├®e de nombre n├®gatif[39m[32m 11[2mms[22m[39m
+[31m     ÔåÆ expected true to be false // Object.is equality[39m
+[31m   [31m├ù[31m validateOpenExerciseStatement[2m > [22mlogarithme d'argument non positif[39m[32m 1[2mms[22m[39m
+[31m     ÔåÆ expected true to be false // Object.is equality[39m
+[31m   [31m├ù[31m validateOpenExerciseStatement[2m > [22mdivision par z├®ro[39m[32m 1[2mms[22m[39m
+[31m     ÔåÆ expected true to be false // Object.is equality[39m
+   [32mÔ£ô[39m validateOpenExerciseStatement[2m > [22m├®nonc├® valide sans variables probl├®matiques[32m 0[2mms[22m[39m
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ» Failed Tests 3 ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»
+
+ FAIL  src/lib/guards.test.ts > validateOpenExerciseStatement > racine carr├®e de nombre n├®gatif
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ÔØ» src/lib/guards.test.ts:96:26
+     94|       { x: -5 }
+     95|     )
+     96|     expect(result.valid).toBe(false)
+       |                          ^
+     97|     expect(result.reason).toContain('Racine carr├®e')
+     98|   })
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[1/3]ÔÄ»
+
+ FAIL  src/lib/guards.test.ts > validateOpenExerciseStatement > logarithme d'argument non positif
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ÔØ» src/lib/guards.test.ts:105:26
+    103|       { x: 0 }
+    104|     )
+    105|     expect(result.valid).toBe(false)
+       |                          ^
+    106|     expect(result.reason).toContain('Logarithme')
+    107|   })
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[2/3]ÔÄ»
+
+ FAIL  src/lib/guards.test.ts > validateOpenExerciseStatement > division par z├®ro
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ÔØ» src/lib/guards.test.ts:114:26
+    112|       { x: 0 }
+    113|     )
+    114|     expect(result.valid).toBe(false)
+       |                          ^
+    115|     expect(result.reason).toContain('Division par z├®ro')
+    116|   })
+
+ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»ÔÄ»[3/3]ÔÄ»
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[31m3 failed[39m[22m[2m | [22m[1m[32m14 passed[39m[22m[90m (17)[39m
+[2m   Start at [22m 01:38:57
+[2m   Duration [22m 893ms[2m (transform 71ms, setup 0ms, collect 93ms, tests 22ms, environment 0ms, prepare 149ms)[22m
+
