@@ -440,5 +440,40 @@
   "empty": {
     "title": "Aucun résultat",
     "hint": "Essayez de modifier vos critères de recherche."
+  },
+
+  "error-report": {
+    "title": "Signaler une erreur",
+    "description": "Vous avez repéré une coquille, une formule incorrecte ou un lien cassé ? Dites-nous tout.",
+    "label.type": "Quel type d’erreur ?",
+    "type.formula": "Formule",
+    "type.exercise": "Exercice",
+    "type.content": "Contenu (texte, traduction)",
+    "type.technical": "Problème technique (affichage, lien)",
+    "type.other": "Autre",
+    "label.severity": "Gravité",
+    "severity.low": "Mineure (faute de frappe, mise en forme)",
+    "severity.medium": "Moyenne (information inexacte ou obsolète)",
+    "severity.high": "Importante (formule ou exercice erroné)",
+    "severity.critical": "Critique (page inaccessible, risque pour l’utilisateur)",
+    "label.title": "Titre (optionnel)",
+    "placeholder.title": "Résumé court du problème",
+    "label.description": "Décrivez l’erreur",
+    "placeholder.description": "Précisez ce qui ne va pas, où, et ce que vous attendiez…",
+    "hint.title": "Facultatif, 200 caractères maximum.",
+    "hint.description-length": "caractères maximum.",
+    "aria.honeypot": "Laissez ce champ vide",
+    "button.submit": "Envoyer le signalement",
+    "button.sending": "Envoi…",
+    "button.cancel": "Annuler",
+    "button.close": "Fermer",
+    "button.export": "Exporter mes signalements (JSON)",
+    "message.success": "Merci ! Votre signalement a été enregistré.",
+    "message.success-detail": {
+      "one": "{count} signalement enregistré sur cet appareil.",
+      "other": "{count} signalements enregistrés sur cet appareil."
+    },
+    "message.error": "Une erreur est survenue. Veuillez réessayer plus tard.",
+    "message.rate-limit": "Vous avez envoyé trop de signalements. Réessayez plus tard."
   }
 }

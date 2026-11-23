@@ -134,6 +134,7 @@ describe('import (validation + fusion / remplacement)', () => {
       activityDays: ['2026-01-10'],
       flashcards: {},
       decks: { d1: sampleDeck() },
+      errorLog: {},
     }
     const file = JSON.stringify({
       version: 2,

@@ -1,0 +1,85 @@
+---
+import { t } from '@/i18n/index';
+import type { Lang } from '@/i18n/config';
+import ErrorReportForm from '@/components/islands/ErrorReportForm.tsx';
+
+interface Props {
+  lang?: Lang;
+  /** ID de formule/exercice concerné (optionnel, renseigné depuis une page détail). */
+  sourceId?: string;
+}
+
+const { lang = 'fr', sourceId } = Astro.props;
+---
+
+<button
+  id="error-report-trigger"
+  type="button"
+  class="text-xs text-muted underline underline-offset-4 hover:text-primary transition-colors duration-[var(--dur-fast)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring focus-visible:ring-offset-[2px]"
+  aria-controls="error-report-dialog"
+  aria-expanded="false"
+>
+  {t(lang, 'footer.feedback')}
+</button>
+
+<dialog
+  id="error-report-dialog"
+  class="fixed inset-0 z-[var(--z-overlay)] flex items-center justify-center bg-bg/80 backdrop-blur-sm p-4"
+  aria-labelledby="error-report-dialog-title"
+  aria-modal="true"
+>
+  <div class="max-w-md w-full bg-surface border border-border rounded-lg p-6 shadow-md">
+    <h2
+      id="error-report-dialog-title"
+      class="font-serif text-2xl font-semibold tracking-tight text-text mb-2"
+    >
+      {t(lang, 'error-report.title')}
+    </h2>
+    <ErrorReportForm client:visible lang={lang} sourceId={sourceId ?? undefined} />
+    <button
+      type="button"
+      class="mt-4 text-sm text-muted hover:text-primary transition-colors"
+      aria-label={t(lang, 'common.close')}
+    >
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+</dialog>
+
+<script is:inline>
+  (function () {
+    const trigger = document.getElementById('error-report-trigger');
+    const dialog = document.getElementById('error-report-dialog');
+    const closeBtn = dialog?.querySelector('button[aria-label]');
+    if (!trigger || !dialog) return;
+
+    function openDialog() {
+      trigger.setAttribute('aria-expanded', 'true');
+      dialog.showModal();
+    }
+
+    function closeDialog() {
+      trigger.setAttribute('aria-expanded', 'false');
+      dialog.close();
+    }
+
+    trigger.addEventListener('click', openDialog);
+    closeBtn?.addEventListener('click', closeDialog);
+
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDialog();
+    });
+
+    // Fermer en cliquant sur le fond (backdrop), pas sur le contenu.
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) closeDialog();
+    });
+  })();
+</script>
+
+<style>
+  dialog::backdrop {
+    background: rgb(0 0 0 / 0.45);
+    backdrop-filter: blur(4px);
+  }
+</style>

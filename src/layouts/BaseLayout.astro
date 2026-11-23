@@ -10,6 +10,7 @@ import {
 } from '@/i18n/config';
 import { t } from '@/i18n/index';
 import Button from '@/components/ui/Button.astro';
+import ErrorReportTrigger from '@/components/ui/ErrorReportTrigger.astro';
 import SearchPalette from '@/components/islands/SearchPalette.tsx'
 import ThemeToggle from '@/components/islands/ThemeToggle.tsx';
 
@@ -281,7 +282,7 @@ const aboutPath = localizedPath(lang, 'about');
             <a href={aboutPath} class="hover:text-primary transition-colors">{t(lang, 'footer.about')}</a>
             <a href={localizedPath(lang, 'legal')} class="hover:text-primary transition-colors">{t(lang, 'footer.legal')}</a>
             <a href={localizedPath(lang, 'privacy')} class="hover:text-primary transition-colors">{t(lang, 'footer.privacy')}</a>
-            <a href="#" class="hover:text-primary transition-colors">{t(lang, 'footer.feedback')}</a>
+            <ErrorReportTrigger lang={lang} />
           </nav>
         </div>
         <p class="mt-6 text-xs text-subtle text-center">

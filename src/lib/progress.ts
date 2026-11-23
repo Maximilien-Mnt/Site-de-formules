@@ -1,10 +1,10 @@
-// Progression locale — cores purs (testables en node) + store nanostores persistant.
+// Progression locale — cœurs purs (testables en node) + store nanostores persistant.
 //
 // Le store est versionné : clé localStorage `formulo:progress:v2` + champ `version`
-// validé par Zod. LocalStorage indisponible ou contenu invalide → repli sur l'etat
+// validé par Zod. LocalStorage indisponible ou contenu invalide → repli sur l'état
 // initial : l'application reste utilisable.
 //
-// v1 → v2 : le champ reserve `flashcards` devient un vrai map `Record<string, SrsCard>`
+// v1 → v2 : le champ réservé `flashcards` devient un vrai map `Record<string, SrsCard>`
 // (fiches FSRS, logique dans lib/srs.ts) et on ajoute `decks` (paquets de fiches).
 // L'import/le décodage acceptent v1 et v2 et migrent automatiquement vers v2.
 
@@ -26,20 +26,35 @@ export interface ExerciseAttempt {
   /** Horodatage ISO (Date.toISOString()). */
   date: string
   result: AttemptResult
+  /** Tentative précédente qui a abouti à cet échec (optionnelle). */
+  previousAttemptId?: string
+}
+
+export interface ErrorLogEntry {
+  id: string
+  exerciseId: string
+  formulaId: string
+  /** Horodatage ISO (Date.toISOString()). */
+  date: string
+  result: AttemptResult
+  /** Tentative précédente qui a abouti à cet échec (optionnelle). */
+  previousAttemptId?: string
 }
 
 export interface ProgressState {
   version: 2
   /** Statut par formule ; l'absence de cle = statut « new ». */
   formulas: Record<string, FormulaStatus>
-  /** Tentatives d'exercices (log horodate). */
+  /** Tentatives d'exercices (log horodaté). */
   attempts: ExerciseAttempt[]
-  /** Jours d'activite, « YYYY-MM-DD », tries et uniques. */
+  /** Jours d'activité, « YYYY-MM-DD », triés et uniques. */
   activityDays: string[]
-  /** Fiches FSRS : cle `cardKey(formuleId, direction)` → carte persistee. */
+  /** Fiches FSRS : cle `cardKey(formuleId, direction)` → carte persistée. */
   flashcards: Record<string, SrsCard>
-  /** Paquets de fiches crees depuis les filtres du catalogue. */
+  /** Paquets de fiches créés depuis les filtres du catalogue. */
   decks: Record<string, Deck>
+  /** Entrées de carnet d'erreurs : exercices qui ont échoué et qui seront reproposés. */
+  errorLog: Record<string, ErrorLogEntry>
 }
 
 const FORMULA_STATUS = z.enum(['new', 'learning', 'mastered'])
@@ -72,6 +87,15 @@ const deckSchema = z.object({
   directions: z.array(z.enum(DIRECTIONS as [Direction, ...Direction[]])),
 })
 
+const errorLogEntrySchema = z.object({
+  id: z.string().min(1),
+  exerciseId: z.string(),
+  formulaId: z.string(),
+  date: z.string(),
+  result: ATTEMPT_RESULT,
+  previousAttemptId: z.string().optional(),
+})
+
 // Schéma Zod de la version 2 (état courant).
 export const progressSchema = z.object({
   version: z.literal(2),
@@ -80,9 +104,10 @@ export const progressSchema = z.object({
   activityDays: z.array(z.string()).default([]),
   flashcards: z.record(z.string(), cardSchema).default({}),
   decks: z.record(z.string(), deckSchema).default({}),
+  errorLog: z.record(z.string(), errorLogEntrySchema).default({}),
 })
 
-// Forme acceptée pour l'import (v1 ou v2). v1 n'a ni flashcards typées ni decks.
+// Forme acceptée pour l'import (v1 ou v2). v1 n'a ni flashcards typés ni decks.
 const importSchema = z.union([
   progressSchema,
   z.object({
@@ -95,30 +120,18 @@ const importSchema = z.union([
 ])
 
 export function initialState(): ProgressState {
-  return { version: 2, formulas: {}, attempts: [], activityDays: [], flashcards: {}, decks: {} }
-}
-
-/**
- * Passe un état brut (v1 ou v2 validé) à la forme v2 normalisée.
- * Les `flashcards` v1 étaient un emplacement réservé : leurs valeurs inconnues
- * sont ignorées (on repart d'un map vide) — sans perte de progression formule/exo.
- */
-function toV2(raw: unknown): ProgressState | null {
-  const result = importSchema.safeParse(raw)
-  if (!result.success) return null
-  const d = result.data
-  if (d.version === 2) return normalizeState(d)
-  return normalizeState({
+  return {
     version: 2,
-    formulas: d.formulas ?? {},
-    attempts: d.attempts ?? [],
-    activityDays: d.activityDays ?? [],
+    formulas: {},
+    attempts: [],
+    activityDays: [],
     flashcards: {},
     decks: {},
-  })
+    errorLog: {},
+  }
 }
 
-/** Cle de jour « YYYY-MM-DD » du fuseau local. */
+/** Clé de jour « YYYY-MM-DD » du fuseau local. */
 export function dayKey(date: Date): string {
   const y = date.getFullYear()
   const m = String(date.getMonth() + 1).padStart(2, '0')
@@ -126,7 +139,7 @@ export function dayKey(date: Date): string {
   return `${y}-${m}-${d}`
 }
 
-/** Decale un jour-cle de `delta` jours. Pure, independante du fuseau. */
+/** Décale un jour-cle de `delta` jours. Pure, indépendante du fuseau. */
 export function shiftDay(key: string, delta: number): string {
   const [y, m, d] = key.split('-').map(Number)
   return new Date(Date.UTC(y, m - 1, d + delta)).toISOString().slice(0, 10)
@@ -137,11 +150,7 @@ export function addActivityDay(days: readonly string[], day: string): string[] {
   return [...days, day].sort()
 }
 
-/**
- * Serie actuelle : jours consecutifs d'activite jusqu'a `now`.
- * Si aujourd'hui est inactif mais la veille active, la serie reprnd a la veille ;
- * sinon (pas d'activite hier non plus) elle est rompue -> 0.
- */
+/** Série actuelle : jours consécutifs d'activité jusqu'à `now`. */
 export function getStreak(days: readonly string[], now: Date = new Date()): number {
   const set = new Set(days)
   let cursor = dayKey(now)
@@ -172,6 +181,7 @@ function normalizeState(s: ProgressState): ProgressState {
     activityDays,
     flashcards: s.flashcards ?? {},
     decks: s.decks ?? {},
+    errorLog: s.errorLog ?? {},
   }
 }
 
@@ -238,7 +248,7 @@ export function removeDeck(id: string): void {
   progressStore.set(normalizeState({ ...s, decks }))
 }
 
-/** Enregistre une carte FSRS et marque le jour courant d'activite. */
+/** Enregistre une carte FSRS et marque le jour courant d'activité. */
 export function setFlashcard(key: string, card: SrsCard): void {
   const s = progressStore.get()
   progressStore.set(
@@ -250,6 +260,7 @@ export function setFlashcard(key: string, card: SrsCard): void {
   )
 }
 
+
 export type ImportOutcome =
   | { ok: true; mode: ImportMode; state: ProgressState }
   | { ok: false; reason: 'invalid-json' | 'schema' | 'version' }
@@ -258,7 +269,7 @@ export function serializeProgress(state: ProgressState): string {
   return JSON.stringify(normalizeState(state), null, 2)
 }
 
-/** Parse + validation Zod d'une chaine JSON d'export (accepte v1 et migre). Pure. */
+/** Parse + validation Zod d'une chaîne JSON d'export (accepte v1 et migre). Pure. */
 export function parseProgress(json: string): ProgressState {
   let parsed: unknown
   try {
@@ -294,16 +305,22 @@ export function applyImport(
         version: 2,
         formulas: { ...current.formulas, ...imported.formulas },
         attempts: [...byId.values()],
-        activityDays: [...new Set([...current.activityDays, ...imported.activityDays])],
+        activityDays: [
+          ...new Set([...current.activityDays, ...imported.activityDays]),
+        ],
         flashcards: { ...current.flashcards, ...imported.flashcards },
         decks: { ...current.decks, ...imported.decks },
+        errorLog: { ...current.errorLog, ...imported.errorLog },
       })
       return { ok: true, mode, state }
     }
   }
 }
 
-export async function importProgress(file: File, mode: ImportMode): Promise<ImportOutcome> {
+export async function importProgress(
+  file: File,
+  mode: ImportMode,
+): Promise<ImportOutcome> {
   const text = await file.text()
   const outcome = applyImport(progressStore.get(), text, mode)
   if (outcome.ok) progressStore.set(outcome.state)
@@ -317,7 +334,8 @@ export function exportProgress(fileName?: string): string {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = fileName ?? `formulo-progression-${dayKey(new Date())}.json`
+    a.download =
+      fileName ?? `formulo-progression-${dayKey(new Date())}.json`
     document.body.appendChild(a)
     a.click()
     a.remove()
@@ -336,6 +354,22 @@ function decodeProgress(raw: string): ProgressState {
   }
 }
 
+function toV2(raw: unknown): ProgressState | null {
+  const result = importSchema.safeParse(raw)
+  if (!result.success) return null
+  const d = result.data
+  if (d.version === 2) return normalizeState(d)
+  return normalizeState({
+    version: 2,
+    formulas: d.formulas ?? {},
+    attempts: d.attempts ?? [],
+    activityDays: d.activityDays ?? [],
+    flashcards: {},
+    decks: {},
+    errorLog: {},
+  })
+}
+
 export const progressStore: WritableAtom<ProgressState> = persistentAtom<ProgressState>(
   PROGRESS_KEY,
   initialState(),
@@ -344,3 +378,4 @@ export const progressStore: WritableAtom<ProgressState> = persistentAtom<Progres
     decode: decodeProgress,
   },
 )
+
