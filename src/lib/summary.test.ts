@@ -58,7 +58,6 @@ describe('getDefaultSelection', () => {
     ]
     const selected = getDefaultSelection(formulas, {
 formulas: { a: 'mastered', b: 'new' },
-      formulas: { a: 'some-status', b: 'some-status' },
     })
     expect(selected.has('a')).toBe(false)
     expect(selected.has('b')).toBe(true)
@@ -71,7 +70,6 @@ describe('buildSummaryItems', () => {
     makeFormula({
       id: 'pythagore',
       domain: 'geometry',
-      title: 'Théorème de Pythagore',
       latex: 'a^{2} + b^{2} = c^{2}',
       variables: [{ symbol: 'a' }, { symbol: 'b' }, { symbol: 'c' }],
       variants: [{ id: 'hypotenuse', latex: 'c = \\sqrt{a^{2} + b^{2}}' }],

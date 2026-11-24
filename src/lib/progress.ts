@@ -358,7 +358,7 @@ function toV2(raw: unknown): ProgressState | null {
   const result = importSchema.safeParse(raw)
   if (!result.success) return null
   const d = result.data
-  if (d.version === 2) return normalizeState(d)
+  if (d.version === 2) return normalizeState({ ...d } as ProgressState)
   return normalizeState({
     version: 2,
     formulas: d.formulas ?? {},

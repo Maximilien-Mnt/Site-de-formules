@@ -6,9 +6,7 @@ import { buildSummaryItems, groupByDomain, type FormulaSummaryItem } from '@/lib
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import FormulaSummaryApp from '@/components/islands/FormulaSummaryApp.tsx'
 
-interface Props {
-  lang: Lang
-}
+export const prerender = true
 
 const { lang = DEFAULT_LANG } = Astro.props
 

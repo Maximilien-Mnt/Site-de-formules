@@ -1,0 +1,11 @@
+﻿{
+  "extends": "astro/tsconfigs/base",
+  "include": [".astro/types.d.ts", "src/**/*", "vitest.config.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] }
+  }
+}
